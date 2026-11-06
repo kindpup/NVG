@@ -1,0 +1,8 @@
+GameProject {
+ ID "ACMNVG"
+ GUID "6ACA44550BB780AC"
+ TITLE "ACM_NVG"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}
