@@ -1,0 +1,4 @@
+MatPBRBasic {
+ BCRMap "{05154330955EC458}Assets/Data/AN_PVS_5A_lense_BCR.edds"
+ NMOMap "{3DCDF8A24C2996C6}Assets/Data/AN_PVS_5A_lense_NMO.edds"
+}

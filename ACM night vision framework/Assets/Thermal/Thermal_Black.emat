@@ -1,0 +1,13 @@
+MatPBRBasic {
+ Color 0 0 0 1
+ EmissiveLV 8
+ Sort overall
+ CastShadow 0
+ ReceiveShadow 0
+ OccludeRain 0
+ OccludeWetness 0
+ NoDecals 1
+ WetnessScale 0
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+}

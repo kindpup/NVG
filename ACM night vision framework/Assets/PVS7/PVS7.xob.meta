@@ -1,0 +1,69 @@
+MetaFileClass {
+ Name "{06AA3705F93DC2C8}Assets/PVS7/PVS7.xob"
+ Configurations {
+  FBXResourceClass PC {
+   Rotate 0 180 0
+   MaterialAssigns {
+    MaterialAssignClass "{6A306A0697E284BD}" {
+     SourceMaterial "PNV_7"
+     AssignedMaterial "{C6C2E3F439D83841}Assets/PVS7/Data/PNV_7.emat"
+    }
+    MaterialAssignClass "{6A306A0697E284AD}" {
+     SourceMaterial "PM"
+     AssignedMaterial "{E77A3F03086CBCE7}Assets/PVS7/Data/PM.emat"
+    }
+   }
+   MeshParams {
+    MeshParam PVS7_FULL {
+    }
+    MeshParam "PVS7_FULL.001" {
+    }
+    MeshParam "PVS7_FULL.002" {
+    }
+    MeshParam "PVS7_FULL.003" {
+    }
+   }
+   GeometryParams {
+    GeometryParam UBX_MOUNT {
+     SurfaceProperties {
+      "{3B2D2687F56BB4EF}Common/Materials/Game/WeaponParts/weapon_metal.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam UBX_NVG {
+     SurfaceProperties {
+      "{3B2D2687F56BB4EF}Common/Materials/Game/WeaponParts/weapon_metal.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+   }
+   Common TXOCommonClass "{6A306A0697ECC524}" : "{0877E7C4BB2B2C9A}Configs/System/ResourceTypes/PC/MeshObjectCommon.conf" {
+   }
+   ApplicationVendor "Blender Foundation"
+   ApplicationName "Blender (stable FBX IO)"
+   ApplicationVersion "4.2.16 LTS"
+  }
+  FBXResourceClass XBOX_ONE : PC {
+   Common TXOCommonClass "{6A306A0697ECC65F}" : "{9D5B6207F7628CE2}Configs/System/ResourceTypes/XBOX_ONE/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass XBOX_SERIES : PC {
+   Common TXOCommonClass "{6A306A0697ECC67D}" : "{DD9F02115C764647}Configs/System/ResourceTypes/XBOX_SERIES/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass PS4 : PC {
+   Common TXOCommonClass "{6A306A0697ECC61A}" : "{53EC476BC921D99A}Configs/System/ResourceTypes/PS4/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass PS5 : PC {
+   Common TXOCommonClass "{6A306A0697ECC606}" : "{F62AA8E7B8EA9D26}Configs/System/ResourceTypes/PS5/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass HEADLESS : PC {
+   Common TXOCommonClass "{6A306A0697ECC621}" : "{3A5B3356978039E8}Configs/System/ResourceTypes/HEADLESS/MeshObjectCommon.conf" {
+   }
+  }
+ }
+}

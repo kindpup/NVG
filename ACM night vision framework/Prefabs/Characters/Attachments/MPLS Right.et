@@ -1,0 +1,119 @@
+GameEntity {
+ ID "6A66E5705AF9BE0F"
+ components {
+  ParametricMaterialInstanceComponent "{6A66E5705AF9BE1B}" {
+   UserParamAlpha 0
+   ApplyPropertiesWhenMeshChanged 1
+  }
+  ClothNodeStorageComponent "{6A66E5705AF9BE6A}" {
+   Attributes SCR_ItemAttributeCollection "{6A66E5705AF9BE69}" {
+    ItemDisplayName UIInfo "{6A66E5705AF9BE67}" {
+     Name "MPLS"
+     Description "MPLS"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{6A66E5705AF9BE65}" {
+     Weight 0
+     DimensionScaler 0
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{6A66E5705AF9BE63}" {
+      CameraOrbitAngles -25 25 0
+      CameraDistanceToItem 2
+      FOV 10
+     }
+    }
+    CommonItemType "ACM_RailLiteRight"
+    m_ACM_AdditionalCommonItemTypes {
+     "ACM_RailLiteRight"
+    }
+   }
+   StoragePurpose 0 0
+  }
+  MeshObject "{6A66E5705AF9BE7F}" {
+   Object "{1DED1F8D8FC47EF5}Assets/attachments/MPLSRight.xob"
+   InheritVisibility 1
+  }
+  RigidBody "{6A66E5705AF9BE7A}" {
+   Mass 1.5
+   SimState None
+   ModelGeometry 1
+   Static 1
+  }
+  SCR_FlashlightComponent "{6A66E5705AF9BE79}" {
+   Enabled 0
+  }
+  SCR_SoundDataComponent "{6A66E5705AF9BE76}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{6A66E5705AF9BE72}" {
+     m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{6A66E5705AF9BE71}" {
+     m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{6A66E5705AF9BE4E}" {
+     m_sSoundProject "{F62001ED6E9FA253}Sounds/Items/_SharedData/Drop/Items_Drop_Clothes.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+   }
+  }
+  ACM_NVL_EquipmentLightsComponent "{6A66E5705AF9A1A4}" {
+   m_sLightIdentifier "surefireright"
+   m_aSources {
+    ACM_NVL_LightSource "{6A66E5705AF9A1A2}" {
+     m_sLightPrefab "{D9E8228D1F2CECB9}Prefabs/Editor/Common/SureFire_660_Light.et"
+     m_vOffset PointInfo "{6A66E5705AF9A1A0}" {
+      PivotID "Light_Point.001"
+      Angles 180 0 0
+     }
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{6A66E5705AF9A1BF}" {
+   AreaType ACM_RailRight "{6A66E5705AF9A1BD}" {
+   }
+   WornModel "{1DED1F8D8FC47EF5}Assets/attachments/MPLSRight.xob"
+   WornMaterialsOverride {
+    ""
+   }
+   ItemMaterialsOverride {
+    ""
+   }
+  }
+  ActionsManagerComponent "{6A66E5705AF9A1BB}" {
+   ActionContexts {
+    UserActionContext "{6A66E5705AF9A1B6}" {
+     ContextName "default"
+     Position PointInfo "{6A66E5705AF9A1B7}" {
+      PivotID "Head"
+      Offset 0 0.2258 0
+     }
+    }
+   }
+   additionalActions {
+    SCR_EquipClothAction "{52E6EC76F51E12DE}" : "{83B98F1A96591AC6}Prefabs/Characters/Core/Actions/EquipClothAction.conf" {
+     "Sort Priority" -10
+    }
+    SCR_PickUpItemAction "{52E6EC76F43FCD58}" : "{F39A4E9B190C1846}Prefabs/Characters/Core/Actions/PickUpItemAction.conf" {
+    }
+    SCR_SwitchFlashlightLensAction "{6A66E5705AF9A1B2}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{6A66E5705AF9A1B0}" {
+      Name "Toggle Flashlight"
+      Description "Toggle helmet flashlight on/off"
+     }
+    }
+   }
+  }
+  RplComponent "{6A66E5705AF9A1B1}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{6A66E5705AF9A19E}" {
+  }
+ }
+}

@@ -1,0 +1,26 @@
+FrameWidgetClass {
+ {
+  FrameWidgetClass "{A84D2C68E76C4E21}" {
+   Name "NVGOverlayRoot"
+   Slot FrameWidgetSlot "{7C8A2A2CB8B14D30}" { PositionX 0 OffsetLeft 0 PositionY 0 OffsetTop 0 SizeX 1 OffsetRight 0 SizeY 1 OffsetBottom 0 }
+   {
+    RTTextureWidgetClass "{D49A1ED81B5D4C02}" {
+     Name "NVGFeedTexture"
+     Slot FrameWidgetSlot "{3AB15D7A021D49E2}" { PositionX 0 OffsetLeft 0 PositionY 0 OffsetTop 0 SizeX 1 OffsetRight 0 SizeY 1 OffsetBottom 0 }
+    }
+    RenderTargetWidgetClass "{1918B7CC891E48F1}" {
+     Name "NVGFeedTarget"
+     Slot FrameWidgetSlot "{5464B0CE354A4B42}" { PositionX 0 OffsetLeft 0 PositionY 0 OffsetTop 0 SizeX 1 OffsetRight 0 SizeY 1 OffsetBottom 0 }
+    }
+    ImageWidgetClass "{B8D16A84AA88437C}" {
+     Name "NVGLeftTube"
+     Slot FrameWidgetSlot "{B5D010F7087B46BA}" { PositionX 0.325 OffsetLeft -410 PositionY 0.5 OffsetTop -410 SizeX 820 OffsetRight 410 SizeY 820 OffsetBottom 410 }
+    }
+    ImageWidgetClass "{C25F6B12C6E94863}" {
+     Name "NVGRightTube"
+     Slot FrameWidgetSlot "{A7A7D6B20B4643B0}" { PositionX 0.675 OffsetLeft -410 PositionY 0.5 OffsetTop -410 SizeX 820 OffsetRight 410 SizeY 820 OffsetBottom 410 }
+    }
+   }
+  }
+ }
+}

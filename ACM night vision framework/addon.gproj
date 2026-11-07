@@ -1,0 +1,9 @@
+GameProject {
+ ID "ACMnightvisionframework"
+ GUID "6ACB4A72C8EBC56B"
+ TITLE "ACM Night Vision Framework"
+ Dependencies {
+  "688719AD953F7AD6"
+  "58D0FB3206B6F859"
+ }
+}

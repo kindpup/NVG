@@ -1,0 +1,312 @@
+FrameWidgetClass {
+ Name "ACM_IvasBootRoot"
+ {
+  ImageWidgetClass {
+   Name "ACM_BootBackground"
+   Slot FrameWidgetSlot {
+    Anchor 0 0 1 1
+    OffsetLeft 0
+    OffsetTop 0
+    OffsetRight 0
+    OffsetBottom 0
+   }
+   Color 0.012 0.020 0.016 1
+   Size 0 0
+  }
+  ImageWidgetClass {
+   Name "ACM_BootLogo"
+   Slot FrameWidgetSlot {
+    Anchor 0.5 0.5 0.5 0.5
+    PositionX -120.0
+    OffsetLeft -120.0
+    PositionY -310.0
+    OffsetTop -310.0
+    SizeX 240.0
+    OffsetRight -120.0
+    SizeY 160.0
+    OffsetBottom 150.0
+   }
+   Color 1 1 1 1
+   Texture "{562BA6B7449AE9B6}Logo/acm logo2.edds"
+   Image ""
+   Size 240.0 160.0
+  }
+  TextWidgetClass {
+   Name "ACM_BootTitle"
+   Slot FrameWidgetSlot {
+    Anchor 0.5 0.5 0.5 0.5
+    PositionX -260.0
+    OffsetLeft -260.0
+    PositionY -136.0
+    OffsetTop -136.0
+    SizeX 520.0
+    OffsetRight -260.0
+    SizeY 26.0
+    OffsetBottom 110.0
+   }
+   Color 0.70 0.96 0.80 1
+   Text "I.V.A.S."
+   "Font Size" 24
+   "No Localization" 1
+  }
+  TextWidgetClass {
+   Name "ACM_BootSubtitle"
+   Slot FrameWidgetSlot {
+    Anchor 0.5 0.5 0.5 0.5
+    PositionX -260.0
+    OffsetLeft -260.0
+    PositionY -108.0
+    OffsetTop -108.0
+    SizeX 520.0
+    OffsetRight -260.0
+    SizeY 18.0
+    OffsetBottom 90.0
+   }
+   Color 0.42 0.66 0.54 1
+   Text "INTEGRATED VISUAL AUGMENTATION SYSTEM"
+   "Font Size" 13
+   "No Localization" 1
+  }
+     TextWidgetClass {
+     Name "ACM_BootLine0"
+     "Is Visible" 0
+     Slot FrameWidgetSlot {
+      Anchor 0.5 0.5 0.5 0.5
+      PositionX -260.0
+      OffsetLeft -260.0
+      PositionY -70.0
+      OffsetTop -70.0
+      SizeX 520.0
+      OffsetRight -260.0
+      SizeY 20.0
+      OffsetBottom 50.0
+     }
+     Color 0.55 0.88 0.70 1
+     Text ""
+     "Font Size" 15
+     "No Localization" 1
+    }
+     TextWidgetClass {
+     Name "ACM_BootLine1"
+     "Is Visible" 0
+     Slot FrameWidgetSlot {
+      Anchor 0.5 0.5 0.5 0.5
+      PositionX -260.0
+      OffsetLeft -260.0
+      PositionY -48.0
+      OffsetTop -48.0
+      SizeX 520.0
+      OffsetRight -260.0
+      SizeY 20.0
+      OffsetBottom 28.0
+     }
+     Color 0.55 0.88 0.70 1
+     Text ""
+     "Font Size" 15
+     "No Localization" 1
+    }
+     TextWidgetClass {
+     Name "ACM_BootLine2"
+     "Is Visible" 0
+     Slot FrameWidgetSlot {
+      Anchor 0.5 0.5 0.5 0.5
+      PositionX -260.0
+      OffsetLeft -260.0
+      PositionY -26.0
+      OffsetTop -26.0
+      SizeX 520.0
+      OffsetRight -260.0
+      SizeY 20.0
+      OffsetBottom 6.0
+     }
+     Color 0.55 0.88 0.70 1
+     Text ""
+     "Font Size" 15
+     "No Localization" 1
+    }
+     TextWidgetClass {
+     Name "ACM_BootLine3"
+     "Is Visible" 0
+     Slot FrameWidgetSlot {
+      Anchor 0.5 0.5 0.5 0.5
+      PositionX -260.0
+      OffsetLeft -260.0
+      PositionY -4.0
+      OffsetTop -4.0
+      SizeX 520.0
+      OffsetRight -260.0
+      SizeY 20.0
+      OffsetBottom -16.0
+     }
+     Color 0.55 0.88 0.70 1
+     Text ""
+     "Font Size" 15
+     "No Localization" 1
+    }
+     TextWidgetClass {
+     Name "ACM_BootLine4"
+     "Is Visible" 0
+     Slot FrameWidgetSlot {
+      Anchor 0.5 0.5 0.5 0.5
+      PositionX -260.0
+      OffsetLeft -260.0
+      PositionY 18.0
+      OffsetTop 18.0
+      SizeX 520.0
+      OffsetRight -260.0
+      SizeY 20.0
+      OffsetBottom -38.0
+     }
+     Color 0.55 0.88 0.70 1
+     Text ""
+     "Font Size" 15
+     "No Localization" 1
+    }
+     TextWidgetClass {
+     Name "ACM_BootLine5"
+     "Is Visible" 0
+     Slot FrameWidgetSlot {
+      Anchor 0.5 0.5 0.5 0.5
+      PositionX -260.0
+      OffsetLeft -260.0
+      PositionY 40.0
+      OffsetTop 40.0
+      SizeX 520.0
+      OffsetRight -260.0
+      SizeY 20.0
+      OffsetBottom -60.0
+     }
+     Color 0.55 0.88 0.70 1
+     Text ""
+     "Font Size" 15
+     "No Localization" 1
+    }
+     TextWidgetClass {
+     Name "ACM_BootLine6"
+     "Is Visible" 0
+     Slot FrameWidgetSlot {
+      Anchor 0.5 0.5 0.5 0.5
+      PositionX -260.0
+      OffsetLeft -260.0
+      PositionY 62.0
+      OffsetTop 62.0
+      SizeX 520.0
+      OffsetRight -260.0
+      SizeY 20.0
+      OffsetBottom -82.0
+     }
+     Color 0.55 0.88 0.70 1
+     Text ""
+     "Font Size" 15
+     "No Localization" 1
+    }
+     TextWidgetClass {
+     Name "ACM_BootLine7"
+     "Is Visible" 0
+     Slot FrameWidgetSlot {
+      Anchor 0.5 0.5 0.5 0.5
+      PositionX -260.0
+      OffsetLeft -260.0
+      PositionY 84.0
+      OffsetTop 84.0
+      SizeX 520.0
+      OffsetRight -260.0
+      SizeY 20.0
+      OffsetBottom -104.0
+     }
+     Color 0.55 0.88 0.70 1
+     Text ""
+     "Font Size" 15
+     "No Localization" 1
+    }
+     TextWidgetClass {
+     Name "ACM_BootLine8"
+     "Is Visible" 0
+     Slot FrameWidgetSlot {
+      Anchor 0.5 0.5 0.5 0.5
+      PositionX -260.0
+      OffsetLeft -260.0
+      PositionY 106.0
+      OffsetTop 106.0
+      SizeX 520.0
+      OffsetRight -260.0
+      SizeY 20.0
+      OffsetBottom -126.0
+     }
+     Color 0.55 0.88 0.70 1
+     Text ""
+     "Font Size" 15
+     "No Localization" 1
+    }
+     TextWidgetClass {
+     Name "ACM_BootLine9"
+     "Is Visible" 0
+     Slot FrameWidgetSlot {
+      Anchor 0.5 0.5 0.5 0.5
+      PositionX -260.0
+      OffsetLeft -260.0
+      PositionY 128.0
+      OffsetTop 128.0
+      SizeX 520.0
+      OffsetRight -260.0
+      SizeY 20.0
+      OffsetBottom -148.0
+     }
+     Color 0.55 0.88 0.70 1
+     Text ""
+     "Font Size" 15
+     "No Localization" 1
+    }
+  ImageWidgetClass {
+   Name "ACM_BootProgressTrack"
+   Slot FrameWidgetSlot {
+    Anchor 0.5 0.5 0.5 0.5
+    PositionX -260.0
+    OffsetLeft -260.0
+    PositionY 168.0
+    OffsetTop 168.0
+    SizeX 520.0
+    OffsetRight -260.0
+    SizeY 4.0
+    OffsetBottom -172.0
+   }
+   Color 0.10 0.20 0.15 1
+   Size 520.0 4.0
+  }
+  ImageWidgetClass {
+   Name "ACM_BootProgressFill"
+   Slot FrameWidgetSlot {
+    Anchor 0.5 0.5 0.5 0.5
+    PositionX -260.0
+    OffsetLeft -260.0
+    PositionY 168.0
+    OffsetTop 168.0
+    SizeX 520.0
+    OffsetRight -260.0
+    SizeY 4.0
+    OffsetBottom -172.0
+   }
+   Color 0.45 0.92 0.62 1
+   Size 520.0 4.0
+  }
+  TextWidgetClass {
+   Name "ACM_BootTagline"
+   Slot FrameWidgetSlot {
+    Anchor 0.5 0.5 0.5 0.5
+    PositionX -260.0
+    OffsetLeft -260.0
+    PositionY 186.0
+    OffsetTop 186.0
+    SizeX 520.0
+    OffsetRight -260.0
+    SizeY 18.0
+    OffsetBottom -204.0
+   }
+   Color 0.38 0.60 0.48 1
+   Text "POWERED BY ACM"
+   "Font Size" 12
+   "Horizontal Alignment" Right
+   "No Localization" 1
+  }
+ }
+}

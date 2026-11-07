@@ -1,0 +1,9 @@
+ColorsEffect {
+ Brightness 1.05
+ Contrast 1.08
+ OverlayFactor 0.18
+ OverlayColor 0.35 0.72 0.95 1
+ Saturation 0
+ ColorizationColor 0.52 0.78 0.92 1
+ DesaturationWeights 0.299 0.587 0.114 0
+}

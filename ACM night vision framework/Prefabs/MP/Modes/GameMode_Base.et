@@ -1,0 +1,24 @@
+SCR_BaseGameMode {
+ ID "56B2B479C6B96951"
+ components {
+  ACM_RadialMenuItemsComponent "{67200001AAAA1002}" {
+   m_MenuController SCR_RadialMenuController "{67200001AAAA1003}" {
+    m_RMControls SCR_RadialMenuControllerInputs "{67200001AAAA1004}" {
+     m_sControllerContext "CharacterGeneralContext"
+     m_sOpenAction "ACM_OpenRadialMenu"
+     m_bCloseOnReleaseOpen 0
+     m_bPerformOnClose 0
+     m_bCloseOnPerform 1
+     m_bShowWhileUnconcious 0
+     m_bDeselectInCenter 0
+    }
+   }
+  }
+  ACM_SquadCommandComponent "{6A316904B118964A}" {
+  }
+  ACM_TacticalContactManager "{67200001AAAA1007}" {
+  }
+  ACM_TacticalRoleComponent "{67200001AAAA1005}" {
+  }
+ }
+}

@@ -1,0 +1,19 @@
+LightEntity {
+ ID "68573A1E2B60421A"
+ coords 0 0 0
+ Color 1 0 0 1
+ LV 20
+ CastShadow 0
+ ProjectionMap "{BE2A006CD1DE9649}Assets/laser_dot_large.edds"
+ Type Spot
+ Radius 500
+ NearPlane 0.1
+ SpotAngle 0.5
+ SpotAngleAttenuation 0
+ DistanceAttenuation 1
+ Dynamic 1
+ ShowSource 1
+ VolLightOffset 0
+ VolLightIntensity 5
+ VolLightFogBias 1
+}

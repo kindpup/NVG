@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{1803AA2168C963B5}Assets/Characters/Basebody/Data/Basebody_01_Male_Arms_Asian_wound.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

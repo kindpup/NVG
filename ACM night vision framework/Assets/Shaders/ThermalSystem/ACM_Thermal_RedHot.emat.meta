@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{073CD26316083D04}Assets/Shaders/ThermalSystem/ACM_Thermal_RedHot.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

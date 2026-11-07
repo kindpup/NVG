@@ -1,0 +1,78 @@
+GameEntity {
+ ID "62B142824AD2F066"
+ components {
+  SignalsManagerComponent "{62B142824AD2F053}" {
+  }
+  SoundComponent "{62B142824AD2F040}" {
+   Filenames {
+    "{927BE973F8A2D7FA}Sounds/Items/_SharedData/PickUp/Items_PickUp_Cloth.acp" "{F62001ED6E9FA253}Sounds/Items/_SharedData/Drop/Items_Drop_Clothes.acp"
+   }
+   DistanceManagement 0
+  }
+  InventoryItemComponent "{62B142824AD2F1BC}" {
+   Attributes SCR_ItemAttributeCollection "{62B142824AD2F1B3}" {
+    ItemDisplayName UIInfo "{62B142824AD2F1B6}" {
+     Name "Vlite Green"
+     Description "Vlite Green"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{62B142824AD2F1AB}" {
+     Weight 0.39
+     SizeSetupStrategy Manual
+     ItemDimensions 1 1 1
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{62B142824AD2F1AE}" {
+      CameraOrbitAngles -25 25 0
+      CameraDistanceToItem 2
+      FOV 10
+      PreviewWornModel 1
+     }
+    }
+   }
+  }
+  MeshObject "{62B142824AD2F1A2}" {
+   Object "{F47845D558C6A07A}assets/attachments/vlite.xob"
+   Materials {
+   }
+  }
+  ParametricMaterialInstanceComponent "{62B142824AD2F194}" {
+   UserParamAlpha 0
+   ApplyPropertiesWhenMeshChanged 1
+  }
+  RigidBody "{62B142824AD2F196}" {
+   Mass 1.5
+   ModelGeometry 1
+   Static 1
+  }
+  BaseLoadoutClothComponent "{62B142824AD2F189}" {
+   AreaType ACM_Vlite "{62B142824AD2F18D}" {
+   }
+   WornModel "{F47845D558C6A07A}assets/attachments/vlite.xob"
+   WornMaterialsOverride {
+    "" ""
+   }
+   ItemModel "{F47845D558C6A07A}assets/attachments/vlite.xob"
+   ItemMaterialsOverride {
+    "" ""
+   }
+  }
+  ActionsManagerComponent "{62B142824AD2F1FF}" {
+   ActionContexts {
+    UserActionContext "{62B142824AD2F1FE}" {
+     ContextName "default"
+     Position PointInfo "{62B142824AD2F1F0}" {
+     }
+    }
+   }
+   additionalActions {
+    SCR_EquipClothAction "{52E6EC76F51E12DE}" : "{83B98F1A96591AC6}Prefabs/Characters/Core/Actions/EquipClothAction.conf" {
+    }
+    SCR_PickUpItemAction "{52E6EC76F43FCD58}" : "{F39A4E9B190C1846}Prefabs/Characters/Core/Actions/PickUpItemAction.conf" {
+    }
+   }
+  }
+  RplComponent "{62B142824AD2F1F6}" {
+   "Parent Node From Parent Entity" 0
+  }
+ }
+}

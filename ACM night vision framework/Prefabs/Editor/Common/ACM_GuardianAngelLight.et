@@ -1,0 +1,16 @@
+LightEntity : "{640BCE1BD611FB3E}Prefabs/Vehicles/Core/Lights/VehicleLight_HiBeam_Base.et" {
+ ID "68573A1E2B604300"
+ coords 0 0 0
+ angles 0 0 0
+ Color 1 0 0 1
+ LV 8
+ CastShadow 0
+ NearPlane 0.1
+ SpotAngle 60
+ SpotAngleAttenuation 0.5
+ DistanceAttenuation 1
+ Range 15
+ VolLightOffset 0
+ VolLightScale 0.3
+ VolLightIntensity 5
+}

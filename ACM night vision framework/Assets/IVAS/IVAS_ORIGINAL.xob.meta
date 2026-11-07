@@ -1,0 +1,70 @@
+MetaFileClass {
+ Name "{A719D639A6D2C01D}Assets/IVAS/IVAS_ORIGINAL.xob"
+ Configurations {
+  FBXResourceClass PC {
+   ExportSkinning 1
+   Rotate 0 180 0
+   MaterialAssigns {
+    MaterialAssignClass "{6A3A4DC1D9006B2E}" {
+     SourceMaterial "IvasSystem"
+     AssignedMaterial "{B02A2EEEBC58EAB0}Assets/IVAS/Data/IvasSystem.emat"
+    }
+    MaterialAssignClass "{6A3A4DC1D9006BD3}" {
+     SourceMaterial "MI_NVG_Mount_L3Harris_FPG_21_FDE"
+     AssignedMaterial "{2484D2D2700431FA}Assets/IVAS/Data/MI_NVG_Mount_L3Harris_FPG_21_FDE.emat"
+    }
+    MaterialAssignClass "{6A3A4DC1D9006BC9}" {
+     SourceMaterial "MI_NVG_L3Harris_FPGPNVG_FDE"
+     AssignedMaterial "{261B2FFB8119D5C3}Assets/IVAS/Data/MI_NVG_L3Harris_FPGPNVG_FDE.emat"
+    }
+   }
+   MeshParams {
+    MeshParam "Circle.001" {
+    }
+    MeshParam "NVG_Mount_L3Harris_FPGPNVG_Base.001" {
+    }
+   }
+   GeometryParams {
+    GeometryParam "UBX_MOUNT.001" {
+     SurfaceProperties {
+      "{F92897FFC5F51154}weapon_metal_3B2D2687F56BB4EF.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam "UBX_NVG.001" {
+     SurfaceProperties {
+      "{F92897FFC5F51154}weapon_metal_3B2D2687F56BB4EF.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+   }
+   Common TXOCommonClass "{6A3A4DC1D9325FBF}" : "{0877E7C4BB2B2C9A}Configs/System/ResourceTypes/PC/MeshObjectCommon.conf" {
+   }
+   ApplicationVendor "Blender Foundation"
+   ApplicationName "Blender (stable FBX IO)"
+   ApplicationVersion "5.0.1"
+  }
+  FBXResourceClass XBOX_ONE : PC {
+   Common TXOCommonClass "{6A3A4DC1D9324030}" : "{9D5B6207F7628CE2}Configs/System/ResourceTypes/XBOX_ONE/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass XBOX_SERIES : PC {
+   Common TXOCommonClass "{6A3A4DC1D93240D0}" : "{DD9F02115C764647}Configs/System/ResourceTypes/XBOX_SERIES/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass PS4 : PC {
+   Common TXOCommonClass "{6A3A4DC1D93240F7}" : "{53EC476BC921D99A}Configs/System/ResourceTypes/PS4/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass PS5 : PC {
+   Common TXOCommonClass "{6A3A4DC1D9324091}" : "{F62AA8E7B8EA9D26}Configs/System/ResourceTypes/PS5/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass HEADLESS : PC {
+   Common TXOCommonClass "{6A3A4DC1D9324086}" : "{3A5B3356978039E8}Configs/System/ResourceTypes/HEADLESS/MeshObjectCommon.conf" {
+   }
+  }
+ }
+}

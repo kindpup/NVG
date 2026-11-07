@@ -1,0 +1,10 @@
+{
+  "iffEnabled": true,
+  "friendlyIffEnabled": true,
+  "hostileTrackingEnabled": true,
+  "civilianIffEnabled": true,
+  "unknownContactsEnabled": true,
+  "friendlyOutlinesEnabled": true,
+  "hostileOutlinesEnabled": true,
+  "contactSharingEnabled": true
+}

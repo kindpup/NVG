@@ -1,0 +1,12 @@
+MatPBRBasic {
+ Color 0.05 0.005 0.005 1
+ Emissive 0.005 0 0 1
+ EmissiveLV 1
+ CastShadow 0
+ ReceiveShadow 0
+ OccludeRain 0
+ OccludeWetness 0
+ NoDecals 1
+ WetnessScale 0
+ OpacityMap "{70A53F4EA373F142}Assets/Characters/Basebody/Data/HeadClipping_A.edds"
+}

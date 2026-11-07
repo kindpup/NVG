@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{758640022A160027}Assets/Shaders/NVSystem/Grains/ACM_V2_FilmGrain.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

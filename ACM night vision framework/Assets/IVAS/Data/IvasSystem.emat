@@ -1,0 +1,7 @@
+MatPBRBasic {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{D8370FB02699FB02}Assets/IVAS/Data/IvasSystem_BCR.edds"
+ OpacityMap "{EAED3C580C6274BD}Assets/IVAS/Data/IvasSystem_Opacity.edds"
+ NMOMap "{E0EFB422FFEEA99C}Assets/IVAS/Data/IvasSystem_NMO.edds"
+}

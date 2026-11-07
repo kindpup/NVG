@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{1807D390BFCE8B8A}ACM_NVG_Anim.pap"
+ Configurations {
+  ProcAnimProjectResourceClass PC {
+  }
+  ProcAnimProjectResourceClass XBOX_ONE : PC {
+  }
+  ProcAnimProjectResourceClass XBOX_SERIES : PC {
+  }
+  ProcAnimProjectResourceClass PS4 : PC {
+  }
+  ProcAnimProjectResourceClass PS5 : PC {
+  }
+  ProcAnimProjectResourceClass HEADLESS : PC {
+  }
+ }
+}

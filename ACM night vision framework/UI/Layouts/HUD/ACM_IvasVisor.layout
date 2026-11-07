@@ -1,0 +1,1376 @@
+FrameWidgetClass {
+ Name "ACM_IvasVisorRoot"
+ {
+   ImageWidgetClass {
+    Name "ACM_VisorPanelId"
+    Slot FrameWidgetSlot {
+     Anchor 0 0 0 0
+     PositionX 52.0
+     OffsetLeft 52.0
+     PositionY 52.0
+     OffsetTop 52.0
+     SizeX 380.0
+     OffsetRight -432.0
+     SizeY 56.0
+     OffsetBottom -108.0
+    }
+    Color 0.02 0.07 0.05 0.46
+    Size 380.0 56.0
+   }
+   ImageWidgetClass {
+    Name "ACM_VisorPanelSquad"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 88.0
+     OffsetLeft 88.0
+     PositionY -140.0
+     OffsetTop -140.0
+     SizeX 470.0
+     OffsetRight -558.0
+     SizeY 375.0
+     OffsetBottom -235.0
+    }
+    Color 0.02 0.07 0.05 0.46
+    Size 396.0 203.0
+   }
+   ImageWidgetClass {
+    Name "ACM_VisorPanelLog"
+    Slot FrameWidgetSlot {
+     Anchor 0 1 0 1
+     PositionX 52.0
+     OffsetLeft 52.0
+     PositionY -192.0
+     OffsetTop -192.0
+     SizeX 576.0
+     OffsetRight -628.0
+     SizeY 140.0
+     OffsetBottom 52.0
+    }
+    Color 0.02 0.07 0.05 0.46
+    Size 576.0 140.0
+   }
+   ImageWidgetClass {
+    Name "ACM_VisorPanelReadout"
+    Slot FrameWidgetSlot {
+     Anchor 1 1 1 1
+     PositionX -540.0
+     OffsetLeft -540.0
+     PositionY -156.0
+     OffsetTop -156.0
+     SizeX 480.0
+     OffsetRight 60.0
+     SizeY 104.0
+     OffsetBottom 52.0
+    }
+    Color 0.02 0.07 0.05 0.46
+    Size 480.0 104.0
+   }
+   ImageWidgetClass {
+    Name "ACM_VisorCornerTLH"
+    Slot FrameWidgetSlot {
+     Anchor 0 0 0 0
+     PositionX 46.0
+     OffsetLeft 46.0
+     PositionY 46.0
+     OffsetTop 46.0
+     SizeX 90.0
+     OffsetRight -136.0
+     SizeY 3.0
+     OffsetBottom -49.0
+    }
+    Color 0.64 0.96 0.80 1
+    Size 90.0 3.0
+   }
+   ImageWidgetClass {
+    Name "ACM_VisorCornerTLV"
+    Slot FrameWidgetSlot {
+     Anchor 0 0 0 0
+     PositionX 46.0
+     OffsetLeft 46.0
+     PositionY 46.0
+     OffsetTop 46.0
+     SizeX 3.0
+     OffsetRight -49.0
+     SizeY 90.0
+     OffsetBottom -136.0
+    }
+    Color 0.64 0.96 0.80 1
+    Size 3.0 90.0
+   }
+   ImageWidgetClass {
+    Name "ACM_VisorCornerTRH"
+    Slot FrameWidgetSlot {
+     Anchor 1 0 1 0
+     PositionX -136.0
+     OffsetLeft -136.0
+     PositionY 46.0
+     OffsetTop 46.0
+     SizeX 90.0
+     OffsetRight 46.0
+     SizeY 3.0
+     OffsetBottom -49.0
+    }
+    Color 0.64 0.96 0.80 1
+    Size 90.0 3.0
+   }
+   ImageWidgetClass {
+    Name "ACM_VisorCornerTRV"
+    Slot FrameWidgetSlot {
+     Anchor 1 0 1 0
+     PositionX -49.0
+     OffsetLeft -49.0
+     PositionY 46.0
+     OffsetTop 46.0
+     SizeX 3.0
+     OffsetRight 46.0
+     SizeY 90.0
+     OffsetBottom -136.0
+    }
+    Color 0.64 0.96 0.80 1
+    Size 3.0 90.0
+   }
+   ImageWidgetClass {
+    Name "ACM_VisorCornerBLH"
+    Slot FrameWidgetSlot {
+     Anchor 0 1 0 1
+     PositionX 46.0
+     OffsetLeft 46.0
+     PositionY -49.0
+     OffsetTop -49.0
+     SizeX 90.0
+     OffsetRight -136.0
+     SizeY 3.0
+     OffsetBottom 46.0
+    }
+    Color 0.64 0.96 0.80 1
+    Size 90.0 3.0
+   }
+   ImageWidgetClass {
+    Name "ACM_VisorCornerBLV"
+    Slot FrameWidgetSlot {
+     Anchor 0 1 0 1
+     PositionX 46.0
+     OffsetLeft 46.0
+     PositionY -136.0
+     OffsetTop -136.0
+     SizeX 3.0
+     OffsetRight -49.0
+     SizeY 90.0
+     OffsetBottom 46.0
+    }
+    Color 0.64 0.96 0.80 1
+    Size 3.0 90.0
+   }
+   ImageWidgetClass {
+    Name "ACM_VisorCornerBRH"
+    Slot FrameWidgetSlot {
+     Anchor 1 1 1 1
+     PositionX -136.0
+     OffsetLeft -136.0
+     PositionY -49.0
+     OffsetTop -49.0
+     SizeX 90.0
+     OffsetRight 46.0
+     SizeY 3.0
+     OffsetBottom 46.0
+    }
+    Color 0.64 0.96 0.80 1
+    Size 90.0 3.0
+   }
+   ImageWidgetClass {
+    Name "ACM_VisorCornerBRV"
+    Slot FrameWidgetSlot {
+     Anchor 1 1 1 1
+     PositionX -49.0
+     OffsetLeft -49.0
+     PositionY -136.0
+     OffsetTop -136.0
+     SizeX 3.0
+     OffsetRight 46.0
+     SizeY 90.0
+     OffsetBottom 46.0
+    }
+    Color 0.64 0.96 0.80 1
+    Size 3.0 90.0
+   }
+   ImageWidgetClass {
+    Name "ACM_VisorTickL0"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 56.0
+     OffsetLeft 56.0
+     PositionY -140.0
+     OffsetTop -140.0
+     SizeX 22.0
+     OffsetRight -78.0
+     SizeY 2.0
+     OffsetBottom 138.0
+    }
+    Color 0.60 0.92 0.76 0.9
+    Size 22.0 2.0
+   }
+   ImageWidgetClass {
+    Name "ACM_VisorTickR0"
+    Slot FrameWidgetSlot {
+     Anchor 1 0.5 1 0.5
+     PositionX -78.0
+     OffsetLeft -78.0
+     PositionY -140.0
+     OffsetTop -140.0
+     SizeX 22.0
+     OffsetRight 56.0
+     SizeY 2.0
+     OffsetBottom 138.0
+    }
+    Color 0.60 0.92 0.76 0.9
+    Size 22.0 2.0
+   }
+   ImageWidgetClass {
+    Name "ACM_VisorTickL1"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 56.0
+     OffsetLeft 56.0
+     PositionY 0.0
+     OffsetTop 0.0
+     SizeX 22.0
+     OffsetRight -78.0
+     SizeY 2.0
+     OffsetBottom -2.0
+    }
+    Color 0.60 0.92 0.76 0.9
+    Size 22.0 2.0
+   }
+   ImageWidgetClass {
+    Name "ACM_VisorTickR1"
+    Slot FrameWidgetSlot {
+     Anchor 1 0.5 1 0.5
+     PositionX -78.0
+     OffsetLeft -78.0
+     PositionY 0.0
+     OffsetTop 0.0
+     SizeX 22.0
+     OffsetRight 56.0
+     SizeY 2.0
+     OffsetBottom -2.0
+    }
+    Color 0.60 0.92 0.76 0.9
+    Size 22.0 2.0
+   }
+   ImageWidgetClass {
+    Name "ACM_VisorTickL2"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 56.0
+     OffsetLeft 56.0
+     PositionY 140.0
+     OffsetTop 140.0
+     SizeX 22.0
+     OffsetRight -78.0
+     SizeY 2.0
+     OffsetBottom -142.0
+    }
+    Color 0.60 0.92 0.76 0.9
+    Size 22.0 2.0
+   }
+   ImageWidgetClass {
+    Name "ACM_VisorTickR2"
+    Slot FrameWidgetSlot {
+     Anchor 1 0.5 1 0.5
+     PositionX -78.0
+     OffsetLeft -78.0
+     PositionY 140.0
+     OffsetTop 140.0
+     SizeX 22.0
+     OffsetRight 56.0
+     SizeY 2.0
+     OffsetBottom -142.0
+    }
+    Color 0.60 0.92 0.76 0.9
+    Size 22.0 2.0
+   }
+   TextWidgetClass {
+    Name "ACM_VisorId"
+    Slot FrameWidgetSlot {
+     Anchor 0 0 0 0
+     PositionX 60.0
+     OffsetLeft 60.0
+     PositionY 60.0
+     OffsetTop 60.0
+     SizeX 460.0
+     OffsetRight -520.0
+     SizeY 20.0
+     OffsetBottom -80.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text "ID: ---"
+    "Font Size" 16
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorRole"
+    Slot FrameWidgetSlot {
+     Anchor 0 0 0 0
+     PositionX 60.0
+     OffsetLeft 60.0
+     PositionY 82.0
+     OffsetTop 82.0
+     SizeX 460.0
+     OffsetRight -520.0
+     SizeY 18.0
+     OffsetBottom -100.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 13
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorMode"
+    Slot FrameWidgetSlot {
+     Anchor 1 1 1 1
+     PositionX -520.0
+     OffsetLeft -520.0
+     PositionY -80.0
+     OffsetTop -80.0
+     SizeX 460.0
+     OffsetRight 60.0
+     SizeY 20.0
+     OffsetBottom 60.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text "MODE: DAY"
+    "Font Size" 16
+    "Horizontal Alignment" Right
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorStatus"
+    Slot FrameWidgetSlot {
+     Anchor 0 1 0 1
+     PositionX 60.0
+     OffsetLeft 60.0
+     PositionY -80.0
+     OffsetTop -80.0
+     SizeX 460.0
+     OffsetRight -520.0
+     SizeY 18.0
+     OffsetBottom 62.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 13
+    "No Localization" 1
+   }
+   FrameWidgetClass {
+    Name "ACM_VisorRibbon"
+     Slot FrameWidgetSlot {
+      Anchor 0.5 0 0.5 0
+      PositionX -450.0
+      OffsetLeft -450.0
+      PositionY 26.0
+      OffsetTop 26.0
+      SizeX 900.0
+      OffsetRight -450.0
+      SizeY 44.0
+      OffsetBottom -70.0
+     }
+    {
+     ImageWidgetClass {
+      Name "ACM_VisorRibbonBack"
+       Slot FrameWidgetSlot {
+        Anchor 0 0 0 0
+        PositionX 0.0
+        OffsetLeft 0.0
+        PositionY 0.0
+        OffsetTop 0.0
+        SizeX 900.0
+        OffsetRight -900.0
+        SizeY 44.0
+        OffsetBottom -44.0
+       }
+      Color 0.02 0.07 0.05 0.52
+      Size 900.0 44.0
+     }
+     CanvasWidgetClass {
+      Name "ACM_VisorRibbonCanvas"
+       Slot FrameWidgetSlot {
+        Anchor 0 0 0 0
+        PositionX 0.0
+        OffsetLeft 0.0
+        PositionY 0.0
+        OffsetTop 0.0
+        SizeX 900.0
+        OffsetRight -900.0
+        SizeY 44.0
+        OffsetBottom -44.0
+       }
+     }
+     TextWidgetClass {
+      Name "ACM_VisorRibbonLabel0"
+      Slot FrameWidgetSlot {
+       Anchor 0 0 0 0
+       PositionX 0.0
+       OffsetLeft 0.0
+       PositionY 1.0
+       OffsetTop 1.0
+       SizeX 60.0
+       OffsetRight -60.0
+       SizeY 15.0
+       OffsetBottom -16.0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 12
+      "Horizontal Alignment" Center
+      "No Localization" 1
+     }
+     TextWidgetClass {
+      Name "ACM_VisorRibbonLabel1"
+      Slot FrameWidgetSlot {
+       Anchor 0 0 0 0
+       PositionX 0.0
+       OffsetLeft 0.0
+       PositionY 1.0
+       OffsetTop 1.0
+       SizeX 60.0
+       OffsetRight -60.0
+       SizeY 15.0
+       OffsetBottom -16.0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 12
+      "Horizontal Alignment" Center
+      "No Localization" 1
+     }
+     TextWidgetClass {
+      Name "ACM_VisorRibbonLabel2"
+      Slot FrameWidgetSlot {
+       Anchor 0 0 0 0
+       PositionX 0.0
+       OffsetLeft 0.0
+       PositionY 1.0
+       OffsetTop 1.0
+       SizeX 60.0
+       OffsetRight -60.0
+       SizeY 15.0
+       OffsetBottom -16.0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 12
+      "Horizontal Alignment" Center
+      "No Localization" 1
+     }
+     TextWidgetClass {
+      Name "ACM_VisorRibbonLabel3"
+      Slot FrameWidgetSlot {
+       Anchor 0 0 0 0
+       PositionX 0.0
+       OffsetLeft 0.0
+       PositionY 1.0
+       OffsetTop 1.0
+       SizeX 60.0
+       OffsetRight -60.0
+       SizeY 15.0
+       OffsetBottom -16.0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 12
+      "Horizontal Alignment" Center
+      "No Localization" 1
+     }
+     TextWidgetClass {
+      Name "ACM_VisorRibbonLabel4"
+      Slot FrameWidgetSlot {
+       Anchor 0 0 0 0
+       PositionX 0.0
+       OffsetLeft 0.0
+       PositionY 1.0
+       OffsetTop 1.0
+       SizeX 60.0
+       OffsetRight -60.0
+       SizeY 15.0
+       OffsetBottom -16.0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 12
+      "Horizontal Alignment" Center
+      "No Localization" 1
+     }
+     TextWidgetClass {
+      Name "ACM_VisorRibbonLabel5"
+      Slot FrameWidgetSlot {
+       Anchor 0 0 0 0
+       PositionX 0.0
+       OffsetLeft 0.0
+       PositionY 1.0
+       OffsetTop 1.0
+       SizeX 60.0
+       OffsetRight -60.0
+       SizeY 15.0
+       OffsetBottom -16.0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 12
+      "Horizontal Alignment" Center
+      "No Localization" 1
+     }
+     TextWidgetClass {
+      Name "ACM_VisorRibbonLabel6"
+      Slot FrameWidgetSlot {
+       Anchor 0 0 0 0
+       PositionX 0.0
+       OffsetLeft 0.0
+       PositionY 1.0
+       OffsetTop 1.0
+       SizeX 60.0
+       OffsetRight -60.0
+       SizeY 15.0
+       OffsetBottom -16.0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 12
+      "Horizontal Alignment" Center
+      "No Localization" 1
+     }
+     TextWidgetClass {
+      Name "ACM_VisorRibbonLabel7"
+      Slot FrameWidgetSlot {
+       Anchor 0 0 0 0
+       PositionX 0.0
+       OffsetLeft 0.0
+       PositionY 1.0
+       OffsetTop 1.0
+       SizeX 60.0
+       OffsetRight -60.0
+       SizeY 15.0
+       OffsetBottom -16.0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 12
+      "Horizontal Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_VisorHeading"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0 0.5 0
+     PositionX -60.0
+     OffsetLeft -60.0
+     PositionY 74.0
+     OffsetTop 74.0
+     SizeX 120.0
+     OffsetRight -60.0
+     SizeY 24.0
+     OffsetBottom -98.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text ""
+    "Font Size" 17
+    "Horizontal Alignment" Center
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquadHeader"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY -132.0
+     OffsetTop -132.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 16.0
+     OffsetBottom 116.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 13
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquad0"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY -110.0
+     OffsetTop -110.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 18.0
+     OffsetBottom 92.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquad1"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY -89.0
+     OffsetTop -89.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 18.0
+     OffsetBottom 71.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquad2"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY -68.0
+     OffsetTop -68.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 18.0
+     OffsetBottom 50.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquad3"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY -47.0
+     OffsetTop -47.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 18.0
+     OffsetBottom 29.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquad4"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY -26.0
+     OffsetTop -26.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 18.0
+     OffsetBottom 8.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquad5"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY -5.0
+     OffsetTop -5.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 18.0
+     OffsetBottom -13.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquad6"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY 16.0
+     OffsetTop 16.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 18.0
+     OffsetBottom -34.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquad7"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY 37.0
+     OffsetTop 37.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 18.0
+     OffsetBottom -55.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquad8"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY 58.0
+     OffsetTop 58.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 18.0
+     OffsetBottom -76.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquad9"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY 79.0
+     OffsetTop 79.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 18.0
+     OffsetBottom -97.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquad10"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY 100.0
+     OffsetTop 100.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 18.0
+     OffsetBottom -118.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquad11"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY 121.0
+     OffsetTop 121.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 18.0
+     OffsetBottom -139.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquad12"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY 142.0
+     OffsetTop 142.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 18.0
+     OffsetBottom -160.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquad13"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY 163.0
+     OffsetTop 163.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 18.0
+     OffsetBottom -181.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquad14"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY 184.0
+     OffsetTop 184.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 18.0
+     OffsetBottom -202.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquad15"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY 205.0
+     OffsetTop 205.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 18.0
+     OffsetBottom -223.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquad16"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY 226.0
+     OffsetTop 226.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 18.0
+     OffsetBottom -244.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquad17"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY 247.0
+     OffsetTop 247.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 18.0
+     OffsetBottom -265.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquad18"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY 268.0
+     OffsetTop 268.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 18.0
+     OffsetBottom -286.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquad19"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY 289.0
+     OffsetTop 289.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 18.0
+     OffsetBottom -307.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquad20"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY 310.0
+     OffsetTop 310.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 18.0
+     OffsetBottom -328.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquad21"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY 331.0
+     OffsetTop 331.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 18.0
+     OffsetBottom -349.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquad22"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY 352.0
+     OffsetTop 352.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 18.0
+     OffsetBottom -370.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorSquad23"
+    Slot FrameWidgetSlot {
+     Anchor 0 0.5 0 0.5
+     PositionX 96.0
+     OffsetLeft 96.0
+     PositionY 373.0
+     OffsetTop 373.0
+     SizeX 454.0
+     OffsetRight -550.0
+     SizeY 18.0
+     OffsetBottom -391.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   FrameWidgetClass {
+    Name "ACM_VisorCasualtyPanel"
+    Slot FrameWidgetSlot {
+     Anchor 1 0.5 1 0.5
+     PositionX -518.0
+     OffsetLeft -518.0
+     PositionY -125.0
+     OffsetTop -125.0
+     SizeX 430.0
+     OffsetRight 88.0
+     SizeY 250.0
+     OffsetBottom -125.0
+    }
+    {
+     ImageWidgetClass {
+      Name "ACM_VisorCasualtyBack"
+      Slot FrameWidgetSlot {
+       Anchor 0 0 1 1
+       OffsetLeft 0
+       OffsetTop 0
+       OffsetRight 0
+       OffsetBottom 0
+      }
+      Color 0.02 0.07 0.05 0.72
+     }
+     TextWidgetClass {
+      Name "ACM_VisorCasualtyName"
+      Slot FrameWidgetSlot {
+       PositionX 10.0
+       OffsetLeft 10.0
+       PositionY 8.0
+       OffsetTop 8.0
+       SizeX 410.0
+       OffsetRight -420.0
+       SizeY 20.0
+       OffsetBottom -28.0
+      }
+      Color 1 0.72 0.20 1
+      Text ""
+      "Font Size" 16
+      "No Localization" 1
+     }
+     TextWidgetClass {
+      Name "ACM_VisorCasualtyState"
+      Slot FrameWidgetSlot {
+       PositionX 10.0
+       OffsetLeft 10.0
+       PositionY 30.0
+       OffsetTop 30.0
+       SizeX 410.0
+       OffsetRight -420.0
+       SizeY 18.0
+       OffsetBottom -48.0
+      }
+      Color 1 0.45 0.25 1
+      Text ""
+      "Font Size" 14
+      "No Localization" 1
+     }
+     TextWidgetClass {
+      Name "ACM_VisorCasualty0"
+      Slot FrameWidgetSlot {
+       PositionX 10.0
+       OffsetLeft 10.0
+       PositionY 54.0
+       OffsetTop 54.0
+       SizeX 410.0
+       OffsetRight -420.0
+       SizeY 18.0
+       OffsetBottom -72.0
+      }
+      Color 0.72 0.86 0.78 1
+      Text ""
+      "Font Size" 13
+      "No Localization" 1
+     }
+     TextWidgetClass {
+      Name "ACM_VisorCasualty1"
+      Slot FrameWidgetSlot {
+       PositionX 10.0
+       OffsetLeft 10.0
+       PositionY 74.0
+       OffsetTop 74.0
+       SizeX 410.0
+       OffsetRight -420.0
+       SizeY 18.0
+       OffsetBottom -92.0
+      }
+      Color 0.72 0.86 0.78 1
+      Text ""
+      "Font Size" 13
+      "No Localization" 1
+     }
+     TextWidgetClass {
+      Name "ACM_VisorCasualty2"
+      Slot FrameWidgetSlot {
+       PositionX 10.0
+       OffsetLeft 10.0
+       PositionY 94.0
+       OffsetTop 94.0
+       SizeX 410.0
+       OffsetRight -420.0
+       SizeY 18.0
+       OffsetBottom -112.0
+      }
+      Color 0.72 0.86 0.78 1
+      Text ""
+      "Font Size" 13
+      "No Localization" 1
+     }
+     TextWidgetClass {
+      Name "ACM_VisorCasualty3"
+      Slot FrameWidgetSlot {
+       PositionX 10.0
+       OffsetLeft 10.0
+       PositionY 114.0
+       OffsetTop 114.0
+       SizeX 410.0
+       OffsetRight -420.0
+       SizeY 18.0
+       OffsetBottom -132.0
+      }
+      Color 0.72 0.86 0.78 1
+      Text ""
+      "Font Size" 13
+      "No Localization" 1
+     }
+     TextWidgetClass {
+      Name "ACM_VisorCasualty4"
+      Slot FrameWidgetSlot {
+       PositionX 10.0
+       OffsetLeft 10.0
+       PositionY 134.0
+       OffsetTop 134.0
+       SizeX 410.0
+       OffsetRight -420.0
+       SizeY 18.0
+       OffsetBottom -152.0
+      }
+      Color 0.72 0.86 0.78 1
+      Text ""
+      "Font Size" 13
+      "No Localization" 1
+     }
+     TextWidgetClass {
+      Name "ACM_VisorCasualty5"
+      Slot FrameWidgetSlot {
+       PositionX 10.0
+       OffsetLeft 10.0
+       PositionY 154.0
+       OffsetTop 154.0
+       SizeX 410.0
+       OffsetRight -420.0
+       SizeY 18.0
+       OffsetBottom -172.0
+      }
+      Color 0.72 0.86 0.78 1
+      Text ""
+      "Font Size" 13
+      "No Localization" 1
+     }
+     TextWidgetClass {
+      Name "ACM_VisorCasualty6"
+      Slot FrameWidgetSlot {
+       PositionX 10.0
+       OffsetLeft 10.0
+       PositionY 174.0
+       OffsetTop 174.0
+       SizeX 410.0
+       OffsetRight -420.0
+       SizeY 18.0
+       OffsetBottom -192.0
+      }
+      Color 0.72 0.86 0.78 1
+      Text ""
+      "Font Size" 13
+      "No Localization" 1
+     }
+     TextWidgetClass {
+      Name "ACM_VisorCasualty7"
+      Slot FrameWidgetSlot {
+       PositionX 10.0
+       OffsetLeft 10.0
+       PositionY 194.0
+       OffsetTop 194.0
+       SizeX 410.0
+       OffsetRight -420.0
+       SizeY 18.0
+       OffsetBottom -212.0
+      }
+      Color 0.72 0.86 0.78 1
+      Text ""
+      "Font Size" 13
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_VisorLog0"
+    Slot FrameWidgetSlot {
+     Anchor 0 1 0 1
+     PositionX 60.0
+     OffsetLeft 60.0
+     PositionY -104.0
+     OffsetTop -104.0
+     SizeX 560.0
+     OffsetRight -620.0
+     SizeY 18.0
+     OffsetBottom 86.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorLog1"
+    Slot FrameWidgetSlot {
+     Anchor 0 1 0 1
+     PositionX 60.0
+     OffsetLeft 60.0
+     PositionY -124.0
+     OffsetTop -124.0
+     SizeX 560.0
+     OffsetRight -620.0
+     SizeY 18.0
+     OffsetBottom 106.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorLog2"
+    Slot FrameWidgetSlot {
+     Anchor 0 1 0 1
+     PositionX 60.0
+     OffsetLeft 60.0
+     PositionY -144.0
+     OffsetTop -144.0
+     SizeX 560.0
+     OffsetRight -620.0
+     SizeY 18.0
+     OffsetBottom 126.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorLog3"
+    Slot FrameWidgetSlot {
+     Anchor 0 1 0 1
+     PositionX 60.0
+     OffsetLeft 60.0
+     PositionY -164.0
+     OffsetTop -164.0
+     SizeX 560.0
+     OffsetRight -620.0
+     SizeY 18.0
+     OffsetBottom 146.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorLog4"
+    Slot FrameWidgetSlot {
+     Anchor 0 1 0 1
+     PositionX 60.0
+     OffsetLeft 60.0
+     PositionY -184.0
+     OffsetTop -184.0
+     SizeX 560.0
+     OffsetRight -620.0
+     SizeY 18.0
+     OffsetBottom 166.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorWeaponName"
+    Slot FrameWidgetSlot {
+     Anchor 1 1 1 1
+     PositionX -520.0
+     OffsetLeft -520.0
+     PositionY -104.0
+     OffsetTop -104.0
+     SizeX 460.0
+     OffsetRight 60.0
+     SizeY 18.0
+     OffsetBottom 86.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text ""
+    "Font Size" 15
+    "Horizontal Alignment" Right
+   }
+   TextWidgetClass {
+    Name "ACM_VisorWeaponAmmo"
+    Slot FrameWidgetSlot {
+     Anchor 1 1 1 1
+     PositionX -520.0
+     OffsetLeft -520.0
+     PositionY -126.0
+     OffsetTop -126.0
+     SizeX 460.0
+     OffsetRight 60.0
+     SizeY 18.0
+     OffsetBottom 108.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "Horizontal Alignment" Right
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_VisorGrid"
+    Slot FrameWidgetSlot {
+     Anchor 1 1 1 1
+     PositionX -520.0
+     OffsetLeft -520.0
+     PositionY -148.0
+     OffsetTop -148.0
+     SizeX 460.0
+     OffsetRight 60.0
+     SizeY 18.0
+     OffsetBottom 130.0
+    }
+    Color 0.58 0.90 0.72 1
+    Text ""
+    "Font Size" 14
+    "Horizontal Alignment" Right
+    "No Localization" 1
+   }
+ }
+}

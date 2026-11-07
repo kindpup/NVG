@@ -1,0 +1,38 @@
+IVAS SERVER IFF SETTINGS
+
+File: $profile:ACM_IVAS_IFF.json
+This is the SERVER process's profile directory (the -profile launch argument).
+It is not the addon directory or a connecting player's profile.
+
+The server creates the file with all features permitted when the tactical manager
+or first character initializes. You can also copy ACM_IVAS_IFF.example.json into
+the server profile as ACM_IVAS_IFF.json before startup.
+Stop the server, edit true/false values, then restart to apply changes.
+No dependency on Shadow Admin is required.
+
+iffEnabled: Master permission for all IVAS IFF identification and contact sharing.
+friendlyIffEnabled: Friendly markers, identification, roster/vitals and silhouettes.
+hostileTrackingEnabled: Hostile acquisition/presentation and shared hostile contacts.
+civilianIffEnabled: Civilian identification.
+unknownContactsEnabled: Unknown-contact identification.
+friendlyOutlinesEnabled: Friendly body outlines; friendly labels can stay enabled.
+hostileOutlinesEnabled: Confirmed-hostile body outlines; markers can stay enabled.
+contactSharingEnabled: Send/receive shared tactical contacts through the IVAS data link.
+
+False overrides the wearer's menu, including after Reset. True permits the feature;
+it does not force it on or change prefab defaults. Restricted menu actions read
+SERVER DISABLED. Normal night vision, thermal view, remote video, map planning,
+and the device power/visor controls are not disabled by this policy.
+
+The server publishes the policy on each replicated character, including late joins
+and respawns. Clients cannot supply policy values and never load their own JSON.
+Until their server policy arrives, IFF permissions are off. Sharing is also gated
+on the server's report acceptance and receiver eligibility paths.
+
+Missing fields keep their enabled defaults for compatibility. Invalid/unreadable
+JSON disables IFF and logs an error; the existing file is not overwritten.
+For a complete shutdown set iffEnabled to false; other values can stay true.
+To retain labels but remove body highlights, set both outline fields to false.
+
+Validation: Tests/Validate-IffPolicy.ps1 runs isolated Workbench config checks.
+These checks do not replace a dedicated-server/peer test of replicated state.
