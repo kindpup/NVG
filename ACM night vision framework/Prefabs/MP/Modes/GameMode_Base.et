@@ -16,8 +16,6 @@ SCR_BaseGameMode {
   }
   ACM_SquadCommandComponent "{6A316904B118964A}" {
   }
-  ACM_TacticalContactManager "{67200001AAAA1007}" {
-  }
   ACM_TacticalRoleComponent "{67200001AAAA1005}" {
   }
  }

@@ -1,0 +1,226 @@
+GameEntity {
+ ID "6A2F1C9DBB95D010"
+ components {
+  ParametricMaterialInstanceComponent "{6A2F1C9DBB95D039}" {
+   Enabled 1
+   AcceptHierarchyProperties 0x3ff 0
+   UserParamAlpha 0
+   ApplyPropertiesWhenMeshChanged 1
+  }
+  SignalsManagerComponent "{6A2F1C9DBB95D02E}" {
+  }
+  SoundComponent "{6A2F1C9DBB95D020}" {
+  }
+  InventoryItemComponent "{6A2F1C9DBB95D022}" {
+   Attributes SCR_ItemAttributeCollection "{6A2F1C9DBB95D027}" {
+    ItemDisplayName SCR_InventoryUIInfo "{6A2F1C9DBB95D0D9}" {
+     Name "ACM: IVAS"
+     Description "ACM: FGPNVG BLK"
+     m_aItemHints {
+      SCR_InventoryItemHintUIInfo "{6A2F1C9DBB95D0DF}" {
+       Name "This item requires a headstrap or compatible helmet"
+       Icon "{E23427CAC80DA8B7}UI/Textures/Icons/icons_mapMarkersUI.imageset"
+       IconSetName "mark-exclamation"
+      }
+     }
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{6A2F1C9DBB95D0D1}" {
+     Weight 0.2
+     SizeSetupStrategy Manual
+     ItemDimensions 5 5 5
+     ItemVolume 0.00000001
+     DimensionScaler 1
+     RestingAdditiveRotationLS 0 0 0
+     RestingAdditiveOffsetLS 0 0 0
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{6A2F1C9DBB95D0D5}" {
+      PreviewModel "{20A6021572AABFB1}Assets/IVAS/IVASstatic.xob"
+     }
+    }
+    CommonItemType "NIGHT_VISION"
+    m_SlotType SLOT_ANY
+    m_ACM_AdditionalCommonItemTypes {
+     "ACM_NightVision"
+    }
+   }
+  }
+  MeshObject "{6A2F1C9DBB95D0D7}" {
+   Object "{FC94D287F12B711B}Assets/IVAS/IVAS.xob"
+   Materials {
+   }
+   InheritVisibility 1
+  }
+  RigidBody "{6A2F1C9DBB95D0CF}" {
+   SimState None
+   ResponseIndex "TinyDestructible"
+   ModelGeometry 1
+  }
+  ProcAnimComponent "{6A2F1C9DBB95D0C1}" {
+   Parameters {
+    ProcAnimParams "{6A2F1C9DBB95D0E4}" {
+     ResourceName "{3BE7E5DD66693CB1}ACM_NVG.pap"
+     BoneNames {
+      "w_nvgRotator"
+     }
+     AlwaysSimulateOwner 1
+    }
+   }
+  }
+  ACM_NightVisionComponent "{6A2F1C9DBB95D099}" {
+   m_eUseMask CUSTOM
+   m_HDRMaterial "{59F26A676C5E62F6}Assets/Shaders/NVSystem/Colors/Thermal Night.emat"
+   m_bManualBrightnessEnabled 1
+   m_fBrightnessStep 0.25
+   m_sAnimationSignal "w_nvRotator"
+   m_aPhosphorColors {
+    ACM_PhosphorColorOption "{6A2F1C9DBB95D09A}" {
+     m_sName "Red"
+     m_Material "{335461E3DAF37CD9}Assets/Shaders/NVSystem/Colors/ACM_V2_RedPhosphor_HDR.emat"
+    }
+    ACM_PhosphorColorOption "{6A2F1C9DBB95D09F}" {
+     m_sName "White"
+     m_Material "{59F26A676C5E62F6}Assets/Shaders/NVSystem/Colors/Thermal Night.emat"
+    }
+    ACM_PhosphorColorOption "{6A2F1C9DBB95D09E}" {
+     m_sName "Green"
+     m_Material "{B277CCF517222C0C}Assets/Shaders/NVSystem/Colors/ACM_V2_GreenPhosphor_HDR.emat"
+    }
+    ACM_PhosphorColorOption "{6A2F1C9DBB95D090}" {
+     m_sName "Blue"
+     m_Material "{ED769E2936B8E743}Assets/Shaders/NVSystem/Colors/ACM_V2_BLUEPhosphor_HDR.emat"
+    }
+    ACM_PhosphorColorOption "{6A2F1C9DBB95D093}" {
+     m_sName "Amber"
+     m_Material "{843375C9FB51E38B}Assets/Shaders/NVSystem/Colors/ACM_V2_AMBERPhosphor_HDR.emat"
+    }
+   }
+  }
+  ACM_RemoteFeedSourceComponent "{6A2F727387FF89F7}" {
+   m_eSourceType SOLDIER
+   m_bRequiresCarrier 1
+   m_CameraAnchor PointInfo "{6A2F7273D909DAF2}" {
+    Offset -0.0025 0.0515 0.0608
+   }
+   m_bDebugLog 1
+  }
+  ACM_TargetDetectionComponent "{6A2F1C9DBB95D094}" {
+   m_fMaxRange 250
+   m_fFovDegrees 160
+   m_iMaxTargets 32
+   m_bDetectIncapacitated 0
+   m_bIvasOutlineConfirmed 1
+   m_fLineWidth 4.5
+   m_bLabelShowName 1
+   m_fLabelMaxRange 215
+   m_ColFriendly 0 0.25 1 1
+   m_ColHostile 0.518 0 0 1
+   m_ColNeutral 1 0.8 0 0.85
+   m_ColUnknown 1 0.954 0.799 0.85
+   m_bIsIvasVisor 1
+  }
+  ACM_ThermalComponentV2 "{6A2F1C9DBB95D096}" {
+   Enabled 0
+   m_eUseMask CUSTOM
+   m_aPalettes {
+    ACM_ThermalPalette "{6A2F1C9DBB95D088}" {
+     m_sName "White Hot"
+     m_Material "{A131B20E9E1745E0}UI/Materials/Editor/Thermal WH.emat"
+     m_fDefaultBrightness 1
+    }
+    ACM_ThermalPalette "{6A2F1C9DBB95D08B}" {
+     m_sName "Flir"
+     m_Material "{D4308E4CC5BAEAC0}UI/Materials/Editor/Thermal Flir.emat"
+    }
+    ACM_ThermalPalette "{6A2F1C9DBB95D080}" {
+     m_sName "Green"
+     m_Material "{18ECC73E26AFA56A}UI/Materials/Editor/Thermal Green.emat"
+    }
+    ACM_ThermalPalette "{6A2F1C9DBB95D082}" {
+     m_sName "Orange"
+     m_Material "{C15D807755CDCB98}UI/Materials/Editor/Thermal Orange.emat"
+    }
+   }
+   m_bManualBrightnessEnabled 1
+   m_fBrightnessStep 0.25
+   m_sAnimationSignal "w_nvRotator"
+  }
+  ACM_ThermalTestComponent "{6A3AE75297738949}" {
+   m_aPhosphorColors {
+    ACM_PhosphorColorOption "{6A3AE7526F40BA1C}" {
+     m_sName "Blue"
+     m_Material "{ED769E2936B8E743}Assets/Shaders/NVSystem/Colors/ACM_V2_BLUEPhosphor_HDR.emat"
+    }
+   }
+   m_ThermalHDRMaterial "{89F1DBD504945699}Assets/Thermal/ACM_ThermalHDR test.emat"
+   m_eSignatureMode SCOPE_HIGHLIGHT
+   m_aSignatureMaterials {
+    ACM_ThermalSignatureMaterial "{6A3AE75297738A01}" {
+     m_sName "Red 1 - faintest"
+     m_Material "{A1D0E5C7B2340001}Assets/Thermal/Thermal_Red_01.emat"
+    }
+    ACM_ThermalSignatureMaterial "{6A3AE75297738A02}" {
+     m_sName "Red 2"
+     m_Material "{A1D0E5C7B2340002}Assets/Thermal/Thermal_Red_02.emat"
+    }
+    ACM_ThermalSignatureMaterial "{6A3AE75297738A03}" {
+     m_sName "Red 3"
+     m_Material "{A1D0E5C7B2340003}Assets/Thermal/Thermal_Red_03.emat"
+    }
+    ACM_ThermalSignatureMaterial "{6A3AE75297738A04}" {
+     m_sName "Red 4"
+     m_Material "{A1D0E5C7B2340004}Assets/Thermal/Thermal_Red_04.emat"
+    }
+    ACM_ThermalSignatureMaterial "{6A3AE75297738A05}" {
+     m_sName "Red 5 - brightest"
+     m_Material "{A1D0E5C7B2340005}Assets/Thermal/Thermal_Red_05.emat"
+    }
+   }
+   m_iSignatureMaterialIndex 0
+   m_ThermalBodyMaterial "{BF743ABC7BA368D5}Assets/Thermal/Thermal_Red.emat"
+   m_HeatColor 1 0 0 1
+   m_fEmissiveStrength 47.417
+  }
+  BaseLoadoutClothComponent "{6A2F1C9DBB95D086}" {
+   AreaType ACM_NV_Slotted "{6A2F1C9DBB95D0B8}" {
+   }
+   Animate 1
+   WornModel "{FC94D287F12B711B}Assets/IVAS/IVAS.xob"
+   WornMaterialsOverride {
+    "" ""
+   }
+   ItemModel "{FC94D287F12B711B}Assets/IVAS/IVAS.xob"
+   ItemMaterialsOverride {
+    "" ""
+   }
+  }
+  ActionsManagerComponent "{6A2F1C9DBB95D0BD}" {
+   ActionContexts {
+    UserActionContext "{6A2F1C9DBB95D0BF}" {
+     ContextName "default"
+     Position PointInfo "{6A2F1C9DBB95D0B0}" {
+      Offset 0 0.0879 0.0259
+     }
+     Radius 0.3
+    }
+   }
+   additionalActions {
+    SCR_PickUpItemAction "{6A2F1C9DBB95D0B4}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{6A2F1C9DBB95D0B7}" {
+      Name "#AR-Inventory_PickUp"
+     }
+    }
+   }
+  }
+  RplComponent "{6A2F1C9DBB95D0AB}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{6A2F1C9DBB95D0AD}" {
+  }
+ }
+ coords 1209.543 37.382 2629.37
+}

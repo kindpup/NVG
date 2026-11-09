@@ -1,0 +1,22 @@
+NVS_IRLaser {
+ ID "685C425488ABA64B"
+ coords 1209.48 38.036 2626.412
+ ColorType Temperature
+ Color 1 1 1 1
+ LV 0.05
+ CastShadow 0
+ ProjectionMap "{C67BB9F0AB6A07C7}UI/Imagesets/Highlight/highlight_ui.edds"
+ ClipEV -10
+ Radius 0.05
+ NearPlane 0.08
+ SpotAngle 9
+ SpotAngleAttenuation 0.76
+ DistanceAttenuation 0.7
+ Dynamic 1
+ ShowSource 1
+ SourceSize 0.218
+ VolLightOffset 0.05
+ VolLightScale 0
+ VolLightIntensity 0
+ LensFlareScale 0
+}

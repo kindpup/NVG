@@ -1,0 +1,6 @@
+MatPBRBasic {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{8F1F433D464D3DF5}Assets/attachments/Data/MPLSLight_BCR.edds"
+ NMOMap "{B7C7F8AF9F3A6F6B}Assets/attachments/Data/MPLSLight_NMO.edds"
+}

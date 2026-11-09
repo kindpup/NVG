@@ -16,6 +16,15 @@
 // and one of which (a StopInputPump call in ModeClear) was itself silently disabling the
 // keybinds every time the device was equipped.
 
+//! ECOTI-style modes of the fused thermal circle (F-Pano). The thermal key cycles
+//! off -> OUTLINE -> FUSED -> THERMAL -> off.
+enum ACM_EEcotiMode
+{
+	OUTLINE,	//!< bright edges around warm / contrasting things, night vision untouched elsewhere
+	FUSED,		//!< thermal picture blended over the night vision
+	THERMAL		//!< full thermal picture in the circle
+}
+
 [ComponentEditorProps(category: "ACM/Equipment", description: "Thermal imaging gadget component")]
 class ACM_ThermalComponentV2Class : SCR_GadgetComponentClass
 {
@@ -61,7 +70,62 @@ class ACM_ThermalComponentV2 : SCR_GadgetComponent
 	
 	[Attribute("", UIWidgets.Auto, desc: "Procedural animation signal identifier", category: "ACM Thermal - Animation")]
 	protected string m_sAnimationSignal;
-	
+
+	// Tube view - thermal only inside the tube circles, normal view outside them. Same system as
+	// ACM_NightVisionComponent (see ACM_NVGTubeView). FULLSCREEN keeps the old whole-screen effect.
+	[Attribute("0", UIWidgets.ComboBox, desc: "Tube shape. FULLSCREEN = thermal covers the whole screen (old behaviour). SINGLE / DUAL / PANORAMIC = thermal only inside the tubes, normal view outside. CUSTOM = use Custom Tubes.", category: "ACM Thermal - Tubes", enums: ParamEnumArray.FromEnum(ACM_ENVGTubeLayout))]
+	protected ACM_ENVGTubeLayout m_eTubeLayout;
+
+	[Attribute("", UIWidgets.Object, desc: "Tube circles used when Tube Layout is CUSTOM. Units are screen heights from the screen centre.", category: "ACM Thermal - Tubes")]
+	protected ref array<ref ACM_NVGTube> m_aCustomTubes;
+
+	[Attribute("0.08", UIWidgets.Slider, desc: "How soft the tube edge is, as a fraction of the tube radius.", category: "ACM Thermal - Tubes", params: "0 0.5 0.01")]
+	protected float m_fTubeEdgeSoftness;
+
+	// Note: the thermal sky flicker is NOT caused by this or by the tube camera - it also happens
+	// full-screen on the main camera. It is the engine's volumetric clouds inside ThermalImaging.
+	[Attribute("1", UIWidgets.Slider, desc: "Render resolution of the thermal picture. Lower values are cheaper but blurrier.", category: "ACM Thermal - Tubes", params: "0.3 1 0.05")]
+	protected float m_fTubeResolutionScale;
+
+	[Attribute("0.12", UIWidgets.Slider, desc: "Lens distortion towards the tube edge. 0 = none.", category: "ACM Thermal - Tubes", params: "0 0.5 0.01")]
+	protected float m_fTubeEdgeDistortion;
+
+	[Attribute("1", UIWidgets.Slider, desc: "Darkness of the thin faded black outline around each tube. 0 = no outline.", category: "ACM Thermal - Tubes", params: "0 1 0.05")]
+	protected float m_fTubeRimDarkness;
+
+	[Attribute("1", UIWidgets.CheckBox, desc: "Clear sky: hide the clouds while thermal is on (local to this player only). The engine renders clouds unstably in thermal, which makes the whole sky flicker.", category: "ACM Thermal - Tubes")]
+	protected bool m_bClearSky;
+
+	// FUSED THERMAL (F-Pano): instead of turning the whole picture thermal, the thermal key adds a
+	// thermal overlay to the night vision - a smaller circle inside the centre tube, blended over the
+	// night vision, showing only warm things. Needs the night vision tubes to be on.
+	[Attribute("0", UIWidgets.CheckBox, desc: "Fused thermal (F-Pano): the thermal key overlays thermal on the night vision in a smaller circle inside the centre tube, instead of switching the whole view to thermal.", category: "ACM Thermal - Fusion")]
+	protected bool m_bFusionOverlay;
+
+	[Attribute("0.8", UIWidgets.Slider, desc: "Size of the fused thermal circle as a fraction of the centre tube.", category: "ACM Thermal - Fusion", params: "0.2 1 0.01")]
+	protected float m_fFusionRadius;
+
+	[Attribute("0.5", UIWidgets.Slider, desc: "Opacity of the fused thermal overlay over the night vision.", category: "ACM Thermal - Fusion", params: "0 1 0.05")]
+	protected float m_fFusionOpacity;
+
+	[Attribute("{0549C113CEA9243E}UI/Materials/Editor/Thermal Fusion.emat", UIWidgets.ResourceNamePicker, desc: "Thermal material for the fused overlay: should be black except for hot temperatures, so only warm things show.", category: "ACM Thermal - Fusion", params: "emat")]
+	protected ResourceName m_FusionMaterial;
+
+	[Attribute("0.5", UIWidgets.Slider, desc: "Opacity of the thermal picture over the night vision in FUSED mode.", category: "ACM Thermal - Fusion", params: "0.1 1 0.05")]
+	protected float m_fFusedOpacity;
+
+	protected bool m_bFusionApplied;
+	protected bool m_bFusionFailLogged;
+
+	//! Current ECOTI mode while the circle is on.
+	protected ACM_EEcotiMode m_eEcotiMode = ACM_EEcotiMode.OUTLINE;
+	//! Per-mode overlay strength (brightness keys), indexed by ACM_EEcotiMode.
+	protected ref array<float> m_aEcotiStrength;
+	protected static const float ECOTI_STRENGTH_STEP = 0.1;
+	protected static const float ECOTI_STRENGTH_MIN = 0.1;
+
+	protected bool m_bUsingTubeView;
+
 	protected SignalsManagerComponent m_pSignalMgr;
 	protected InventoryItemComponent m_pInventoryItem;
 	protected SCR_CharacterControllerComponent m_pCharController;
@@ -468,7 +532,14 @@ class ACM_ThermalComponentV2 : SCR_GadgetComponent
 		BaseWorld world = GetGame().GetWorld();
 		if (!world || !m_bActivated)
 			return;
-		
+
+		// ECOTI: the keys set the strength of the current mode's overlay instead.
+		if (m_bFusionOverlay)
+		{
+			AdjustEcotiStrength(increase);
+			return;
+		}
+
 		float step = m_fBrightnessStep;
 		if (!increase)
 			step = -step;
@@ -483,7 +554,7 @@ class ACM_ThermalComponentV2 : SCR_GadgetComponent
 		m_fCurrentBrightness = newVal;
 
 		// Only update brightness on the camera we already applied to.
-		if (m_bHDRBrightnessApplied && m_iAppliedCamId >= 0 && m_iAppliedCamId == world.GetCurrentCameraId())
+		if (m_bHDRBrightnessApplied && IsAppliedCameraLive(world))
 		{
 			world.SetCameraHDRBrightness(m_iAppliedCamId, m_fCurrentBrightness);
 			DebugTrace("brightness -> " + m_fCurrentBrightness);
@@ -502,7 +573,16 @@ class ACM_ThermalComponentV2 : SCR_GadgetComponent
 
 		if (!m_bActivated)
 			return;
-		
+
+		// ECOTI: back to the authored strengths for every mode.
+		if (m_bFusionOverlay)
+		{
+			m_aEcotiStrength = null;
+			ApplyFusion(true);
+			ShowEcotiHint(GetEcotiModeName() + "  reset");
+			return;
+		}
+
 		// Use the active palette's default brightness first, fall back to component base
 		if (m_aPalettes && m_iCurrentPalette >= 0 && m_iCurrentPalette < m_aPalettes.Count())
 		{
@@ -518,8 +598,29 @@ class ACM_ThermalComponentV2 : SCR_GadgetComponent
 		}
 		
 		BaseWorld world = GetGame().GetWorld();
-		if (world && m_bHDRBrightnessApplied && m_iAppliedCamId >= 0 && m_iAppliedCamId == world.GetCurrentCameraId())
+		if (world && m_bHDRBrightnessApplied && IsAppliedCameraLive(world))
 			world.SetCameraHDRBrightness(m_iAppliedCamId, m_fCurrentBrightness);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	// The tube camera is never the "current" camera, so the plain current-camera check would block
+	// brightness changes whenever the tube view is in use.
+	protected bool IsAppliedCameraLive(BaseWorld world)
+	{
+		if (m_iAppliedCamId < 0 || !world)
+			return false;
+
+		if (m_bUsingTubeView)
+			return true;
+
+		return m_iAppliedCamId == world.GetCurrentCameraId();
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected void ReleaseTubeView()
+	{
+		ACM_NVGTubeView.Release(this);
+		m_bUsingTubeView = false;
 	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -531,19 +632,42 @@ class ACM_ThermalComponentV2 : SCR_GadgetComponent
 
 		if (m_bMenuOpen)
 			return;
-		
+
 		if (!m_CharacterOwner)
 			return;
-		
+
 		if (m_CharacterOwner != SCR_PlayerController.GetLocalControlledEntity())
 			return;
-		
+
 		m_bIsWorn = CheckIsWorn();
 		if (!m_bIsWorn)
 			return;
 
+		// ECOTI: while the circle is on, the key steps OUTLINE -> FUSED -> THERMAL; one more press
+		// after THERMAL switches it off (falls through below).
+		if (m_bFusionOverlay && m_bActivated && m_eEcotiMode != ACM_EEcotiMode.THERMAL)
+		{
+			if (m_eEcotiMode == ACM_EEcotiMode.OUTLINE)
+				m_eEcotiMode = ACM_EEcotiMode.FUSED;
+			else
+				m_eEcotiMode = ACM_EEcotiMode.THERMAL;
+
+			ApplyFusion(true);
+			ShowEcotiHint(GetEcotiModeName());
+			return;
+		}
+
 		bool nextState = !m_bActivated;
-		if (nextState)
+		if (nextState && m_bFusionOverlay)
+		{
+			m_eEcotiMode = ACM_EEcotiMode.OUTLINE;
+
+			// Fused thermal sits on top of the night vision, so the night vision has to be on.
+			ACM_NightVisionComponent deviceNvg = ACM_NightVisionComponent.Cast(GetOwner().FindComponent(ACM_NightVisionComponent));
+			if (deviceNvg && !deviceNvg.IsNVGActive())
+				deviceNvg.ToggleNVG();
+		}
+		else if (nextState)
 		{
 			// Avoid visual conflicts: thermal owns the camera effect while active.
 			ACM_NightVisionComponent nvgComp = ACM_NightVisionComponent.Cast(m_CharacterOwner.FindComponent(ACM_NightVisionComponent));
@@ -552,16 +676,34 @@ class ACM_ThermalComponentV2 : SCR_GadgetComponent
 		}
 
 		m_bActivated = nextState;
+
+		string devicePrefab = "?";
+		if (GetOwner() && GetOwner().GetPrefabData())
+			devicePrefab = GetOwner().GetPrefabData().GetPrefabName();
+		Print("[ACM Thermal] Thermal " + m_bActivated.ToString() + " on " + devicePrefab + " (fused overlay: " + m_bFusionOverlay.ToString() + ").", LogLevel.NORMAL);
+
 		ApplyVisualEffect(m_bActivated);
 		UpdateAnimation();
 		ToggleActive(m_bActivated, SCR_EUseContext.CUSTOM);
+
+		if (m_bFusionOverlay)
+		{
+			if (m_bActivated)
+				ShowEcotiHint(GetEcotiModeName());
+			else
+				ShowEcotiHint("OFF");
+		}
 	}
-	
+
 	protected void OnPaletteInput()
 	{
 		if (!m_bActivated)
 			return;
 		CyclePalette();
+
+		// ECOTI: the palette is the colour of the FUSED / THERMAL picture (OUTLINE keeps its own).
+		if (m_bFusionOverlay)
+			ShowEcotiHint("Palette: " + GetCurrentPaletteName());
 	}
 	
 	override void OnToggleActive(bool state)
@@ -621,12 +763,38 @@ class ACM_ThermalComponentV2 : SCR_GadgetComponent
 		int camId = world.GetCurrentCameraId();
 		if (camId < 0)
 			return;
-		
+
+		// Fused thermal (F-Pano) never touches the main or night vision camera: it only adds the
+		// overlay to the night vision tubes.
+		if (m_bFusionOverlay)
+		{
+			ApplyFusion(enable && m_bIsWorn && isLocalPlayer);
+			return;
+		}
+
 		if (enable && m_bIsWorn)
 		{
+			// TUBE VIEW: the thermal chain goes on the tube camera and the main camera stays clean,
+			// so only the inside of the tubes is thermal. Falls back to the main camera (the old
+			// full-screen effect) if the view cannot be built.
+			bool useTubes = false;
+			if (isLocalPlayer && m_eTubeLayout != ACM_ENVGTubeLayout.FULLSCREEN)
+			{
+				if (ACM_NVGTubeView.Acquire(this, m_eTubeLayout, m_aCustomTubes, m_fTubeEdgeSoftness, m_fTubeResolutionScale, m_fTubeEdgeDistortion, m_fTubeRimDarkness))
+				{
+					camId = ACM_NVGTubeView.CAMERA_INDEX;
+					useTubes = true;
+				}
+			}
+
+			if (!useTubes)
+				ReleaseTubeView();
+
 			// Active camera changed since last apply -> revert the old camera first.
 			if (m_iAppliedCamId >= 0 && m_iAppliedCamId != camId)
 				RevertAppliedEffects();
+
+			m_bUsingTubeView = useTubes;
 
 			if (isLocalPlayer)
 				SetDeviceVisible(false);
@@ -680,16 +848,149 @@ class ACM_ThermalComponentV2 : SCR_GadgetComponent
 
 			world.SetCameraHDRBrightness(camId, m_fCurrentBrightness);
 			m_bHDRBrightnessApplied = true;
+
+			if (isLocalPlayer)
+				ACM_ThermalClouds.SetClearSky(this, m_bClearSky);
 		}
 		else
 		{
 			if (isLocalPlayer)
 				SetDeviceVisible(true);
 
+			ACM_ThermalClouds.SetClearSky(this, false);
 			RevertAppliedEffects();
+			ReleaseTubeView();
 			world.SetCameraPostProcessEffect(camId, 9, PostProcessEffectType.None, "");
 			world.SetCameraPostProcessEffect(camId, 8, PostProcessEffectType.None, "");
 		}
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Fused thermal on/off. The overlay lives in the night vision's tube view; if that is not up
+	//! (night vision off) it is applied later from DriveUpdate as soon as the view appears.
+	protected void ApplyFusion(bool enable)
+	{
+		if (enable)
+		{
+			if (ACM_NVGTubeView.IsUp())
+			{
+				ResourceName material;
+				float opacity;
+				bool additive;
+				GetEcotiSettings(material, opacity, additive);
+
+				m_bFusionApplied = ACM_NVGTubeView.SetFusionOverlay(true, material, m_fFusionRadius, opacity, additive);
+				if (!m_bFusionApplied && !m_bFusionFailLogged)
+				{
+					m_bFusionFailLogged = true;
+					Print("[ACM Thermal] Fused overlay could not start (material: " + material + ").", LogLevel.WARNING);
+				}
+			}
+			else
+			{
+				m_bFusionApplied = false;
+				Print("[ACM Thermal] Fused overlay waiting for the night vision tubes.", LogLevel.NORMAL);
+			}
+
+			ACM_ThermalClouds.SetClearSky(this, m_bClearSky);
+			return;
+		}
+
+		if (m_bFusionApplied)
+			ACM_NVGTubeView.SetFusionOverlay(false, m_FusionMaterial);
+
+		m_bFusionApplied = false;
+		ACM_ThermalClouds.SetClearSky(this, false);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	// ECOTI MODES
+	//------------------------------------------------------------------------------------------------
+	protected void EnsureEcotiStrength()
+	{
+		if (m_aEcotiStrength && m_aEcotiStrength.Count() == 3)
+			return;
+
+		m_aEcotiStrength = {m_fFusionOpacity, m_fFusedOpacity, 1.0};
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Material, opacity and blend for the current mode. OUTLINE uses the outline material and is
+	//! added on top; FUSED and THERMAL use the selected palette and cover the night vision.
+	protected void GetEcotiSettings(out ResourceName material, out float opacity, out bool additive)
+	{
+		EnsureEcotiStrength();
+		opacity = m_aEcotiStrength[m_eEcotiMode];
+
+		if (m_eEcotiMode == ACM_EEcotiMode.OUTLINE)
+		{
+			material = m_FusionMaterial;
+			additive = true;
+			return;
+		}
+
+		additive = false;
+		material = "";
+
+		m_iCurrentPalette = GetValidPaletteIndex(m_iCurrentPalette);
+		if (m_aPalettes && m_iCurrentPalette >= 0 && m_iCurrentPalette < m_aPalettes.Count() && m_aPalettes[m_iCurrentPalette])
+			material = m_aPalettes[m_iCurrentPalette].GetMaterial();
+
+		if (material.IsEmpty() || !IsThermalImagingMaterial(material))
+			material = DEFAULT_THERMAL_MATERIAL;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected string GetEcotiModeName()
+	{
+		switch (m_eEcotiMode)
+		{
+			case ACM_EEcotiMode.OUTLINE: return "OUTLINE";
+			case ACM_EEcotiMode.FUSED: return "FUSED";
+			case ACM_EEcotiMode.THERMAL: return "THERMAL";
+		}
+
+		return "?";
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected void ShowEcotiHint(string text)
+	{
+		SCR_HintManagerComponent.ShowCustomHint(text, "ECOTI", 1.5);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Brightness keys in ECOTI: the strength of the current mode's overlay.
+	protected void AdjustEcotiStrength(bool increase)
+	{
+		EnsureEcotiStrength();
+
+		float step = ECOTI_STRENGTH_STEP;
+		if (!increase)
+			step = -step;
+
+		float value = Math.Clamp(m_aEcotiStrength[m_eEcotiMode] + step, ECOTI_STRENGTH_MIN, 1.0);
+		m_aEcotiStrength[m_eEcotiMode] = value;
+
+		ApplyFusion(true);
+		int percent = Math.Round(value * 100);
+		ShowEcotiHint(GetEcotiModeName() + "  " + percent.ToString() + "%");
+	}
+
+	//------------------------------------------------------------------------------------------------
+	// The tube view outlives nothing: if the device is deleted while thermal is on, drop the
+	// effect from the tube camera and remove the view.
+	override void OnDelete(IEntity owner)
+	{
+		if (m_bFusionOverlay)
+			ApplyFusion(false);
+		ACM_ThermalClouds.SetClearSky(this, false);
+
+		if (m_bUsingTubeView)
+			RevertAppliedEffects();
+		ReleaseTubeView();
+
+		super.OnDelete(owner);
 	}
 	
 	protected void SetDeviceVisible(bool visible)
@@ -846,6 +1147,16 @@ class ACM_ThermalComponentV2 : SCR_GadgetComponent
 		// the frame ActivateContext is called, and an action in an inactive context reads
 		// zero - which looks exactly like an unbound key.
 		GetGame().GetInputManager().ActivateContext("ACM_ThermalContext");
+
+		// Fused thermal follows the night vision: when the tubes (re)appear while fused thermal is on,
+		// put the overlay back; when they go, it goes with them.
+		if (m_bFusionOverlay && m_bActivated && !m_bMenuOpen)
+		{
+			if (ACM_NVGTubeView.IsUp() && !ACM_NVGTubeView.IsFusionOn())
+				ApplyFusion(true);
+			else if (!ACM_NVGTubeView.IsUp())
+				m_bFusionApplied = false;
+		}
 		
 		bool menuNowOpen = GetGame().GetMenuManager().IsAnyMenuOpen();
 		if (menuNowOpen != m_bMenuOpen)
@@ -1282,6 +1593,9 @@ class ACM_ThermalComponentV2 : SCR_GadgetComponent
 	{
 		DebugTrace("ModeClear mode=" + mode);
 
+		if (m_bFusionOverlay)
+			ApplyFusion(false);
+		ACM_ThermalClouds.SetClearSky(this, false);
 		RevertAppliedEffects();
 		UnregisterInputs();
 		m_bInputsRegistered = false;

@@ -1,0 +1,8 @@
+FilmGrainEffect {
+ Sharpness 2
+ GrainSize 6.227
+ IntensityX0 5
+ IntensityX1 3.807
+ Frequency 234
+ NoiseMap "{AD3E92A89145042A}Assets/Shaders/NVSystem/Grains/noisemap.edds"
+}

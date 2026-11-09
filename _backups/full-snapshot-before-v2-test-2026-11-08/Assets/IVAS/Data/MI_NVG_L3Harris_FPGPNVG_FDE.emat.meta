@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{261B2FFB8119D5C3}Assets/IVAS/Data/MI_NVG_L3Harris_FPGPNVG_FDE.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,9 @@
+MatPBRBasic {
+ Cull none
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ RoughnessScale 2
+ BCRMap "{D384EE60A07DCB7E}Assets/Helmets/GlowStick/Data/Glowstick_BCR.edds"
+ OpacityMap "{70A53F4EA373F142}Assets/Characters/Basebody/Data/HeadClipping_A.edds"
+ NMOMap "{EB5C55F2790A99E0}Assets/Helmets/GlowStick/Data/Glowstick_NMO.edds"
+}

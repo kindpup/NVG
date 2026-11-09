@@ -1,0 +1,6 @@
+MatPBRBasic {
+ Emissive 1 1 1 0
+ EmissiveLV -1.366
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+}

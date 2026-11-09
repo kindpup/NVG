@@ -1,0 +1,16 @@
+GameEntity {
+ ID "68572B1E2B60421A"
+ components {
+  MeshObject "{68572B1E5A47A764}" {
+   Object "{59FCA318D6FDCF00}Assets/Laser Beam/Laser Beam.xob"
+   CastFarShadow 0
+  }
+  ParametricMaterialInstanceComponent "{68572B195E0DD05E}" {
+   AcceptHierarchyProperties 0x7f 0
+   ColorAlbedo 1 1 1 1
+   ColorEmissive 1 1 1 1
+   EmissiveMultiplier 512
+  }
+ }
+ coords 0 0 0
+}

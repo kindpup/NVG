@@ -54,6 +54,20 @@ modded class SCR_CharacterCameraHandlerComponent
 	protected static const bool ACM_CAM_DEBUG = false;
 
 	//------------------------------------------------------------------------------------------------
+	// NVG tube view: hand the final camera transform to the tube camera the moment it is computed.
+	// Copying it later from the world camera always got LAST frame's view (measured: ~100 % of moving
+	// frames), which made the picture inside the tubes jitter while aiming.
+	override void OnAfterCameraUpdate(float pDt, bool pIsKeyframe, inout vector transformMS[4], inout vector transformWS[4])
+	{
+		super.OnAfterCameraUpdate(pDt, pIsKeyframe, transformMS, transformWS);
+		ACM_NVGTubeView.OnPlayerCameraUpdated(GetOwner(), transformWS);
+
+		// Late in the frame, after the weather system has written the clouds: keep them off while
+		// thermal is on (no-op otherwise).
+		ACM_ThermalClouds.Maintain();
+	}
+
+	//------------------------------------------------------------------------------------------------
 	override void OnAlphatestChange(int a)
 	{
 		super.OnAlphatestChange(a);
@@ -146,15 +160,10 @@ modded class SCR_CharacterCameraHandlerComponent
 	}
 
 	//------------------------------------------------------------------------------------------------
-	// EITHER component marks a head-mounted device. An IVAS does not have to carry night vision -
-	// strip that component off the prefab and it is a pure sensor, and testing only for night vision
-	// would leave a sensor-only variant filling the wearer's screen.
+	// The night vision component marks a head-mounted device.
 	//------------------------------------------------------------------------------------------------
 	protected bool IsHeadMountedDevice(IEntity entity)
 	{
-		if (entity.FindComponent(ACM_NightVisionComponent))
-			return true;
-
-		return entity.FindComponent(ACM_TargetDetectionComponent) != null;
+		return entity.FindComponent(ACM_NightVisionComponent) != null;
 	}
 }

@@ -68,6 +68,7 @@ GameEntity {
    }
   }
   ACM_NightVisionComponent "{6854414D702AE35D}" {
+   m_eTubeLayout PANORAMIC
    m_eUseMask CUSTOM
    m_HDRMaterial "{59F26A676C5E62F6}Assets/Shaders/NVSystem/Colors/Thermal Night.emat"
    m_GrainMaterial "{758640022A160027}Assets/Shaders/NVSystem/Grains/ACM_V2_FilmGrain.emat"
@@ -96,6 +97,31 @@ GameEntity {
      m_Material "{843375C9FB51E38B}Assets/Shaders/NVSystem/Colors/ACM_V2_AMBERPhosphor_HDR.emat"
     }
    }
+  }
+  ACM_ThermalComponentV2 "{8C49EF21F5E33E7B}" {
+   m_eTubeLayout PANORAMIC
+   m_aPalettes {
+    ACM_ThermalPalette "{FDF8F68A844EF91E}" {
+     m_sName "White Hot"
+     m_Material "{A131B20E9E1745E0}UI/Materials/Editor/Thermal WH.emat"
+     m_fDefaultBrightness 1
+    }
+    ACM_ThermalPalette "{52F62BA4202ECD00}" {
+     m_sName "Flir"
+     m_Material "{D4308E4CC5BAEAC0}UI/Materials/Editor/Thermal Flir.emat"
+    }
+    ACM_ThermalPalette "{8986368C0F7896F6}" {
+     m_sName "Green"
+     m_Material "{18ECC73E26AFA56A}UI/Materials/Editor/Thermal Green.emat"
+    }
+    ACM_ThermalPalette "{78F07BE5BE6B7F3A}" {
+     m_sName "Orange"
+     m_Material "{C15D807755CDCB98}UI/Materials/Editor/Thermal Orange.emat"
+    }
+   }
+   m_bManualBrightnessEnabled 1
+   m_fBrightnessStep 0.25
+   m_sAnimationSignal "w_nvRotator"
   }
   BaseLoadoutClothComponent "{6854414D70351979}" {
    AreaType ACM_NV_Slotted "{6854414D70351978}" {

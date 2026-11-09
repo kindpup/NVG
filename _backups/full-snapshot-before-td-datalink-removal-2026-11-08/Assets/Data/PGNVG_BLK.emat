@@ -1,0 +1,6 @@
+MatPBRBasic {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{CBF701AD5614C8CF}Assets/Data/PGNVG_BLK_BCR.edds"
+ NMOMap "{5C8858E093CB37BF}Assets/Data/PGNVG_NMO.edds"
+}

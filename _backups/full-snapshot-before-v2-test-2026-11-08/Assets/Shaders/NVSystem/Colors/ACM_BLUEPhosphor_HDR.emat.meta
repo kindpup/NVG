@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{86619066FB821DF0}Assets/Shaders/NVSystem/Colors/ACM_BLUEPhosphor_HDR.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

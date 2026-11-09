@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{6D794F2AF7E0A7A0}Assets/Shaders/NVSystem/Grains/ACM_V2_WhiteGrain.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

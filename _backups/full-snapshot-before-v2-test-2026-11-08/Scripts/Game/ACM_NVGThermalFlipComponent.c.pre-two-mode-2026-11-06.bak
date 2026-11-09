@@ -1,0 +1,216 @@
+[ComponentEditorProps(category: "GameScripted/Gadgets", description: "Standalone PVS-15 night vision and thermal mode controller.")]
+class ACM_NVGThermalFlipComponentClass : ScriptComponentClass
+{
+}
+
+// Local-only screen effect controller. N toggles power; B cycles white phosphor,
+// white-hot thermal, and black-hot thermal. Effects are applied only on state or
+// camera changes, and are always cleared when the item is no longer worn.
+class ACM_NVGThermalFlipComponent : ScriptComponent
+{
+	[Attribute("ACM_ToggleNVG", UIWidgets.EditBox, "Action that toggles the NVG view on/off.")]
+	protected string m_sPowerAction;
+
+	[Attribute("ACM_ChangeSightMode", UIWidgets.EditBox, "Action that cycles white phosphor, white-hot, and black-hot.")]
+	protected string m_sModeAction;
+
+	[Attribute("{A15F15D00C4A4458}UI/Materials/ACM_NVG_WhiteHot.emat", UIWidgets.ResourceNamePicker, "White-hot thermal palette.", "emat")]
+	protected ResourceName m_sWhiteHotMaterial;
+
+	[Attribute("{A15F15D00C4A4459}UI/Materials/ACM_NVG_BlackHot.emat", UIWidgets.ResourceNamePicker, "Black-hot thermal palette.", "emat")]
+	protected ResourceName m_sBlackHotMaterial;
+
+	[Attribute("{8F4EA38DBA5C4D7B}UI/Materials/ACM_NVG_BlueWhite.emat", UIWidgets.ResourceNamePicker, "Cool white-phosphor night vision grade.", "emat")]
+	protected ResourceName m_sBlueWhiteMaterial;
+
+	protected bool m_bNVGActive;
+	protected int m_iMode;
+	protected int m_iAppliedCamera = -1;
+	protected int m_iAppliedMode = -1;
+	protected bool m_bEffectApplied;
+	protected BaseWorld m_World;
+	protected InputManager m_RegisteredInput;
+
+	void ACM_NVGThermalFlipComponent(IEntityComponentSource src, IEntity ent, IEntity parent)
+	{
+		SetEventMask(ent, EntityEvent.FRAME | EntityEvent.INIT);
+	}
+
+	override void EOnInit(IEntity owner)
+	{
+		m_World = owner.GetWorld();
+		m_bNVGActive = false;
+		m_iMode = 0;
+		EnsureInputListeners();
+	}
+
+	protected void EnsureInputListeners()
+	{
+		if (m_RegisteredInput || !GetGame())
+			return;
+
+		InputManager input = GetGame().GetInputManager();
+		if (!input)
+			return;
+
+		input.AddActionListener(m_sPowerAction, EActionTrigger.DOWN, OnPowerAction);
+		input.AddActionListener(m_sModeAction, EActionTrigger.DOWN, OnModeAction);
+		m_RegisteredInput = input;
+	}
+
+	protected bool IsLocalWearer(IEntity owner)
+	{
+		if (!owner || !GetGame())
+			return false;
+
+		PlayerController controller = GetGame().GetPlayerController();
+		if (!controller)
+			return false;
+
+		IEntity character = controller.GetControlledEntity();
+		if (!character)
+			return false;
+
+		InventoryItemComponent ownerItem = InventoryItemComponent.Cast(owner.FindComponent(InventoryItemComponent));
+		if (ownerItem)
+		{
+			SCR_InventoryStorageManagerComponent storageManager = SCR_InventoryStorageManagerComponent.Cast(character.FindComponent(SCR_InventoryStorageManagerComponent));
+			if (storageManager)
+			{
+				SCR_CharacterInventoryStorageComponent characterStorage = storageManager.GetCharacterStorage();
+				if (characterStorage)
+				{
+					InventoryItemComponent headgear = characterStorage.GetItemFromLoadoutSlot(new LoadoutHeadCoverArea());
+					if (headgear == ownerItem)
+						return true;
+				}
+			}
+		}
+
+		IEntity current = owner;
+		while (current)
+		{
+			if (current == character)
+				return true;
+			current = current.GetParent();
+		}
+		return false;
+	}
+
+	protected void OnPowerAction()
+	{
+		IEntity owner = GetOwner();
+		if (!owner || !IsLocalWearer(owner))
+			return;
+
+		m_bNVGActive = !m_bNVGActive;
+		if (!m_bNVGActive)
+		{
+			ClearAppliedEffect();
+			return;
+		}
+
+		ApplyCurrentMode();
+	}
+
+	protected void OnModeAction()
+	{
+		IEntity owner = GetOwner();
+		if (!owner || !m_bNVGActive || !IsLocalWearer(owner))
+			return;
+
+		m_iMode = (m_iMode + 1) % 3;
+		ApplyCurrentMode();
+	}
+
+	protected void ApplyCurrentMode()
+	{
+		if (!m_World || !m_bNVGActive)
+			return;
+
+		IEntity owner = GetOwner();
+		if (!owner || !IsLocalWearer(owner))
+		{
+			m_bNVGActive = false;
+			ClearAppliedEffect();
+			return;
+		}
+
+		int cameraId = m_World.GetCurrentCameraId();
+		if (cameraId < 0)
+			return;
+
+		if (m_bEffectApplied && m_iAppliedCamera != cameraId)
+			ClearAppliedEffect();
+
+		m_iAppliedCamera = cameraId;
+		m_iAppliedMode = m_iMode;
+		if (m_iMode == 0)
+		{
+			m_World.SetCameraPostProcessEffect(cameraId, 11, PostProcessEffectType.ThermalImaging, string.Empty);
+			m_World.SetCameraPostProcessEffect(cameraId, 11, PostProcessEffectType.Colors, m_sBlueWhiteMaterial);
+			m_bEffectApplied = true;
+			return;
+		}
+
+		m_World.SetCameraPostProcessEffect(cameraId, 11, PostProcessEffectType.Colors, string.Empty);
+		string thermalMaterial = m_sWhiteHotMaterial;
+		if (m_iMode == 2)
+			thermalMaterial = m_sBlackHotMaterial;
+
+		m_World.SetCameraPostProcessEffect(cameraId, 11, PostProcessEffectType.ThermalImaging, thermalMaterial);
+		m_bEffectApplied = true;
+	}
+
+	protected void ClearAppliedEffect()
+	{
+		if (m_World && m_bEffectApplied && m_iAppliedCamera >= 0)
+		{
+			m_World.SetCameraPostProcessEffect(m_iAppliedCamera, 11, PostProcessEffectType.ThermalImaging, string.Empty);
+			m_World.SetCameraPostProcessEffect(m_iAppliedCamera, 11, PostProcessEffectType.Colors, string.Empty);
+		}
+
+		m_iAppliedCamera = -1;
+		m_iAppliedMode = -1;
+		m_bEffectApplied = false;
+	}
+
+	override void EOnFrame(IEntity owner, float timeSlice)
+	{
+		EnsureInputListeners();
+		if (!m_bNVGActive)
+			return;
+
+		if (!owner || !IsLocalWearer(owner))
+		{
+			m_bNVGActive = false;
+			ClearAppliedEffect();
+			return;
+		}
+
+		int cameraId = m_World.GetCurrentCameraId();
+		if (cameraId < 0)
+		{
+			ClearAppliedEffect();
+			return;
+		}
+
+		if (cameraId != m_iAppliedCamera || m_iMode != m_iAppliedMode)
+			ApplyCurrentMode();
+	}
+
+	override void OnDelete(IEntity owner)
+	{
+		if (m_RegisteredInput)
+		{
+			m_RegisteredInput.RemoveActionListener(m_sPowerAction, EActionTrigger.DOWN, OnPowerAction);
+			m_RegisteredInput.RemoveActionListener(m_sModeAction, EActionTrigger.DOWN, OnModeAction);
+			m_RegisteredInput = null;
+		}
+
+		m_bNVGActive = false;
+		ClearAppliedEffect();
+		m_World = null;
+		super.OnDelete(owner);
+	}
+}

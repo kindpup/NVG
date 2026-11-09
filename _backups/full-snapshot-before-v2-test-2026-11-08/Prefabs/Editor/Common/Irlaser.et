@@ -1,0 +1,15 @@
+ACM_V2_IRLaser {
+ ID "68571A663BE25C6D"
+ components {
+  ParametricMaterialInstanceComponent "{5B9B8D7A6E4C3F22}" {
+   EmissiveMultiplier 200
+  }
+ }
+ coords 0 0 0
+ m_sBeamMesh "{F9CB682058275CFB}Prefabs/Editor/Common/LaserBeamMesh.et"
+ m_fMaxRange 500
+ m_fMeshDefaultLength 1
+ m_fIntensity 300
+ m_fBeamOpacity 1.0
+ m_fBeamThickness 1.0
+}

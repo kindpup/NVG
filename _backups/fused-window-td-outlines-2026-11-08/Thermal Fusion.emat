@@ -1,0 +1,11 @@
+ThermalImagingEffect {
+ TempConversionTex "{97F40CC13954E75E}Textures/Thermal_Filter/thermal colors/Fusion_HotOnly.edds"
+ TemperatureConversionMethod CustomMinMax
+ TemperatureRangeMin -0.142
+ TemperatureDisplayMin 10
+ TemperatureDisplayMax 40
+ DownsizeMethod Blur
+ DownsizePercent 60
+ BlurAmount 0.5
+ UpsampleMethod Bilinear
+}

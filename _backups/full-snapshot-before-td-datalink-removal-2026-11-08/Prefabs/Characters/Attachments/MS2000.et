@@ -1,0 +1,114 @@
+GameEntity {
+ ID "686B33963C748FE1"
+ components {
+  ClothNodeStorageComponent "{686B33963C74B050}" {
+   Attributes SCR_ItemAttributeCollection "{686B33963C74B07E}" {
+    ItemDisplayName UIInfo "{686B33963C74B070}" {
+     Name "MS2000"
+     Description "MS2000"
+     Icon "{CD204860C71F74B6}Prefabs/Characters/Attachments/strobe_transparent.edds"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{686B33963C74B069}" {
+     Weight 0
+     DimensionScaler 0
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{686B33963C74B06A}" {
+      CameraOrbitAngles -25 25 0
+      CameraDistanceToItem 2
+      FOV 10
+     }
+    }
+   }
+   StoragePurpose 0 0
+  }
+  MeshObject "{686B33963C74B06C}" {
+   Object "{BCC0A5414663D87D}Assets/MS200.xob"
+   InheritVisibility 1
+  }
+  ParametricMaterialInstanceComponent "{686B33963C74B061}" {
+   UserParamAlpha 0
+   ApplyPropertiesWhenMeshChanged 1
+  }
+  RigidBody "{686B33963C74B065}" {
+   Mass 1.5
+   SimState None
+   ModelGeometry 1
+   Static 1
+  }
+  SCR_SoundDataComponent "{686B33963C74B018}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{686B33963C74B01F}" {
+     m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{686B33963C74B01E}" {
+     m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{686B33963C74B011}" {
+     m_sSoundProject "{F62001ED6E9FA253}Sounds/Items/_SharedData/Drop/Items_Drop_Clothes.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+   }
+  }
+  ACM_NVL_EquipmentLightsComponent "{686B33963C74B03D}" {
+   m_aSources {
+    ACM_NVL_LightSource "{68935CB202DA91E0}" {
+     m_sLightPrefab "{C9ED8D9D19FE2122}Prefabs/Characters/Items/NVG/LightSources/IR_Illuminator.et"
+     m_vOffset PointInfo "{68935CB205931595}" {
+      Offset 0 0.0596 -0.0358
+     }
+     m_eType IRLIGHT
+    }
+   }
+  }
+  ACM_NVL_StrobeComponent "{686B33963C74B033}" {
+   m_aSources {
+    ACM_NVL_LightSource "{68935CB228082E50}" {
+     m_sLightPrefab "{C9ED8D9D19FE2122}Prefabs/Characters/Items/NVG/LightSources/IR_Illuminator.et"
+     m_vOffset PointInfo "{68935CB22EF63EB8}" {
+      Offset 0 0.0596 -0.0358
+     }
+     m_eType IRLIGHT
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{686B33963C74B037}" {
+   AreaType ACM_Strobe "{686B33963C74B029}" {
+   }
+   WornModel "{BCC0A5414663D87D}Assets/MS200.xob"
+   WornMaterialsOverride {
+    ""
+   }
+   ItemMaterialsOverride {
+    ""
+   }
+  }
+  ActionsManagerComponent "{686B33963C74B02A}" {
+   ActionContexts {
+    UserActionContext "{686B33963C74B026}" {
+     ContextName "default"
+     Position PointInfo "{686B33963C74B0D9}" {
+      PivotID "Head"
+      Offset 0 0.2258 0
+     }
+    }
+   }
+   additionalActions {
+    SCR_EquipClothAction "{52E6EC76F51E12DE}" : "{83B98F1A96591AC6}Prefabs/Characters/Core/Actions/EquipClothAction.conf" {
+     "Sort Priority" -10
+    }
+    SCR_PickUpItemAction "{52E6EC76F43FCD58}" : "{F39A4E9B190C1846}Prefabs/Characters/Core/Actions/PickUpItemAction.conf" {
+    }
+   }
+  }
+  RplComponent "{686B33963C74B0DD}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{686B33963C74B0DE}" {
+  }
+ }
+}

@@ -114,8 +114,8 @@ GameEntity {
    "Parent Node From Parent Entity" 0
   }
   ACM_NVGThermalFlipComponent "{6ACB4DD98E40F00B}" {
-  }
-  ACM_NVGScreenTubeOverlayComponent "{6ACB4DD98E40F00C}" {
+   m_bAllowThermal 0
+   m_eTubeLayout DUAL
   }
   Hierarchy "{6ACB4DD9878E4821}" {
   }

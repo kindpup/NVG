@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{78FA6E0ED16FB0DD}Assets/attachments/Data/MI_Opscore_FAST_MT_Cover_MC.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

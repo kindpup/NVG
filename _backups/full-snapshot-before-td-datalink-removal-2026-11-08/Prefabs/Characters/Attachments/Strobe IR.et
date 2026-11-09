@@ -1,0 +1,129 @@
+GameEntity {
+ ID "671E48088A94D395"
+ components {
+  ClothNodeStorageComponent "{671E48088A94D450}" {
+   Attributes SCR_ItemAttributeCollection "{671E48088A94D453}" {
+    ItemDisplayName UIInfo "{671E48088A94D452}" {
+     Name "Strobe IR"
+     Description "Strobe"
+     Icon "{CD204860C71F74B6}Prefabs/Characters/Attachments/strobe_transparent.edds"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{671E48088A94D455}" {
+     Weight 0
+     DimensionScaler 0
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{671E48088A94D454}" {
+      CameraOrbitAngles -25 25 0
+      CameraDistanceToItem 2
+      FOV 10
+     }
+    }
+   }
+   StoragePurpose 0 0
+  }
+  MeshObject "{671E48088A94D44A}" {
+   Object "{EE4C1F89C02F75E7}Assets/attachments/STROBES/STROBE1.xob"
+   InheritVisibility 1
+  }
+  ParametricMaterialInstanceComponent "{671E48088A94D44D}" {
+   UserParamAlpha 0
+   ApplyPropertiesWhenMeshChanged 1
+  }
+  RigidBody "{671E48088A94D47E}" {
+   Mass 1.5
+   SimState None
+   ModelGeometry 1
+   Static 1
+  }
+  SCR_SoundDataComponent "{671E48088A94D470}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{671E48088A94D472}" {
+     m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{671E48088A94D475}" {
+     m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{671E48088A94D474}" {
+     m_sSoundProject "{F62001ED6E9FA253}Sounds/Items/_SharedData/Drop/Items_Drop_Clothes.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+   }
+  }
+  ACM_NVL_GuardianAngelComponent "{685B23FBBF1F5F1E}" {
+   m_sLeftLightPrefab "{C9ED8D9D19FE2122}Prefabs/Characters/Items/NVG/LightSources/IR_Illuminator.et"
+   m_sRightLightPrefab "{C9ED8D9D19FE2122}Prefabs/Characters/Items/NVG/LightSources/IR_Illuminator.et"
+   m_vLeftOffset PointInfo "{685B23FBAC0DD323}" {
+    PivotID "Lights_Right"
+    Offset 0.0145 0.0264 0.0234
+    Angles 0 -90.8837 -35.5417
+   }
+   m_vRightOffset PointInfo "{685B23FBDF3A5546}" {
+    Offset -0.0145 0.0264 0.0234
+    Angles 0 90.8837 -35.5417
+   }
+  }
+  ACM_NVL_EquipmentLightsComponent "{685242CE87AB1C8A}" {
+   m_sLightIdentifier "ACMLightstrobesolid"
+   m_aSources {
+    ACM_NVL_LightSource "{68935CB81D3DCF7F}" {
+     m_sLightPrefab "{C9ED8D9D19FE2122}Prefabs/Characters/Items/NVG/LightSources/IR_Illuminator.et"
+     m_vOffset PointInfo "{68935CB2B70D5CAB}" {
+      PivotID "light_point"
+     }
+     m_eType IRLIGHT
+    }
+   }
+  }
+  ACM_NVL_StrobeComponent "{671E48088A94D456}" {
+   m_aSources {
+    ACM_NVL_LightSource "{68935CB2805070D2}" {
+     m_sLightPrefab "{C9ED8D9D19FE2122}Prefabs/Characters/Items/NVG/LightSources/IR_Illuminator.et"
+     m_vOffset PointInfo "{68935CB2A2C1BE85}" {
+      PivotID "light_point"
+     }
+     m_eType IRLIGHT
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{671E48088A94D477}" {
+   AreaType ACM_Strobe "{671E48088A94D476}" {
+   }
+   WornModel "{EE4C1F89C02F75E7}Assets/attachments/STROBES/STROBE1.xob"
+   WornMaterialsOverride {
+    ""
+   }
+   ItemModel "{EE4C1F89C02F75E7}Assets/attachments/STROBES/STROBE1.xob"
+   ItemMaterialsOverride {
+    ""
+   }
+  }
+  ActionsManagerComponent "{671E48088A94D468}" {
+   ActionContexts {
+    UserActionContext "{671E48088A94D46B}" {
+     ContextName "default"
+     Position PointInfo "{671E48088A94D46A}" {
+      PivotID "Head"
+      Offset 0 0.2258 0
+     }
+    }
+   }
+   additionalActions {
+    SCR_EquipClothAction "{52E6EC76F51E12DE}" : "{83B98F1A96591AC6}Prefabs/Characters/Core/Actions/EquipClothAction.conf" {
+     "Sort Priority" -10
+    }
+    SCR_PickUpItemAction "{52E6EC76F43FCD58}" : "{F39A4E9B190C1846}Prefabs/Characters/Core/Actions/PickUpItemAction.conf" {
+    }
+   }
+  }
+  RplComponent "{671E48088A971C0A}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{671E48088A971C09}" {
+  }
+ }
+}

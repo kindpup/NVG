@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{6B44E4A73991F0B0}Assets/Data/MI_NVG_Mount_L3Harris_FPG_21_BLK.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

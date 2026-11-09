@@ -1,0 +1,12 @@
+MatPBRBasic {
+ Color 0 0.502 0.125 1
+ Emissive 0 0.502 0.125 1
+ EmissiveLV 1
+ Cull none
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ RoughnessScale 1.585
+ BCRMap "{D384EE60A07DCB7E}Assets/Helmets/GlowStick/Data/Glowstick_BCR.edds"
+ OpacityMap "{70A53F4EA373F142}Assets/Characters/Basebody/Data/HeadClipping_A.edds"
+ NMOMap "{EB5C55F2790A99E0}Assets/Helmets/GlowStick/Data/Glowstick_NMO.edds"
+}

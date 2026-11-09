@@ -1,0 +1,6 @@
+MatPBRBasic {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{C95D8BA76835FA63}Assets/Data/MI_NVG_PVS14_FDE_noACM_V2_BCR.edds"
+ NMOMap "{4FF26FAD9B930572}Assets/Data/MI_NVG_PVS14_NMO.edds"
+}

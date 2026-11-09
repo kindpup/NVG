@@ -1531,14 +1531,9 @@ class ACM_RemoteFeedRenderer
 	//------------------------------------------------------------------------------------------------
 	protected void GetVisorSafeInsets(WorkspaceWidget workspace, out float top, out float bottom)
 	{
+		// No visor bands to keep clear any more (the IVAS visor overlay was removed).
 		top = 0;
 		bottom = 0;
-
-		if (!workspace || !ACM_IvasVisorOverlay.IsShown())
-			return;
-
-		top = workspace.DPIScale(VISOR_SAFE_TOP);
-		bottom = workspace.DPIScale(VISOR_SAFE_BOTTOM);
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -1636,7 +1631,9 @@ class ACM_RemoteFeedRenderer
 		//
 		// Gated on the strip being SHOWN, not merely possible. Friendly IFF set to OFF, or nobody
 		// nearby, and the wearer gets the whole left edge back - which is most of the time.
-		if (ACM_IvasVisorOverlay.IsSquadStripShown() && IsLeftCorner())
+		// The squad strip belonged to the removed IVAS visor overlay, so it is never shown now.
+		bool squadStripShown = false;
+		if (squadStripShown && IsLeftCorner())
 		{
 			float centreY = ry + (rh * 0.5);
 			float squadTop = centreY - workspace.DPIScale(VISOR_SQUAD_ABOVE);

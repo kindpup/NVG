@@ -1,0 +1,6 @@
+MatPBRBasic {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{4B183CFCFD8AA7D3}Assets/attachments/Data/Strap_BCR.edds"
+ NMOMap "{73C0876E24FDF54D}Assets/attachments/Data/Strap_NMO.edds"
+}

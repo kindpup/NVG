@@ -1,0 +1,28 @@
+SCR_ChimeraCharacter {
+ ID "520EC961A090B1EE"
+ components {
+  ParametricMaterialInstanceComponent "{6A3A4D8822D01D43}" {
+   Enabled 1
+   AcceptHierarchyProperties 0x3ff 0
+   ApplyPropertiesWhenMeshChanged 1
+  }
+  ACM_NVL_NetworkComponent "{6866ABC48E9D65CC}" {
+  }
+  ACM_PlayerLinkComponent "{67200001AAAA1006}" {
+  }
+  ACM_ScopedHighlightComponent "{6A3A4D8826D20BDB}" {
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Ghillie {
+     AreaType ACM_Ghillie "{69B37362BCD0F9EC}" {
+     }
+    }
+    LoadoutSlotInfo ACM_Headstrap {
+     AreaType ACM_Headstrap "{686AEBE9258EE6EF}" {
+     }
+    }
+   }
+  }
+ }
+}

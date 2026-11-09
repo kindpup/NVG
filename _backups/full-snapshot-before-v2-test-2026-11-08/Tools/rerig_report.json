@@ -1,0 +1,163 @@
+[
+ {
+  "fbx": "Assets/Fpano.fbx",
+  "status": "OK",
+  "notes": [],
+  "armature": "Armature",
+  "bones": [
+   "w_nvgRoot",
+   "w_nvgRotator"
+  ],
+  "meshes": [
+   "NVG_Mount_L3Harris_FPGPNVG_Mount_Main",
+   "NVG_Mount_L3Harris_FPGPNVG_Base",
+   "UBX_MOUNT",
+   "UBX_NVG"
+  ],
+  "materials": [
+   "MI_NVG_L3Harris_FPGPNVG_FDE",
+   "MI_NVG_Mount_L3Harris_FPG_21_FDE",
+   "weapon_metal_3B2D2687F56BB4EF"
+  ],
+  "baked_meshes": [
+   "NVG_Mount_L3Harris_FPGPNVG_Mount_Main"
+  ],
+  "backup": "Fpano.fbx.bak"
+ },
+ {
+  "fbx": "Assets/GPNVG.fbx",
+  "status": "OK",
+  "notes": [],
+  "armature": "Armature",
+  "bones": [
+   "w_nvgRoot",
+   "w_nvgRotator"
+  ],
+  "meshes": [
+   "MOUNT.001",
+   "MOUNT",
+   "UBX_NVG",
+   "UTM_Mount"
+  ],
+  "materials": [
+   "FireGeo_Material",
+   "PGNVG.001",
+   "weapon_metal_3B2D2687F56BB4EF"
+  ],
+  "baked_meshes": [
+   "MOUNT.001"
+  ],
+  "backup": "GPNVG.fbx.bak"
+ },
+ {
+  "fbx": "Assets/PVS14.fbx",
+  "status": "OK",
+  "notes": [],
+  "armature": "Armature",
+  "bones": [
+   "w_nvgRoot",
+   "w_nvgRotator"
+  ],
+  "meshes": [
+   "NVG_PVS14_Arm",
+   "UBX_MOUNT",
+   "UBX_NVG",
+   "NVG_PVS14_Mount"
+  ],
+  "materials": [
+   "MI_NVG_PVS14",
+   "weapon_metal_3B2D2687F56BB4EF"
+  ],
+  "baked_meshes": [
+   "NVG_PVS14_Arm"
+  ],
+  "backup": "PVS14.fbx.bak"
+ },
+ {
+  "fbx": "Assets/PVS31Rigged.fbx",
+  "status": "OK",
+  "notes": [],
+  "armature": "Armature",
+  "bones": [
+   "w_nvgRoot",
+   "w_nvgRotator"
+  ],
+  "meshes": [
+   "NVG_31_LOD0",
+   "NVG_Mount_L3Harris_FPGPNVG_Base_LOD0",
+   "UBX_MOUNT",
+   "UBX_NVG"
+  ],
+  "materials": [
+   "MI_NVG_Mount_L3Harris_FPG_21_FDE",
+   "MI_PVS31",
+   "weapon_metal_3B2D2687F56BB4EF"
+  ],
+  "baked_meshes": [
+   "NVG_31_LOD0"
+  ],
+  "backup": "PVS31Rigged.fbx.bak"
+ },
+ {
+  "fbx": "Assets/pvs5RIGGED.fbx",
+  "status": "SKIPPED - no armature with bone w_nvgRotator",
+  "notes": [],
+  "armatures": [
+   "Armature:['Root', 'Hips', 'Spine1', 'Spine2', 'Spine3', 'Spine4', 'Spine5', 'Neck1', 'Neck2', 'Neck3', 'Head', 'Camera', 'BlowChick_left', 'BlowChick_right', 'CorrugatorSupercilii_left', 'CorrugatorSupercilii_right', 'DepressorAnguli_left', 'DepressorAnguli_right', 'DepressorSeptiNasil', 'LeftFacialNoseCorner', 'LevatorAnguli_left', 'LevatorAnguli_right', 'LevatorLabii_left', 'LevatorLabii_right', 'LevatorSuperioris_left', 'LevatorSuperioris_right', 'MassaterStretch_left', 'MassaterStretch_right', 'Massater_left', 'Massater_right', 'Mentalis_left', 'Mentalis_right', 'Nasalis_left', 'Nasalis_right', 'Occipitalis_left', 'Occipitalis_right', 'Occipitofrontalis_left', 'Occipitofrontalis_right', 'OrbicularisOculi_bottomCenterLid_left', 'OrbicularisOculi_bottomCenterLid_right', 'OrbicularisOculi_bottomCenter_left', 'OrbicularisOculi_bottomCenter_right', 'OrbicularisOculi_bottomLeftLid_left', 'OrbicularisOculi_bottomLeftLid_right', 'OrbicularisOculi_bottomLeft_left', 'OrbicularisOculi_bottomLeft_right', 'OrbicularisOculi_bottomRightLid_left', 'OrbicularisOculi_bottomRightLid_right', 'OrbicularisOculi_bottomRight_left', 'OrbicularisOculi_bottomRight_right', 'OrbicularisOculi_cornerLeft_left', 'OrbicularisOculi_cornerLeft_right', 'OrbicularisOculi_nostril_left', 'OrbicularisOculi_nostril_right', 'OrbicularisOculi_upperCenterLid_left', 'OrbicularisOculi_upperCenterLid_right', 'OrbicularisOculi_upperCenter_left', 'OrbicularisOculi_upperCenter_right', 'OrbicularisOculi_upperLeftLid_left', 'OrbicularisOculi_upperLeftLid_right', 'OrbicularisOculi_upperLeft_left', 'OrbicularisOculi_upperLeft_right', 'OrbicularisOculi_upperRightLid_left', 'OrbicularisOculi_upperRightLid_right', 'OrbicularisOculi_upperRight_left', 'OrbicularisOculi_upperRight_right', 'Orbicularis_bottomCenter', 'Orbicularis_bottomCenterLips', 'Orbicularis_bottomLeft', 'Orbicularis_bottomLipsLeft', 'Orbicularis_bottomLipsRight', 'Orbicularis_bottomRight', 'Orbicularis_cornerLeft', 'Orbicularis_cornerRight', 'Orbicularis_upperCenter', 'Orbicularis_upperCenterLips', 'Orbicularis_upperLeft', 'Orbicularis_upperLeftLips', 'Orbicularis_upperRight', 'Orbicularis_upperRightLips', 'Procerus', 'Risorius_left', 'Risorius_right', 'Temporalis_back_left', 'Temporalis_back_right', 'Temporalis_front_left', 'Temporalis_front_right', 'ZygomaticusMajor_left', 'ZygomaticusMajor_right', 'ZygomaticusMinor_left', 'ZygomaticusMinor_right', 'jawRP', 'Jaw', 'leftJawSpikeBone', 'rightJawSpikeBone', 'tongueRoot', 'tongueMiddle', 'tongueUpper', 'tongueTip', 'tongueLeftRoll', 'tongueRightRoll', 'PlatysmaMinor_left', 'PlatysmaMinor_right', 'leftEye', 'EyeLeftPupil', 'leftEye_pupil1', 'leftEye_pupil2', 'leftEye_pupil3', 'leftEye_pupil4', 'leftEye_pupil5', 'leftEye_pupil6', 'leftEye_pupil7', 'leftEye_pupil8', 'rightEye', 'rightEye_pupil1', 'rightEye_pupil2', 'rightEye_pupil3', 'rightEye_pupil4', 'rightEye_pupil5', 'rightEye_pupil6', 'rightEye_pupil7', 'rightEye_pupil8', 'LeftPectoral', 'RightPectoral', 'LeftShoulderBlade', 'RightShoulderBlade', 'RightShoulder', 'RightArm', 'RightArmTwist', 'RightForeArm', 'RightForeArmTwist', 'RightHand', 'RightHandMiddle1', 'RightHandMiddle2', 'RightHandMiddle3', 'RightHandMiddle4', 'RightHandMiddle5', 'RightHandRing1', 'RightHandRing2', 'RightHandRing3', 'RightHandRing4', 'RightHandRing5', 'RightHandPinky1', 'RightHandPinky2', 'RightHandPinky3', 'RightHandPinky4', 'RightHandPinky5', 'RightHandIndex1', 'RightHandIndex2', 'RightHandIndex3', 'RightHandIndex4', 'RightHandIndex5', 'RightHandThumb1', 'RightHandThumb2', 'RightHandThumb3', 'RightHandThumb4', 'RightHandThumb5', 'RightHandInbetween', 'RightHandProp', 'RightHandUpperVolume', 'RightHandLowerVolume', 'RightForeArmVolume', 'RightArmVolume', 'LeftShoulder', 'LeftArm', 'LeftArmTwist', 'LeftForeArm', 'LeftForeArmTwist', 'LeftHand', 'LeftHandProp', 'LeftHandInbetween', 'LeftHandMiddle1', 'LeftHandMiddle2', 'LeftHandMiddle3', 'LeftHandMiddle4', 'LeftHandMiddle5', 'LeftHandRing1', 'LeftHandRing2', 'LeftHandRing3', 'LeftHandRing4', 'LeftHandRing5', 'LeftHandPinky1', 'LeftHandPinky2', 'LeftHandPinky3', 'LeftHandPinky4', 'LeftHandPinky5', 'LeftHandIndex1', 'LeftHandIndex2', 'LeftHandIndex3', 'LeftHandIndex4', 'LeftHandIndex5', 'LeftHandThumb1', 'LeftHandThumb2', 'LeftHandThumb3', 'LeftHandThumb4', 'LeftHandThumb5', 'LeftHandUpperVolume', 'LeftHandLowerVolume', 'LeftForeArmVolume', 'LeftArmVolume', 'Stomach3', 'Stomach2', 'Stomach1', 'RightLegClothF', 'LeftLegClothF', 'RightLegClothB', 'LeftLegClothB', 'RightLeg', 'RightLegTwist', 'RightKnee', 'RightKneeTwist', 'RightFoot', 'RightToe', 'RightKneeVolume', 'RightLegVolume', 'LeftLeg', 'LeftLegTwist', 'LeftKnee', 'LeftKneeTwist', 'LeftFoot', 'LeftToe', 'LeftKneeVolume', 'LeftLegVolume', 'Collision']"
+  ]
+ },
+ {
+  "fbx": "Assets/PVS7/PVS7 rigged.fbx",
+  "status": "OK",
+  "notes": [],
+  "armature": "Armature",
+  "bones": [
+   "w_nvgRoot",
+   "w_nvgRotator"
+  ],
+  "meshes": [
+   "PVS7_FULL",
+   "UBX_MOUNT",
+   "UBX_NVG",
+   "PVS7_FULL.001",
+   "PVS7_FULL.002",
+   "PVS7_FULL.003"
+  ],
+  "materials": [
+   "PM.001",
+   "PNV_7.001",
+   "weapon_metal_3B2D2687F56BB4EF"
+  ],
+  "baked_meshes": [
+   "PVS7_FULL"
+  ],
+  "backup": "PVS7 rigged.fbx.bak"
+ },
+ {
+  "fbx": "Assets/IVAS/IVAS.fbx",
+  "status": "OK",
+  "notes": [],
+  "armature": "Armature",
+  "bones": [
+   "w_nvgRoot",
+   "w_nvgRotator"
+  ],
+  "meshes": [
+   "Circle.001",
+   "NVG_Mount_L3Harris_FPGPNVG_Base.001",
+   "UBX_MOUNT.001",
+   "UBX_NVG.001"
+  ],
+  "materials": [
+   "IvasSystem",
+   "MI_NVG_L3Harris_FPGPNVG_FDE",
+   "MI_NVG_Mount_L3Harris_FPG_21_FDE",
+   "MI_NVG_Mount_L3Harris_FPG_21_FDE.001",
+   "weapon_metal_3B2D2687F56BB4EF.001"
+  ],
+  "baked_meshes": [
+   "Circle.001"
+  ],
+  "backup": "IVAS.fbx.bak"
+ }
+]

@@ -1,0 +1,2362 @@
+FrameWidgetClass {
+ Name "ACM_NVGMenuRoot"
+ {
+   ImageWidgetClass {
+    Name "ACM_NVGMenuDim"
+    Slot FrameWidgetSlot {
+     Anchor 0 0 1 1
+     OffsetLeft 0
+     OffsetTop 0
+     OffsetRight 0
+     OffsetBottom 0
+    }
+    Color 0.01 0.03 0.02 0.82
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuPanel"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -620.0
+     OffsetLeft -620.0
+     PositionY -400.0
+     OffsetTop -400.0
+     SizeX 1240.0
+     OffsetRight -620.0
+     SizeY 800.0
+     OffsetBottom -400.0
+    }
+    Color 0.02 0.07 0.05 0.88
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuTitle"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -380.0
+     OffsetTop -380.0
+     SizeX 760.0
+     OffsetRight -160.0
+     SizeY 34.0
+     OffsetBottom 346.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text "ACM SYSTEM"
+    "Font Size" 24
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuSubtitle"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -344.0
+     OffsetTop -344.0
+     SizeX 1000.0
+     OffsetRight -400.0
+     SizeY 24.0
+     OffsetBottom 320.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text "Deploy the PVS-15 and switch between night vision and thermal."
+    "Font Size" 17
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHint"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -318.0
+     OffsetTop -318.0
+     SizeX 1180.0
+     OffsetRight -580.0
+     SizeY 20.0
+     OffsetBottom 298.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuCloseBg"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 520.0
+     OffsetLeft 520.0
+     PositionY -380.0
+     OffsetTop -380.0
+     SizeX 80.0
+     OffsetRight -600.0
+     SizeY 32.0
+     OffsetBottom 348.0
+    }
+    Color 0.13 0.32 0.24 0.98
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuClose"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 520.0
+     OffsetLeft 520.0
+     PositionY -380.0
+     OffsetTop -380.0
+     SizeX 80.0
+     OffsetRight -600.0
+     SizeY 32.0
+     OffsetBottom 348.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuCloseLabel"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text "CLOSE"
+      "Font Size" 15
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg0"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -292.0
+     OffsetTop -292.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 258.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow0"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -292.0
+     OffsetTop -292.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 258.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel0"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr0"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY -284.0
+     OffsetTop -284.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom 264.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg1"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -256.0
+     OffsetTop -256.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 222.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow1"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -256.0
+     OffsetTop -256.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 222.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel1"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr1"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY -248.0
+     OffsetTop -248.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom 228.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg2"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -220.0
+     OffsetTop -220.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 186.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow2"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -220.0
+     OffsetTop -220.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 186.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel2"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr2"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY -212.0
+     OffsetTop -212.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom 192.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg3"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -184.0
+     OffsetTop -184.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 150.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow3"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -184.0
+     OffsetTop -184.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 150.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel3"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr3"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY -176.0
+     OffsetTop -176.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom 156.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg4"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -148.0
+     OffsetTop -148.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 114.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow4"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -148.0
+     OffsetTop -148.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 114.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel4"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr4"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY -140.0
+     OffsetTop -140.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom 120.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg5"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -112.0
+     OffsetTop -112.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 78.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow5"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -112.0
+     OffsetTop -112.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 78.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel5"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr5"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY -104.0
+     OffsetTop -104.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom 84.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg6"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -76.0
+     OffsetTop -76.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 42.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow6"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -76.0
+     OffsetTop -76.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 42.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel6"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr6"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY -68.0
+     OffsetTop -68.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom 48.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg7"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -40.0
+     OffsetTop -40.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 6.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow7"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -40.0
+     OffsetTop -40.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 6.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel7"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr7"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY -32.0
+     OffsetTop -32.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom 12.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg8"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -4.0
+     OffsetTop -4.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -30.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow8"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -4.0
+     OffsetTop -4.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -30.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel8"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr8"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY 4.0
+     OffsetTop 4.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom -24.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg9"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 32.0
+     OffsetTop 32.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -66.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow9"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 32.0
+     OffsetTop 32.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -66.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel9"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr9"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY 40.0
+     OffsetTop 40.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom -60.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg10"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 68.0
+     OffsetTop 68.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -102.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow10"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 68.0
+     OffsetTop 68.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -102.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel10"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr10"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY 76.0
+     OffsetTop 76.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom -96.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg11"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 104.0
+     OffsetTop 104.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -138.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow11"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 104.0
+     OffsetTop 104.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -138.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel11"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr11"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY 112.0
+     OffsetTop 112.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom -132.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg12"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 140.0
+     OffsetTop 140.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -174.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow12"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 140.0
+     OffsetTop 140.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -174.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel12"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr12"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY 148.0
+     OffsetTop 148.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom -168.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg13"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 176.0
+     OffsetTop 176.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -210.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow13"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 176.0
+     OffsetTop 176.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -210.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel13"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr13"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY 184.0
+     OffsetTop 184.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom -204.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg14"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 212.0
+     OffsetTop 212.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -246.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow14"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 212.0
+     OffsetTop 212.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -246.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel14"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr14"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY 220.0
+     OffsetTop 220.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom -240.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg15"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 248.0
+     OffsetTop 248.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -282.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow15"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 248.0
+     OffsetTop 248.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -282.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel15"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr15"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY 256.0
+     OffsetTop 256.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom -276.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg16"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -292.0
+     OffsetTop -292.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 258.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow16"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -292.0
+     OffsetTop -292.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 258.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel16"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr16"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY -284.0
+     OffsetTop -284.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom 264.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg17"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -256.0
+     OffsetTop -256.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 222.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow17"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -256.0
+     OffsetTop -256.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 222.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel17"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr17"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY -248.0
+     OffsetTop -248.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom 228.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg18"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -220.0
+     OffsetTop -220.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 186.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow18"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -220.0
+     OffsetTop -220.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 186.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel18"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr18"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY -212.0
+     OffsetTop -212.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom 192.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg19"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -184.0
+     OffsetTop -184.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 150.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow19"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -184.0
+     OffsetTop -184.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 150.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel19"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr19"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY -176.0
+     OffsetTop -176.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom 156.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg20"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -148.0
+     OffsetTop -148.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 114.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow20"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -148.0
+     OffsetTop -148.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 114.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel20"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr20"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY -140.0
+     OffsetTop -140.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom 120.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg21"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -112.0
+     OffsetTop -112.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 78.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow21"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -112.0
+     OffsetTop -112.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 78.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel21"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr21"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY -104.0
+     OffsetTop -104.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom 84.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg22"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -76.0
+     OffsetTop -76.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 42.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow22"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -76.0
+     OffsetTop -76.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 42.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel22"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr22"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY -68.0
+     OffsetTop -68.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom 48.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg23"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -40.0
+     OffsetTop -40.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 6.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow23"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -40.0
+     OffsetTop -40.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 6.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel23"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr23"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY -32.0
+     OffsetTop -32.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom 12.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg24"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -4.0
+     OffsetTop -4.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -30.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow24"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -4.0
+     OffsetTop -4.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -30.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel24"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr24"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY 4.0
+     OffsetTop 4.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom -24.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg25"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 32.0
+     OffsetTop 32.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -66.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow25"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 32.0
+     OffsetTop 32.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -66.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel25"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr25"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY 40.0
+     OffsetTop 40.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom -60.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg26"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 68.0
+     OffsetTop 68.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -102.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow26"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 68.0
+     OffsetTop 68.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -102.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel26"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr26"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY 76.0
+     OffsetTop 76.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom -96.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg27"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 104.0
+     OffsetTop 104.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -138.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow27"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 104.0
+     OffsetTop 104.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -138.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel27"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr27"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY 112.0
+     OffsetTop 112.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom -132.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg28"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 140.0
+     OffsetTop 140.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -174.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow28"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 140.0
+     OffsetTop 140.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -174.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel28"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr28"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY 148.0
+     OffsetTop 148.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom -168.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg29"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 176.0
+     OffsetTop 176.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -210.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow29"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 176.0
+     OffsetTop 176.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -210.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel29"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr29"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY 184.0
+     OffsetTop 184.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom -204.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg30"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 212.0
+     OffsetTop 212.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -246.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow30"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 212.0
+     OffsetTop 212.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -246.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel30"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr30"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY 220.0
+     OffsetTop 220.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom -240.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_NVGMenuRowBg31"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 248.0
+     OffsetTop 248.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -282.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_NVGMenuRow31"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 248.0
+     OffsetTop 248.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -282.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_NVGMenuLabel31"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuHdr31"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY 256.0
+     OffsetTop 256.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom -276.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_NVGMenuStatus"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 352.0
+     OffsetTop 352.0
+     SizeX 1180.0
+     OffsetRight -580.0
+     SizeY 22.0
+     OffsetBottom -374.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+ }
+}

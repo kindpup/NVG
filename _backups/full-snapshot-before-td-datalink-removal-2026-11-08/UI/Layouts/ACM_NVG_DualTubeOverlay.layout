@@ -1,0 +1,84 @@
+FrameWidgetClass {
+ Name "ACMTubeRoot"
+ Slot FrameWidgetSlot "{7C8A2A2CB8B14D30}" {
+  Anchor 0 0 1 1
+  PositionX 0
+  PositionY 0
+  SizeX 0
+  OffsetRight 0
+  SizeY 0
+  OffsetBottom 0
+ }
+ {
+  RTTextureWidgetClass "{D49A1ED81B5D4C02}" {
+   Name "ACMTubeRT"
+   Slot FrameWidgetSlot "{3AB15D7A021D49E2}" {
+    Anchor 0 0 1 1
+    PositionX 0
+    PositionY 0
+    SizeX 0
+    OffsetRight 0
+    SizeY 0
+    OffsetBottom 0
+   }
+   format "LDR_sRGB"
+   {
+    RenderTargetWidgetClass "{1918B7CC891E48F1}" {
+     Name "ACMTubeTarget"
+     Slot FrameWidgetSlot "{5464B0CE354A4B42}" {
+      Anchor 0 0 1 1
+      PositionX 0
+      PositionY 0
+      SizeX 0
+      OffsetRight 0
+      SizeY 0
+      OffsetBottom 0
+     }
+     camera 20
+     Format Inherit
+    }
+   }
+  }
+  RTTextureWidgetClass "{5F2B8D41C7A34E19}" {
+   Name "ACMFusionRT"
+   Slot FrameWidgetSlot "{8E3C1A72D45B4F60}" {
+    Anchor 0 0 1 1
+    PositionX 0
+    PositionY 0
+    SizeX 0
+    OffsetRight 0
+    SizeY 0
+    OffsetBottom 0
+   }
+   format "LDR_sRGB"
+   {
+    RenderTargetWidgetClass "{2A7E6F93B18C4D05}" {
+     Name "ACMFusionTarget"
+     Slot FrameWidgetSlot "{C4D19E2B7A6F4381}" {
+      Anchor 0 0 1 1
+      PositionX 0
+      PositionY 0
+      SizeX 0
+      OffsetRight 0
+      SizeY 0
+      OffsetBottom 0
+     }
+     camera 21
+     Format Inherit
+    }
+   }
+  }
+  FrameWidgetClass "{A84D2C68E76C4E21}" {
+   Name "ACMTubeImages"
+   Slot FrameWidgetSlot "{B5D010F7087B46BA}" {
+    Anchor 0 0 1 1
+    PositionX 0
+    PositionY 0
+    SizeX 0
+    OffsetRight 0
+    SizeY 0
+    OffsetBottom 0
+   }
+  }
+ }
+}

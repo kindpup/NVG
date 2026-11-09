@@ -1,0 +1,2362 @@
+FrameWidgetClass {
+ Name "ACM_ThermalMenuRoot"
+ {
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuDim"
+    Slot FrameWidgetSlot {
+     Anchor 0 0 1 1
+     OffsetLeft 0
+     OffsetTop 0
+     OffsetRight 0
+     OffsetBottom 0
+    }
+    Color 0.01 0.03 0.02 0.82
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuPanel"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -620.0
+     OffsetLeft -620.0
+     PositionY -400.0
+     OffsetTop -400.0
+     SizeX 1240.0
+     OffsetRight -620.0
+     SizeY 800.0
+     OffsetBottom -400.0
+    }
+    Color 0.02 0.07 0.05 0.88
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuTitle"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -380.0
+     OffsetTop -380.0
+     SizeX 760.0
+     OffsetRight -160.0
+     SizeY 34.0
+     OffsetBottom 346.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text "ACM SYSTEM"
+    "Font Size" 24
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuSubtitle"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -344.0
+     OffsetTop -344.0
+     SizeX 1000.0
+     OffsetRight -400.0
+     SizeY 24.0
+     OffsetBottom 320.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text "White-hot thermal view and PVS-15 controls."
+    "Font Size" 17
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHint"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -318.0
+     OffsetTop -318.0
+     SizeX 1180.0
+     OffsetRight -580.0
+     SizeY 20.0
+     OffsetBottom 298.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuCloseBg"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 520.0
+     OffsetLeft 520.0
+     PositionY -380.0
+     OffsetTop -380.0
+     SizeX 80.0
+     OffsetRight -600.0
+     SizeY 32.0
+     OffsetBottom 348.0
+    }
+    Color 0.13 0.32 0.24 0.98
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuClose"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 520.0
+     OffsetLeft 520.0
+     PositionY -380.0
+     OffsetTop -380.0
+     SizeX 80.0
+     OffsetRight -600.0
+     SizeY 32.0
+     OffsetBottom 348.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuCloseLabel"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text "CLOSE"
+      "Font Size" 15
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg0"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -292.0
+     OffsetTop -292.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 258.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow0"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -292.0
+     OffsetTop -292.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 258.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel0"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr0"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY -284.0
+     OffsetTop -284.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom 264.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg1"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -256.0
+     OffsetTop -256.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 222.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow1"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -256.0
+     OffsetTop -256.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 222.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel1"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr1"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY -248.0
+     OffsetTop -248.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom 228.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg2"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -220.0
+     OffsetTop -220.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 186.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow2"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -220.0
+     OffsetTop -220.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 186.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel2"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr2"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY -212.0
+     OffsetTop -212.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom 192.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg3"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -184.0
+     OffsetTop -184.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 150.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow3"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -184.0
+     OffsetTop -184.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 150.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel3"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr3"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY -176.0
+     OffsetTop -176.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom 156.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg4"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -148.0
+     OffsetTop -148.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 114.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow4"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -148.0
+     OffsetTop -148.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 114.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel4"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr4"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY -140.0
+     OffsetTop -140.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom 120.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg5"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -112.0
+     OffsetTop -112.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 78.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow5"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -112.0
+     OffsetTop -112.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 78.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel5"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr5"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY -104.0
+     OffsetTop -104.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom 84.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg6"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -76.0
+     OffsetTop -76.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 42.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow6"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -76.0
+     OffsetTop -76.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 42.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel6"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr6"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY -68.0
+     OffsetTop -68.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom 48.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg7"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -40.0
+     OffsetTop -40.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 6.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow7"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -40.0
+     OffsetTop -40.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 6.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel7"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr7"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY -32.0
+     OffsetTop -32.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom 12.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg8"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -4.0
+     OffsetTop -4.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -30.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow8"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -4.0
+     OffsetTop -4.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -30.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel8"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr8"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY 4.0
+     OffsetTop 4.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom -24.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg9"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 32.0
+     OffsetTop 32.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -66.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow9"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 32.0
+     OffsetTop 32.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -66.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel9"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr9"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY 40.0
+     OffsetTop 40.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom -60.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg10"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 68.0
+     OffsetTop 68.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -102.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow10"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 68.0
+     OffsetTop 68.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -102.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel10"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr10"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY 76.0
+     OffsetTop 76.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom -96.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg11"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 104.0
+     OffsetTop 104.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -138.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow11"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 104.0
+     OffsetTop 104.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -138.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel11"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr11"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY 112.0
+     OffsetTop 112.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom -132.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg12"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 140.0
+     OffsetTop 140.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -174.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow12"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 140.0
+     OffsetTop 140.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -174.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel12"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr12"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY 148.0
+     OffsetTop 148.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom -168.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg13"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 176.0
+     OffsetTop 176.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -210.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow13"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 176.0
+     OffsetTop 176.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -210.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel13"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr13"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY 184.0
+     OffsetTop 184.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom -204.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg14"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 212.0
+     OffsetTop 212.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -246.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow14"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 212.0
+     OffsetTop 212.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -246.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel14"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr14"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY 220.0
+     OffsetTop 220.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom -240.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg15"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 248.0
+     OffsetTop 248.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -282.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow15"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 248.0
+     OffsetTop 248.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -282.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel15"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr15"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY 256.0
+     OffsetTop 256.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom -276.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg16"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -292.0
+     OffsetTop -292.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 258.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow16"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -292.0
+     OffsetTop -292.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 258.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel16"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr16"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY -284.0
+     OffsetTop -284.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom 264.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg17"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -256.0
+     OffsetTop -256.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 222.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow17"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -256.0
+     OffsetTop -256.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 222.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel17"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr17"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY -248.0
+     OffsetTop -248.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom 228.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg18"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -220.0
+     OffsetTop -220.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 186.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow18"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -220.0
+     OffsetTop -220.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 186.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel18"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr18"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY -212.0
+     OffsetTop -212.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom 192.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg19"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -184.0
+     OffsetTop -184.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 150.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow19"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -184.0
+     OffsetTop -184.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 150.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel19"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr19"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY -176.0
+     OffsetTop -176.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom 156.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg20"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -148.0
+     OffsetTop -148.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 114.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow20"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -148.0
+     OffsetTop -148.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 114.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel20"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr20"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY -140.0
+     OffsetTop -140.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom 120.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg21"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -112.0
+     OffsetTop -112.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 78.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow21"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -112.0
+     OffsetTop -112.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 78.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel21"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr21"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY -104.0
+     OffsetTop -104.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom 84.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg22"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -76.0
+     OffsetTop -76.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 42.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow22"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -76.0
+     OffsetTop -76.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 42.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel22"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr22"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY -68.0
+     OffsetTop -68.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom 48.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg23"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -40.0
+     OffsetTop -40.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 6.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow23"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -40.0
+     OffsetTop -40.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 6.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel23"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr23"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY -32.0
+     OffsetTop -32.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom 12.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg24"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -4.0
+     OffsetTop -4.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -30.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow24"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -4.0
+     OffsetTop -4.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -30.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel24"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr24"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY 4.0
+     OffsetTop 4.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom -24.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg25"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 32.0
+     OffsetTop 32.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -66.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow25"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 32.0
+     OffsetTop 32.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -66.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel25"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr25"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY 40.0
+     OffsetTop 40.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom -60.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg26"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 68.0
+     OffsetTop 68.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -102.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow26"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 68.0
+     OffsetTop 68.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -102.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel26"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr26"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY 76.0
+     OffsetTop 76.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom -96.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg27"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 104.0
+     OffsetTop 104.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -138.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow27"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 104.0
+     OffsetTop 104.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -138.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel27"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr27"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY 112.0
+     OffsetTop 112.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom -132.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg28"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 140.0
+     OffsetTop 140.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -174.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow28"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 140.0
+     OffsetTop 140.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -174.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel28"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr28"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY 148.0
+     OffsetTop 148.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom -168.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg29"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 176.0
+     OffsetTop 176.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -210.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow29"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 176.0
+     OffsetTop 176.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -210.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel29"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr29"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY 184.0
+     OffsetTop 184.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom -204.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg30"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 212.0
+     OffsetTop 212.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -246.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow30"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 212.0
+     OffsetTop 212.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -246.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel30"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr30"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY 220.0
+     OffsetTop 220.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom -240.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_ThermalMenuRowBg31"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 248.0
+     OffsetTop 248.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -282.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_ThermalMenuRow31"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 248.0
+     OffsetTop 248.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -282.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_ThermalMenuLabel31"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuHdr31"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY 256.0
+     OffsetTop 256.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom -276.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_ThermalMenuStatus"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 352.0
+     OffsetTop 352.0
+     SizeX 1180.0
+     OffsetRight -580.0
+     SizeY 22.0
+     OffsetBottom -374.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+ }
+}

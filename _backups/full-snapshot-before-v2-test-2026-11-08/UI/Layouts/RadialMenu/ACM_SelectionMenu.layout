@@ -1,0 +1,164 @@
+FrameWidget SelectionMenu {
+ size 1 1
+ halign center_ref
+ valign center_ref
+ {
+  BlurWidget Blur {
+   slot {
+    halign 0.5
+    valign 0.5
+    anchor-left 0
+    anchor-top 0
+    anchor-right 1
+    anchor-bottom 1
+   }
+   visible 0
+   Intensity 0.5
+   Priority 0
+  }
+  OverlayWidget OverlayWrap {
+   slot {
+    halign 0.5
+    valign 0.5
+    size 512 512
+   }
+   {
+    OverlayWidget OverlayCross {
+     slot {
+      size 1 1
+     }
+     visible 0
+    }
+    OverlayWidget OverlaySegments {
+     slot {
+      size 1 1
+     }
+    }
+    OverlayWidget OverlayDividers {
+     slot {
+      size 1 1
+     }
+    }
+    OverlayWidget OverlayContent {
+     slot {
+      size 1 1
+     }
+    }
+    ImageWidget SelectorLine {
+     slot {
+      halign 0.5
+      valign 0.5
+      size 8 256
+     }
+     visible 0
+     Color 1 1 1 0.3
+    }
+    ImageWidget ImgSelector {
+     slot {
+      halign 0.5
+      valign 0
+      size 32 32
+     }
+     visible 0
+    }
+    ImageWidget ImgInnerSelector {
+     slot {
+      halign 0.5
+      valign 0.5
+      size 64 64
+     }
+     visible 0
+    }
+    FrameWidget CurrentSelected {
+     slot {
+      halign 0.5
+      valign 0.5
+      size 128 128
+     }
+     visible 0
+    }
+    FrameWidget CurrentSelectedFeedback {
+     slot {
+      halign 0.5
+      valign 0.5
+      size 128 128
+     }
+     visible 0
+    }
+    FrameWidget Hint {
+     slot {
+      size 0 0
+     }
+     visible 0
+    }
+    FrameWidget FrameNumberHints {
+     slot {
+      size 0 0
+     }
+     visible 0
+    }
+   }
+  }
+  VerticalLayoutWidget InfoPanel {
+   slot {
+    halign 0.5
+    valign 0.5
+    size 300 100
+   }
+   {
+    TextWidget InfoName {
+     slot {
+      halign 0.5
+      size 1 24
+     }
+     visible 1
+     Color 1 1 1 1
+     Font "{AB5B79B1F4E7B46C}UI/Fonts/RobotoCondensed/RobotoCondensed_Bold.fnt"
+     "Font Size" 20
+     "Exact Size" 1
+     Align center
+     VAlign center
+    }
+    TextWidget InfoDescription {
+     slot {
+      halign 0.5
+      size 1 20
+     }
+     visible 0
+     Color 0.7 0.7 0.7 1
+     Font "{07E56D7B2AA8FC6B}UI/Fonts/RobotoCondensed/RobotoCondensed_Regular.fnt"
+     "Font Size" 14
+     "Exact Size" 1
+     Align center
+     VAlign center
+    }
+    TextWidget BreadCrumbs {
+     slot {
+      halign 0.5
+      size 1 16
+     }
+     visible 0
+     Color 0.5 0.5 0.5 1
+     Font "{07E56D7B2AA8FC6B}UI/Fonts/RobotoCondensed/RobotoCondensed_Regular.fnt"
+     "Font Size" 12
+     "Exact Size" 1
+     Align center
+     VAlign center
+    }
+    TextWidget ActionHint {
+     slot {
+      halign 0.5
+      size 1 16
+     }
+     visible 0
+     Color 0.5 0.5 0.5 1
+     Font "{07E56D7B2AA8FC6B}UI/Fonts/RobotoCondensed/RobotoCondensed_Regular.fnt"
+     "Font Size" 12
+     "Exact Size" 1
+     Align center
+     VAlign center
+    }
+   }
+  }
+ }
+}

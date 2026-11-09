@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{624427778C98F827}Assets/Weapons/Attachments/Optics/PSO1/Data/ACM_NVG_PIPMaterial.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

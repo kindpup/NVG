@@ -12,9 +12,13 @@ class ACM_PhosphorColorOption
 	
 	[Attribute("", UIWidgets.ResourceNamePicker, desc: "HDR material for this color", "emat")]
 	protected ResourceName m_Material;
-	
+
+	[Attribute("0 0 0", UIWidgets.EditBox, desc: "Eyecup glow colour on the wearer's face (RGB 0-1). 0 0 0 = automatic from the name / material.")]
+	protected vector m_vFaceGlowColor;
+
 	string GetName() { return m_sName; }
 	ResourceName GetMaterial() { return m_Material; }
+	vector GetFaceGlowColor() { return m_vFaceGlowColor; }
 }
 
 [ComponentEditorProps(category: "ACM/Equipment", description: "Night vision goggle functionality")]
@@ -27,7 +31,18 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 	// Post-processing materials
 	[Attribute("", UIWidgets.ResourceNamePicker, desc: "HDR colorization material for NV effect", "emat", category: "ACM NVG - Visuals")]
 	protected ResourceName m_HDRMaterial;
-	
+
+	[Attribute("1", UIWidgets.CheckBox, desc: "Eyecup glow: the phosphor colour lights the wearer's face while the night vision is on (seen by everyone). Flashes when the colour changes.", category: "ACM NVG - Visuals")]
+	protected bool m_bFaceGlow;
+
+	[Attribute("0 0 0", UIWidgets.EditBox, desc: "Eyecup glow colour for the default material (RGB 0-1). 0 0 0 = automatic from the material name.", category: "ACM NVG - Visuals")]
+	protected vector m_vDefaultFaceGlowColor;
+
+	//! Last glow state sent, so the link is only asked when something changed.
+	protected bool m_bFaceGlowSentOn;
+	protected vector m_vFaceGlowSentColor;
+	protected bool m_bFaceGlowSentAny;
+
 	[Attribute("", UIWidgets.ResourceNamePicker, desc: "Film grain overlay material", "emat", category: "ACM NVG - Visuals")]
 	protected ResourceName m_GrainMaterial;
 	
@@ -70,7 +85,30 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 	// Phosphor color materials - dynamic array for unlimited colors
 	[Attribute("", UIWidgets.Auto, desc: "List of phosphor color options", category: "ACM NVG - Colors")]
 	protected ref array<ref ACM_PhosphorColorOption> m_aPhosphorColors;
-	
+
+	// Tube view - night vision only inside the tube circles, normal view outside them.
+	// See ACM_NVGTubeView. FULLSCREEN keeps the old whole-screen effect.
+	[Attribute("0", UIWidgets.ComboBox, desc: "Tube shape. FULLSCREEN = night vision covers the whole screen (old behaviour). SINGLE / DUAL / PANORAMIC = night vision only inside the tubes, normal view outside. CUSTOM = use Custom Tubes.", category: "ACM NVG - Tubes", enums: ParamEnumArray.FromEnum(ACM_ENVGTubeLayout))]
+	protected ACM_ENVGTubeLayout m_eTubeLayout;
+
+	[Attribute("", UIWidgets.Object, desc: "Tube circles used when Tube Layout is CUSTOM. Units are screen heights from the screen centre.", category: "ACM NVG - Tubes")]
+	protected ref array<ref ACM_NVGTube> m_aCustomTubes;
+
+	[Attribute("0.08", UIWidgets.Slider, desc: "How soft the tube edge is, as a fraction of the tube radius.", category: "ACM NVG - Tubes", params: "0 0.5 0.01")]
+	protected float m_fTubeEdgeSoftness;
+
+	[Attribute("0.85", UIWidgets.Slider, desc: "Render resolution of the night vision picture. Lower = faster; grain hides the softness.", category: "ACM NVG - Tubes", params: "0.3 1 0.05")]
+	protected float m_fTubeResolutionScale;
+
+	[Attribute("0.12", UIWidgets.Slider, desc: "Lens distortion towards the tube edge. 0 = none. Needs the radial tube mask texture.", category: "ACM NVG - Tubes", params: "0 0.5 0.01")]
+	protected float m_fTubeEdgeDistortion;
+
+	[Attribute("1", UIWidgets.Slider, desc: "Darkness of the thin faded black outline around each tube. 0 = no outline.", category: "ACM NVG - Tubes", params: "0 1 0.05")]
+	protected float m_fTubeRimDarkness;
+
+	protected bool m_bUsingTubeView;
+	protected bool m_bVanillaGrainRegistered;
+
 	// Internal references
 	protected SignalsManagerComponent m_pSignalMgr;
 	protected InventoryItemComponent m_pInventoryItem;
@@ -172,13 +210,13 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 			signalName = ACM_DEFAULT_ROTATOR_SIGNAL;
 
 		// Only CREATE the signal when nobody else has - and creation parameters must match
-		// ACM_NV_FlipAction / ACM_TargetDetectionComponent through the shared helper (
+		// ACM_NV_FlipAction through the shared helper (
 		// initial 0 = STOWED after the polarity flip). Never write into an existing signal here: on a live worn device the
 		// real state is owned by UpdateAnimation and stomping it from a deferred init would undo a
 		// toggle that happened in the first 250ms (stream-in restore does exactly that).
 		int sigId = m_pSignalMgr.FindSignal(signalName);
 		if (sigId < 0)
-			ACM_TargetDetectionComponent.EnsureAnimationSignal(owner, m_pSignalMgr, signalName);
+			EnsureAnimationSignal(owner, m_pSignalMgr, signalName);
 
 		// The actual point: an inactive entity never ticks its ProcAnimComponent, and preview
 		// clones are never toggled, so this is their only chance to leave the bind pose.
@@ -323,6 +361,17 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 	float GetBaseBrightness() { return m_fBaseBrightness; }
 	bool IsManualAdjustEnabled() { return m_bManualBrightnessEnabled; }
 	bool IsNVGActive() { return m_bActivated; }
+
+	//------------------------------------------------------------------------------------------------
+	//! Creates (or finds) the rotator signal with the same parameters for every creator, whichever
+	//! component or action initialises first.
+	static int EnsureAnimationSignal(IEntity owner, SignalsManagerComponent signals, string signalName)
+	{
+		if (!owner || !signals)
+			return -1;
+
+		return signals.AddOrFindMPSignal(signalName, 0.01, 0.5, 0);
+	}
 	bool IsNVGWorn() { return m_bIsWorn; }
 	
 	//------------------------------------------------------------------------------------------------
@@ -392,9 +441,11 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 			return;
 		
 		m_iCurrentColorIndex = (m_iCurrentColorIndex + 1) % (maxIndex + 1);
-		
+
 		if (m_bActivated)
 			ApplyVisualEffect(true, true);
+
+		UpdateFaceGlow();
 	}
 	
 	void SetPhosphorColor(int colorIndex)
@@ -404,9 +455,11 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 			colorIndex = 0;
 		
 		m_iCurrentColorIndex = colorIndex;
-		
+
 		if (m_bActivated)
 			ApplyVisualEffect(true, true);
+
+		UpdateFaceGlow();
 	}
 	
 	protected ResourceName GetCurrentPhosphorMaterial()
@@ -419,7 +472,51 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 		
 		return m_HDRMaterial;
 	}
-	
+
+	//------------------------------------------------------------------------------------------------
+	// EYECUP FACE GLOW
+	//------------------------------------------------------------------------------------------------
+	protected vector GetFaceGlowColor()
+	{
+		if (m_iCurrentColorIndex > 0 && m_aPhosphorColors && m_iCurrentColorIndex <= m_aPhosphorColors.Count())
+		{
+			ACM_PhosphorColorOption option = m_aPhosphorColors[m_iCurrentColorIndex - 1];
+			if (option)
+				return ACM_NVGFaceGlow.ColorForPhosphor(option.GetName(), option.GetMaterial(), option.GetFaceGlowColor());
+		}
+
+		return ACM_NVGFaceGlow.ColorForPhosphor("", m_HDRMaterial, m_vDefaultFaceGlowColor);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Local wearer only: tells everyone (through the player link) whether the eyecups glow and in
+	//! which colour. Cheap to call often - it only sends when the state changed.
+	protected void UpdateFaceGlow(bool forceOff = false)
+	{
+		if (!m_bFaceGlow || !m_CharacterOwner)
+			return;
+
+		if (m_CharacterOwner != SCR_PlayerController.GetLocalControlledEntity())
+			return;
+
+		ACM_PlayerLinkComponent link = ACM_PlayerLinkComponent.Cast(m_CharacterOwner.FindComponent(ACM_PlayerLinkComponent));
+		if (!link)
+			return;
+
+		bool on = !forceOff && m_bActivated && m_bIsWorn;
+		vector color = GetFaceGlowColor();
+
+		if (m_bFaceGlowSentAny && on == m_bFaceGlowSentOn && (!on || color == m_vFaceGlowSentColor))
+			return;
+
+		if (!link.AskSetFaceGlow(on, color))
+			return;
+
+		m_bFaceGlowSentAny = true;
+		m_bFaceGlowSentOn = on;
+		m_vFaceGlowSentColor = color;
+	}
+
 	//------------------------------------------------------------------------------------------------
 	// Manual brightness controls
 	//------------------------------------------------------------------------------------------------
@@ -465,7 +562,7 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 			m_fCurrentBrightness = newVal;
 			
 			// Only update brightness on the camera we already applied to.
-			if (m_bHDRBrightnessApplied && m_iAppliedCamId >= 0 && m_iAppliedCamId == world.GetCurrentCameraId())
+			if (m_bHDRBrightnessApplied && IsAppliedCameraLive(world))
 				world.SetCameraHDRBrightness(m_iAppliedCamId, m_fCurrentBrightness);
 		}
 	}
@@ -480,9 +577,30 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 			m_fCurrentBrightness = m_fBaseBrightness;
 			
 			BaseWorld world = GetGame().GetWorld();
-			if (world && m_bHDRBrightnessApplied && m_iAppliedCamId >= 0 && m_iAppliedCamId == world.GetCurrentCameraId())
+			if (world && m_bHDRBrightnessApplied && IsAppliedCameraLive(world))
 				world.SetCameraHDRBrightness(m_iAppliedCamId, m_fCurrentBrightness);
 		}
+	}
+
+	//------------------------------------------------------------------------------------------------
+	// The tube camera is never the "current" camera, so the old current-camera check would have
+	// blocked brightness changes whenever the tube view is in use.
+	protected bool IsAppliedCameraLive(BaseWorld world)
+	{
+		if (m_iAppliedCamId < 0 || !world)
+			return false;
+
+		if (m_bUsingTubeView)
+			return true;
+
+		return m_iAppliedCamId == world.GetCurrentCameraId();
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected void ReleaseTubeView()
+	{
+		ACM_NVGTubeView.Release(this);
+		m_bUsingTubeView = false;
 	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -536,6 +654,7 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 		m_bActivated = state;
 		ApplyVisualEffect(state);
 		UpdateAnimationTo(state, "OnToggleActive");
+		UpdateFaceGlow();
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -628,6 +747,13 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 	//------------------------------------------------------------------------------------------------
 	protected void DisableVanillaNightGrain(bool disable)
 	{
+		// Balanced per instance. Re-applying while already on (colour change, menu close) used to
+		// register again each time, so the count never returned to zero and the vanilla night
+		// noise stayed off after the goggles were removed.
+		if (disable == m_bVanillaGrainRegistered)
+			return;
+		m_bVanillaGrainRegistered = disable;
+
 		// Use global state manager to prevent conflicts when multiple players have NVGs
 		if (disable)
 			ACM_NVGGlobalStateManager.RegisterActiveNVG();
@@ -700,16 +826,36 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 		
 		if (enable && m_bIsWorn)
 		{
+			// TUBE VIEW: the chain goes on the tube camera and the main camera stays clean, so
+			// only the inside of the tubes is night vision. Falls back to the main camera (the
+			// old full-screen effect) if the view cannot be built.
+			bool useTubes = false;
+			if (isLocalPlayer && m_eTubeLayout != ACM_ENVGTubeLayout.FULLSCREEN)
+			{
+				if (ACM_NVGTubeView.Acquire(this, m_eTubeLayout, m_aCustomTubes, m_fTubeEdgeSoftness, m_fTubeResolutionScale, m_fTubeEdgeDistortion, m_fTubeRimDarkness))
+				{
+					camId = ACM_NVGTubeView.CAMERA_INDEX;
+					useTubes = true;
+				}
+			}
+
+			if (!useTubes)
+				ReleaseTubeView();
+
 			// Active camera changed since last apply -> revert old camera first to
 			// avoid leaving slots bound on a camera we no longer track.
 			if (m_iAppliedCamId >= 0 && m_iAppliedCamId != camId)
 				RevertAppliedEffects();
-			
+
+			m_bUsingTubeView = useTubes;
+
 			if (isLocalPlayer)
 				SetDeviceVisible(false);
-			
-			DisableVanillaNightGrain(true);
-			
+
+			// Vanilla night noise is the naked-eye view. With tubes, that is what surrounds them,
+			// so it stays on; only the full-screen effect replaces it.
+			DisableVanillaNightGrain(!useTubes);
+
 			m_iAppliedCamId = camId;
 			s_EffectOwner = this;
 			s_iEffectVersion++;
@@ -753,9 +899,10 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 		{
 			if (isLocalPlayer)
 				SetDeviceVisible(true);
-			
+
 			RevertAppliedEffects();
-			
+			ReleaseTubeView();
+
 			DisableVanillaNightGrain(false);
 			
 			if (m_bManualBrightnessEnabled)
@@ -771,49 +918,8 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 		ACM_IRSystem ir = ACM_IRSystem.GetInstance();
 		if (ir)
 			ir.SetIRVisibility(enable);
-		
-		// Target detection is opt-in per device and follows this device's power state.
-		// Only enable it for the local player - unlike the IR system, which is a global
-		// visibility flag, this one draws to the local screen.
-		// A MENU IS NOT A POWER CUT.
-		//
-		// This call used to be unconditional, and it is what has been killing the IVAS HUD.
-		// The menu handler in Update() calls ApplyVisualEffect(false) so the night vision
-		// post-process does not bleed through the inventory screen - a real requirement, and
-		// the post-process genuinely must go down. Target detection then went down with it:
-		// SetDetectionActive(false) -> Deactivate() -> m_Provider = null and Stop(), which
-		// removes DrawTick and ScanTick from the callqueue.
-		//
-		// DrawTick already handles menus by itself - it clears the overlay while one is open
-		// and rebuilds the contact set on the next pass after it closes. It simply cannot do
-		// that once Stop() has unregistered it, and EnsureTicking cannot revive it either:
-		// its own guard is `if (!m_bRunning || !m_Provider) return` - precisely the state the
-		// teardown just created. Confirmed in console.log as `run=false prov=0` for every
-		// second a menu was open, and `run=true prov=1` again the second one closed.
-		//
-		// So the menu transition passes touchDetection=false and suppresses the post-process
-		// only. The overlay is powered by the visor, not by night vision's screen effect.
-		if (touchDetection)
-			UpdateTargetDetection(enable && isLocalPlayer);
 	}
-	
-	//------------------------------------------------------------------------------------------------
-	// Character highlighting. Does nothing unless this specific NVG entity carries an
-	// ACM_TargetDetectionComponent - that component's presence is the opt-in switch, which
-	// is why this is resolved from our own owner rather than routed through a global system
-	// flag the way IR visibility is.
-	//------------------------------------------------------------------------------------------------
-	protected void UpdateTargetDetection(bool enable)
-	{
-		IEntity owner = GetOwner();
-		if (!owner)
-			return;
-		
-		ACM_TargetDetectionComponent detection = ACM_TargetDetectionComponent.Cast(owner.FindComponent(ACM_TargetDetectionComponent));
-		if (detection)
-			detection.SetDetectionActive(enable);
-	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	// Thermal gadget driving.
 	//
@@ -838,30 +944,6 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 			return null;
 		
 		return ACM_ThermalComponentV2.Cast(owner.FindComponent(ACM_ThermalComponentV2));
-	}
-	
-	//------------------------------------------------------------------------------------------------
-	// Same problem, same fix, one more component.
-	//
-	// ACM_ThermalTestComponent derives from THIS class, so it reports our own gadget type and loses
-	// the same race for the manager's attention - on a device carrying both, it is loaded and then
-	// never driven at all. Forwarded here so the trial rig behaves like every other gadget on the
-	// device rather than like a component that silently does nothing.
-	//
-	// Guarded against self so a device carrying ONLY the test component cannot forward its own
-	// lifecycle back into itself and recurse.
-	//------------------------------------------------------------------------------------------------
-	protected ACM_ThermalTestComponent GetThermalTestComponent()
-	{
-		IEntity owner = GetOwner();
-		if (!owner)
-			return null;
-		
-		ACM_ThermalTestComponent test = ACM_ThermalTestComponent.Cast(owner.FindComponent(ACM_ThermalTestComponent));
-		if (test == this)
-			return null;
-		
-		return test;
 	}
 	
 	protected void SetDeviceVisible(bool visible)
@@ -993,27 +1075,13 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 		if (thermal)
 			thermal.HostUpdate(timeSlice);
 
-		ACM_ThermalTestComponent thermalTest = GetThermalTestComponent();
-		if (thermalTest)
-			thermalTest.HostUpdate(timeSlice);
-
-		// KEEP THE IVAS DRAW LOOP ALIVE.
-		//
-		// Before the local-player early exit on purpose, and here rather than in the detection
-		// system because THIS update is engine-driven: the gadget system calls it every frame.
-		//
-		// The detection system draws from repeating callqueue entries, and opening a menu used to
-		// stop them for good - the contact marks never came back until the wearer toggled IVAS off
-		// and on, which runs Start() and re-registers them. This call is what keeps that path alive
-		// across a menu; see ACM_TargetDetectionSystem.EnsureTicking.
-		ACM_TargetDetectionSystem tdSystem = ACM_TargetDetectionSystem.GetInstance();
-		if (tdSystem)
-			tdSystem.EnsureTicking();
-		
 		// Early exit for non-local players
 		if (!m_CharacterOwner || m_CharacterOwner != SCR_PlayerController.GetLocalControlledEntity())
 			return;
-		
+
+		// Keeps the eyecup glow in step with power / worn state (sends only on change).
+		UpdateFaceGlow();
+
 		if (m_fBrightnessAdjustCooldown > 0)
 			m_fBrightnessAdjustCooldown -= timeSlice;
 		
@@ -1393,17 +1461,8 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 		if (thermal)
 			thermal.HostModeSwitch(mode, charOwner);
 
-		ACM_ThermalTestComponent thermalTest = GetThermalTestComponent();
-		if (thermalTest)
-			thermalTest.HostModeSwitch(mode, charOwner);
-		
 		if (mode == EGadgetMode.ON_GROUND || mode == EGadgetMode.LAST)
 		{
-			// Unconditional, unlike the effect teardown below: ClearNVGEffects() bails early
-			// when it thinks the device is still worn, and a highlight overlay left running
-			// after the goggles are dropped is far more visible than a stale camera slot.
-			UpdateTargetDetection(false);
-			
 			// Check if this is a spurious mode switch (NVG was recently active)
 			float currentTime = System.GetTickCount() / 1000.0;
 			if (m_bActivated && (currentTime - m_fLastKnownGoodTime) < 2.0)
@@ -1412,6 +1471,7 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 			// Only clear if we're actually being removed (not just inventory glitch)
 			// Set worn state first so ClearNVGEffects can check it
 			m_bIsWorn = false;
+			UpdateFaceGlow(true);
 			
 			if (m_bActivated)
 			{
@@ -1484,9 +1544,10 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 		// RevertAppliedEffects() is a no-op if we never applied anything, which
 		// makes this safe to call unconditionally.
 		RevertAppliedEffects();
-		
+		ReleaseTubeView();
+
 		DisableVanillaNightGrain(false);
-		
+
 		if (m_bManualBrightnessEnabled)
 		{
 			InputManager im = GetGame().GetInputManager();
@@ -1499,7 +1560,6 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 		if (ir)
 			ir.SetIRVisibility(false);
 		
-		UpdateTargetDetection(false);
 	}
 	
 	// THE DEFAULT HERE IS SHOW, AND THAT IS THE WHOLE POINT.
@@ -1594,8 +1654,7 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 	//------------------------------------------------------------------------------------------------
 	protected void OnDeath()
 	{
-		UpdateTargetDetection(false);
-		
+		UpdateFaceGlow(true);
 		m_bMenuOpen = false;
 		m_bIsWorn = false;
 		m_iNotWornFrameCount = 0;
@@ -1649,6 +1708,15 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 			GetGame().GetCallqueue().Remove(ACM_EnsureAnimTicking);
 			GetGame().GetCallqueue().Remove(DeferredKitLoadCheck);
 		}
+
+		UpdateFaceGlow(true);
+
+		// Deleted while switched on (respawn, item destroyed): take the tube view and the
+		// vanilla-noise suppression down with it.
+		if (m_bUsingTubeView)
+			RevertAppliedEffects();
+		ReleaseTubeView();
+		DisableVanillaNightGrain(false);
 
 		super.OnDelete(owner);
 	}

@@ -1,0 +1,14 @@
+ThermalImagingEffect {
+ TempConversionTex "{A15F15D00C4A4457}Textures/Thermal_Filter/BlackHot.edds"
+ TemperatureConversionMethod AutomaticLowHighPL
+ TemperatureRangeMin -0.142
+ DownsizeMethod Blur
+ DownsizePercent 100
+ UpsampleMethod Nearest
+ GhostingAmount 0.02
+ DegradeFPS 60
+ SimOverrideValues 1
+ SimForceRecomputeTableOnChange 1
+ SimTemperatureSkyMax -68
+ SimTemperatureWaterMin -29.7
+}

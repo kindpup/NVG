@@ -1,0 +1,57 @@
+HDREffect {
+ VisiblePercentWhite 100
+ VisiblePercentBlack 99
+ TargetBrightness 0.001
+ SpeedDarkToBright 20
+ SpeedBrightToDark 20
+ HDR 0
+ FilmicShoulderStrength 0.069
+ FilmicLinearStrength 2
+ FilmicLinearAngle -0.075
+ FilmicToeStrength 0.001
+ FilmicToeNumerator -0.25
+ FilmicToeDenumerator 16.871
+ FilmicExposureBias 8.298
+ FilmicWhitePoint 5.92
+ FilmicShoulderStrength2 0
+ FilmicLinearStrength2 0.016
+ FilmicLinearAngle2 0.312
+ FilmicToeStrength2 0.954
+ FilmicToeNumerator2 -0.234
+ FilmicToeDenumerator2 5.935
+ FilmicExposureBias2 4
+ ColorTableBase "{59AA4946AD7E4218}Common/Postprocess/LUT/LUT_Thermal_100.edds"
+ ToneMapBlend 1
+ BloomIntensity 0
+ BloomColor 1 1 1 1
+ BloomThreshold 0
+ BloomSteepness 0
+ BloomDownsampleHalfRes 1
+ BloomDownsampleQuality "Very Low (1-tap)"
+ BloomStrength0 1
+ BloomStrength1 1
+ BloomStrength2 1
+ BloomStrength3 1
+ BloomStrength4 1
+ BloomStrength5 1
+ BloomStrength6 1
+ BloomRadius0 2
+ BloomRadius1 2
+ BloomRadius2 2
+ BloomRadius3 2
+ BloomRadius4 2
+ BloomRadius5 2
+ BloomRadius6 2
+ Contrast 2
+ OverlayColor 0 0 0 1
+ Saturation 0
+ ColorizationColor 1 1 1 1
+ DesaturationWeights 0.299 0.587 0.114 0
+ VignetteMode Scope
+ Vignette 1.61
+ VignetteColor 1 1 1 1
+ VignetteSharpness 0
+ ReticleColor 0.094 0.176 0.271 0
+ ReticleMove 0
+ LensFlaresHalfRes 1
+}

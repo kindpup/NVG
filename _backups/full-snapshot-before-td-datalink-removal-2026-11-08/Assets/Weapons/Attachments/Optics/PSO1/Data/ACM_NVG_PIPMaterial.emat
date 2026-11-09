@@ -1,0 +1,12 @@
+MatCommon {
+ Color 1 1 1 1
+ Cull none
+ CastShadow 0
+ ReceiveShadow 0
+ OccludeRain 0
+ OccludeWetness 0
+ NoDecals 1
+ SurfaceProperties "{3DC7C8A918E3F4A5}Common/Materials/Game/glass.gamemat"
+ AlbedoMap "$rendertarget"
+ DisablePrexposure 1
+}

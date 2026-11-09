@@ -1,0 +1,24 @@
+LightEntity {
+ ID "685B2EC8AB7A9937"
+ Color 1 1 1 0
+ LV 20
+ CastShadow 0
+ ClipEV 2.46
+ Enabled 1
+ Type Spot
+ Radius 40
+ NearPlane 2
+ SpotAngle 53.68
+ SpotAngleAttenuation 0.58
+ DistanceAttenuation 1.79
+ Dynamic 1
+ Visualization Opaque
+ ShowSource 1
+ SourceMaterial "{E21591A9C6D08AE8}Assets/Props/Furniture/LightCeiling_01/data/LightCeiling_01_Glass_on.emat"
+ SourceSize 10
+ VolLightScale 0.2
+ VolLightIntensity 0.5
+ LensFlareType Disabled
+ LensFlareIndex 0
+ LensFlareScale 0
+}

@@ -1,0 +1,40 @@
+HDREffect {
+ VisiblePercentWhite 100
+ VisiblePercentBlack 99
+ TargetBrightness 1
+ SpeedDarkToBright 20
+ SpeedBrightToDark 20
+ FilmicShoulderStrength 2
+ FilmicLinearStrength 0.765
+ FilmicLinearAngle -0.206
+ FilmicToeStrength 0.217
+ FilmicToeNumerator 0.824
+ FilmicToeDenumerator 3.788
+ FilmicExposureBias 1.986
+ FilmicWhitePoint 0.1
+ BloomIntensity 0
+ BloomColor 0 0 0 1
+ BloomUseThreshold 1
+ BloomThreshold 1.174
+ BloomSteepness 3.649
+ BloomDownsampleHalfRes 1
+ BloomDownsampleQuality "Very Low (1-tap)"
+ BloomStrength0 0.927
+ BloomStrength1 0.893
+ BloomStrength2 0.974
+ BloomStrength3 0.864
+ BloomStrength4 0.936
+ BloomStrength5 0.621
+ BloomStrength6 0.99
+ BloomRadius1 1.905
+ BloomRadius4 1.768
+ BloomRadius5 1.859
+ BloomRadius6 2
+ Contrast 1.897
+ Brightness 0.265
+ Saturation 0.3
+ ColorizationColor 0.599 0.599 0.599 0
+ DesaturationWeights -2.7 12.3 -3.7 0
+ VignetteColor 0.149 0.149 0.149 1
+ LensFlaresEnabled 0
+}

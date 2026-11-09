@@ -1,0 +1,9 @@
+MatPBRBasic {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ RoughnessScale 2.396
+ BCRMap "{DD0DDF473DDB5F11}Assets/Data/MI_PVS31_BL_noACM_V2_BCR.edds"
+ OpacityMap "{70A53F4EA373F142}Assets/Characters/Basebody/Data/HeadClipping_A.edds"
+ NormalPower 1.254
+ NMOMap "{18DB90F8B7A61E3B}assets/characters/headgear/NVG/PVS31/Data/PVS31_NMO.edds"
+}

@@ -1,0 +1,1370 @@
+{
+ "Fpano.fbx [ORIGINAL]": {
+  "status": "ok",
+  "objects": [
+   {
+    "name": "Armature",
+    "type": "ARMATURE",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0011,
+     0.0102
+    ],
+    "bones": {
+     "w_nvgRoot": {
+      "parent": null,
+      "head": [
+       0.0,
+       -0.0324,
+       -0.0113
+      ],
+      "tail": [
+       0.0,
+       -0.0252,
+       0.0725
+      ]
+     },
+     "w_nvgRotator": {
+      "parent": "w_nvgRoot",
+      "head": [
+       0.0,
+       -0.0263,
+       0.0726
+      ],
+      "tail": [
+       0.0,
+       -0.0221,
+       0.1565
+      ]
+     }
+    }
+   },
+   {
+    "name": "NVG_Mount_L3Harris_FPGPNVG_Mount_Main",
+    "type": "MESH",
+    "parent": "Armature",
+    "parent_type": "OBJECT",
+    "parent_bone": null,
+    "loc": [
+     -0.0,
+     0.0011,
+     0.0102
+    ],
+    "armature_mods": [
+     "Armature"
+    ],
+    "weighted_verts_per_group": {
+     "w_nvgRotator": 10158
+    },
+    "vert_count": 10158
+   },
+   {
+    "name": "NVG_Mount_L3Harris_FPGPNVG_Base",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     -0.0002,
+     -0.0191,
+     -0.0044
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 1526
+   },
+   {
+    "name": "UBX_MOUNT",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0011,
+     0.0102
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 8
+   },
+   {
+    "name": "UBX_NVG",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0011,
+     0.0102
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 8
+   }
+  ]
+ },
+ "Fpano.fbx [CURRENT]": {
+  "status": "ok",
+  "objects": [
+   {
+    "name": "Armature",
+    "type": "ARMATURE",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0011,
+     0.0102
+    ],
+    "bones": {
+     "w_nvgRoot": {
+      "parent": null,
+      "head": [
+       0.0,
+       -0.0324,
+       -0.0113
+      ],
+      "tail": [
+       0.0,
+       -0.0252,
+       0.0725
+      ]
+     },
+     "w_nvgRotator": {
+      "parent": "w_nvgRoot",
+      "head": [
+       -0.0,
+       -0.0263,
+       0.0726
+      ],
+      "tail": [
+       0.0,
+       0.0183,
+       0.0013
+      ]
+     }
+    }
+   },
+   {
+    "name": "NVG_Mount_L3Harris_FPGPNVG_Mount_Main",
+    "type": "MESH",
+    "parent": "Armature",
+    "parent_type": "OBJECT",
+    "parent_bone": null,
+    "loc": [
+     -0.0,
+     0.0011,
+     0.0102
+    ],
+    "armature_mods": [
+     "Armature"
+    ],
+    "weighted_verts_per_group": {
+     "w_nvgRotator": 10158
+    },
+    "vert_count": 10158
+   },
+   {
+    "name": "NVG_Mount_L3Harris_FPGPNVG_Base",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     -0.0002,
+     -0.0191,
+     -0.0044
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 1526
+   },
+   {
+    "name": "UBX_MOUNT",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0011,
+     0.0102
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 8
+   },
+   {
+    "name": "UBX_NVG",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0011,
+     0.0102
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 8
+   }
+  ]
+ },
+ "GPNVG.fbx [ORIGINAL]": {
+  "status": "ok",
+  "objects": [
+   {
+    "name": "Armature",
+    "type": "ARMATURE",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0011,
+     0.0102
+    ],
+    "bones": {
+     "w_nvgRoot": {
+      "parent": null,
+      "head": [
+       0.0,
+       -0.0324,
+       -0.0113
+      ],
+      "tail": [
+       0.0,
+       -0.027,
+       0.0506
+      ]
+     },
+     "w_nvgRotator": {
+      "parent": "w_nvgRoot",
+      "head": [
+       0.0,
+       -0.0302,
+       0.0508
+      ],
+      "tail": [
+       0.0,
+       -0.027,
+       0.1128
+      ]
+     }
+    }
+   },
+   {
+    "name": "MOUNT.001",
+    "type": "MESH",
+    "parent": "Armature",
+    "parent_type": "OBJECT",
+    "parent_bone": null,
+    "loc": [
+     0.0074,
+     -0.017,
+     0.0681
+    ],
+    "armature_mods": [
+     "Armature"
+    ],
+    "weighted_verts_per_group": {
+     "w_nvgRotator": 7384
+    },
+    "vert_count": 7384
+   },
+   {
+    "name": "MOUNT",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0074,
+     -0.0154,
+     0.0673
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 1679
+   },
+   {
+    "name": "UBX_NVG",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0011,
+     0.0102
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 8
+   },
+   {
+    "name": "UTM_Mount",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     -0.0002,
+     -0.0191,
+     -0.0044
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 323
+   }
+  ]
+ },
+ "GPNVG.fbx [CURRENT]": {
+  "status": "ok",
+  "objects": [
+   {
+    "name": "Armature",
+    "type": "ARMATURE",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0011,
+     0.0102
+    ],
+    "bones": {
+     "w_nvgRoot": {
+      "parent": null,
+      "head": [
+       0.0,
+       -0.0324,
+       -0.0113
+      ],
+      "tail": [
+       0.0,
+       -0.027,
+       0.0506
+      ]
+     },
+     "w_nvgRotator": {
+      "parent": "w_nvgRoot",
+      "head": [
+       -0.0,
+       -0.0302,
+       0.0508
+      ],
+      "tail": [
+       0.0,
+       0.0028,
+       -0.0018
+      ]
+     }
+    }
+   },
+   {
+    "name": "MOUNT.001",
+    "type": "MESH",
+    "parent": "Armature",
+    "parent_type": "OBJECT",
+    "parent_bone": null,
+    "loc": [
+     0.0074,
+     -0.017,
+     0.0681
+    ],
+    "armature_mods": [
+     "Armature"
+    ],
+    "weighted_verts_per_group": {
+     "w_nvgRotator": 7384
+    },
+    "vert_count": 7384
+   },
+   {
+    "name": "MOUNT",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0074,
+     -0.0154,
+     0.0673
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 1679
+   },
+   {
+    "name": "UBX_NVG",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0011,
+     0.0102
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 8
+   },
+   {
+    "name": "UTM_Mount",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     -0.0002,
+     -0.0191,
+     -0.0044
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 323
+   }
+  ]
+ },
+ "PVS14.fbx [ORIGINAL]": {
+  "status": "ok",
+  "objects": [
+   {
+    "name": "Armature",
+    "type": "ARMATURE",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "bones": {
+     "w_nvgRoot": {
+      "parent": null,
+      "head": [
+       0.0,
+       -0.0324,
+       -0.0113
+      ],
+      "tail": [
+       0.0,
+       -0.0232,
+       0.0947
+      ]
+     },
+     "w_nvgRotator": {
+      "parent": "w_nvgRoot",
+      "head": [
+       0.0,
+       -0.0153,
+       0.0937
+      ],
+      "tail": [
+       0.0,
+       -0.0061,
+       0.1997
+      ]
+     }
+    }
+   },
+   {
+    "name": "NVG_PVS14_Arm",
+    "type": "MESH",
+    "parent": "Armature",
+    "parent_type": "OBJECT",
+    "parent_bone": null,
+    "loc": [
+     -0.0,
+     -0.0,
+     -0.0
+    ],
+    "armature_mods": [
+     "Armature"
+    ],
+    "weighted_verts_per_group": {
+     "w_nvgRotator": 2263
+    },
+    "vert_count": 2263
+   },
+   {
+    "name": "UBX_MOUNT",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0014,
+     -0.0062,
+     0.0792
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 8
+   },
+   {
+    "name": "UBX_NVG",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     -0.0,
+     -0.0483,
+     0.0323
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 8
+   },
+   {
+    "name": "NVG_PVS14_Mount",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 94
+   }
+  ]
+ },
+ "PVS14.fbx [CURRENT]": {
+  "status": "ok",
+  "objects": [
+   {
+    "name": "Armature",
+    "type": "ARMATURE",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "bones": {
+     "w_nvgRoot": {
+      "parent": null,
+      "head": [
+       0.0,
+       -0.0324,
+       -0.0113
+      ],
+      "tail": [
+       0.0,
+       -0.0232,
+       0.0947
+      ]
+     },
+     "w_nvgRotator": {
+      "parent": "w_nvgRoot",
+      "head": [
+       0.0,
+       -0.0153,
+       0.0937
+      ],
+      "tail": [
+       0.0,
+       0.0381,
+       0.0017
+      ]
+     }
+    }
+   },
+   {
+    "name": "NVG_PVS14_Arm",
+    "type": "MESH",
+    "parent": "Armature",
+    "parent_type": "OBJECT",
+    "parent_bone": null,
+    "loc": [
+     -0.0,
+     -0.0,
+     -0.0
+    ],
+    "armature_mods": [
+     "Armature"
+    ],
+    "weighted_verts_per_group": {
+     "w_nvgRotator": 2263
+    },
+    "vert_count": 2263
+   },
+   {
+    "name": "NVG_PVS14_Mount",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 94
+   },
+   {
+    "name": "UBX_MOUNT",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0014,
+     -0.0062,
+     0.0792
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 8
+   },
+   {
+    "name": "UBX_NVG",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     -0.0,
+     -0.0483,
+     0.0323
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 8
+   }
+  ]
+ },
+ "PVS31Rigged.fbx [ORIGINAL]": {
+  "status": "ok",
+  "objects": [
+   {
+    "name": "Armature",
+    "type": "ARMATURE",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0011,
+     0.0102
+    ],
+    "bones": {
+     "w_nvgRoot": {
+      "parent": null,
+      "head": [
+       0.0,
+       -0.0324,
+       -0.0113
+      ],
+      "tail": [
+       0.0,
+       -0.0252,
+       0.0725
+      ]
+     },
+     "w_nvgRotator": {
+      "parent": "w_nvgRoot",
+      "head": [
+       0.0,
+       -0.0263,
+       0.0726
+      ],
+      "tail": [
+       0.0,
+       -0.0221,
+       0.1565
+      ]
+     }
+    }
+   },
+   {
+    "name": "NVG_31_LOD0",
+    "type": "MESH",
+    "parent": "Armature",
+    "parent_type": "OBJECT",
+    "parent_bone": null,
+    "loc": [
+     -0.026,
+     -0.0523,
+     0.0215
+    ],
+    "armature_mods": [
+     "Armature"
+    ],
+    "weighted_verts_per_group": {
+     "w_nvgRotator": 7510
+    },
+    "vert_count": 7510
+   },
+   {
+    "name": "NVG_Mount_L3Harris_FPGPNVG_Base_LOD0",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     -0.0002,
+     -0.0191,
+     -0.0044
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 1526
+   },
+   {
+    "name": "UBX_MOUNT",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0014,
+     -0.0062,
+     0.0792
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 8
+   },
+   {
+    "name": "UBX_NVG",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     -0.0,
+     -0.0483,
+     0.0323
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 8
+   }
+  ]
+ },
+ "PVS31Rigged.fbx [CURRENT]": {
+  "status": "ok",
+  "objects": [
+   {
+    "name": "Armature",
+    "type": "ARMATURE",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0011,
+     0.0102
+    ],
+    "bones": {
+     "w_nvgRoot": {
+      "parent": null,
+      "head": [
+       0.0,
+       -0.0324,
+       -0.0113
+      ],
+      "tail": [
+       0.0,
+       -0.0252,
+       0.0725
+      ]
+     },
+     "w_nvgRotator": {
+      "parent": "w_nvgRoot",
+      "head": [
+       -0.0,
+       -0.0263,
+       0.0726
+      ],
+      "tail": [
+       0.0,
+       0.0183,
+       0.0013
+      ]
+     }
+    }
+   },
+   {
+    "name": "NVG_31_LOD0",
+    "type": "MESH",
+    "parent": "Armature",
+    "parent_type": "OBJECT",
+    "parent_bone": null,
+    "loc": [
+     -0.026,
+     -0.0523,
+     0.0215
+    ],
+    "armature_mods": [
+     "Armature"
+    ],
+    "weighted_verts_per_group": {
+     "w_nvgRotator": 7510
+    },
+    "vert_count": 7510
+   },
+   {
+    "name": "NVG_Mount_L3Harris_FPGPNVG_Base_LOD0",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     -0.0002,
+     -0.0191,
+     -0.0044
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 1526
+   },
+   {
+    "name": "UBX_MOUNT",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0014,
+     -0.0062,
+     0.0792
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 8
+   },
+   {
+    "name": "UBX_NVG",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     -0.0,
+     -0.0483,
+     0.0323
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 8
+   }
+  ]
+ },
+ "PVS7 rigged.fbx [ORIGINAL]": {
+  "status": "ok",
+  "objects": [
+   {
+    "name": "Armature",
+    "type": "ARMATURE",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "bones": {
+     "w_nvgRoot": {
+      "parent": null,
+      "head": [
+       0.0,
+       -0.0324,
+       -0.0113
+      ],
+      "tail": [
+       0.0,
+       -0.0238,
+       0.0883
+      ]
+     },
+     "w_nvgRotator": {
+      "parent": "w_nvgRoot",
+      "head": [
+       0.0,
+       -0.0113,
+       0.0864
+      ],
+      "tail": [
+       0.0,
+       -0.0027,
+       0.186
+      ]
+     }
+    }
+   },
+   {
+    "name": "PVS7_FULL",
+    "type": "MESH",
+    "parent": "Armature",
+    "parent_type": "OBJECT",
+    "parent_bone": null,
+    "loc": [
+     -0.0,
+     -0.0013,
+     -0.003
+    ],
+    "armature_mods": [
+     "Armature"
+    ],
+    "weighted_verts_per_group": {
+     "w_nvgRotator": 7885
+    },
+    "vert_count": 7885
+   },
+   {
+    "name": "UBX_MOUNT",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 8
+   },
+   {
+    "name": "UBX_NVG",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 8
+   },
+   {
+    "name": "PVS7_FULL.001",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0059,
+     0.0
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 158
+   },
+   {
+    "name": "PVS7_FULL.002",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0059,
+     0.0
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 46
+   },
+   {
+    "name": "PVS7_FULL.003",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 10
+   }
+  ]
+ },
+ "PVS7 rigged.fbx [CURRENT]": {
+  "status": "ok",
+  "objects": [
+   {
+    "name": "Armature",
+    "type": "ARMATURE",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "bones": {
+     "w_nvgRoot": {
+      "parent": null,
+      "head": [
+       0.0,
+       -0.0324,
+       -0.0113
+      ],
+      "tail": [
+       0.0,
+       -0.0238,
+       0.0883
+      ]
+     },
+     "w_nvgRotator": {
+      "parent": "w_nvgRoot",
+      "head": [
+       -0.0,
+       -0.0113,
+       0.0864
+      ],
+      "tail": [
+       0.0,
+       0.0388,
+       -0.0001
+      ]
+     }
+    }
+   },
+   {
+    "name": "PVS7_FULL",
+    "type": "MESH",
+    "parent": "Armature",
+    "parent_type": "OBJECT",
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     -0.0013,
+     -0.003
+    ],
+    "armature_mods": [
+     "Armature"
+    ],
+    "weighted_verts_per_group": {
+     "w_nvgRotator": 7885
+    },
+    "vert_count": 7885
+   },
+   {
+    "name": "PVS7_FULL.001",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0059,
+     0.0
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 158
+   },
+   {
+    "name": "PVS7_FULL.002",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0059,
+     0.0
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 46
+   },
+   {
+    "name": "PVS7_FULL.003",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 10
+   },
+   {
+    "name": "UBX_MOUNT",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 8
+   },
+   {
+    "name": "UBX_NVG",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 8
+   }
+  ]
+ },
+ "IVAS.fbx [ORIGINAL]": {
+  "status": "ok",
+  "objects": [
+   {
+    "name": "Armature",
+    "type": "ARMATURE",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0004,
+     0.0164,
+     0.0186
+    ],
+    "bones": {
+     "w_nvgRoot": {
+      "parent": null,
+      "head": [
+       -0.0006,
+       -0.0516,
+       -0.0077
+      ],
+      "tail": [
+       0.0003,
+       -0.0273,
+       0.0728
+      ]
+     },
+     "w_nvgRotator": {
+      "parent": "w_nvgRoot",
+      "head": [
+       -0.0,
+       -0.0264,
+       0.0725
+      ],
+      "tail": [
+       -0.0011,
+       -0.0029,
+       0.1533
+      ]
+     }
+    }
+   },
+   {
+    "name": "Circle.001",
+    "type": "MESH",
+    "parent": "Armature",
+    "parent_type": "OBJECT",
+    "parent_bone": null,
+    "loc": [
+     0.0022,
+     -0.0528,
+     0.0516
+    ],
+    "armature_mods": [
+     "Armature"
+    ],
+    "weighted_verts_per_group": {
+     "w_nvgRotator": 10947
+    },
+    "vert_count": 10947
+   },
+   {
+    "name": "NVG_Mount_L3Harris_FPGPNVG_Base.001",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     -0.0002,
+     -0.0191,
+     0.0011
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 1526
+   },
+   {
+    "name": "UBX_MOUNT.001",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0011,
+     0.0156
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 8
+   },
+   {
+    "name": "UBX_NVG.001",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0011,
+     0.0156
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 8
+   }
+  ]
+ },
+ "IVAS.fbx [CURRENT]": {
+  "status": "ok",
+  "objects": [
+   {
+    "name": "Armature",
+    "type": "ARMATURE",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0004,
+     0.0164,
+     0.0186
+    ],
+    "bones": {
+     "w_nvgRoot": {
+      "parent": null,
+      "head": [
+       -0.0006,
+       -0.0516,
+       -0.0077
+      ],
+      "tail": [
+       0.0003,
+       -0.0273,
+       0.0728
+      ]
+     },
+     "w_nvgRotator": {
+      "parent": "w_nvgRoot",
+      "head": [
+       -0.0,
+       -0.0264,
+       0.0725
+      ],
+      "tail": [
+       0.001,
+       0.0008,
+       -0.0071
+      ]
+     }
+    }
+   },
+   {
+    "name": "Circle.001",
+    "type": "MESH",
+    "parent": "Armature",
+    "parent_type": "OBJECT",
+    "parent_bone": null,
+    "loc": [
+     0.0022,
+     -0.0528,
+     0.0516
+    ],
+    "armature_mods": [
+     "Armature"
+    ],
+    "weighted_verts_per_group": {
+     "w_nvgRotator": 10947
+    },
+    "vert_count": 10947
+   },
+   {
+    "name": "NVG_Mount_L3Harris_FPGPNVG_Base.001",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     -0.0002,
+     -0.0191,
+     0.0011
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 1526
+   },
+   {
+    "name": "UBX_MOUNT.001",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0011,
+     0.0156
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 8
+   },
+   {
+    "name": "UBX_NVG.001",
+    "type": "MESH",
+    "parent": null,
+    "parent_type": null,
+    "parent_bone": null,
+    "loc": [
+     0.0,
+     0.0011,
+     0.0156
+    ],
+    "armature_mods": [],
+    "weighted_verts_per_group": {},
+    "vert_count": 8
+   }
+  ]
+ }
+}

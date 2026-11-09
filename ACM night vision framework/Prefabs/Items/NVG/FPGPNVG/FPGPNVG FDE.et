@@ -68,6 +68,7 @@ GameEntity {
    }
   }
   ACM_NightVisionComponent "{68C6977BA22710AC}" {
+   m_eTubeLayout PANORAMIC
    m_eUseMask CUSTOM
    m_HDRMaterial "{59F26A676C5E62F6}Assets/Shaders/NVSystem/Colors/Thermal Night.emat"
    m_GrainMaterial "{758640022A160027}Assets/Shaders/NVSystem/Grains/ACM_V2_FilmGrain.emat"
@@ -97,12 +98,10 @@ GameEntity {
     }
    }
   }
-  ACM_TargetDetectionComponent "{6A0E2283AF54DCF7}" {
-   m_fMaxRange 100
-   m_fFovDegrees 95
-   m_fLineWidth 4.5
-  }
   ACM_ThermalComponentV2 "{6A0E22824CA62265}" {
+   m_bFusionOverlay 1
+   m_fFusionOpacity 1
+   m_eTubeLayout PANORAMIC
    m_aPalettes {
     ACM_ThermalPalette "{6A0E2282776AFDA9}" {
      m_Material "{A131B20E9E1745E0}UI/Materials/Editor/Thermal WH.emat"

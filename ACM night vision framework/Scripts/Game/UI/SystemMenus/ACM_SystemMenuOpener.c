@@ -63,7 +63,6 @@ class ACM_SystemMenuOpener
 		input.AddActionListener("ACM_Lasers_Menu", EActionTrigger.DOWN, OnLasersMenuInput);
 		input.AddActionListener("ACM_NVG_Menu", EActionTrigger.DOWN, OnNVGMenuInput);
 		input.AddActionListener("ACM_Thermal_Menu", EActionTrigger.DOWN, OnThermalMenuInput);
-		input.AddActionListener("ACM_IVAS_Menu", EActionTrigger.DOWN, OnIvasMenuInput);
 
 		s_bRegistered = true;
 
@@ -84,7 +83,6 @@ class ACM_SystemMenuOpener
 			input.RemoveActionListener("ACM_Lasers_Menu", EActionTrigger.DOWN, OnLasersMenuInput);
 			input.RemoveActionListener("ACM_NVG_Menu", EActionTrigger.DOWN, OnNVGMenuInput);
 			input.RemoveActionListener("ACM_Thermal_Menu", EActionTrigger.DOWN, OnThermalMenuInput);
-			input.RemoveActionListener("ACM_IVAS_Menu", EActionTrigger.DOWN, OnIvasMenuInput);
 		}
 
 		s_bRegistered = false;
@@ -95,7 +93,6 @@ class ACM_SystemMenuOpener
 	protected static void OnLasersMenuInput() { Toggle(ChimeraMenuPreset.ACM_LasersMenu, "Lasers"); }
 	protected static void OnNVGMenuInput() { Toggle(ChimeraMenuPreset.ACM_NVGMenu, "Night Vision"); }
 	protected static void OnThermalMenuInput() { Toggle(ChimeraMenuPreset.ACM_ThermalMenu, "Thermal"); }
-	protected static void OnIvasMenuInput() { Toggle(ChimeraMenuPreset.ACM_IvasMenu, "IVAS"); }
 
 	//------------------------------------------------------------------------------------------------
 	// Toggle rather than open. A key that only opens leaves the player hunting for Escape, and a
@@ -163,7 +160,6 @@ class ACM_SystemMenuOpener
 		CloseIfOpen(menus, ChimeraMenuPreset.ACM_LasersMenu, keep);
 		CloseIfOpen(menus, ChimeraMenuPreset.ACM_NVGMenu, keep);
 		CloseIfOpen(menus, ChimeraMenuPreset.ACM_ThermalMenu, keep);
-		CloseIfOpen(menus, ChimeraMenuPreset.ACM_IvasMenu, keep);
 	}
 
 	//------------------------------------------------------------------------------------------------

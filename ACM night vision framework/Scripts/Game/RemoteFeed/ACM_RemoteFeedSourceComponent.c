@@ -397,8 +397,7 @@ class ACM_RemoteFeedSourceComponent : ScriptComponent
 		if (m_eAccessPolicy == ACM_ERemoteFeedAccess.FACTION)
 			return SameFaction(viewerPlayerId);
 
-		// EXPLICIT_LINK. Group links live on the contact manager, so this defers to the same grants
-		// the data link uses rather than keeping a second list.
+		// EXPLICIT_LINK. Uses the squad links opened from the squad menu (ACM_SquadLinkRegistry).
 		return HasExplicitLink(controllerId, viewerPlayerId);
 	}
 
@@ -431,11 +430,7 @@ class ACM_RemoteFeedSourceComponent : ScriptComponent
 		if (controllerId <= 0)
 			return false;
 
-		ACM_TacticalContactManager manager = ACM_TacticalContactManager.GetInstance();
-		if (!manager)
-			return false;
-
-		return manager.GroupsAreLinked(controllerId, viewerPlayerId);
+		return ACM_SquadLinkRegistry.GroupsAreLinked(controllerId, viewerPlayerId);
 	}
 
 	//------------------------------------------------------------------------------------------------

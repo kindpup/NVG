@@ -1,0 +1,2362 @@
+FrameWidgetClass {
+ Name "ACM_SysMenuRoot"
+ {
+   ImageWidgetClass {
+    Name "ACM_SysMenuDim"
+    Slot FrameWidgetSlot {
+     Anchor 0 0 1 1
+     OffsetLeft 0
+     OffsetTop 0
+     OffsetRight 0
+     OffsetBottom 0
+    }
+    Color 0.01 0.03 0.02 0.82
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuPanel"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -620.0
+     OffsetLeft -620.0
+     PositionY -400.0
+     OffsetTop -400.0
+     SizeX 1240.0
+     OffsetRight -620.0
+     SizeY 800.0
+     OffsetBottom -400.0
+    }
+    Color 0.02 0.07 0.05 0.88
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuTitle"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -380.0
+     OffsetTop -380.0
+     SizeX 760.0
+     OffsetRight -160.0
+     SizeY 34.0
+     OffsetBottom 346.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text "ACM SYSTEM"
+    "Font Size" 24
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuSubtitle"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -344.0
+     OffsetTop -344.0
+     SizeX 1000.0
+     OffsetRight -400.0
+     SizeY 24.0
+     OffsetBottom 320.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text ""
+    "Font Size" 17
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHint"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -318.0
+     OffsetTop -318.0
+     SizeX 1180.0
+     OffsetRight -580.0
+     SizeY 20.0
+     OffsetBottom 298.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuCloseBg"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 520.0
+     OffsetLeft 520.0
+     PositionY -380.0
+     OffsetTop -380.0
+     SizeX 80.0
+     OffsetRight -600.0
+     SizeY 32.0
+     OffsetBottom 348.0
+    }
+    Color 0.13 0.32 0.24 0.98
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuClose"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 520.0
+     OffsetLeft 520.0
+     PositionY -380.0
+     OffsetTop -380.0
+     SizeX 80.0
+     OffsetRight -600.0
+     SizeY 32.0
+     OffsetBottom 348.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuCloseLabel"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text "CLOSE"
+      "Font Size" 15
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg0"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -292.0
+     OffsetTop -292.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 258.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow0"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -292.0
+     OffsetTop -292.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 258.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel0"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr0"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY -284.0
+     OffsetTop -284.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom 264.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg1"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -256.0
+     OffsetTop -256.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 222.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow1"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -256.0
+     OffsetTop -256.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 222.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel1"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr1"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY -248.0
+     OffsetTop -248.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom 228.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg2"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -220.0
+     OffsetTop -220.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 186.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow2"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -220.0
+     OffsetTop -220.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 186.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel2"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr2"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY -212.0
+     OffsetTop -212.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom 192.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg3"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -184.0
+     OffsetTop -184.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 150.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow3"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -184.0
+     OffsetTop -184.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 150.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel3"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr3"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY -176.0
+     OffsetTop -176.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom 156.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg4"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -148.0
+     OffsetTop -148.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 114.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow4"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -148.0
+     OffsetTop -148.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 114.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel4"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr4"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY -140.0
+     OffsetTop -140.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom 120.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg5"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -112.0
+     OffsetTop -112.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 78.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow5"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -112.0
+     OffsetTop -112.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 78.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel5"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr5"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY -104.0
+     OffsetTop -104.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom 84.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg6"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -76.0
+     OffsetTop -76.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 42.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow6"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -76.0
+     OffsetTop -76.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 42.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel6"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr6"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY -68.0
+     OffsetTop -68.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom 48.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg7"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -40.0
+     OffsetTop -40.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 6.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow7"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -40.0
+     OffsetTop -40.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom 6.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel7"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr7"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY -32.0
+     OffsetTop -32.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom 12.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg8"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -4.0
+     OffsetTop -4.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -30.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow8"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -4.0
+     OffsetTop -4.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -30.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel8"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr8"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY 4.0
+     OffsetTop 4.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom -24.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg9"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 32.0
+     OffsetTop 32.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -66.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow9"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 32.0
+     OffsetTop 32.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -66.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel9"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr9"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY 40.0
+     OffsetTop 40.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom -60.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg10"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 68.0
+     OffsetTop 68.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -102.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow10"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 68.0
+     OffsetTop 68.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -102.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel10"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr10"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY 76.0
+     OffsetTop 76.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom -96.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg11"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 104.0
+     OffsetTop 104.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -138.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow11"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 104.0
+     OffsetTop 104.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -138.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel11"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr11"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY 112.0
+     OffsetTop 112.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom -132.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg12"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 140.0
+     OffsetTop 140.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -174.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow12"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 140.0
+     OffsetTop 140.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -174.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel12"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr12"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY 148.0
+     OffsetTop 148.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom -168.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg13"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 176.0
+     OffsetTop 176.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -210.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow13"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 176.0
+     OffsetTop 176.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -210.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel13"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr13"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY 184.0
+     OffsetTop 184.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom -204.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg14"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 212.0
+     OffsetTop 212.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -246.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow14"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 212.0
+     OffsetTop 212.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -246.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel14"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr14"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY 220.0
+     OffsetTop 220.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom -240.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg15"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 248.0
+     OffsetTop 248.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -282.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow15"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 248.0
+     OffsetTop 248.0
+     SizeX 580.0
+     OffsetRight 20.0
+     SizeY 34.0
+     OffsetBottom -282.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel15"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr15"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -596.0
+     OffsetLeft -596.0
+     PositionY 256.0
+     OffsetTop 256.0
+     SizeX 572.0
+     OffsetRight 24.0
+     SizeY 20.0
+     OffsetBottom -276.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg16"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -292.0
+     OffsetTop -292.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 258.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow16"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -292.0
+     OffsetTop -292.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 258.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel16"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr16"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY -284.0
+     OffsetTop -284.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom 264.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg17"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -256.0
+     OffsetTop -256.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 222.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow17"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -256.0
+     OffsetTop -256.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 222.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel17"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr17"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY -248.0
+     OffsetTop -248.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom 228.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg18"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -220.0
+     OffsetTop -220.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 186.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow18"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -220.0
+     OffsetTop -220.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 186.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel18"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr18"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY -212.0
+     OffsetTop -212.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom 192.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg19"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -184.0
+     OffsetTop -184.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 150.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow19"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -184.0
+     OffsetTop -184.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 150.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel19"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr19"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY -176.0
+     OffsetTop -176.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom 156.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg20"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -148.0
+     OffsetTop -148.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 114.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow20"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -148.0
+     OffsetTop -148.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 114.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel20"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr20"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY -140.0
+     OffsetTop -140.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom 120.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg21"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -112.0
+     OffsetTop -112.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 78.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow21"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -112.0
+     OffsetTop -112.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 78.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel21"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr21"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY -104.0
+     OffsetTop -104.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom 84.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg22"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -76.0
+     OffsetTop -76.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 42.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow22"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -76.0
+     OffsetTop -76.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 42.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel22"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr22"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY -68.0
+     OffsetTop -68.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom 48.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg23"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -40.0
+     OffsetTop -40.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 6.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow23"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -40.0
+     OffsetTop -40.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom 6.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel23"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr23"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY -32.0
+     OffsetTop -32.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom 12.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg24"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -4.0
+     OffsetTop -4.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -30.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow24"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY -4.0
+     OffsetTop -4.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -30.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel24"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr24"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY 4.0
+     OffsetTop 4.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom -24.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg25"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 32.0
+     OffsetTop 32.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -66.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow25"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 32.0
+     OffsetTop 32.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -66.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel25"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr25"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY 40.0
+     OffsetTop 40.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom -60.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg26"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 68.0
+     OffsetTop 68.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -102.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow26"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 68.0
+     OffsetTop 68.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -102.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel26"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr26"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY 76.0
+     OffsetTop 76.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom -96.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg27"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 104.0
+     OffsetTop 104.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -138.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow27"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 104.0
+     OffsetTop 104.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -138.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel27"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr27"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY 112.0
+     OffsetTop 112.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom -132.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg28"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 140.0
+     OffsetTop 140.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -174.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow28"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 140.0
+     OffsetTop 140.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -174.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel28"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr28"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY 148.0
+     OffsetTop 148.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom -168.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg29"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 176.0
+     OffsetTop 176.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -210.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow29"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 176.0
+     OffsetTop 176.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -210.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel29"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr29"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY 184.0
+     OffsetTop 184.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom -204.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg30"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 212.0
+     OffsetTop 212.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -246.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow30"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 212.0
+     OffsetTop 212.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -246.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel30"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr30"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY 220.0
+     OffsetTop 220.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom -240.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SysMenuRowBg31"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 248.0
+     OffsetTop 248.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -282.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SysMenuRow31"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 20.0
+     OffsetLeft 20.0
+     PositionY 248.0
+     OffsetTop 248.0
+     SizeX 580.0
+     OffsetRight -600.0
+     SizeY 34.0
+     OffsetBottom -282.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SysMenuLabel31"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 16
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuHdr31"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 24.0
+     OffsetLeft 24.0
+     PositionY 256.0
+     OffsetTop 256.0
+     SizeX 572.0
+     OffsetRight -596.0
+     SizeY 20.0
+     OffsetBottom -276.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_SysMenuStatus"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 352.0
+     OffsetTop 352.0
+     SizeX 1180.0
+     OffsetRight -580.0
+     SizeY 22.0
+     OffsetBottom -374.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+ }
+}

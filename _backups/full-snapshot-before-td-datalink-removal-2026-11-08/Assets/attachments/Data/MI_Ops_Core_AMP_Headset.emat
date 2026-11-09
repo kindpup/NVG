@@ -1,0 +1,6 @@
+MatPBRBasic {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{6A4F9E8BD6A872D0}assets/attachments/Data/MI_Ops_Core_AMP_Headset_BCR.edds"
+ NMOMap "{529725190FDF204E}assets/attachments/Data/MI_Ops_Core_AMP_Headset_NMO.edds"
+}

@@ -1,0 +1,23 @@
+MetaFileClass {
+ Name "{5C8858E093CB37BF}Assets/Data/PGNVG_NMO.edds"
+ Configurations {
+  PNGResourceClass PC : "{A968DA7F9A1E3A3E}Configs/System/ResourceTypes/PC/TextureNType.conf" {
+   MaxSize "1024"
+  }
+  PNGResourceClass XBOX_ONE : "{7F6A4D372443A88D}Configs/System/ResourceTypes/XBOX_ONE/TextureNType.conf" {
+   MaxSize "1024"
+  }
+  PNGResourceClass XBOX_SERIES : "{065D289C7FF8B20D}Configs/System/ResourceTypes/XBOX_SERIES/TextureNType.conf" {
+   MaxSize "1024"
+  }
+  PNGResourceClass PS4 : "{29DF4A6CBBABE916}Configs/System/ResourceTypes/PS4/TextureNType.conf" {
+   MaxSize "1024"
+  }
+  PNGResourceClass PS5 : "{DED3C8CA8494EA99}Configs/System/ResourceTypes/PS5/TextureNType.conf" {
+   MaxSize "1024"
+  }
+  PNGResourceClass HEADLESS : "{AFD658E4D0EB5FBC}Configs/System/ResourceTypes/HEADLESS/TextureNType.conf" {
+   MaxSize "1024"
+  }
+ }
+}

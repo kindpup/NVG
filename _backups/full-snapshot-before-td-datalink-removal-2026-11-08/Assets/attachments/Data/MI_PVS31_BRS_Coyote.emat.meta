@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{498A7FD1ED2D2E1B}Assets/attachments/Data/MI_PVS31_BRS_Coyote.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

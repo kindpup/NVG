@@ -1,0 +1,18 @@
+LightEntity {
+ ID "671E479B874E3FAB"
+ coords 0 0 0
+ Color 0.8 1 0.8 1
+ LV 4.96
+ CastShadow 0
+ ClipEV -10
+ Radius 0.2
+ NearPlane 0.31
+ SpotAngle 43.8
+ DistanceAttenuation 0.1
+ Dynamic 1
+ ShowSource 1
+ SourceSize 0.124
+ VolLightScale 0
+ VolLightIntensity 0
+ LensFlareScale 0
+}

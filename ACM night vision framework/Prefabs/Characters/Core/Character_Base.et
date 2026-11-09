@@ -10,8 +10,6 @@ SCR_ChimeraCharacter {
   }
   ACM_PlayerLinkComponent "{67200001AAAA1006}" {
   }
-  ACM_ScopedHighlightComponent "{6A3A4D8826D20BDB}" {
-  }
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
     LoadoutSlotInfo Ghillie {

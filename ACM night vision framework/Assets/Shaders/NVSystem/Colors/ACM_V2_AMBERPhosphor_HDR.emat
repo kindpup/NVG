@@ -33,7 +33,7 @@ HDREffect {
  Saturation 0
  ColorizationColor 0.812 0.737 0.506 1
  DesaturationWeights 1.5 1.5 1.5 0
- Vignette 0.65
+ Vignette 0
  VignetteSharpness 0.65
  LensFlaresEnabled 1
 }

@@ -1,0 +1,17 @@
+LightEntity {
+ ID "67165ACD60D1362D"
+ coords 0 0 0
+ Color 1 1 1 0
+ LV 3.75
+ CastShadow 0
+ Enabled 0
+ Radius 15
+ NearPlane 2
+ SpotAngle 170
+ Dynamic 1
+ ShowSource 1
+ VolLightScale 0.1
+ VolLightIntensity 0.005
+ LensFlareType Automatic
+ LensFlareScale 0.2
+}

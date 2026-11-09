@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{2ABF1A7A74E02B82}Assets/Characters/Basebody/Data/Basebody_01_Male_Head.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

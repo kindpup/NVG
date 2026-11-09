@@ -72,6 +72,7 @@ GameEntity {
    }
   }
   ACM_NightVisionComponent "{68544143A3433F66}" {
+   m_eTubeLayout SINGLE
    m_eUseMask CUSTOM
    m_HDRMaterial "{59F26A676C5E62F6}Assets/Shaders/NVSystem/Colors/Thermal Night.emat"
    m_GrainMaterial "{758640022A160027}Assets/Shaders/NVSystem/Grains/ACM_V2_FilmGrain.emat"

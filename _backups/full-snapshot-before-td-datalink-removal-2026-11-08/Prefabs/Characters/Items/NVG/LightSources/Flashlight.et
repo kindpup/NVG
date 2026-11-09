@@ -1,0 +1,21 @@
+LightEntity {
+ ID "65208777AC391CF7"
+ coords 0 0 0
+ Color 1 1 1 0
+ LV 6
+ CastShadow 0
+ ClipEV -10
+ Enabled 0
+ Radius 40
+ NearPlane 2
+ SpotAngle 30
+ SpotAngleAttenuation 0.95
+ DistanceAttenuation 0.1
+ Visualization Normal
+ SourceSize 0.001
+ VolLightScale 0.07
+ VolLightIntensity 0.2
+ LensFlareType Manual
+ LensFlareIndex 1
+ LensFlareScale 9.2
+}

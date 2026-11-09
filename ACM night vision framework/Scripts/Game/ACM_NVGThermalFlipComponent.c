@@ -5,6 +5,9 @@ class ACM_NVGThermalFlipComponentClass : ScriptComponentClass
 
 // Local-only post-process controller. ACM_ToggleNVG powers the view; ACM_ChangeSightMode
 // switches between green night vision and white-hot thermal.
+//
+// The picture is shown through ACM_NVGTubeView: night vision / thermal only inside the tubes,
+// the normal world outside them. Set Tube Layout to FULLSCREEN for the old whole-screen effect.
 class ACM_NVGThermalFlipComponent : ScriptComponent
 {
 	[Attribute("ACM_ToggleNVG", UIWidgets.EditBox, "Action that toggles the NVG view on/off.")]
@@ -13,11 +16,35 @@ class ACM_NVGThermalFlipComponent : ScriptComponent
 	[Attribute("ACM_ChangeSightMode", UIWidgets.EditBox, "Action that switches between night vision and thermal.")]
 	protected string m_sModeAction;
 
+	[Attribute("1", UIWidgets.CheckBox, "Allow thermal mode. Off = night vision only; the mode action does nothing.")]
+	protected bool m_bAllowThermal;
+
 	[Attribute("{9A4F5D6C7E8F1023}UI/Materials/ACM_NVG_GreenPhosphor.emat", UIWidgets.ResourceNamePicker, "Green phosphor HDR material.", "emat")]
 	protected ResourceName m_sNightVisionMaterial;
 
 	[Attribute("{8B3E4C5D6A7F9012}UI/Materials/ACM_Thermal_WhiteHot.emat", UIWidgets.ResourceNamePicker, "White-hot thermal imaging material.", "emat")]
 	protected ResourceName m_sThermalMaterial;
+
+	[Attribute("2", UIWidgets.ComboBox, "Tube shape. FULLSCREEN = whole screen (old behaviour).", enums: ParamEnumArray.FromEnum(ACM_ENVGTubeLayout), category: "Tubes")]
+	protected ACM_ENVGTubeLayout m_eTubeLayout;
+
+	[Attribute("", UIWidgets.Object, "Tube circles used when Tube Layout is CUSTOM. Units are screen heights from the screen centre.", category: "Tubes")]
+	protected ref array<ref ACM_NVGTube> m_aCustomTubes;
+
+	[Attribute("0.08", UIWidgets.Slider, "How soft the tube edge is, as a fraction of the tube radius.", params: "0 0.5 0.01", category: "Tubes")]
+	protected float m_fTubeEdgeSoftness;
+
+	[Attribute("1", UIWidgets.Slider, "Render resolution of the night vision / thermal picture. Lower values are cheaper but blurrier.", params: "0.3 1 0.05", category: "Tubes")]
+	protected float m_fTubeResolutionScale;
+
+	[Attribute("0.12", UIWidgets.Slider, "Lens distortion towards the tube edge. 0 = none. Needs the radial tube mask texture.", params: "0 0.5 0.01", category: "Tubes")]
+	protected float m_fTubeEdgeDistortion;
+
+	[Attribute("1", UIWidgets.Slider, "Darkness of the thin faded black outline around each tube. 0 = no outline.", params: "0 1 0.05", category: "Tubes")]
+	protected float m_fTubeRimDarkness;
+
+	[Attribute("1", UIWidgets.CheckBox, "Clear sky: hide the clouds while in thermal mode (local to this player only). The engine renders clouds unstably in thermal, which makes the whole sky flicker.", category: "Tubes")]
+	protected bool m_bClearSky;
 
 	protected static const int ACM_PP_THERMAL_SLOT = 11;
 	protected static const int ACM_PP_HDR_SLOT = 16;
@@ -26,9 +53,9 @@ class ACM_NVGThermalFlipComponent : ScriptComponent
 	protected bool m_bNVGActive;
 	protected int m_iMode;	// 0 = green night vision, 1 = white-hot thermal
 	protected int m_iAppliedCamera = -1;
-	protected int m_iAppliedNVGCamera = -1;
 	protected int m_iAppliedMode = -1;
 	protected bool m_bEffectApplied;
+	protected bool m_bUsingTubeView;
 	protected BaseWorld m_World;
 	protected InputManager m_RegisteredInput;
 
@@ -120,8 +147,35 @@ class ACM_NVGThermalFlipComponent : ScriptComponent
 		if (!owner || !m_bNVGActive || !IsLocalWearer(owner))
 			return;
 
+		// Night-vision-only devices never switch to thermal.
+		if (!m_bAllowThermal)
+		{
+			m_iMode = 0;
+			return;
+		}
+
 		m_iMode = 1 - m_iMode;
 		ApplyCurrentMode();
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Picks the camera the effect goes on: the tube camera when the tube view is available,
+	//! otherwise the main camera (full-screen fallback).
+	protected int ResolveTargetCamera()
+	{
+		m_bUsingTubeView = false;
+
+		if (m_eTubeLayout != ACM_ENVGTubeLayout.FULLSCREEN)
+		{
+			if (ACM_NVGTubeView.Acquire(this, m_eTubeLayout, m_aCustomTubes, m_fTubeEdgeSoftness, m_fTubeResolutionScale, m_fTubeEdgeDistortion, m_fTubeRimDarkness))
+			{
+				m_bUsingTubeView = true;
+				return ACM_NVGTubeView.CAMERA_INDEX;
+			}
+		}
+
+		ACM_NVGTubeView.Release(this);
+		return m_World.GetCurrentCameraId();
 	}
 
 	protected void ApplyCurrentMode()
@@ -137,72 +191,53 @@ class ACM_NVGThermalFlipComponent : ScriptComponent
 			return;
 		}
 
-		int cameraId = m_World.GetCurrentCameraId();
+		int cameraId = ResolveTargetCamera();
 		if (cameraId < 0)
 			return;
 
 		if (m_bEffectApplied && m_iAppliedCamera != cameraId)
-			ClearAppliedEffect();
+			ClearPostProcess();
 
 		m_iAppliedCamera = cameraId;
 		m_iAppliedMode = m_iMode;
-		m_World.SetCameraPostProcessEffect(cameraId, ACM_PP_THERMAL_SLOT, PostProcessEffectType.ThermalImaging, string.Empty);
-		m_World.SetCameraPostProcessEffect(cameraId, ACM_PP_THERMAL_SLOT, PostProcessEffectType.Colors, string.Empty);
-		ACM_NVGScreenTubeOverlayComponent overlay = ACM_NVGScreenTubeOverlayComponent.Cast(owner.FindComponent(ACM_NVGScreenTubeOverlayComponent));
 
 		if (m_iMode == 0)
 		{
+			m_World.SetCameraPostProcessEffect(cameraId, ACM_PP_THERMAL_SLOT, PostProcessEffectType.ThermalImaging, string.Empty);
+			m_World.SetCameraPostProcessEffect(cameraId, ACM_PP_HDR_SLOT, PostProcessEffectType.HDR, m_sNightVisionMaterial);
+		}
+		else
+		{
 			m_World.SetCameraPostProcessEffect(cameraId, ACM_PP_HDR_SLOT, PostProcessEffectType.HDR, ACM_DEFAULT_HDR);
-			if (overlay && overlay.IsFeedReady())
-			{
-				overlay.UpdateFeedCameraFromView(cameraId);
-				overlay.SetFeedActive(true);
-				m_iAppliedNVGCamera = overlay.GetFeedCameraIndex();
-			}
-			if (m_iAppliedNVGCamera >= 0 && m_iAppliedNVGCamera != cameraId)
-				m_World.SetCameraPostProcessEffect(m_iAppliedNVGCamera, ACM_PP_HDR_SLOT, PostProcessEffectType.HDR, m_sNightVisionMaterial);
-			else
-				m_World.SetCameraPostProcessEffect(cameraId, ACM_PP_HDR_SLOT, PostProcessEffectType.HDR, m_sNightVisionMaterial);
-			m_bEffectApplied = true;
-			return;
+			m_World.SetCameraPostProcessEffect(cameraId, ACM_PP_THERMAL_SLOT, PostProcessEffectType.ThermalImaging, m_sThermalMaterial);
 		}
 
-		if (overlay)
-			overlay.SetFeedActive(false);
-		ClearAppliedNVGCamera();
-		m_World.SetCameraPostProcessEffect(cameraId, ACM_PP_HDR_SLOT, PostProcessEffectType.HDR, ACM_DEFAULT_HDR);
-		m_World.SetCameraPostProcessEffect(cameraId, ACM_PP_THERMAL_SLOT, PostProcessEffectType.ThermalImaging, m_sThermalMaterial);
+		// Clouds off while in thermal mode (local only) - the engine's thermal clouds flicker.
+		ACM_ThermalClouds.SetClearSky(this, m_bClearSky && m_iMode == 1);
+
 		m_bEffectApplied = true;
 	}
 
-	protected void ClearAppliedNVGCamera()
+	//! Resets only the slots this component wrote, on the camera it wrote them to.
+	protected void ClearPostProcess()
 	{
-		if (m_World && m_iAppliedNVGCamera >= 0)
-			m_World.SetCameraPostProcessEffect(m_iAppliedNVGCamera, ACM_PP_HDR_SLOT, PostProcessEffectType.HDR, ACM_DEFAULT_HDR);
-		m_iAppliedNVGCamera = -1;
-	}
-
-	protected void ClearAppliedEffect()
-	{
-		IEntity owner = GetOwner();
-		if (owner)
-		{
-			ACM_NVGScreenTubeOverlayComponent overlay = ACM_NVGScreenTubeOverlayComponent.Cast(owner.FindComponent(ACM_NVGScreenTubeOverlayComponent));
-			if (overlay)
-				overlay.SetFeedActive(false);
-		}
-
 		if (m_World && m_bEffectApplied && m_iAppliedCamera >= 0)
 		{
 			m_World.SetCameraPostProcessEffect(m_iAppliedCamera, ACM_PP_THERMAL_SLOT, PostProcessEffectType.ThermalImaging, string.Empty);
-			m_World.SetCameraPostProcessEffect(m_iAppliedCamera, ACM_PP_THERMAL_SLOT, PostProcessEffectType.Colors, string.Empty);
 			m_World.SetCameraPostProcessEffect(m_iAppliedCamera, ACM_PP_HDR_SLOT, PostProcessEffectType.HDR, ACM_DEFAULT_HDR);
 		}
-		ClearAppliedNVGCamera();
 
 		m_iAppliedCamera = -1;
 		m_iAppliedMode = -1;
 		m_bEffectApplied = false;
+	}
+
+	protected void ClearAppliedEffect()
+	{
+		ACM_ThermalClouds.SetClearSky(this, false);
+		ClearPostProcess();
+		ACM_NVGTubeView.Release(this);
+		m_bUsingTubeView = false;
 	}
 
 	override void EOnFrame(IEntity owner, float timeSlice)
@@ -221,10 +256,18 @@ class ACM_NVGThermalFlipComponent : ScriptComponent
 		if (!m_World)
 			return;
 
+		// The tube camera index never changes; the view keeps itself aligned with the main camera.
+		if (m_bUsingTubeView)
+		{
+			if (!ACM_NVGTubeView.IsActiveFor(this) || m_iMode != m_iAppliedMode)
+				ApplyCurrentMode();
+			return;
+		}
+
 		int cameraId = m_World.GetCurrentCameraId();
 		if (cameraId < 0)
 		{
-			ClearAppliedEffect();
+			ClearPostProcess();
 			return;
 		}
 

@@ -1,0 +1,13 @@
+GenericEntity {
+ ID "69F757AC99318FC7"
+ components {
+  ACM_RemoteFeedSourceComponent "{6A30276485B2F901}" {
+   m_eSourceType K9
+   m_CameraAnchor PointInfo "{6A302764B814E7C1}" {
+    PivotID "head"
+    Offset 0 0.1553 0.0376
+    Angles -20.6164 0 0
+   }
+  }
+ }
+}

@@ -1,0 +1,107 @@
+GameEntity : "{D4BC1F7EC5C290A3}Prefabs/Characters/HeadGear/Hat_Boonie_US_01/Hat_Boonie_US_01_base.et" {
+ ID "5112706CD4157AC7"
+ components {
+  ClothNodeStorageComponent "{687127F68C26CE7E}" {
+   Attributes SCR_IdentityItemAttributeCollection "{687127F68C26CE64}" {
+    ItemDisplayName UIInfo "{687127F68C26CE66}" {
+     Name "ACM: PVS5"
+     Description "ACM: PVS5"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{687127F68C26CE1A}" {
+     Weight 1.5
+     SizeSetupStrategy Manual
+     ItemDimensions 20 20 20
+     ItemVolume 2500
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{687127F68C26CE1C}" {
+     }
+    }
+   }
+   StoragePurpose 0x40 0x1
+   UseCapacityCoefficient 0
+   MaxCumulativeVolume 0.1
+  }
+  ColliderHistoryComponent "{687127F68C26CE10}" {
+  }
+  InventoryItemComponent "{5244E4431E28A759}" {
+   Enabled 0
+   Attributes SCR_ItemAttributeCollection "{687127F68C26CE12}" {
+    ItemDisplayName UIInfo "{687127F68C26CE15}" {
+     Name "IHPS"
+     Description "IHPS"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{687127F68C26CE14}" {
+     SizeSetupStrategy Manual
+    }
+   }
+  }
+  MeshObject "{5112706CD4157AE0}" {
+   Object "{C6EB88BC6A23EF97}Assets/pvs5RIGGED.xob"
+   InheritSkeleton 1
+  }
+  ParametricMaterialInstanceComponent "{5854DCD8F168E46E}" {
+   AcceptHierarchyProperties 0x3ff 0
+  }
+  RigidBody "{5112706CD4157AE6}" {
+   LayerPreset "FireGeo"
+   Active Active
+   SimState Collision
+   ResponseIndex "NoCollision"
+  }
+  SCR_ArmorDamageManagerComponent "{687127F68C26CE09}" {
+   "Additional hit zones" {
+    SCR_ArmorHitZone helmet {
+     ColliderNames {
+      "UTM_FireGeo"
+     }
+     HZDefault 1
+     MaxHealth 10000
+     m_eHitZoneGroup HEAD
+    }
+   }
+   m_fPassedDamageScale 0.25
+  }
+  ACM_NightVisionComponent "{687127F6E7671B6E}" {
+   m_HDRMaterial "{843375C9FB51E38B}Assets/Shaders/NVSystem/Colors/ACM_V2_AMBERPhosphor_HDR.emat"
+   m_aPhosphorColors {
+    ACM_PhosphorColorOption "{687127F610A530B5}" {
+     m_sName "Amber"
+     m_Material "{843375C9FB51E38B}Assets/Shaders/NVSystem/Colors/ACM_V2_AMBERPhosphor_HDR.emat"
+    }
+    ACM_PhosphorColorOption "{687127F611E217B8}" {
+     m_sName "Blue"
+     m_Material "{ED769E2936B8E743}Assets/Shaders/NVSystem/Colors/ACM_V2_BLUEPhosphor_HDR.emat"
+    }
+    ACM_PhosphorColorOption "{687127F611858E9D}" {
+     m_sName "Green"
+     m_Material "{B277CCF517222C0C}Assets/Shaders/NVSystem/Colors/ACM_V2_GreenPhosphor_HDR.emat"
+    }
+    ACM_PhosphorColorOption "{687127F612562F69}" {
+     m_sName "Red"
+     m_Material "{335461E3DAF37CD9}Assets/Shaders/NVSystem/Colors/ACM_V2_RedPhosphor_HDR.emat"
+    }
+    ACM_PhosphorColorOption "{687127F6130471A1}" {
+     m_sName "White"
+     m_Material "{59F26A676C5E62F6}Assets/Shaders/NVSystem/Colors/ACM_V2_WhitePhosphor_HDR.emat"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5112706CD4157AF8}" {
+   AreaType ACM_Headstrap "{5A68DCDCBC46C964}" {
+   }
+   WornModel "{C6EB88BC6A23EF97}Assets/pvs5RIGGED.xob"
+   WornMaterialsOverride {
+    ""
+   }
+   ItemModel "{C6EB88BC6A23EF97}Assets/pvs5RIGGED.xob"
+   ItemMaterialsOverride {
+    ""
+   }
+   PhysicsOnWearEnabled 1
+   AnimateCollidersOnWear 1
+   DeflatedModel "{C6EB88BC6A23EF97}Assets/pvs5RIGGED.xob"
+  }
+ }
+ coords 0 0 0
+}

@@ -1,0 +1,122 @@
+FrameWidgetClass {
+ Name "ACM_RemoteFeedRoot"
+ {
+  FrameWidgetClass {
+   Name "ACM_RemoteFeedPanel"
+   Slot FrameWidgetSlot {
+    PositionX 48.0
+    OffsetLeft 48.0
+    PositionY 120.0
+    OffsetTop 120.0
+    SizeX 288.0
+    OffsetRight -336.0
+    SizeY 180.0
+    OffsetBottom -300.0
+   }
+   {
+    ImageWidgetClass {
+     Name "ACM_RemoteFeedBackground"
+     Slot FrameWidgetSlot {
+      Anchor 0 0 1 1
+      OffsetLeft 0
+      OffsetTop 0
+      OffsetRight 0
+      OffsetBottom 0
+     }
+     Color 0.020 0.024 0.028 1
+    }
+    RenderTargetWidgetClass {
+     Name "ACM_RemoteFeedTarget"
+     Slot FrameWidgetSlot {
+      Anchor 0 0 1 1
+      OffsetLeft 4
+      OffsetTop 26
+      OffsetRight 4
+      OffsetBottom 4
+     }
+     "Linear Filtering" 0
+    }
+    CanvasWidgetClass {
+     Name "ACM_RemoteFeedCanvas"
+     Slot FrameWidgetSlot {
+      Anchor 0 0 1 1
+      OffsetLeft 4
+      OffsetTop 26
+      OffsetRight 4
+      OffsetBottom 4
+     }
+    }
+    ImageWidgetClass {
+     Name "ACM_RemoteFeedHeader"
+     Slot FrameWidgetSlot {
+      Anchor 0 0 1 0
+      OffsetLeft 0
+      OffsetTop 0
+      OffsetRight 0
+      OffsetBottom -22.0
+     }
+     Color 0.055 0.062 0.070 1
+    }
+    TextWidgetClass {
+     Name "ACM_RemoteFeedTitle"
+     Slot FrameWidgetSlot {
+      Anchor 0 0 1 0
+      OffsetLeft 10
+      OffsetTop 3.0
+      OffsetRight 140
+      OffsetBottom -19.0
+     }
+     Color 0.75 0.90 0.95 1
+     Text "REMOTE FEED // TEST"
+     "Font Size" 13
+     "No Localization" 1
+    }
+    TextWidgetClass {
+     Name "ACM_RemoteFeedOwner"
+     Slot FrameWidgetSlot {
+      Anchor 0 1 1 1
+      OffsetLeft 4
+      OffsetTop -22.0
+      OffsetRight 4
+      OffsetBottom 4.0
+     }
+     Color 0.70 0.80 0.88 1
+     Text ""
+     "Font Size" 12
+     "No Localization" 1
+    }
+    TextWidgetClass {
+     Name "ACM_RemoteFeedLink"
+     Slot FrameWidgetSlot {
+      Anchor 1 0 1 0
+      OffsetLeft -134.0
+      OffsetTop 3.0
+      OffsetRight 6.0
+      OffsetBottom -19.0
+     }
+     Color 0.62 0.82 0.72 1
+     Text ""
+     "Font Size" 12
+     "Horizontal Alignment" Right
+     "No Localization" 1
+    }
+    TextWidgetClass {
+     Name "ACM_RemoteFeedStatus"
+     "Is Visible" 0
+     Slot FrameWidgetSlot {
+      Anchor 1 0 1 0
+      OffsetLeft -134.0
+      OffsetTop 3.0
+      OffsetRight 6.0
+      OffsetBottom -19.0
+     }
+     Color 0.95 0.75 0.35 1
+     Text "OPTIC PRIORITY"
+     "Font Size" 12
+     "Horizontal Alignment" Right
+     "No Localization" 1
+    }
+   }
+  }
+ }
+}

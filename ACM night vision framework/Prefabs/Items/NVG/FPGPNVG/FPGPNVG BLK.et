@@ -69,6 +69,7 @@ GameEntity {
    }
   }
   ACM_NightVisionComponent "{68C6977B3BD71AAA}" {
+   m_eTubeLayout PANORAMIC
    m_eUseMask CUSTOM
    m_HDRMaterial "{59F26A676C5E62F6}Assets/Shaders/NVSystem/Colors/Thermal Night.emat"
    m_bManualBrightnessEnabled 1
@@ -97,21 +98,10 @@ GameEntity {
     }
    }
   }
-  ACM_TargetDetectionComponent "{6A09261768CFBD6E}" {
-   m_fMaxRange 100
-   m_fFovDegrees 95
-   m_iMaxTargets 32
-   m_bDetectIncapacitated 0
-   m_bIvasOutlineConfirmed 1
-   m_fLineWidth 4.5
-   m_bLabelShowName 1
-   m_fLabelMaxRange 215
-   m_ColFriendly 0 0.25 1 1
-   m_ColHostile 0.518 0 0 1
-   m_ColNeutral 1 0.8 0 0.85
-   m_ColUnknown 1 0.954 0.799 0.85
-  }
   ACM_ThermalComponentV2 "{69A2562AEECD2633}" {
+   m_bFusionOverlay 1
+   m_fFusionOpacity 1
+   m_eTubeLayout PANORAMIC
    m_eUseMask CUSTOM
    m_aPalettes {
     ACM_ThermalPalette "{69B64DC324C5C4E8}" {

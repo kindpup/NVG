@@ -1,0 +1,13 @@
+GenericEntity : "{77CA4803A4A2B8E3}Prefabs/Drones/FPVBase/FPVRpg.et" {
+ ID "65932E3D2F6C309A"
+ components {
+  ACM_RemoteFeedSourceComponent "{6A300404C97C7C88}" {
+   m_eSourceType UAV
+   m_CameraAnchor PointInfo "{6A30040708E964DD}" {
+    Offset 0 0.0053 0.1614
+    Angles -38.1888 0 0
+   }
+   m_eBoneSource OWNER
+  }
+ }
+}

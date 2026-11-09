@@ -1,0 +1,97 @@
+ImageSetClass {
+ RefSize 320 256
+ Textures {
+  ImageSetTextureClass "{6866A65FDCDB55EB}" {
+   screenSize FHD
+   size 320 256
+   path "{6840EF4964813D43}UI/Textures/Icons/ACM_Icons_Atlas_v4.edds"
+  }
+ }
+ Images {
+  ImageSetDefClass flashlight {
+   Pos 0 0
+   Size 64 64
+   Flags 0 0
+  }
+  ImageSetDefClass strobe {
+   Pos 64 0
+   Size 64 64
+   Flags 0 0
+  }
+  ImageSetDefClass ir {
+   Pos 128 0
+   Size 64 64
+   Flags 0 0
+  }
+  ImageSetDefClass ir_cover {
+   Pos 192 0
+   Size 64 64
+   Flags 0 0
+  }
+  ImageSetDefClass nvg {
+   Pos 256 0
+   Size 64 64
+   Flags 0 0
+  }
+  ImageSetDefClass category {
+   Pos 0 64
+   Size 64 64
+   Flags 0 0
+  }
+  ImageSetDefClass thermal {
+   Pos 64 64
+   Size 64 64
+   Flags 0 0
+  }
+  ImageSetDefClass white {
+   Pos 128 64
+   Size 64 64
+   Flags 0 0
+  }
+  ImageSetDefClass red {
+   Pos 192 64
+   Size 64 64
+   Flags 0 0
+  }
+  ImageSetDefClass green {
+   Pos 256 64
+   Size 64 64
+   Flags 0 0
+  }
+  ImageSetDefClass blue {
+   Pos 0 128
+   Size 64 64
+   Flags 0 0
+  }
+  ImageSetDefClass yellow {
+   Pos 64 128
+   Size 64 64
+   Flags 0 0
+  }
+  ImageSetDefClass orange {
+   Pos 128 128
+   Size 64 64
+   Flags 0 0
+  }
+  ImageSetDefClass cyan {
+   Pos 192 128
+   Size 64 64
+   Flags 0 0
+  }
+  ImageSetDefClass magenta {
+   Pos 256 128
+   Size 64 64
+   Flags 0 0
+  }
+  ImageSetDefClass amber {
+   Pos 0 192
+   Size 64 64
+   Flags 0 0
+  }
+  ImageSetDefClass default {
+   Pos 128 64
+   Size 64 64
+   Flags 0 0
+  }
+ }
+}

@@ -2,7 +2,7 @@
 // ACM_SquadCommandComponent.c
 // Server-authoritative squad command: roster roles, group size, and cross-group data link sharing.
 //
-// Lives on the GAME MODE, like ACM_TacticalRoleComponent and ACM_TacticalContactManager, because
+// Lives on the GAME MODE, like ACM_TacticalRoleComponent, because
 // it arbitrates between groups and therefore cannot belong to any one of them.
 //
 //------------------------------------------------------------------------------------------------
@@ -276,12 +276,8 @@ class ACM_SquadCommandComponent : ScriptComponent
 		if (fromGroupId < 0 || toGroupId < 0 || fromGroupId == toGroupId)
 			return;
 
-		ACM_TacticalContactManager manager = ACM_TacticalContactManager.GetInstance();
-		if (!manager)
-			return;
-
 		// One direction only, deliberately. See the note above.
-		manager.ServerGrantLink(fromGroupId, toGroupId, false, 0);
+		ACM_SquadLinkRegistry.ServerGrantLink(fromGroupId, toGroupId, false, 0);
 
 		Print(string.Format("[ACM Squad] leader %1 OPENED group %2 -> %3", callerPlayerId, fromGroupId, toGroupId), LogLevel.DEBUG);
 	}
@@ -298,11 +294,7 @@ class ACM_SquadCommandComponent : ScriptComponent
 		if (!IsLeaderOf(callerPlayerId, group))
 			return;
 
-		ACM_TacticalContactManager manager = ACM_TacticalContactManager.GetInstance();
-		if (!manager)
-			return;
-
-		manager.ServerRevokeLink(group.GetGroupID(), toGroupId);
+		ACM_SquadLinkRegistry.ServerRevokeLink(group.GetGroupID(), toGroupId);
 
 		Print(string.Format("[ACM Squad] leader %1 CLOSED group %2 -> %3", callerPlayerId, group.GetGroupID(), toGroupId), LogLevel.DEBUG);
 	}
@@ -390,13 +382,9 @@ class ACM_SquadCommandComponent : ScriptComponent
 		if (found < 0)
 			return;
 
-		ACM_TacticalContactManager manager = ACM_TacticalContactManager.GetInstance();
-		if (!manager)
-			return;
-
 		// myGroup shares TO the requester. Not bidirectional: approving somebody's request is not
 		// an agreement to receive theirs, and if they want that they can approve their own side.
-		manager.ServerGrantLink(myGroupId, requesterGroupId, false, 0);
+		ACM_SquadLinkRegistry.ServerGrantLink(myGroupId, requesterGroupId, false, 0);
 
 		m_aRequests.Remove(found);
 

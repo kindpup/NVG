@@ -1,0 +1,16 @@
+GenericEntity {
+ ID "659863D5118F3377"
+ components {
+  ACM_RemoteFeedSourceComponent "{6A3004178077C1CC}" {
+   m_eSourceType UAV
+   m_CameraAnchor PointInfo "{6A300417827FDA8C}" {
+    Offset 0 -0.012 0.1325
+    Angles -60.0204 0 0
+   }
+   m_LinkProfile ACM_RemoteFeedProfile "{6A300417F6626532}" {
+    optimalRange 160
+    maxRange 400
+   }
+  }
+ }
+}

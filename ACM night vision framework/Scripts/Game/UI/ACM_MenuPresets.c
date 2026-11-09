@@ -17,6 +17,5 @@ modded enum ChimeraMenuPreset
 	ACM_LightsMenu,
 	ACM_LasersMenu,
 	ACM_NVGMenu,
-	ACM_ThermalMenu,
-	ACM_IvasMenu
+	ACM_ThermalMenu
 }

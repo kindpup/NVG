@@ -1,0 +1,23 @@
+MetaFileClass {
+ Name "{7CCB31CCF21C2FBE}Assets/Data/MI_NVG_PVS14_MC_noACM_V2_BCR.edds"
+ Configurations {
+  PNGResourceClass PC : "{EAB5DE3219F9CBA8}Configs/System/ResourceTypes/PC/TextureColorMap.conf" {
+   MaxSize "1024"
+  }
+  PNGResourceClass XBOX_ONE : "{91D862F89991BFBE}Configs/System/ResourceTypes/XBOX_ONE/TextureColorMap.conf" {
+   MaxSize "1024"
+  }
+  PNGResourceClass XBOX_SERIES : "{5FEAED1642ECE679}Configs/System/ResourceTypes/XBOX_SERIES/TextureColorMap.conf" {
+   MaxSize "1024"
+  }
+  PNGResourceClass PS4 : "{12273E1A0928F0C4}Configs/System/ResourceTypes/PS4/TextureColorMap.conf" {
+   MaxSize "1024"
+  }
+  PNGResourceClass PS5 : "{531A0D167B1ABD97}Configs/System/ResourceTypes/PS5/TextureColorMap.conf" {
+   MaxSize "1024"
+  }
+  PNGResourceClass HEADLESS : "{BEAF5CD0C438676E}Configs/System/ResourceTypes/HEADLESS/TextureColorMap.conf" {
+   MaxSize "1024"
+  }
+ }
+}

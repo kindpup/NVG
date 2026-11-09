@@ -8,78 +8,7 @@
 const string ACM_RADIAL_IMAGESET = "{C258361975CC6C9D}UI/Textures/Icons/ACM_RadialMenu_Icons.imageset";
 
 //------------------------------------------------------------------------------------------------
-// IVAS visor flip.
-//
-// Device-scoped rather than player-scoped: it sits under the device's own category alongside its
-// NVG and thermal toggles, because it acts on that specific piece of hardware. Only offered for a
-// device whose ACM_TargetDetectionComponent has the IVAS visor option enabled - a conventional NVG
-// has no independent visor, so showing the entry would be offering something that does nothing.
-//------------------------------------------------------------------------------------------------
-class ACM_IvasVisorEntry : SCR_SelectionMenuEntry
-{
-	protected IEntity m_Owner;
-	protected bool m_bPerformed;
-
-	void ACM_IvasVisorEntry(IEntity owner)
-	{
-		m_Owner = owner;
-		SetIcon(ACM_RADIAL_IMAGESET, "nvg");
-		Update();
-	}
-
-	protected ACM_TargetDetectionComponent ResolveDetection()
-	{
-		if (!m_Owner)
-			return null;
-
-		return ACM_TargetDetectionComponent.Cast(m_Owner.FindComponent(ACM_TargetDetectionComponent));
-	}
-
-	override void Update()
-	{
-		ACM_TargetDetectionComponent detection = ResolveDetection();
-
-		if (!detection)
-		{
-			SetName("Visor");
-			return;
-		}
-
-		// Authority missing is its own state, not a hidden entry.
-		//
-		// This used to be gated out of existence: the menu only offered the visor when this machine
-		// had authority, so any moment authority had not resolved - the tick after a teleport, the
-		// tick after a possession - the entry was gone and there was no way at all to switch the
-		// device on. Saying NO CONTROL is usable and it tells the player something true.
-		if (!detection.HasLocalAuthority())
-		{
-			SetName("Visor [NO CONTROL]");
-			return;
-		}
-
-		// States the CURRENT position rather than the action it will perform, matching how the
-		// mod's other stateful entries read.
-		if (detection.IsVisorDown())
-			SetName("Visor [DOWN]");
-		else
-			SetName("Visor [UP]");
-	}
-
-	override void OnPerform()
-	{
-		if (m_bPerformed)
-			return;
-
-		m_bPerformed = true;
-
-		ACM_TargetDetectionComponent detection = ResolveDetection();
-		if (detection)
-			detection.ToggleVisor();
-	}
-}
-
-//------------------------------------------------------------------------------------------------
-// IVAS SETTINGS -> TACTICAL ROLE
+// SETTINGS -> TACTICAL ROLE
 //
 // The radial menu is only a FRONTEND for the role API. It owns no role state, caches nothing and
 // makes no decisions - it calls ACM_TacticalRoleComponent.RequestSetTacticalRole and stops. A
@@ -139,7 +68,7 @@ class ACM_TacticalRoleEntry : SCR_SelectionMenuEntry
 
 		// Feedback, because the menu closes on perform and the marker change happens out on other
 		// people's displays rather than on the selecting player's own.
-		SCR_HintManagerComponent.ShowCustomHint(string.Format("Tactical Role: %1", m_sDisplayName), "ACM IVAS", 3);
+		SCR_HintManagerComponent.ShowCustomHint(string.Format("Tactical Role: %1", m_sDisplayName), "ACM", 3);
 	}
 }
 
@@ -228,9 +157,6 @@ class ACM_RadialMenuItemsComponent : SCR_RadialMenuItemsComponent
 			return true;
 		
 		if (ACM_ThermalComponentV2.Cast(entity.FindComponent(ACM_ThermalComponentV2)))
-			return true;
-		
-		if (ACM_ThermalTestComponent.Cast(entity.FindComponent(ACM_ThermalTestComponent)))
 			return true;
 		
 		return false;
@@ -401,24 +327,7 @@ class ACM_RadialMenuItemsComponent : SCR_RadialMenuItemsComponent
 		ACM_ThermalComponentV2 thermalComp = ACM_ThermalComponentV2.Cast(
 			entity.FindComponent(ACM_ThermalComponentV2));
 		
-		ACM_TargetDetectionComponent detectionComp = ACM_TargetDetectionComponent.Cast(
-			entity.FindComponent(ACM_TargetDetectionComponent));
-
-		// An IVAS's own optics belong under SYSTEM, not in a second wedge of their own.
-		//
-		// The device would otherwise appear twice on the root ring - once as SYSTEM and once under
-		// its item name - with the visor in one place and night vision in the other. So a device the
-		// IVAS branch has already covered contributes none of those entries here; anything else on
-		// the same entity, a helmet light say, still gets its category as before.
-		// Capability, not control. Keyed off HasIvasVisor before, which meant that whenever authority
-		// had not resolved the IVAS branch was absent AND this category un-suppressed itself, so the
-		// player saw a different menu shape depending on timing. Same test the IVAS branch uses now,
-		// so the two can never disagree.
-		bool ivasOwned = false;
-		if (detectionComp && detectionComp.HasVisorHardware())
-			ivasOwned = true;
-
-		if (nvgComp && !ivasOwned)
+		if (nvgComp)
 		{
 			category.AddEntry(new ACM_DynamicMenuEntry(entity, ACM_DynamicActionType.TOGGLE_NVG, deviceName));
 			
@@ -432,13 +341,7 @@ class ACM_RadialMenuItemsComponent : SCR_RadialMenuItemsComponent
 			}
 		}
 		
-		ACM_ThermalTestComponent thermalTestComp = ACM_ThermalTestComponent.Cast(
-			entity.FindComponent(ACM_ThermalTestComponent));
-
-		if (thermalTestComp && !ivasOwned)
-			category.AddEntry(new ACM_DynamicMenuEntry(entity, ACM_DynamicActionType.TOGGLE_THERMAL_TEST, deviceName));
-
-		if (thermalComp && !ivasOwned)
+		if (thermalComp)
 		{
 			category.AddEntry(new ACM_DynamicMenuEntry(entity, ACM_DynamicActionType.TOGGLE_THERMAL, deviceName));
 			
@@ -601,251 +504,11 @@ class ACM_RadialMenuItemsComponent : SCR_RadialMenuItemsComponent
 		AddWeaponAttachmentEntries(radialMenu, character);
 		AddEquipmentEntries(radialMenu, character);
 		AddVehicleEntries(radialMenu, character);
-		AddIvasEntries(radialMenu);
 		AddTacticalRoleEntries(radialMenu);
 		
 		
 		if (!radialMenu.GetEntryCount())
 			GetGame().GetCallqueue().Call(radialMenu.Close);
-	}
-
-	//------------------------------------------------------------------------------------------------
-	// ACM IVAS branch.
-	//
-	// THE UNIVERSAL INTERFACE. Every normal player-facing IVAS function is reachable from here with
-	// a gamepad and nothing else. The two keyboard bindings that exist - remote feed toggle and
-	// cycle - remain as shortcuts and are never the only way to reach their function.
-	//
-	// DEVICE AWARE. A control whose hardware is absent is not offered. A plain FPGPNVG has a night
-	// vision component but no ACM_TargetDetectionComponent, so it gets SYSTEM with night vision and
-	// phosphor in it and none of the other five branches - offering a player a Data Link switch on
-	// goggles that have no data link is worse than offering nothing.
-	//------------------------------------------------------------------------------------------------
-	protected void AddIvasEntries(notnull SCR_RadialMenu radialMenu)
-	{
-		// Re-decide authority before building anything.
-		//
-		// The background poll gets there within a second, but a player whose menu came up without its
-		// IVAS branch will close it and open it again straight away. Making that reopen the thing
-		// that fixes it costs one inventory walk per device and turns a confusing dead menu into a
-		// self-correcting one.
-		ACM_TargetDetectionComponent.RefreshAllAuthority();
-
-		ACM_TargetDetectionComponent device = ACM_TargetDetectionComponent.GetLocalDevice();
-
-		// No detection hardware. Night vision and thermal keep the per-device categories they have
-		// always had, so an FPGPNVG is completely unaffected by everything in this method.
-		if (!device)
-			return;
-
-		AddIvasSystemCategory(radialMenu, device);
-		AddIvasIffCategory(radialMenu);
-		AddIvasTargetingCategory(radialMenu);
-		AddIvasDataLinkCategory(radialMenu);
-		AddIvasFeedCategory(radialMenu, device);
-		AddIvasDisplayCategory(radialMenu);
-	}
-
-	//------------------------------------------------------------------------------------------------
-	// SYSTEM: the hardware itself. Power, the visor, and the two optics.
-	//
-	// Night vision and thermal are here rather than under the IVAS master on purpose - they are
-	// separate visual systems with their own power, and switching IVAS off must not take them with
-	// it. What the master does hide is everything augmented: markers and the feed.
-	//------------------------------------------------------------------------------------------------
-	protected void AddIvasSystemCategory(notnull SCR_RadialMenu radialMenu, notnull ACM_TargetDetectionComponent device)
-	{
-		ACM_IvasCategory category = new ACM_IvasCategory(ACM_EIvasCategory.SYSTEM);
-
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.IVAS_MASTER));
-
-		IEntity owner = device.GetOwner();
-
-		// Visor first among the hardware entries: with it stowed, the optics below have nothing to
-		// show through, so the flip is the one that matters most.
-		if (owner && device.HasVisorHardware())
-			category.AddEntry(new ACM_IvasVisorEntry(owner));
-
-		if (owner)
-		{
-			ACM_NightVisionComponent nvg = ACM_NightVisionComponent.Cast(owner.FindComponent(ACM_NightVisionComponent));
-			if (nvg)
-			{
-				category.AddEntry(new ACM_DynamicMenuEntry(owner, ACM_DynamicActionType.TOGGLE_NVG, ""));
-
-				// A picker listing one choice is a dead entry.
-				if (nvg.GetAvailableColorCount() > 1)
-				{
-					ACM_PhosphorColorCategory phosphor = new ACM_PhosphorColorCategory(owner, "Phosphor Colour");
-					array<string> colorNames = nvg.GetAvailableColorNames();
-					for (int i = 0; i < colorNames.Count(); i++)
-						phosphor.AddEntry(new ACM_PhosphorColorEntry(owner, i, colorNames[i]));
-
-					category.AddEntry(phosphor);
-				}
-			}
-
-			// The trial thermal rig, when the device carries one.
-			//
-			// It needs its own lookup and its own entry. It derives from ACM_NightVisionComponent,
-			// so it is invisible to the thermal lookup below, and on a device that also carries a
-			// plain night vision component the NVG lookup above returns THAT one - whichever sits
-			// first on the entity wins. The net effect was a component present on the prefab,
-			// loaded, and completely unreachable from the menu, which is indistinguishable from it
-			// not being installed. Starred so nobody mistakes a test build for the shipping one.
-			ACM_ThermalTestComponent thermalTest = ACM_ThermalTestComponent.Cast(owner.FindComponent(ACM_ThermalTestComponent));
-			if (thermalTest)
-			{
-				category.AddEntry(new ACM_DynamicMenuEntry(owner, ACM_DynamicActionType.TOGGLE_THERMAL_TEST, ""));
-
-				// Signature strength, in flight. The emat holds the precision - script setters are
-				// all ints and cannot express the values that actually read - so the choice is
-				// between authored materials rather than along a slider. Same gate as the phosphor
-				// picker: a list of one is a dead entry.
-				if (thermalTest.GetSignatureMaterialCount() > 1)
-				{
-					ACM_ThermalSignatureCategory sigCategory = new ACM_ThermalSignatureCategory(owner, "Signature Strength");
-					array<string> sigNames = thermalTest.GetSignatureMaterialNames();
-					for (int i = 0; i < sigNames.Count(); i++)
-						sigCategory.AddEntry(new ACM_ThermalSignatureEntry(owner, i, sigNames[i]));
-
-					category.AddEntry(sigCategory);
-				}
-			}
-
-			ACM_ThermalComponentV2 thermal = ACM_ThermalComponentV2.Cast(owner.FindComponent(ACM_ThermalComponentV2));
-			if (thermal)
-			{
-				category.AddEntry(new ACM_DynamicMenuEntry(owner, ACM_DynamicActionType.TOGGLE_THERMAL, ""));
-
-				if (thermal.GetPaletteCount() > 1)
-				{
-					ACM_ThermalPaletteCategory palette = new ACM_ThermalPaletteCategory(owner, "Thermal Palette");
-					array<string> paletteNames = thermal.GetPaletteNames();
-					for (int i = 0; i < paletteNames.Count(); i++)
-						palette.AddEntry(new ACM_ThermalPaletteEntry(owner, i, paletteNames[i]));
-
-					category.AddEntry(palette);
-				}
-			}
-		}
-
-		// Reset is the only entry in this whole menu that asks twice.
-		//
-		// Everything else changes one setting and is trivially undone by selecting it again. This
-		// one throws away every preference at once, and a mis-click on a thumbstick is exactly how
-		// that happens by accident. The confirmation is a ring rather than a text prompt, so it
-		// costs no mouse and no keyboard.
-		ACM_IvasCategory reset = new ACM_IvasCategory(ACM_EIvasCategory.RESET_CONFIRMATION);
-		reset.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.RESET_CANCEL));
-		reset.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.RESET_CONFIRM));
-		category.AddEntry(reset);
-
-		radialMenu.AddEntry(category);
-	}
-
-	//------------------------------------------------------------------------------------------------
-	// IFF: who is identified, and how loudly.
-	//
-	// Friendly and civilian both live here because they answer the same question - who is NOT a
-	// target - and keeping them in one branch is what makes that reading obvious on the ring.
-	//------------------------------------------------------------------------------------------------
-	protected void AddIvasIffCategory(notnull SCR_RadialMenu radialMenu)
-	{
-		ACM_IvasCategory category = new ACM_IvasCategory(ACM_EIvasCategory.IFF);
-
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.FRIENDLY_IFF));
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.FRIENDLY_SCOPE));
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.FRIENDLY_DETAIL));
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.FRIENDLY_SILHOUETTES));
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.CIVILIAN_IFF));
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.UNKNOWN_CONTACTS));
-
-		radialMenu.AddEntry(category);
-	}
-
-	//------------------------------------------------------------------------------------------------
-	// TARGETING: hostiles only.
-	//
-	// Deliberately no "clear contacts". It manipulates store state rather than operating the device,
-	// and anything shared over the link re-arrives on the next report - so from the player's side it
-	// would be a button that appears not to work. The API exists for debugging and is not offered
-	// here.
-	//------------------------------------------------------------------------------------------------
-	protected void AddIvasTargetingCategory(notnull SCR_RadialMenu radialMenu)
-	{
-		ACM_IvasCategory category = new ACM_IvasCategory(ACM_EIvasCategory.TARGETING);
-
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.HOSTILE_TRACKING));
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.CONTACT_FILTER));
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.CONTACT_DETAIL));
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.HOSTILE_SILHOUETTES));
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.STALE_CONTACTS));
-
-		radialMenu.AddEntry(category);
-	}
-
-	//------------------------------------------------------------------------------------------------
-	// DATA LINK.
-	//
-	// Only offered where there is a link to control. These entries change what this client offers
-	// and accepts; the server keeps deciding who may report, who may receive, and what squad scope
-	// means. No toggle here can widen the player's authorised network.
-	//------------------------------------------------------------------------------------------------
-	protected void AddIvasDataLinkCategory(notnull SCR_RadialMenu radialMenu)
-	{
-		if (!ACM_TacticalContactManager.GetInstance())
-			return;
-
-		ACM_IvasCategory category = new ACM_IvasCategory(ACM_EIvasCategory.DATA_LINK);
-
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.DATALINK_MASTER));
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.DATALINK_RECEIVE));
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.DATALINK_SHARE));
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.DATALINK_STATUS));
-
-		radialMenu.AddEntry(category);
-	}
-
-	//------------------------------------------------------------------------------------------------
-	// REMOTE FEED. Only on hardware with a visor to project it into.
-	//------------------------------------------------------------------------------------------------
-	protected void AddIvasFeedCategory(notnull SCR_RadialMenu radialMenu, notnull ACM_TargetDetectionComponent device)
-	{
-		// Hardware test, not an authority test. The entries handle not being in control.
-		if (!device.HasVisorHardware())
-			return;
-
-		ACM_IvasCategory category = new ACM_IvasCategory(ACM_EIvasCategory.REMOTE_FEED);
-
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.FEED_MASTER));
-
-		ACM_FeedSourceCategory picker = new ACM_FeedSourceCategory();
-		picker.Populate();
-		category.AddEntry(picker);
-
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.FEED_NEXT));
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.FEED_PREV));
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.FEED_SIZE));
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.FEED_POSITION));
-
-		radialMenu.AddEntry(category);
-	}
-
-	//------------------------------------------------------------------------------------------------
-	// DISPLAY: how the overlay looks, rather than what it decides.
-	//------------------------------------------------------------------------------------------------
-	protected void AddIvasDisplayCategory(notnull SCR_RadialMenu radialMenu)
-	{
-		ACM_IvasCategory category = new ACM_IvasCategory(ACM_EIvasCategory.DISPLAY);
-
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.HUD));
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.MARKER_SCALE));
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.CONTACT_LABELS));
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.LABEL_DISTANCE));
-		category.AddEntry(new ACM_IvasMenuEntry(ACM_EIvasAction.LABEL_NAMES));
-
-		radialMenu.AddEntry(category);
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -1240,117 +903,6 @@ class ACM_ThermalPaletteEntry : SCR_SelectionMenuEntry
 }
 
 //------------------------------------------------------------------------------------------------
-// Signature strength for the thermal test rig.
-//
-// A LIST of authored materials rather than a slider, because that is where the precision is. Every
-// setter on ParametricMaterialInstanceComponent takes an int, so the finest step script can express
-// is roughly 1/255 of a multiplier unit; an .emat takes Emissive as floats and reads correctly at
-// 0.027. Choosing between materials is therefore not a workaround for a missing slider - it is the
-// only control fine enough to be useful.
-//------------------------------------------------------------------------------------------------
-class ACM_ThermalSignatureCategory : SCR_SelectionMenuCategoryEntry
-{
-	protected IEntity m_Owner;
-	protected string m_sName;
-
-	void ACM_ThermalSignatureCategory(IEntity owner, string name)
-	{
-		if (!owner) return;
-		m_sName = name;
-		m_Owner = owner;
-		SetIcon(ACM_RADIAL_IMAGESET, "category");
-		SetName(m_sName);
-	}
-
-	override void Update()
-	{
-		ACM_ThermalTestComponent testComp = ACM_ThermalTestComponent.Cast(m_Owner.FindComponent(ACM_ThermalTestComponent));
-		if (!testComp)
-		{
-			SetName(m_sName);
-			return;
-		}
-
-		array<string> names = testComp.GetSignatureMaterialNames();
-		int index = testComp.GetSignatureMaterialIndex();
-
-		if (index >= 0 && index < names.Count())
-			SetName(string.Format("Signature [%1]", names[index]));
-		else
-			SetName(m_sName);
-	}
-
-	override void SetEntryComponent(SCR_SelectionMenuEntryComponent entryComponent)
-	{
-		m_EntryComponent = entryComponent;
-		if (entryComponent)
-		{
-			Widget root = entryComponent.GetRootWidget();
-			if (root)
-			{
-				ImageWidget iconWidget = ImageWidget.Cast(root.FindAnyWidget("Icon"));
-				if (iconWidget)
-					iconWidget.LoadImageFromSet(0, ACM_RADIAL_IMAGESET, "category");
-			}
-		}
-		Update();
-	}
-}
-
-//------------------------------------------------------------------------------------------------
-class ACM_ThermalSignatureEntry : SCR_SelectionMenuEntry
-{
-	protected IEntity m_Owner;
-	protected int m_iIndex;
-	protected string m_sLabel;
-
-	void ACM_ThermalSignatureEntry(IEntity owner, int index, string label)
-	{
-		m_Owner = owner;
-		m_iIndex = index;
-		m_sLabel = label;
-
-		// Same reasoning as the palette entries: these names are free text from the prefab, so
-		// deriving an icon from them would ask the imageset for something that is not there.
-		SetIcon(ACM_RADIAL_IMAGESET, "thermal");
-		SetName(m_sLabel);
-	}
-
-	override void Update()
-	{
-		ACM_ThermalTestComponent testComp = ACM_ThermalTestComponent.Cast(m_Owner.FindComponent(ACM_ThermalTestComponent));
-		if (testComp && testComp.GetSignatureMaterialIndex() == m_iIndex)
-			SetName(string.Format("%1 [ACTIVE]", m_sLabel));
-		else
-			SetName(m_sLabel);
-	}
-
-	override void SetEntryComponent(SCR_SelectionMenuEntryComponent entryComponent)
-	{
-		m_EntryComponent = entryComponent;
-		if (entryComponent)
-		{
-			Widget root = entryComponent.GetRootWidget();
-			if (root)
-			{
-				ImageWidget iconWidget = ImageWidget.Cast(root.FindAnyWidget("Icon"));
-				if (iconWidget)
-					iconWidget.LoadImageFromSet(0, ACM_RADIAL_IMAGESET, "thermal");
-			}
-		}
-		Update();
-	}
-
-	override void OnPerform()
-	{
-		if (!m_Owner) return;
-		ACM_ThermalTestComponent testComp = ACM_ThermalTestComponent.Cast(m_Owner.FindComponent(ACM_ThermalTestComponent));
-		if (testComp)
-			testComp.SetSignatureMaterial(m_iIndex);
-	}
-}
-
-//------------------------------------------------------------------------------------------------
 class ACM_StrobeColorCategory : SCR_SelectionMenuCategoryEntry
 {
 	protected IEntity m_Owner;
@@ -1647,7 +1199,6 @@ enum ACM_DynamicActionType
 	TOGGLE_NVG,
 	CYCLE_NVG_COLOR,
 	TOGGLE_THERMAL,
-	TOGGLE_THERMAL_TEST,
 	SET_PHOSPHOR_DEFAULT,
 	SET_PHOSPHOR_GREEN,
 	SET_PHOSPHOR_WHITE,
@@ -1743,7 +1294,6 @@ class ACM_DynamicMenuEntry : SCR_SelectionMenuEntry
 			case ACM_DynamicActionType.SET_COLOR_MAGENTA: return "magenta";
 			case ACM_DynamicActionType.TOGGLE_NVG: return "nvg";
 			case ACM_DynamicActionType.TOGGLE_THERMAL: return "thermal";
-			case ACM_DynamicActionType.TOGGLE_THERMAL_TEST: return "thermal";
 			case ACM_DynamicActionType.TOGGLE_GUARDIAN_ANGEL: return "strobe";
 		}
 		return "category";
@@ -1872,21 +1422,6 @@ class ACM_DynamicMenuEntry : SCR_SelectionMenuEntry
 			}
 			return "NVG";
 		}
-		else if (m_ActionType == ACM_DynamicActionType.TOGGLE_THERMAL_TEST)
-		{
-			ACM_ThermalTestComponent testComp = ACM_ThermalTestComponent.Cast(m_Owner.FindComponent(ACM_ThermalTestComponent));
-			if (testComp)
-			{
-				// IsNVGActive rather than a thermal-specific getter, because the activation state
-				// is the inherited one - the test rig is a night vision component wearing a
-				// different picture.
-				if (testComp.IsNVGActive())
-					return "THERMAL* [ON]";
-				else
-					return "THERMAL* [OFF]";
-			}
-			return "THERMAL*";
-		}
 		else if (m_ActionType == ACM_DynamicActionType.TOGGLE_THERMAL)
 		{
 			ACM_ThermalComponentV2 thermalComp = ACM_ThermalComponentV2.Cast(m_Owner.FindComponent(ACM_ThermalComponentV2));
@@ -1963,11 +1498,6 @@ class ACM_DynamicMenuEntry : SCR_SelectionMenuEntry
 		{
 			ACM_ThermalComponentV2 thermalComp = ACM_ThermalComponentV2.Cast(m_Owner.FindComponent(ACM_ThermalComponentV2));
 			if (thermalComp) thermalComp.ToggleThermal();
-		}
-		else if (m_ActionType == ACM_DynamicActionType.TOGGLE_THERMAL_TEST)
-		{
-			ACM_ThermalTestComponent testComp = ACM_ThermalTestComponent.Cast(m_Owner.FindComponent(ACM_ThermalTestComponent));
-			if (testComp) testComp.ToggleNVG();
 		}
 		else if (m_ActionType == ACM_DynamicActionType.TOGGLE_GUARDIAN_ANGEL)
 		{

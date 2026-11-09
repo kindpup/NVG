@@ -1,0 +1,5 @@
+MatPBRBasic {
+ AllowUserAlphaBias 1
+ BCRMap "{1BFDA1B63D75CD9E}Assets/Data/MI_HHB_TracerTactical_MC_BCR.edds"
+ NMOMap "{23251A24E4029F00}Assets/Data/MI_HHB_TracerTactical_MC_NMO.edds"
+}

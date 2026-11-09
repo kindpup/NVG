@@ -1,0 +1,146 @@
+GameEntity {
+ ID "685301E333C876C7"
+ components {
+  ParametricMaterialInstanceComponent "{685301E333C87694}" {
+   Enabled 1
+   AcceptHierarchyProperties 0x3ff 0
+   UserParamAlpha 0
+   ApplyPropertiesWhenMeshChanged 1
+  }
+  SignalsManagerComponent "{685301E333C876F4}" {
+  }
+  SoundComponent "{685301E333C876E6}" {
+   DistanceManagement 0
+  }
+  InventoryItemComponent "{685301E333C8769B}" {
+   Attributes SCR_ItemAttributeCollection "{685301E333C8769A}" {
+    ItemDisplayName SCR_InventoryUIInfo "{685301E333C8769D}" {
+     Name "ACM: PVS14 MC"
+     Description "Universal PVS14"
+     m_aItemHints {
+      SCR_InventoryItemHintUIInfo "{685301E333C87691}" {
+       Name "This item requires a headstrap or compatible helmet"
+       Icon "{E23427CAC80DA8B7}UI/Textures/Icons/icons_mapMarkersUI.imageset"
+       IconSetName "mark-exclamation"
+      }
+     }
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{685301E333C87690}" {
+     Weight 0.2
+     SizeSetupStrategy Manual
+     ItemDimensions 5 5 5
+     ItemVolume 0.00000001
+     DimensionScaler 1
+     RestingAdditiveRotationLS 0 0 0
+     RestingAdditiveOffsetLS 0 0 0
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{685301E333C87693}" {
+      PreviewModel "{8943DB0113CF0F51}Assets/PVS14static.xob"
+     }
+    }
+    CommonItemType "NIGHT_VISION"
+    m_SlotType SLOT_ANY
+    m_ACM_AdditionalCommonItemTypes {
+     "ACM_NightVision" "NIGHT_VISION"
+    }
+   }
+  }
+  MeshObject "{685301E333C87695}" {
+   Object "{F0DE119E4ED032A0}Assets/PVS14.xob"
+   Materials {
+    MaterialAssignClass "{685301E32964FED3}" {
+     SourceMaterial "MI_NVG_PVS14"
+     AssignedMaterial "{F84329E32357DC02}Assets/Data/MI_NVG_PVS14 BLK.emat"
+    }
+   }
+   InheritVisibility 1
+  }
+  RigidBody "{685301E333C87697}" {
+   SimState None
+   ResponseIndex "TinyDestructible"
+   ModelGeometry 1
+  }
+  ProcAnimComponent "{685301E333C8411F}" {
+   Parameters {
+    ProcAnimParams "{685301E333C84131}" {
+     ResourceName "{3BE7E5DD66693CB1}ACM_NVG.pap"
+     BoneNames {
+      "w_nvgRotator"
+     }
+    }
+   }
+  }
+  ACM_NightVisionComponent "{685301E333C87699}" {
+   m_eUseMask CUSTOM
+   m_HDRMaterial "{59F26A676C5E62F6}Assets/Shaders/NVSystem/Colors/Thermal Night.emat"
+   m_GrainMaterial "{758640022A160027}Assets/Shaders/NVSystem/Grains/ACM_V2_FilmGrain.emat"
+   m_bManualBrightnessEnabled 1
+   m_fBrightnessStep 0.25
+   m_sAnimationSignal "w_nvRotator"
+   m_aPhosphorColors {
+    ACM_PhosphorColorOption "{685425DECF00BD92}" {
+     m_sName "Red"
+     m_Material "{335461E3DAF37CD9}Assets/Shaders/NVSystem/Colors/ACM_V2_RedPhosphor_HDR.emat"
+    }
+    ACM_PhosphorColorOption "{685425DECFBD68A8}" {
+     m_sName "White"
+     m_Material "{59F26A676C5E62F6}Assets/Shaders/NVSystem/Colors/Thermal Night.emat"
+    }
+    ACM_PhosphorColorOption "{685425DEC04A4990}" {
+     m_sName "Green"
+     m_Material "{B277CCF517222C0C}Assets/Shaders/NVSystem/Colors/ACM_V2_GreenPhosphor_HDR.emat"
+    }
+    ACM_PhosphorColorOption "{685425DEC0096E04}" {
+     m_sName "Blue"
+     m_Material "{ED769E2936B8E743}Assets/Shaders/NVSystem/Colors/ACM_V2_BLUEPhosphor_HDR.emat"
+    }
+    ACM_PhosphorColorOption "{685425DEE4DD269B}" {
+     m_sName "Amber"
+     m_Material "{843375C9FB51E38B}Assets/Shaders/NVSystem/Colors/ACM_V2_AMBERPhosphor_HDR.emat"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{685301E333C84133}" {
+   AreaType ACM_NV_Slotted "{685301E333C84135}" {
+   }
+   Animate 1
+   WornModel "{F0DE119E4ED032A0}Assets/PVS14.xob"
+   WornMaterialsOverride {
+    "{E509D416CFD37F35}Assets/Data/MI_NVG_PVS14 MC.emat"
+   }
+   ItemModel "{F0DE119E4ED032A0}Assets/PVS14.xob"
+   ItemMaterialsOverride {
+    "{E509D416CFD37F35}Assets/Data/MI_NVG_PVS14 MC.emat"
+   }
+  }
+  ActionsManagerComponent "{685301E333C84137}" {
+   ActionContexts {
+    UserActionContext "{685301E333C84138}" {
+     ContextName "default"
+     Position PointInfo "{685301E333C8413A}" {
+      Offset 0 0.0879 0.0259
+     }
+     Radius 0.3
+    }
+   }
+   additionalActions {
+    SCR_PickUpItemAction "{685301E333C8413C}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{685301E333C8413F}" {
+      Name "#AR-Inventory_PickUp"
+     }
+    }
+   }
+  }
+  RplComponent "{685301E333C84121}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{685301E333CBFDFB}" {
+  }
+ }
+ coords 1209.543 37.382 2629.37
+}

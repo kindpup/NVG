@@ -1,0 +1,67 @@
+ProcAnimSignalResClass {
+ Inputs {
+  IOPItemInputClass {
+   id 1
+   name "w_nvRotator"
+   tl -286 14
+   children {
+    4
+   }
+  }
+  IOPInputValueClass {
+   id 3
+   name "Value 1"
+   tl -292 -83
+   children {
+    4
+   }
+   value 145
+  }
+ }
+ Ops {
+  IOPItemOpMulClass {
+   id 4
+   name "Mul 4"
+   tl -59 -24
+   children {
+    5
+   }
+   inputs {
+    ConnectionClass "1:0" {
+     id 1
+     port 0
+    }
+    ConnectionClass "3:0" {
+     id 3
+     port 0
+    }
+   }
+  }
+  IOPItemOpSmootherClass {
+   id 5
+   name "Smoother 5"
+   tl 170 -17
+   children {
+    2
+   }
+   inputs {
+    ConnectionClass "4:0" {
+     id 4
+     port 0
+    }
+   }
+   "Fade In Time" 700
+   "Fade Out Time" 600
+   "Fade In Type" "S-curve"
+   "Fade Out Type" "Power of 2"
+  }
+ }
+ Outputs {
+  IOPItemOutputClass {
+   id 2
+   name "Rotation"
+   tl 395 -17
+   input 5
+  }
+ }
+}

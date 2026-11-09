@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{289F33A8E0F70C88}Assets/SharedMaterials/Thermal_PAS13G_WhiteHot_HDR.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

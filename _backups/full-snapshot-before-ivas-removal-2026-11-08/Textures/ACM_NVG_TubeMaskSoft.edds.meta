@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{7688B9B44C3F0674}Textures/ACM_NVG_TubeMaskSoft.edds"
+ Configurations {
+  PNGResourceClass PC : "{2231C67ACC4BB0AC}Configs/System/ResourceTypes/PC/TextureMask.conf" {
+  }
+  PNGResourceClass XBOX_ONE : "{3B78A666261DD8B4}Configs/System/ResourceTypes/XBOX_ONE/TextureMask.conf" {
+  }
+  PNGResourceClass XBOX_SERIES : "{9A79E1F659B378E7}Configs/System/ResourceTypes/XBOX_SERIES/TextureMask.conf" {
+  }
+  PNGResourceClass PS4 : "{5CB64ED6EEBDE368}Configs/System/ResourceTypes/PS4/TextureMask.conf" {
+  }
+  PNGResourceClass PS5 : "{64796311C22F7B3C}Configs/System/ResourceTypes/PS5/TextureMask.conf" {
+  }
+  PNGResourceClass HEADLESS : "{0B025DFAF55852CD}Configs/System/ResourceTypes/HEADLESS/TextureMask.conf" {
+  }
+ }
+}

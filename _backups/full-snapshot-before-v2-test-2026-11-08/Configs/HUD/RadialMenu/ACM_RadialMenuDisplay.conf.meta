@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{A9C0A5D4E9D3B95F}Configs/HUD/RadialMenu/ACM_RadialMenuDisplay.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

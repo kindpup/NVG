@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{DFF75897C868EB7C}Assets/Shaders/ThermalSystem/ACM_V2_ThermalHDR_WhiteHot.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

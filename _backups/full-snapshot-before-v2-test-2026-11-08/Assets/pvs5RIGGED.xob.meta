@@ -1,0 +1,56 @@
+MetaFileClass {
+ Name "{C6EB88BC6A23EF97}Assets/pvs5RIGGED.xob"
+ Configurations {
+  FBXResourceClass PC {
+   ExportSkinning 1
+   Rotate 0 180 0
+   MaterialAssigns {
+    MaterialAssignClass "{6870FB58C9A3FA3C}" {
+     SourceMaterial "AN_PVS_5A_03"
+     AssignedMaterial "{DB2781BE7F78E1A0}Assets/Data/AN_PVS_5A_03.emat"
+    }
+    MaterialAssignClass "{6870FB58C9A3FAD2}" {
+     SourceMaterial "AN_PVS_5A_01"
+     AssignedMaterial "{71C7EF65CD2807DB}Assets/Data/AN_PVS_5A_01.emat"
+    }
+    MaterialAssignClass "{6870FB58C9A3FAD7}" {
+     SourceMaterial "AN_PVS_5A_02"
+     AssignedMaterial "{2F2FC62672A589D4}Assets/Data/AN_PVS_5A_02.emat"
+    }
+    MaterialAssignClass "{6870FB58C9A3FACD}" {
+     SourceMaterial "AN_PVS_5A_lense"
+     AssignedMaterial "{4A01F7050EFD493A}Assets/Data/AN_PVS_5A_lense.emat"
+    }
+   }
+   MeshParams {
+    MeshParam AN_PVS_5A_head_strap {
+    }
+   }
+   Common TXOCommonClass "{6870FB58C9C31523}" : "{0877E7C4BB2B2C9A}Configs/System/ResourceTypes/PC/MeshObjectCommon.conf" {
+   }
+   ApplicationVendor "Blender Foundation"
+   ApplicationName "Blender (stable FBX IO)"
+   ApplicationVersion "4.2.16 LTS"
+  }
+  FBXResourceClass XBOX_ONE : PC {
+   Common TXOCommonClass "{6870FB58C9C3093B}" : "{9D5B6207F7628CE2}Configs/System/ResourceTypes/XBOX_ONE/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass XBOX_SERIES : PC {
+   Common TXOCommonClass "{6870FB58C9C309BD}" : "{DD9F02115C764647}Configs/System/ResourceTypes/XBOX_SERIES/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass PS4 : PC {
+   Common TXOCommonClass "{6870FB58C9C30A66}" : "{53EC476BC921D99A}Configs/System/ResourceTypes/PS4/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass PS5 : PC {
+   Common TXOCommonClass "{6870FB58C9C30AC9}" : "{F62AA8E7B8EA9D26}Configs/System/ResourceTypes/PS5/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass HEADLESS : PC {
+   Common TXOCommonClass "{6870FB58C9C30ABB}" : "{3A5B3356978039E8}Configs/System/ResourceTypes/HEADLESS/MeshObjectCommon.conf" {
+   }
+  }
+ }
+}
