@@ -206,7 +206,7 @@ class ACM_NVGFaceGlow : Managed
 		{
 			s_bPlacementLogged = true;
 			vector charPos = world[3];
-			Print("[ACM FaceGlow] head joint above feet=" + (headPos[1] - charPos[1]).ToString() + " lights above feet=" + (centre[1] - charPos[1]).ToString() + " lights ahead of head joint=" + vector.Dot(centre - headPos, world[2]).ToString(), LogLevel.NORMAL);
+			Print("[ACM FaceGlow] head joint above feet=" + (headPos[1] - charPos[1]).ToString() + " lights above feet=" + (centre[1] - charPos[1]).ToString() + " lights ahead of head joint=" + vector.Dot(centre - headPos, world[2]).ToString(), LogLevel.DEBUG);
 		}
 	}
 

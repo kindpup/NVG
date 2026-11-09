@@ -1,0 +1,168 @@
+GameEntity {
+ ID "68544149216AEB4F"
+ components {
+  ParametricMaterialInstanceComponent "{68544149216AEB77}" {
+   Enabled 1
+   AcceptHierarchyProperties 0x3ff 0
+   UserParamAlpha 0
+   ApplyPropertiesWhenMeshChanged 1
+  }
+  SignalsManagerComponent "{68544149216AEB44}" {
+  }
+  SoundComponent "{68544149216AEB52}" {
+   DistanceManagement 0
+  }
+  InventoryItemComponent "{68544149216AEB6C}" {
+   Attributes SCR_ItemAttributeCollection "{68544149216AEB63}" {
+    ItemDisplayName SCR_InventoryUIInfo "{68544149216AEB61}" {
+     Name "ACM: PGNVG MC"
+     Description "ACM: PGNVG"
+     m_aItemHints {
+      SCR_InventoryItemHintUIInfo "{68544149216AEB60}" {
+       Name "This item requires a headstrap or compatible helmet"
+       Icon "{E23427CAC80DA8B7}UI/Textures/Icons/icons_mapMarkersUI.imageset"
+       IconSetName "mark-exclamation"
+      }
+     }
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{68544149216AEB66}" {
+     Weight 0.2
+     SizeSetupStrategy Manual
+     ItemDimensions 5 5 5
+     ItemVolume 0.00000001
+     DimensionScaler 1
+     RestingAdditiveRotationLS 0 0 0
+     RestingAdditiveOffsetLS 0 0 0
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{68544149216AEB7D}" {
+      PreviewModel "{6F3CD09272C2D36E}Assets/GPNVGstatic.xob"
+     }
+    }
+    CommonItemType "NIGHT_VISION"
+    m_SlotType SLOT_ANY
+    m_ACM_AdditionalCommonItemTypes {
+     "ACM_NightVision" "NIGHT_VISION"
+    }
+   }
+  }
+  MeshObject "{68544149216AEB73}" {
+   Object "{FF1BBF60071B0FF1}Assets/GPNVG.xob"
+   Materials {
+   }
+   InheritVisibility 1
+  }
+  RigidBody "{68544149216AEB74}" {
+   SimState None
+   ResponseIndex "TinyDestructible"
+   ModelGeometry 1
+  }
+  ProcAnimComponent "{68544149216AE88A}" {
+   Parameters {
+    ProcAnimParams "{68544149216AE888}" {
+     ResourceName "{3BE7E5DD66693CB1}ACM_NVG.pap"
+     BoneNames {
+      "w_nvgRotator"
+     }
+    }
+   }
+  }
+  ACM_NightVisionComponent "{68544149216AEB57}" {
+   m_eTubeLayout PANORAMIC
+   m_eUseMask CUSTOM
+   m_HDRMaterial "{59F26A676C5E62F6}Assets/Shaders/NVSystem/Colors/Thermal Night.emat"
+   m_GrainMaterial "{758640022A160027}Assets/Shaders/NVSystem/Grains/ACM_V2_FilmGrain.emat"
+   m_bManualBrightnessEnabled 1
+   m_fBrightnessStep 0.25
+   m_sAnimationSignal "w_nvRotator"
+   m_aPhosphorColors {
+    ACM_PhosphorColorOption "{68544149216AEB55}" {
+     m_sName "Red"
+     m_Material "{335461E3DAF37CD9}Assets/Shaders/NVSystem/Colors/ACM_V2_RedPhosphor_HDR.emat"
+    }
+    ACM_PhosphorColorOption "{68544149216AEB6B}" {
+     m_sName "White"
+     m_Material "{59F26A676C5E62F6}Assets/Shaders/NVSystem/Colors/Thermal Night.emat"
+    }
+    ACM_PhosphorColorOption "{68544149216AEB6A}" {
+     m_sName "Green"
+     m_Material "{B277CCF517222C0C}Assets/Shaders/NVSystem/Colors/ACM_V2_GreenPhosphor_HDR.emat"
+    }
+    ACM_PhosphorColorOption "{68544149216AEB68}" {
+     m_sName "Blue"
+     m_Material "{ED769E2936B8E743}Assets/Shaders/NVSystem/Colors/ACM_V2_BLUEPhosphor_HDR.emat"
+    }
+    ACM_PhosphorColorOption "{68544149216AEB6F}" {
+     m_sName "Amber"
+     m_Material "{843375C9FB51E38B}Assets/Shaders/NVSystem/Colors/ACM_V2_AMBERPhosphor_HDR.emat"
+    }
+   }
+  }
+  ACM_ThermalComponentV2 "{AD92ADA873E5CFFE}" {
+   m_eTubeLayout PANORAMIC
+   m_aPalettes {
+    ACM_ThermalPalette "{FCA75E54F4F9423C}" {
+     m_sName "White Hot"
+     m_Material "{A131B20E9E1745E0}UI/Materials/Editor/Thermal WH.emat"
+     m_fDefaultBrightness 1
+    }
+    ACM_ThermalPalette "{2CCE603458685953}" {
+     m_sName "Flir"
+     m_Material "{D4308E4CC5BAEAC0}UI/Materials/Editor/Thermal Flir.emat"
+    }
+    ACM_ThermalPalette "{F991D9CB048D2F18}" {
+     m_sName "Green"
+     m_Material "{18ECC73E26AFA56A}UI/Materials/Editor/Thermal Green.emat"
+    }
+    ACM_ThermalPalette "{C72B764050246CF5}" {
+     m_sName "Orange"
+     m_Material "{C15D807755CDCB98}UI/Materials/Editor/Thermal Orange.emat"
+    }
+   }
+   m_bManualBrightnessEnabled 1
+   m_fBrightnessStep 0.25
+   m_sAnimationSignal "w_nvRotator"
+  }
+  BaseLoadoutClothComponent "{68544149216AE88F}" {
+   AreaType ACM_NV_Slotted "{68544149216AE88E}" {
+   }
+   Animate 1
+   WornModel "{FF1BBF60071B0FF1}Assets/GPNVG.xob"
+   WornMaterialsOverride {
+    "{25DAFC154723F1B0}Assets/Data/PGNVGMC.emat"
+   }
+   ItemModel "{FF1BBF60071B0FF1}Assets/GPNVG.xob"
+   ItemMaterialsOverride {
+    "{25DAFC154723F1B0}Assets/Data/PGNVGMC.emat"
+   }
+  }
+  ActionsManagerComponent "{68544149216AE88C}" {
+   ActionContexts {
+    UserActionContext "{68544149216AE882}" {
+     ContextName "default"
+     Position PointInfo "{68544149216AE89F}" {
+      Offset 0 0.0879 0.0259
+     }
+     Radius 0.3
+    }
+   }
+   additionalActions {
+    SCR_PickUpItemAction "{68544149216AE89D}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{68544149216AE89C}" {
+      Name "#AR-Inventory_PickUp"
+     }
+    }
+   }
+  }
+  RplComponent "{68544149216AE893}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{68544149216AE892}" {
+  }
+ }
+ coords 1209.543 37.382 2629.37
+}

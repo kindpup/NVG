@@ -218,7 +218,7 @@ class ACM_NVGTubeView : GenericEntity
 		if (!m_bHookSeen)
 		{
 			m_bHookSeen = true;
-			Print("[ACM NVG] Tube camera is now fed directly by the player camera.", LogLevel.NORMAL);
+			Print("[ACM NVG] Tube camera is now fed directly by the player camera.", LogLevel.DEBUG);
 		}
 	}
 
@@ -347,7 +347,7 @@ class ACM_NVGTubeView : GenericEntity
 		m_bRenderTargetSet = true;
 
 		m_bReady = true;
-		Print("[ACM NVG] Tube view created on camera " + CAMERA_INDEX.ToString() + " at resolution scale " + resolutionScale.ToString(4, 2) + ".", LogLevel.NORMAL);
+		Print("[ACM NVG] Tube view created on camera " + CAMERA_INDEX.ToString() + " at resolution scale " + resolutionScale.ToString(4, 2) + ".", LogLevel.DEBUG);
 		return true;
 	}
 
@@ -993,7 +993,7 @@ class ACM_NVGTubeView : GenericEntity
 			PositionFusionImage();
 		}
 
-		Print("[ACM NVG] Fused thermal on (centre tube, " + (m_fFusionRadius * 100).ToString() + "% circle, " + (m_fFusionOpacity * 100).ToString() + "% opacity).", LogLevel.NORMAL);
+		Print("[ACM NVG] Fused thermal on (centre tube, " + (m_fFusionRadius * 100).ToString() + "% circle, " + (m_fFusionOpacity * 100).ToString() + "% opacity).", LogLevel.DEBUG);
 		return true;
 	}
 

@@ -100,6 +100,18 @@ class ACM_PlayerLinkComponent : ScriptComponent
 			return true;
 		}
 
+		// Host / listen server: this machine IS the server, so set the replicated value directly
+		// rather than relying on an RPC addressed to itself.
+		if (Replication.IsServer())
+		{
+			if (m_iFaceGlowState != state)
+			{
+				m_iFaceGlowState = state;
+				Replication.BumpMe();
+			}
+			return true;
+		}
+
 		Rpc(Rpc_AskSetFaceGlow, state);
 		return true;
 	}

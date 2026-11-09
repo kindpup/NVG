@@ -12,10 +12,6 @@ SCR_ChimeraCharacter {
   }
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
-    LoadoutSlotInfo Ghillie {
-     AreaType ACM_Ghillie "{69B37362BCD0F9EC}" {
-     }
-    }
     LoadoutSlotInfo ACM_Headstrap {
      AreaType ACM_Headstrap "{686AEBE9258EE6EF}" {
      }

@@ -23,9 +23,6 @@ GameEntity {
      }
     }
     CommonItemType "ACM_RailLiteLeft"
-    m_ACM_AdditionalCommonItemTypes {
-     "ACM_RailLiteLeft"
-    }
    }
    StoragePurpose 0 0
   }

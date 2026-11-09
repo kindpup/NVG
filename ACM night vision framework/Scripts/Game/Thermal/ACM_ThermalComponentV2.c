@@ -629,6 +629,7 @@ class ACM_ThermalComponentV2 : SCR_GadgetComponent
 	protected void OnToggleInput()
 	{
 		DebugTrace("OnToggleInput received");
+		ACM_MPDiag.Log("Thermal key on " + GetOwner().ToString() + ": menuOpen=" + m_bMenuOpen.ToString() + " owner=" + (m_CharacterOwner != null).ToString() + " ownerIsLocal=" + (m_CharacterOwner && m_CharacterOwner == SCR_PlayerController.GetLocalControlledEntity()).ToString() + " active=" + m_bActivated.ToString() + " fusion=" + m_bFusionOverlay.ToString());
 
 		if (m_bMenuOpen)
 			return;
@@ -641,7 +642,11 @@ class ACM_ThermalComponentV2 : SCR_GadgetComponent
 
 		m_bIsWorn = CheckIsWorn();
 		if (!m_bIsWorn)
+		{
+			ACM_MPDiag.Log("Thermal key ignored: not worn");
 			return;
+		}
+		ACM_MPDiag.Log("Thermal key accepted: tube view up=" + ACM_NVGTubeView.IsUp().ToString() + " character[" + ACM_MPDiag.Roles(m_CharacterOwner) + "] item[" + ACM_MPDiag.Roles(GetOwner()) + "]");
 
 		// ECOTI: while the circle is on, the key steps OUTLINE -> FUSED -> THERMAL; one more press
 		// after THERMAL switches it off (falls through below).
@@ -680,7 +685,7 @@ class ACM_ThermalComponentV2 : SCR_GadgetComponent
 		string devicePrefab = "?";
 		if (GetOwner() && GetOwner().GetPrefabData())
 			devicePrefab = GetOwner().GetPrefabData().GetPrefabName();
-		Print("[ACM Thermal] Thermal " + m_bActivated.ToString() + " on " + devicePrefab + " (fused overlay: " + m_bFusionOverlay.ToString() + ").", LogLevel.NORMAL);
+		Print("[ACM Thermal] Thermal " + m_bActivated.ToString() + " on " + devicePrefab + " (fused overlay: " + m_bFusionOverlay.ToString() + ").", LogLevel.DEBUG);
 
 		ApplyVisualEffect(m_bActivated);
 		UpdateAnimation();
@@ -708,6 +713,7 @@ class ACM_ThermalComponentV2 : SCR_GadgetComponent
 	
 	override void OnToggleActive(bool state)
 	{
+		ACM_MPDiag.Log("Thermal OnToggleActive(" + state.ToString() + ") on " + GetOwner().ToString() + " ownerIsLocal=" + (m_CharacterOwner && m_CharacterOwner == SCR_PlayerController.GetLocalControlledEntity()).ToString());
 		m_bActivated = state;
 		ApplyVisualEffect(state);
 		UpdateAnimation();
@@ -889,7 +895,7 @@ class ACM_ThermalComponentV2 : SCR_GadgetComponent
 			else
 			{
 				m_bFusionApplied = false;
-				Print("[ACM Thermal] Fused overlay waiting for the night vision tubes.", LogLevel.NORMAL);
+				Print("[ACM Thermal] Fused overlay waiting for the night vision tubes.", LogLevel.DEBUG);
 			}
 
 			ACM_ThermalClouds.SetClearSky(this, m_bClearSky);
@@ -1455,6 +1461,7 @@ class ACM_ThermalComponentV2 : SCR_GadgetComponent
 
 		m_bInputsRegistered = true;
 		DebugTrace("RegisterInputs toggle='" + m_sToggleAction + "'");
+		ACM_MPDiag.Log("Thermal keys registered on " + GetOwner().ToString());
 
 		im.AddActionListener(m_sToggleAction, EActionTrigger.DOWN, OnToggleInput);
 		if (m_aPalettes && m_aPalettes.Count() > 1)

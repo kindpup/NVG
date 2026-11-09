@@ -2499,7 +2499,7 @@ class ACM_NVL_LightsComponent : ScriptComponent
 			return compType + ":noowner";
 
 		// 2. Owner is directly replicated
-		int rplId = Replication.FindId(m_Owner);
+		int rplId = Replication.FindItemId(m_Owner);
 		if (rplId >= 0)
 			return string.Format("%1:rpl_%2", compType, rplId);
 
@@ -2528,7 +2528,7 @@ class ACM_NVL_LightsComponent : ScriptComponent
 				else
 					chainSig = typeSeg + "/" + chainSig;
 
-				int ancestorRplId = Replication.FindId(slotOwner);
+				int ancestorRplId = Replication.FindItemId(slotOwner);
 				if (ancestorRplId >= 0)
 					return string.Format("%1:anc_%2_%3", compType, ancestorRplId, chainSig);
 
@@ -2541,7 +2541,7 @@ class ACM_NVL_LightsComponent : ScriptComponent
 			IEntity parent = m_Owner.GetParent();
 			while (parent)
 			{
-				int parentRplId = Replication.FindId(parent);
+				int parentRplId = Replication.FindItemId(parent);
 				if (parentRplId >= 0)
 				{
 					string ownerType = m_Owner.Type().ToString();

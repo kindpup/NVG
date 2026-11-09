@@ -13,3 +13,6 @@ class ACM_Strobe: LoadoutAreaType{};
 
 class ACM_RailLEFT: LoadoutAreaType{}; // I'm replacing Raillite general area with these two because of the loss of our merge and split script - Jacob
 class ACM_RailRight: LoadoutAreaType{};
+
+// Vlite attachment slot (used by Prefabs/Characters/Attachments/Vlite.et).
+class ACM_Vlite: LoadoutAreaType{};

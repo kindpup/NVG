@@ -43,12 +43,6 @@ GameEntity : "{D4BC1F7EC5C290A3}Prefabs/Characters/HeadGear/Hat_Boonie_US_01/Hat
    Object "{B9D278F11B7D8C0A}Assets/Tracer Tactical.xob"
    InheritSkeleton 1
   }
-  RigidBody "{5112706CD4157AE6}" {
-   LayerPreset "FireGeo"
-   Active Active
-   SimState Collision
-   ResponseIndex "NoCollision"
-  }
   SCR_ArmorDamageManagerComponent "{686AEBE97793B605}" {
    "Additional hit zones" {
     SCR_ArmorHitZone helmet {
@@ -74,13 +68,6 @@ GameEntity : "{D4BC1F7EC5C290A3}Prefabs/Characters/HeadGear/Hat_Boonie_US_01/Hat
      Prefab "{9FB4E50CEF0518E1}Prefabs/Items/NVG/FPGPNVG/FPGPNVG FDE.et"
      AreaType ACM_NV_Slotted "{686AEBE97793B60D}" {
      }
-    }
-    LoadoutSlotInfo Mohawk {
-     PivotID "Head"
-     Offset -0.0065 -1.2311 -1.1031
-     Angles 37.9174 180 0
-     Enabled 0
-     Prefab "{F3B8A9B5141A6ED5}Prefabs/Characters/Attachments/Batterypack.et"
     }
    }
    WornModel "{B9D278F11B7D8C0A}Assets/Tracer Tactical.xob"

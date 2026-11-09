@@ -72,7 +72,7 @@ class ACM_ThermalClouds
 		if (!s_bLogged)
 		{
 			s_bLogged = true;
-			Print("[ACM Thermal] Clear sky on: clouds hidden while thermal is on (density set: " + densityOk.ToString() + ", coverage set: " + coverageOk.ToString() + ").", LogLevel.NORMAL);
+			Print("[ACM Thermal] Clear sky on: clouds hidden while thermal is on (density set: " + densityOk.ToString() + ", coverage set: " + coverageOk.ToString() + ").", LogLevel.DEBUG);
 		}
 	}
 
@@ -103,7 +103,7 @@ class ACM_ThermalClouds
 		}
 
 		s_bLogged = false;
-		Print("[ACM Thermal] Clear sky off: clouds restored.", LogLevel.NORMAL);
+		Print("[ACM Thermal] Clear sky off: clouds restored.", LogLevel.DEBUG);
 	}
 
 	//------------------------------------------------------------------------------------------------

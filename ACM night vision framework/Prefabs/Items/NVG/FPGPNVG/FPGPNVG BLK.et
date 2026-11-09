@@ -42,9 +42,6 @@ GameEntity {
     }
     CommonItemType "NIGHT_VISION"
     m_SlotType SLOT_ANY
-    m_ACM_AdditionalCommonItemTypes {
-     "ACM_NightVision"
-    }
    }
   }
   MeshObject "{68C6977B3BD71A9F}" {

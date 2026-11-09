@@ -6,7 +6,6 @@ GameEntity {
     ItemDisplayName UIInfo "{686B33963C74B070}" {
      Name "MS2000"
      Description "MS2000"
-     Icon "{CD204860C71F74B6}Prefabs/Characters/Attachments/strobe_transparent.edds"
     }
     ItemPhysAttributes ItemPhysicalAttributes "{686B33963C74B069}" {
      Weight 0

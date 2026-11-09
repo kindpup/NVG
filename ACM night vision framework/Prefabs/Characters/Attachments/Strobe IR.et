@@ -6,7 +6,6 @@ GameEntity {
     ItemDisplayName UIInfo "{671E48088A94D452}" {
      Name "Strobe IR"
      Description "Strobe"
-     Icon "{CD204860C71F74B6}Prefabs/Characters/Attachments/strobe_transparent.edds"
     }
     ItemPhysAttributes ItemPhysicalAttributes "{671E48088A94D455}" {
      Weight 0

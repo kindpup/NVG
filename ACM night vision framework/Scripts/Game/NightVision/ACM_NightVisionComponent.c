@@ -599,20 +599,28 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 	//------------------------------------------------------------------------------------------------
 	protected void OnToggleInput()
 	{
+		ACM_MPDiag.Log("NV key on " + GetOwner().ToString() + ": menuOpen=" + m_bMenuOpen.ToString() + " owner=" + (m_CharacterOwner != null).ToString() + " ownerIsLocal=" + (m_CharacterOwner && m_CharacterOwner == SCR_PlayerController.GetLocalControlledEntity()).ToString() + " active=" + m_bActivated.ToString());
+
 		if (m_bMenuOpen)
 			return;
-		
+
 		if (!m_CharacterOwner)
 			return;
-		
+
 		if (m_CharacterOwner != SCR_PlayerController.GetLocalControlledEntity())
 			return;
-		
+
 		// Refresh worn state before toggling
 		m_bIsWorn = CheckIsWorn();
-		
+
 		if (!m_bIsWorn)
+		{
+			ACM_MPDiag.Log("NV key ignored: not worn");
 			return;
+		}
+
+		RplId gadgetId = Replication.FindItemId(this);
+		ACM_MPDiag.Log("NV ToggleActive(" + (!m_bActivated).ToString() + ") useMask=" + m_eUseMask.ToString() + " character[" + ACM_MPDiag.Roles(m_CharacterOwner) + "] item[" + ACM_MPDiag.Roles(GetOwner()) + "] gadgetRplIdValid=" + gadgetId.IsValid().ToString() + " gadgetManager=" + (SCR_GadgetManagerComponent.GetGadgetManager(m_CharacterOwner) != null).ToString());
 		
 		// REQUESTS the toggle, and does nothing else.
 		//
@@ -640,8 +648,38 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 		CyclePhosphorColor();
 	}
 	
+	//------------------------------------------------------------------------------------------------
+	// HOST / LISTEN SERVER FIX.
+	//
+	// Vanilla SCR_GadgetComponent.ToggleActive applies the new state locally only when the gadget is a
+	// network PROXY (a normal client), and otherwise relies on its "ask the server" RPC to call
+	// OnToggleActive. For a player who IS the server (hosting from the game, or the Workbench host),
+	// the goggles are the authority copy, so the local apply is skipped and the night vision never
+	// switched on. If the vanilla path left the state unchanged and this machine owns the goggles'
+	// authority copy for its own character, apply it here.
+	//------------------------------------------------------------------------------------------------
+	override void ToggleActive(bool state, SCR_EUseContext context)
+	{
+		bool before = m_bActivated;
+		super.ToggleActive(state, context);
+
+		if (m_bActivated != before || state == before)
+			return;
+
+		if (!m_CharacterOwner || m_CharacterOwner != SCR_PlayerController.GetLocalControlledEntity())
+			return;
+
+		RplComponent itemRpl = RplComponent.Cast(GetOwner().FindComponent(RplComponent));
+		if (itemRpl && itemRpl.IsProxy())
+			return; // a normal client: vanilla already handled it (or the server will)
+
+		ACM_MPDiag.Log("NV host fallback: applying " + state.ToString() + " locally");
+		OnToggleActive(state);
+	}
+
 	override void OnToggleActive(bool state)
 	{
+		ACM_MPDiag.Log("NV OnToggleActive(" + state.ToString() + ") on " + GetOwner().ToString() + " ownerIsLocal=" + (m_CharacterOwner && m_CharacterOwner == SCR_PlayerController.GetLocalControlledEntity()).ToString() + " worn=" + m_bIsWorn.ToString());
 		m_bActivated = state;
 		ApplyVisualEffect(state);
 		UpdateAnimationTo(state, "OnToggleActive");
@@ -741,9 +779,11 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 			return;
 		
 		int camId = world.GetCurrentCameraId();
+		if (isLocalPlayer)
+			ACM_MPDiag.Log("NV ApplyVisualEffect(" + enable.ToString() + ") camId=" + camId.ToString() + " worn=" + m_bIsWorn.ToString() + " layout=" + typename.EnumToString(ACM_ENVGTubeLayout, m_eTubeLayout));
 		if (camId < 0)
 			return;
-		
+
 		if (enable && m_bIsWorn)
 		{
 			// TUBE VIEW: the chain goes on the tube camera and the main camera stays clean, so
@@ -1371,7 +1411,8 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 	override protected void ModeSwitch(EGadgetMode mode, IEntity charOwner)
 	{
 		super.ModeSwitch(mode, charOwner);
-		
+		ACM_MPDiag.Log("NV ModeSwitch mode=" + typename.EnumToString(EGadgetMode, mode) + " on " + GetOwner().ToString() + " charOwner=" + (charOwner != null).ToString() + " charIsLocal=" + (charOwner && charOwner == SCR_PlayerController.GetLocalControlledEntity()).ToString());
+
 		// Forwarded first, and unconditionally, because the ON_GROUND/LAST branch below
 		// returns early - and that is precisely the case where thermal most needs to hear
 		// about it, so it can tear its own camera effects down.
@@ -1551,7 +1592,8 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 		InputManager im = GetGame().GetInputManager();
 		if (!im)
 			return;
-		
+
+		ACM_MPDiag.Log("NV keys registered on " + GetOwner().ToString());
 		im.AddActionListener("ACM_NV_Toggle", EActionTrigger.DOWN, OnToggleInput);
 		
 		if (m_aPhosphorColors && m_aPhosphorColors.Count() > 0)
@@ -1561,6 +1603,7 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 	protected void UnregisterInputs()
 	{
 		InputManager im = GetGame().GetInputManager();
+		ACM_MPDiag.Log("NV keys unregistered on " + GetOwner().ToString());
 		im.RemoveActionListener("ACM_NV_Toggle", EActionTrigger.DOWN, OnToggleInput);
 		
 		if (m_aPhosphorColors && m_aPhosphorColors.Count() > 0)

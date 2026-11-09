@@ -1,0 +1,108 @@
+GameEntity {
+ ID "6A66E0062CA4F3EE"
+ components {
+  ParametricMaterialInstanceComponent "{6A66E0062CA4F3C8}" {
+   UserParamAlpha 0
+   ApplyPropertiesWhenMeshChanged 1
+  }
+  ClothNodeStorageComponent "{6A66E0062CA4F33D}" {
+   Attributes SCR_ItemAttributeCollection "{6A66E0062CA4F338}" {
+    ItemDisplayName UIInfo "{6A66E0062CA4F337}" {
+     Name "MPLS (Left)"
+     Description "Surefire Left"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{6A66E0062CA4F332}" {
+     Weight 0
+     DimensionScaler 0
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{6A66E0062CA4F30E}" {
+      CameraOrbitAngles -25 25 0
+      CameraDistanceToItem 2
+      FOV 10
+     }
+    }
+    CommonItemType "ACM_RailLiteLeft"
+    m_ACM_AdditionalCommonItemTypes {
+     "ACM_RailLiteLeft"
+    }
+   }
+   StoragePurpose 0 0
+  }
+  MeshObject "{6A66E0062CA4F30A}" {
+   Object "{7123B55C1B921F91}Assets/attachments/MPLSLight.xob"
+   InheritVisibility 1
+  }
+  RigidBody "{6A66E0062CA4F306}" {
+   Mass 1.5
+   SimState None
+   ModelGeometry 1
+   Static 1
+  }
+  SCR_SoundDataComponent "{6A66E0062CA4F305}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{6A66E0062CA4F31E}" {
+     m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{6A66E0062CA4F31D}" {
+     m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{6A66E0062CA4F31A}" {
+     m_sSoundProject "{F62001ED6E9FA253}Sounds/Items/_SharedData/Drop/Items_Drop_Clothes.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+   }
+  }
+  ACM_NVL_EquipmentLightsComponent "{6A66E0062CA4F319}" {
+   m_sLightIdentifier "surefireleft"
+   m_aSources {
+    ACM_NVL_LightSource "{6A66E0062CA4F2F5}" {
+     m_sLightPrefab "{D9E8228D1F2CECB9}Prefabs/Editor/Common/SureFire_660_Light.et"
+     m_vOffset PointInfo "{6A66E0062CA4F2F0}" {
+      PivotID "Light_Point"
+      Angles -14.557 180 -180
+     }
+     m_fMaxBrightness 15
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{6A66E0062CA4F2CC}" {
+   AreaType ACM_RailLEFT "{6A66E0062CA4F2CA}" {
+   }
+   WornModel "{7123B55C1B921F91}Assets/attachments/MPLSLight.xob"
+   WornMaterialsOverride {
+    ""
+   }
+   ItemMaterialsOverride {
+    ""
+   }
+  }
+  ActionsManagerComponent "{6A66E0062CA4F2C6}" {
+   ActionContexts {
+    UserActionContext "{6A66E0062CA4F2C3}" {
+     ContextName "default"
+     Position PointInfo "{6A66E0062CA4F2C1}" {
+      PivotID "Head"
+      Offset 0 0.2258 0
+     }
+    }
+   }
+   additionalActions {
+    SCR_EquipClothAction "{52E6EC76F51E12DE}" : "{83B98F1A96591AC6}Prefabs/Characters/Core/Actions/EquipClothAction.conf" {
+     "Sort Priority" -10
+    }
+    SCR_PickUpItemAction "{52E6EC76F43FCD58}" : "{F39A4E9B190C1846}Prefabs/Characters/Core/Actions/PickUpItemAction.conf" {
+    }
+   }
+  }
+  RplComponent "{6A66E0062CA4F2D8}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{6A66E0062CA4F2D7}" {
+  }
+ }
+}

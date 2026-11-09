@@ -140,7 +140,7 @@ class ACM_NVL_NetworkComponent : ScriptComponent
 		if (!comp) return -1;
 		IEntity owner = comp.GetOwner();
 		if (!owner) return -1;
-		return Replication.FindId(owner);
+		return Replication.FindItemId(owner);
 	}
 	
 	//------------------------------------------------------------------------------------------------
