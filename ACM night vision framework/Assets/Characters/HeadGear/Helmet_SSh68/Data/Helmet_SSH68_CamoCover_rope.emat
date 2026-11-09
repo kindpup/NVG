@@ -1,0 +1,19 @@
+MatPBRBasic : "{5CDDE2709BA9A5EE}Assets/_BaseMaterials/Characters_MatPBRBasic.emat" {
+ Color 0.51 0.51 0.51 1
+ Sort translucent
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BlendMode AlphaBlend
+ BCRMap "{E51F32E4D1587321}Assets/Characters/HeadGear/Helmet_SSh68/Data/Helmet_SSH68_RopeNet_BCR.edds"
+ OpacityMap "{95DE3179B255DF0C}Assets/Characters/HeadGear/Helmet_SSh68/Data/Helmet_SSH68_RopeNet_A.edds"
+ NMOMap "{DDC78976082F21BF}Assets/Characters/HeadGear/Helmet_SSh68/Data/Helmet_SSH68_RopeNet_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 27
+ TITemperatureCoef1 1
+ TITemperature2 27
+ TITemperatureCoef2 1
+ TITemperature3 27
+ TITemperatureCoef3 1
+ TITemperature4 27
+ TITemperatureCoef4 1
+}

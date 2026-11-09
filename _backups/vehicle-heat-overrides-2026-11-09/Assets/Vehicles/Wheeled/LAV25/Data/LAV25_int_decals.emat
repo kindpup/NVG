@@ -1,0 +1,25 @@
+MatPBRBasic {
+ Emissive 1 0.881 0.618 1
+ EmissiveLV 1.389
+ EmissiveAbsoluteLV 0
+ ApplyAlbedoToEmissive 1
+ Sort decal
+ AlphaTest 0.362
+ AlphaMul 1.765
+ BlendMode AlphaBlend
+ RoughnessScale 3.529
+ MetalnessScale 0.795
+ EmissiveMap "{4B7C07569B0759E5}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_int_decals_E.edds"
+ BCRMap "{CE6DF82D16D2CE97}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_int_decals_BCR.edds"
+ OpacityMap "{5C4C3B0A564CA380}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_int_decals_A.edds"
+ NMOMap "{F6B543BFCFA59C09}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_int_decals_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

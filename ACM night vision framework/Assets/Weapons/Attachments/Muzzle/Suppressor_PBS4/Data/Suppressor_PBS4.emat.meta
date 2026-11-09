@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{9CF786F5814B89F9}Assets/Weapons/Attachments/Muzzle/Suppressor_PBS4/Data/Suppressor_PBS4.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{2DF900A321780E41}Assets/Items/Equipment/Backpacks/Backpack_TeamWeaponBag/Data/Backpack_TeamWeaponBag_Soviet.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

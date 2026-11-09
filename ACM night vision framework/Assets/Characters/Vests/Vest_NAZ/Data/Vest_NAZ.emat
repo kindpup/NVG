@@ -1,0 +1,19 @@
+MatPBRMulti : "{0FB93B007F4E3A39}Assets/_BaseMaterials/Characters_MatPBRMulti.emat" {
+ CavityFromAO 0.197
+ VFXMap "{6C9841CEEA64105A}Assets/Characters/Vests/Vest_NAZ/Data/M_Vest_NAZ_VFX.edds"
+ DirtUserOpacity 1
+ DirtOpacity 3
+ DirtRoughness 1
+ DirtBCRMap "{D1ECD193AA89AB5D}Assets/Characters/Vests/Vest_NAZ/Data/M_Vest_NAZ_Blood_BCR.edds"
+ BCR_1 "{2432FFF46F77F3A8}Assets/Characters/Vests/Vest_NAZ/Data/M_Vest_NAZ_BCR.edds"
+ NMO_1 "{1CEA4466B600A136}Assets/Characters/Vests/Vest_NAZ/Data/M_Vest_NAZ_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 27
+ TITemperatureCoef1 1
+ TITemperature2 27
+ TITemperatureCoef2 1
+ TITemperature3 27
+ TITemperatureCoef3 1
+ TITemperature4 27
+ TITemperatureCoef4 1
+}

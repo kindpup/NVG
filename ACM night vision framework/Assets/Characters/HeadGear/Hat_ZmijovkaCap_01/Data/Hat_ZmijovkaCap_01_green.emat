@@ -1,0 +1,12 @@
+MatPBRBasic : "{4A323EB76488C3F1}Assets/Characters/HeadGear/Hat_ZmijovkaCap_01/Data/Hat_ZmijovkaCap_01.emat" {
+ BCRMap "{66B910AA591638FB}Assets/Characters/HeadGear/Hat_ZmijovkaCap_01/Data/Hat_ZmijovkaCap_01_v2_BCR.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 27
+ TITemperatureCoef1 1
+ TITemperature2 27
+ TITemperatureCoef2 1
+ TITemperature3 27
+ TITemperatureCoef3 1
+ TITemperature4 27
+ TITemperatureCoef4 1
+}

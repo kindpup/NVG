@@ -84,7 +84,7 @@ GameEntity : "{D4BC1F7EC5C290A3}Prefabs/Characters/HeadGear/Hat_Boonie_US_01/Hat
     }
     ACM_PhosphorColorOption "{687127F6130471A1}" {
      m_sName "White"
-     m_Material "{59F26A676C5E62F6}Assets/Shaders/NVSystem/Colors/ACM_V2_WhitePhosphor_HDR.emat"
+     m_Material "{59F26A676C5E62F6}Assets/Shaders/NVSystem/Colors/Thermal Night.emat"
     }
    }
   }

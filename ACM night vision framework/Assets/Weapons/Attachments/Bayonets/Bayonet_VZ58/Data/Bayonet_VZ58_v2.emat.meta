@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{F9D06E836ED0ACAA}Assets/Weapons/Attachments/Bayonets/Bayonet_VZ58/Data/Bayonet_VZ58_v2.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

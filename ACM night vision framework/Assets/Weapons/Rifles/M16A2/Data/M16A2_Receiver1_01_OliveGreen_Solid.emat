@@ -1,0 +1,22 @@
+MatPBRCamo : "{C4776498ED1BAA69}Assets/Weapons/Rifles/M16A2/Data/M16A2_Receiver1_01.emat" {
+ CamoAlbedoMap "{CEE23838FD6B350F}Assets/Weapons/Rifles/M16A2/Data/T_OliveGreen_Solid_BC.edds"
+ UVSrcCamoAlbedoMap "UV set 2"
+ CamoAlbedoMapUVTransform MatUVTransform "{5E2E8103705639BA}" {
+  TilingU 1.25
+  TilingV 1.25
+  OffsetU -0.357
+  OffsetV -0.909
+  Rotation 155.758
+ }
+ CamoCRMMap "{2C111EE61E95EF3B}Assets/Weapons/Rifles/M16A2/Data/M16A2_Receiver1_01_Camo_CRM.edds"
+ CamoNormalOpacity 0
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 26
+ TITemperatureCoef1 1
+ TITemperature2 26
+ TITemperatureCoef2 1
+ TITemperature3 26
+ TITemperatureCoef3 1
+ TITemperature4 26
+ TITemperatureCoef4 1
+}

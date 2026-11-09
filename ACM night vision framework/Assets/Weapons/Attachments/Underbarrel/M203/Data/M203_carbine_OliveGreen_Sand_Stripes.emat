@@ -1,0 +1,21 @@
+MatPBRCamo : "{66CBD1E897AB2D8B}Assets/Weapons/Attachments/Underbarrel/M203/Data/M203_carbine.emat" {
+ CamoAlbedoMap "{23CB2FC0292A4C28}Assets/Weapons/Rifles/M16A2/Data/T_OliveGreen_Sand_Stripes_BC.edds"
+ UVSrcCamoAlbedoMap "UV set 2"
+ CamoAlbedoMapUVTransform MatUVTransform "{5E3C6D92DD1D32BD}" {
+  TilingU 1.25
+  TilingV 1.25
+  OffsetU 0.02
+  Rotation 139.394
+ }
+ CamoCRMMap "{DD3D37CF5E3D4607}Assets/Weapons/Attachments/Underbarrel/M203/data/M203_carbine_Camo_CRM.edds"
+ CamoNormalOpacity 0
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 26
+ TITemperatureCoef1 1
+ TITemperature2 26
+ TITemperatureCoef2 1
+ TITemperature3 26
+ TITemperatureCoef3 1
+ TITemperature4 26
+ TITemperatureCoef4 1
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{D7F9F0FC8A7EE87A}Assets/Vehicles/Wheeled/M998/Data/M997_Ambulance_Exterior.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

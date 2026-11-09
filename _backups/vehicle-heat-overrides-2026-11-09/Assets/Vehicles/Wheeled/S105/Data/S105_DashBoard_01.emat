@@ -1,0 +1,18 @@
+MatPBRBasic {
+ Color 0.58 0.58 0.58 1
+ Emissive 1 0.842 0.658 0
+ ApplyAlbedoToEmissive 1
+ AlphaTest 0.48
+ EmissiveMap "{5674A5BAB01B579F}Assets/Vehicles/Wheeled/S105/Data/S105_Dashboard_01_EM.edds"
+ BCRMap "{4A73D5D21071FDCE}Assets/Vehicles/Wheeled/S105/Data/S105_Dashboard_01_BCR.edds"
+ OpacityMap "{F51DC3D5B7EC0678}Assets/Vehicles/Wheeled/S105/Data/S105_Dashboard_01_A.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

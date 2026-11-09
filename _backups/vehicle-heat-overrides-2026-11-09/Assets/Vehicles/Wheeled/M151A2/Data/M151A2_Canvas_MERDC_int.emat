@@ -1,0 +1,12 @@
+MatPBRMulti : "{5F8D24D96EB61275}Assets/Vehicles/Wheeled/M151A2/Data/M151A2_Canvas_MERDC.emat" {
+ DisablePriorityProbes 0
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

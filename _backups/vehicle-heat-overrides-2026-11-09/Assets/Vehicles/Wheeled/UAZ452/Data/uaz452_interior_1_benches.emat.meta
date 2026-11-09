@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{EA0F0AA5C8B98661}Assets/Vehicles/Wheeled/UAZ452/Data/uaz452_interior_1_benches.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

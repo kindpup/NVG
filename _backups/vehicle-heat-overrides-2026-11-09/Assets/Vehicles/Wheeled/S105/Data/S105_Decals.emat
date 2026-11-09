@@ -1,0 +1,23 @@
+MatPBRDecal {
+ CastShadow 0
+ SurfaceProperties "{CE9253778DD8FBDE}Common/Materials/Game/metal.gamemat"
+ AlphaTest 0.1
+ BlendMode AlphaBlend
+ CavityFromAO 0.934
+ NormalPower 1.5
+ NMOMap "{F41FC5B28369AFCD}Assets/Vehicles/Wheeled/S105/Data/S105_Decals_02_NMO.edds"
+ GBufferAlbedo 1
+ GBufferNormal 1
+ NormalCombinePower 4
+ GBufferRoughness 1
+ GBufferAO 1
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

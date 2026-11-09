@@ -1,0 +1,13 @@
+MatPBRBasic : "{5CDDE2709BA9A5EE}Assets/_BaseMaterials/Characters_MatPBRBasic.emat" {
+ BCRMap "{BBB5B2E0B3B24FF6}Assets/Characters/Handwear/Gloves_Pilot_US_01/Data/Gloves_Pilot_US_01_BCR.edds"
+ NMOMap "{836D09726AC51D68}Assets/Characters/Handwear/Gloves_Pilot_US_01/Data/Gloves_Pilot_US_01_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 30
+ TITemperatureCoef1 1
+ TITemperature2 30
+ TITemperatureCoef2 1
+ TITemperature3 30
+ TITemperatureCoef3 1
+ TITemperature4 30
+ TITemperatureCoef4 1
+}

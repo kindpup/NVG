@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{B464F61CFFFD2073}Assets/Vehicles/Wheeled/T601/Data/T601_Interior_Beige.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

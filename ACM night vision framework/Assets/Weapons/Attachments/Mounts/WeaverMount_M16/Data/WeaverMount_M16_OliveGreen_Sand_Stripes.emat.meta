@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{C6EF902A0D62F3DE}Assets/Weapons/Attachments/Mounts/WeaverMount_M16/Data/WeaverMount_M16_OliveGreen_Sand_Stripes.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

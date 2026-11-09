@@ -1,0 +1,19 @@
+MatPBRDecal {
+ Color 0.22 0.22 0.22 1
+ DisablePriorityProbes 1
+ AlphaTest 0.039
+ AlphaMul 0.9
+ BlendMode AlphaBlend
+ MetalnessScale 0
+ BCRMap "{BFD5449FDEBB053A}Assets/Vehicles/Wheeled/M923A1/VehParts/Data/M923A1_Decals_Construction_BCR.edds"
+ OpacityMap "{A4F03CF66D71D29F}Assets/Vehicles/Wheeled/M923A1/VehParts/Data/M923A1_Decals_Construction_A.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

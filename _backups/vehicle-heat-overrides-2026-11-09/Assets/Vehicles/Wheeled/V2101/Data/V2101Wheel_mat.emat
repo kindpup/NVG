@@ -1,0 +1,66 @@
+MatPBRMulti {
+ DisablePriorityProbes 1
+ VFXMap "{B58A520A492A0012}Assets/Vehicles/Wheeled/V2101/Data/S105Wheel_VFX.edds"
+ MudUserOpacity 1
+ MudOpacity 0.95
+ MudColor 0.195 0.173 0.145 1
+ MudMetalness 0
+ MudDetNormal 4
+ MudBCRMap "{15A4D0147C0F3804}Assets/_SharedData/Plaster/ST_Plaster_Damaged_01_BCR.edds"
+ MudNMOMap "{96EF3CD8C8E643BA}Assets/_SharedData/Dirt/ST_Mud_01_NMO.edds"
+ MudMaskMap "{816ABEBED1A52FF3}Assets/_SharedData/DetailMask/ST_Mud_01_Mask.edds"
+ DirtUserOpacity 1
+ DirtOpacity 0.53
+ DirtLayerSharpness 0.5
+ DirtColor 0.283 0.262 0.224 1
+ DirtRoughness 1.678
+ DirtBCRMap "{1624A684A875CD76}Assets/_SharedData/Concrete/ST_Concrete_Bare_01_BCR.edds"
+ DirtMaskMap "{DE18086A9CA88FBA}Assets/_SharedData/DetailMask/ST_Dirt_04_Mask1.edds"
+ DirtUVTransform MatUVTransform "{6A366EC38D217323}" {
+  TilingU 3
+  TilingV 3
+ }
+ UVSrcGlobalMaps "UV set 2"
+ MaskMap "{DABD2CF6DEA530EA}Assets/Vehicles/Wheeled/V2101/Data/S105Wheel_MASK.edds"
+ GlobalNMOMap "{27CB26239EF3F772}Assets/Vehicles/Wheeled/V2101/Data/S105Wheel_NMD.edds"
+ UVSrcDetail "UV set 2"
+ Enabled_4 1
+ Color_4 0.294 0.294 0.294 1
+ BCR_4 "{35DFF427FFCD66ED}Assets/_SharedData/Metal/ST_Metal_Fine01_1m_BCR.edds"
+ NMO_4 "{0D074FB526BA3473}Assets/_SharedData/Metal/ST_Metal_Fine01_1m_NMO.edds"
+ UVTransform_4 MatUVTransform "{5CECCD4CA162DBF4}" {
+  TilingU 10
+  TilingV 10
+ }
+ Roughness_4 1.07
+ Enabled_3 1
+ Color_3 0.027 0.027 0.027 1
+ BCR_3 "{35DFF427FFCD66ED}Assets/_SharedData/Metal/ST_Metal_Fine01_1m_BCR.edds"
+ NMO_3 "{B0948326047A8AD4}Assets/_SharedData/Metal/ST_Metal_Worn_01_NMO.edds"
+ DetNormal_3 0
+ Roughness_3 3.272
+ Enabled_2 1
+ Color_2 0.058 0.058 0.058 1
+ BCR_2 "{DFE62D48EAC7B13B}Assets/_SharedData/Metal/ST_Steel_Battered_02_BCR.edds"
+ NMO_2 "{C2AC9474786C75F8}Assets/_SharedData/Metal/ST_Steel_Base_01_NMO.edds"
+ DetNormal_2 1.838
+ Roughness_2 2
+ Color_1 0.296 0.279 0.239 1
+ BCR_1 "{3527689B84A7ED69}Assets/_SharedData/Metal/ST_Paint_OldMachine_01_BCR.edds"
+ NMO_1 "{0DFFD3095DD0BFF7}Assets/_SharedData/Metal/ST_Paint_OldMachine_01_NMO.edds"
+ UVTransform_1 MatUVTransform "{5CECCD4D04D07C82}" {
+  TilingU 2
+  TilingV 2
+  OffsetU -0.176
+  Rotation 52.941
+ }
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 28
+ TITemperatureCoef1 1
+ TITemperature2 28
+ TITemperatureCoef2 1
+ TITemperature3 28
+ TITemperatureCoef3 1
+ TITemperature4 28
+ TITemperatureCoef4 1
+}

@@ -1,0 +1,21 @@
+MatPBRBasic {
+ Color 0.242 0.319 0.211 1
+ NoDecals 1
+ SurfaceProperties "{CE9253778DD8FBDE}Common/Materials/Game/metal.gamemat"
+ AlphaTest 0.3
+ AlphaMul 2
+ BlendMode AlphaBlend
+ RoughnessScale 0.754
+ BCRMap "{16DE4E86EFB365EA}Assets/_SharedData/Metal/ST_Lighthouse_PaintedMetal_Rusted_BCR.edds"
+ OpacityMap "{2941C6A3988FFC55}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_int_grid_A.edds"
+ NMOMap "{3680180770DDE0EE}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_int_grid_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

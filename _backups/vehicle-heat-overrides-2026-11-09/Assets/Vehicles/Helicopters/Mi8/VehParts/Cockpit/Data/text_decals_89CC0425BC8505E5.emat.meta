@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{FD59DCA4A0C6BD02}Assets/Vehicles/Helicopters/Mi8/VehParts/Cockpit/Data/text_decals_89CC0425BC8505E5.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

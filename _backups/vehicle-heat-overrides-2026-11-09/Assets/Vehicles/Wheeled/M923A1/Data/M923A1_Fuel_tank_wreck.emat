@@ -1,0 +1,61 @@
+MatPBRMulti {
+ Cull none
+ GlobalMCRMap "{3BDC6B8C90021265}Assets/Vehicles/Wheeled/M923A1/Data/M923A1_Fuel_tank_MCR.edds"
+ OverlayBlackPower 0.9
+ OverlayWhitePower 0.5
+ UVSrcGlobalMaps "UV set 2"
+ MaskMap "{5E76A2C3FC8C0447}Assets/Vehicles/Wheeled/M923A1/Data/M923A1_Fuel_tank_GLOBAL_MASK.edds"
+ VFXMap "{8F1D5F2767EF6149}Assets/Vehicles/Wheeled/M923A1/Data/M923A1_Fuel_tank_VFX.edds"
+ GlobalNMOMap "{FF6F5A8F3B8BD025}Assets/Vehicles/Wheeled/M923A1/Data/M923A1_Fuel_tank_NMO.edds"
+ MudMetalness 0
+ DirtOpacity 1.543
+ DirtLayerSharpness 0.416
+ DirtColor 0.004 0.004 0.004 1
+ DirtRoughness 1.5
+ DirtMaskMap "{2563D86FF583B1EF}Assets/_SharedData/DetailMask/ST_Metal_Rust_01_Mask1.edds"
+ DirtUVTransform MatUVTransform "{18F267536A8356B6}" {
+  TilingU 4
+  TilingV 4
+ }
+ Enabled_4 1
+ Color_4 0.708 0.708 0.708 1
+ BCR_4 "{9B97AA81EF1AAA3C}Assets/_SharedData/Dirt/ST_destruct_rust_BCR.edds"
+ NMO_4 "{A34F1113366DF8A2}Assets/_SharedData/Dirt/ST_destruct_rust_NMO.edds"
+ MaskSharpness_4 1.503
+ MaskOffset_4 0.703
+ Mask_4 "{2563D86FF583B1EF}Assets/_SharedData/DetailMask/ST_Metal_Rust_01_Mask1.edds"
+ MaskUVScale_4 0.673
+ UVTransform_4 MatUVTransform "{3DD52765AF0AF61B}" {
+  TilingU 5
+  TilingV 5
+ }
+ DetNormal_4 0.25
+ Roughness_4 1.5
+ Metalness_4 0
+ Color_3 0.218 0.221 0.223 1
+ BCR_3 "{FA742FE6A11B2766}Assets/_SharedData/Metal/ST_Steel_Base_01_BCR.edds"
+ NMO_3 "{C2AC9474786C75F8}Assets/_SharedData/Metal/ST_Steel_Base_01_NMO.edds"
+ UVTransform_3 MatUVTransform "{18F2674CF8FD0F98}" {
+  TilingU 30
+  TilingV 30
+ }
+ Roughness_3 1.5
+ Metalness_2 0
+ Color_1 0.023 0.027 0.015 1
+ NMO_1 "{E522A07425E30E8C}Assets/_SharedData/Metal/ST_Metal_Stainles01_1m_NMO.edds"
+ UVTransform_1 MatUVTransform "{3DD527668FA9067A}" {
+  TilingU 4
+  TilingV 4
+ }
+ Roughness_1 0.905
+ Metalness_1 0
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 12
+ TITemperatureCoef1 1
+ TITemperature2 12
+ TITemperatureCoef2 1
+ TITemperature3 12
+ TITemperatureCoef3 1
+ TITemperature4 12
+ TITemperatureCoef4 1
+}

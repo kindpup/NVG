@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{E3406C8D9F05055A}Assets/Vehicles/Wheeled/M998/Data/Base_Cloth.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

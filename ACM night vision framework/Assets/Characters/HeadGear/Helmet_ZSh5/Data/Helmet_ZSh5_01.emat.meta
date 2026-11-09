@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{CB9654C42B65013C}Assets/Characters/HeadGear/Helmet_ZSh5/Data/Helmet_ZSh5_01.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

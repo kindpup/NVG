@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{77E2BA90339BE657}Assets/Characters/Uniforms/Pants_Suit_01/Data/Pants_Suit_01_Grey.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

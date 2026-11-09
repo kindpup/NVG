@@ -1,0 +1,64 @@
+MatPBRMulti {
+ DisablePriorityProbes 1
+ GlobalMCRMap "{05D1BDE5E0A5AB59}Assets/Vehicles/Wheeled/S1203/Data/S1203_details_MCR.edds"
+ UVSrcGlobalMaps "UV set 2"
+ MaskMap "{8FC368D8E9BC8D5F}Assets/Vehicles/Wheeled/S1203/Data/S1203_details_MASK.edds"
+ VFXMap "{B110894E1748D875}Assets/Vehicles/Wheeled/S1203/Data/S1203_details_VFX.edds"
+ GlobalNMOMap "{54D118BFA924AA51}Assets/Vehicles/Wheeled/S1203/Data/S1203_details_NMO.edds"
+ UVSrcDetail "UV set 2"
+ DirtOpacity 0.3
+ DirtLayerSharpness 0.161
+ DirtColor 0.347 0.32 0.274 1
+ DirtRoughness 1.6
+ DirtBCRMap "{366028E90066FC57}Assets/_SharedData/Dirt/ST_Dirt_Sand_BCR.edds"
+ DirtMaskMap "{2563D86FF583B1EF}Assets/_SharedData/DetailMask/ST_Metal_Rust_01_Mask1.edds"
+ DirtUVTransform MatUVTransform "{5496E013FADA7E52}" {
+  TilingU 40
+  TilingV 40
+ }
+ Enabled_4 1
+ Color_4 0.01 0.01 0.01 1
+ BCR_4 "{AA5CBBA49E90B60B}Assets/_SharedData/Plastic/ST_PlasticCanvas_01_BCR.edds"
+ UVTransform_4 MatUVTransform "{546CCBAADFD0F2CA}" {
+  TilingU 20
+  TilingV 20
+ }
+ Roughness_4 0.65
+ Metalness_4 0
+ Enabled_3 1
+ Color_3 0.006 0.006 0.006 1
+ BCR_3 "{5F54C1714DAA5E23}Assets/_SharedData/Plastic/ST_Plastic_Fine01_1m_BCR.edds"
+ NMO_3 "{678C7AE394DD0CBD}Assets/_SharedData/Plastic/ST_Plastic_Fine01_1m_NMO.edds"
+ UVTransform_3 MatUVTransform "{5468EB23CE93727F}" {
+  TilingU 30
+  TilingV 30
+ }
+ Roughness_3 2
+ Metalness_3 0
+ Enabled_2 1
+ Color_2 0.006 0.006 0.006 1
+ BCR_2 "{07CBA6AB99E68F3D}Assets/_SharedData/Plastic/ST_TarpaulinCanvas_BCR.edds"
+ NMO_2 "{FD3614E7F90495C2}Assets/_SharedData/Metal/ST_Metal_Rust_Coarse01_1m_NMO.edds"
+ UVTransform_2 MatUVTransform "{546AF6001C18D632}" {
+  TilingU 50
+  TilingV 50
+ }
+ Roughness_2 1.3
+ Metalness_2 0
+ Color_1 0.423 0.423 0.423 1
+ BCR_1 "{DDFA1BE6FC945C12}Assets/_SharedData/Metal/ST_Metal_Stainles01_1m_BCR.edds"
+ UVTransform_1 MatUVTransform "{549EF746B844896C}" {
+  TilingU 50
+  TilingV 50
+ }
+ Roughness_1 1.5
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

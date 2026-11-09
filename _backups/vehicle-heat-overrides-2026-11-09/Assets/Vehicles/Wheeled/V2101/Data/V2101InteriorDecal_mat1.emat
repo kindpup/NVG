@@ -1,0 +1,19 @@
+MatPBRBasic {
+ Emissive 1 0.664 0.275 0
+ EmissiveLV 1.4
+ SortBias 1
+ BlendMode AlphaBlend
+ EmissiveMap "{56A1E82E925845FF}Assets/Vehicles/Wheeled/V2101/Data/V2101InteriorDecal_EM.edds"
+ BCRMap "{9F3E41F053639DCE}Assets/Vehicles/Wheeled/V2101/Data/V2101InteriorDecal_BCR.edds"
+ OpacityMap "{B6C546B67A653086}Assets/Vehicles/Wheeled/V2101/Data/V2101InteriorDecal_A.edds"
+ NMOMap "{A7E6FA628A14CF50}Assets/Vehicles/Wheeled/V2101/Data/V2101InteriorDecal_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

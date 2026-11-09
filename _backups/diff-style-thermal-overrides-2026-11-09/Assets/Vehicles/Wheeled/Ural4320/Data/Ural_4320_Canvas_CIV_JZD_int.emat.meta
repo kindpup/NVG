@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{E87CA61FE4A2D5F0}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Canvas_CIV_JZD_int.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

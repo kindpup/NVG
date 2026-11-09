@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{EFCED235D8188D48}Assets/Characters/Vests/Vest_SRU21P/Data/Vest_SRU21P_A.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

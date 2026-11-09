@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{E8BC8CC8A8BB5DAB}Assets/Characters/HeadGear/Hat_FlatCap_01/Data/Hat_FlatCap_01_DarkGray_Dirty.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

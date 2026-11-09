@@ -1,0 +1,14 @@
+MatPBRBasic : "{AD04B939A2C3F083}Assets/_BaseMaterials/Equipment_MatPBRBasic.emat" {
+ Color 0.922 0.922 0.922 1
+ BCRMap "{E5DB620487B0F061}Assets/Items/Equipment/Accessories/Scabbard_6Kh4Bayonet/Data/Scabbard_6Kh4Bayonet_BCR.edds"
+ NMOMap "{DD03D9965EC7A2FF}Assets/Items/Equipment/Accessories/Scabbard_6Kh4Bayonet/Data/Scabbard_6Kh4Bayonet_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 25
+ TITemperatureCoef1 1
+ TITemperature2 25
+ TITemperatureCoef2 1
+ TITemperature3 25
+ TITemperatureCoef3 1
+ TITemperature4 25
+ TITemperatureCoef4 1
+}

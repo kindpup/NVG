@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{03B8BFFA15510EA8}Assets/Vehicles/Helicopters/UH1H/Data/UH1H_Dials.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,22 @@
+MatPBRDecal {
+ Emissive 0.546 0.068 0.017 0
+ EmissiveLV -7.813
+ BlendMode AlphaBlend
+ AllowUserAlphaBias 1
+ MetalnessScale 0
+ EmissiveMap "{D188EED56BECB8C3}Assets/Vehicles/Helicopters/Mi8/Data/Mi8_ControlPanelLights_MASK.edds"
+ GBufferAlbedo 1
+ GBufferNormal 1
+ GBufferRoughness 1
+ GBufferMetalness 1
+ GBufferAO 1
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

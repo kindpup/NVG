@@ -1,0 +1,19 @@
+MatPBRMulti : "{0FB93B007F4E3A39}Assets/_BaseMaterials/Characters_MatPBRMulti.emat" {
+ CavityFromAO 0.471
+ VFXMap "{43D74140AA50FE58}Assets/Characters/Uniforms/Jacket_M70/Data/Jacket_M70_01_VFX.edds"
+ DirtUserOpacity 1
+ DirtOpacity 3
+ DirtRoughness 1.2
+ DirtBCRMap "{45FAFA6E5A3CBEBB}Assets/Characters/Uniforms/Jacket_M70/Data/Jacket_M70_01_wound_BCR.edds"
+ BCR_1 "{0B7DFF7A2F431DAA}Assets/Characters/Uniforms/Jacket_M70/Data/Jacket_M70_01_BCR.edds"
+ NMO_1 "{33A544E8F6344F34}Assets/Characters/Uniforms/Jacket_M70/Data/Jacket_M70_01_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 28
+ TITemperatureCoef1 1
+ TITemperature2 28
+ TITemperatureCoef2 1
+ TITemperature3 28
+ TITemperatureCoef3 1
+ TITemperature4 28
+ TITemperatureCoef4 1
+}

@@ -1,0 +1,20 @@
+MatPBRDecal {
+ Color 0.665 0.665 0.665 1
+ CastShadow 0
+ AlphaTest 0.2
+ BlendMode AlphaBlend
+ RoughnessScale 2.068
+ BCRMap "{30868830CAC6979F}Assets/_SharedData/Decals/ST_DecalInterior_01_BCR.edds"
+ OpacityMap "{51B3BA075492C4AE}Assets/_SharedData/Decals/ST_DecalInterior_01_A.edds"
+ NMOMap "{085E33A213B1C501}Assets/_SharedData/Decals/ST_DecalInterior_01_NMO.edds"
+ GBufferAO 1
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

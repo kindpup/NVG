@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{F134A7D2E04B674E}Assets/Vehicles/Wheeled/M151A2/Data/M151A2_Wheels_MERDC.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,58 @@
+MatPBRMulti {
+ SpecularMul 0.34
+ GlobalMCRMap "{BF31AF6ABB3BE7EF}Assets/Vehicles/Wheeled/V2101/Data/V2101Interior_MCR.edds"
+ MaskMap "{7465CDCAC3278376}Assets/Vehicles/Wheeled/V2101/Data/V2101_mask.edds"
+ VFXMap "{0BF09BC14CD694C3}Assets/Vehicles/Wheeled/V2101/Data/V2101Interior_VFX.edds"
+ GlobalNMOMap "{7B829E6910B225AF}Assets/Vehicles/Wheeled/V2101/Data/V2101Interior_NMO.edds"
+ DirtOpacity 0.132
+ DirtColor 0.238 0.198 0.129 1
+ DirtRoughness 1.6
+ DirtBCRMap "{366028E90066FC57}Assets/_SharedData/Dirt/ST_Dirt_Sand_BCR.edds"
+ DirtMaskMap "{2563D86FF583B1EF}Assets/_SharedData/DetailMask/ST_Metal_Rust_01_Mask1.edds"
+ DirtUVTransform MatUVTransform "{5D82B5A3A68C2DF6}" {
+ }
+ Enabled_4 1
+ Color_4 0.122 0.122 0.122 1
+ BCR_4 "{7258FD18E56A84D2}Assets/Vehicles/Wheeled/V2101/Data/V2101InteriorCeiling_BCR.edds"
+ NMO_4 "{4A80468A3C1DD64C}Assets/Vehicles/Wheeled/V2101/Data/V2101InteriorCeiling_NMO.edds"
+ UVTransform_4 MatUVTransform "{5D349337705CF38F}" {
+  TilingU 40
+  TilingV 40
+ }
+ DetNormal_4 0.588
+ Metalness_4 0
+ Enabled_3 1
+ Color_3 0.424 0.424 0.424 1
+ BCR_3 "{8EADB31D864DD0FC}Assets/_SharedData/Metal/ST_MetalBare_01_BCR.edds"
+ UVTransform_3 MatUVTransform "{5D34933396F11E37}" {
+  TilingU 80
+  TilingV 80
+ }
+ Roughness_3 1.5
+ Enabled_2 1
+ Color_2 0.008 0.008 0.008 1
+ BCR_2 "{AA5CBBA49E90B60B}Assets/_SharedData/Plastic/ST_PlasticCanvas_01_BCR.edds"
+ UVTransform_2 MatUVTransform "{5D349332164761C6}" {
+  TilingU 20
+  TilingV 20
+ }
+ Roughness_2 0.65
+ Metalness_2 0
+ Color_1 0.105 0.053 0.029 1
+ BCR_1 "{F829787DA88C2E39}Assets/_SharedData/Plastic/ST_Plastic_Leather02_1m_BCR.edds"
+ NMO_1 "{C0F1C3EF71FB7CA7}Assets/_SharedData/Plastic/ST_Plastic_Leather02_1m_NMO.edds"
+ UVTransform_1 MatUVTransform "{5D3493336C4A5A17}" {
+  TilingU 12
+  TilingV 12
+ }
+ Metalness_1 0
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

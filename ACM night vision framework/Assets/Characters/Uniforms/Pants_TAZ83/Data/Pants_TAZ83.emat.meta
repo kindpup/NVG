@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{2715EF0FE44D5120}Assets/Characters/Uniforms/Pants_TAZ83/Data/Pants_TAZ83.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

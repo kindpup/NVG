@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{C8F456E6D9905A33}Assets/Weapons/Magazines/RPK74/Data/Magazine_45rnd.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

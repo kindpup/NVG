@@ -1,0 +1,15 @@
+MatPBRMulti : "{0078643DF969CA01}Assets/Vehicles/Wheeled/S1203/Data/S1203_body.emat" {
+ Enabled_2 0
+ Color_2 0.162 0.133 0.103 1
+ Roughness_2 1.961
+ Color_1 0.162 0.133 0.103 1
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

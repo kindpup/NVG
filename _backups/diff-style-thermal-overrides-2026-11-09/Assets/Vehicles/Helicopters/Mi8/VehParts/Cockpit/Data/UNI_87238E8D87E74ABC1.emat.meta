@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{2A9A1EFF67EA545E}Assets/Vehicles/Helicopters/Mi8/VehParts/Cockpit/Data/UNI_87238E8D87E74ABC1.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

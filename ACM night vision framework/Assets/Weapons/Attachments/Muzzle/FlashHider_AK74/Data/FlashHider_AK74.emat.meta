@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{5C93F447E4DCE25B}Assets/Weapons/Attachments/Muzzle/FlashHider_AK74/Data/FlashHider_AK74.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

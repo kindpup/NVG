@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{8608E3220281E273}Assets/Characters/Handwear/Gloves_Wool_01/Data/Gloves_Wool_01.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

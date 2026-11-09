@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{5F5A0DDECC0306CA}Assets/Vehicles/Wheeled/S1203/Data/S1203_Minibus.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

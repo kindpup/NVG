@@ -1,0 +1,13 @@
+MatPBRBasic : "{AD04B939A2C3F083}Assets/_BaseMaterials/Equipment_MatPBRBasic.emat" {
+ BCRMap "{C2A5A5A1DC19C4B8}Assets/Items/Equipment/Backpacks/Backpack_IIFS_FieldPack/Data/Backpack_IIFS_FieldPack_2_BCR.edds"
+ NMOMap "{FA7D1E33056E9626}Assets/Items/Equipment/Backpacks/Backpack_IIFS_FieldPack/Data/Backpack_IIFS_FieldPack_2_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 25
+ TITemperatureCoef1 1
+ TITemperature2 25
+ TITemperatureCoef2 1
+ TITemperature3 25
+ TITemperatureCoef3 1
+ TITemperature4 25
+ TITemperatureCoef4 1
+}

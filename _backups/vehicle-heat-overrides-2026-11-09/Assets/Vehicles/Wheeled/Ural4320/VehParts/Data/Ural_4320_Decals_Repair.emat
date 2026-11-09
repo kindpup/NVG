@@ -1,0 +1,21 @@
+MatPBRDecal {
+ Color 0.202 0.202 0.202 1
+ SortBias 1
+ DisablePriorityProbes 1
+ AlphaMul 2
+ BlendMode AlphaBlend
+ RoughnessScale 2.1
+ MetalnessScale 0
+ BCRMap "{46D5F60E8E62F44F}Assets/Vehicles/Wheeled/Ural4320/VehParts/Data/Ural_4320_Decals_Repair_BCR.edds"
+ OpacityMap "{1966A6F863413F0C}Assets/Vehicles/Wheeled/Ural4320/VehParts/Data/Ural_4320_Decals_Repair_A.edds"
+ GBufferAO 1
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

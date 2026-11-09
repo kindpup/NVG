@@ -1,0 +1,20 @@
+MatPBRBasic {
+ Emissive 1 0.942 0.832 0
+ EmissiveLV 0
+ ApplyAlbedoToEmissive 1
+ CastShadow 1
+ ReceiveShadow 1
+ RoughnessScale 4.379
+ MetalnessScale 0.2
+ EmissiveMap "{6F8F9B735C63B483}Assets/Vehicles/Wheeled/M151A2/Data/M151A2_Dashboard_EM.edds"
+ BCRMap "{CB9CB85F6CDF80D2}Assets/Vehicles/Wheeled/M151A2/Data/M151A2_Dashboard_BCR.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

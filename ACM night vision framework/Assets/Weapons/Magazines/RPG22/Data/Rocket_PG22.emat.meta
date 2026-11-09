@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{394525BA6710188A}Assets/Weapons/Magazines/RPG22/Data/Rocket_PG22.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

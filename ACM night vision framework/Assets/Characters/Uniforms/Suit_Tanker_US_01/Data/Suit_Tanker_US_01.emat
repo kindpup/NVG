@@ -1,0 +1,25 @@
+MatPBRMulti : "{0FB93B007F4E3A39}Assets/_BaseMaterials/Characters_MatPBRMulti.emat" {
+ VFXMap "{A7ED7081EF2AEEF2}Assets/Characters/Uniforms/Suit_Tanker_US_01/Data/Suit_Tanker_US_01_VFX.edds"
+ DirtUserOpacity 1
+ DirtOpacity 2
+ DirtLayerSharpness 0.5
+ DirtColor 0.147 0.118 0.118 1
+ DirtRoughness 1.7
+ DirtBCRMap "{08F15E9AD2DE7E86}Assets/_SharedData/Damage/ST_Clothes_DMG_Blood_BCR.edds"
+ DirtMaskMap "{28724AD5A1D70271}Assets/_SharedData/Damage/ST_Clothes_DMG_Blood_MASK.edds"
+ DirtUVTransform MatUVTransform "{63269D9091004D59}" {
+  TilingU 3
+  TilingV 3
+ }
+ BCR_1 "{EF47CEBB6A390D00}Assets/Characters/Uniforms/Suit_Tanker_US_01/Data/Suit_Tanker_US_01_BCR.edds"
+ NMO_1 "{D79F7529B34E5F9E}Assets/Characters/Uniforms/Suit_Tanker_US_01/Data/Suit_Tanker_US_01_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 28
+ TITemperatureCoef1 1
+ TITemperature2 28
+ TITemperatureCoef2 1
+ TITemperature3 28
+ TITemperatureCoef3 1
+ TITemperature4 28
+ TITemperatureCoef4 1
+}

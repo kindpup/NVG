@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{744662E41D08ABCB}Assets/Vehicles/Helicopters/Mi8/Data/Mi8_Interier_Base_Wreck.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

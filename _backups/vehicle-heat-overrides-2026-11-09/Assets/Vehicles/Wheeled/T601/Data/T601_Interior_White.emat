@@ -1,0 +1,14 @@
+MatPBRMulti : "{3F85DFF738843A8F}Assets/Vehicles/Wheeled/T601/Data/T601_Interior.emat" {
+ DiffuseIBL 0.694 0.694 0.694 1
+ Diffuse 0.791 0.791 0.791 1
+ Color_3 0.376 0.368 0.354 1
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

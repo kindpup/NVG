@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{CBFCFF65E90D2BEE}Assets/Vehicles/Helicopters/Mi8/VehParts/Sight/Data/Heli_Mi8_PKV_sight.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

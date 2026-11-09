@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{101E65A60D979B04}Assets/Characters/Footwear/JungleBoots_01/Data/JungleBoots_01.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

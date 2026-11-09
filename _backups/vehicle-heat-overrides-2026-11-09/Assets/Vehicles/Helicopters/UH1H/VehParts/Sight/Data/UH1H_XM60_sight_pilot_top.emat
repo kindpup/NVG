@@ -1,0 +1,13 @@
+MatPBRBasic {
+ BCRMap "{BFA556AF3F06535B}Assets/Vehicles/Helicopters/UH1H/VehParts/Sight/Data/UH1H_XM60_sight_pilot_top_BCR.edds"
+ NMOMap "{877DED3DE67101C5}Assets/Vehicles/Helicopters/UH1H/VehParts/Sight/Data/UH1H_XM60_sight_pilot_top_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

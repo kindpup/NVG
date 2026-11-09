@@ -1,0 +1,47 @@
+MatPBRMulti {
+ Color 0.258 0.258 0.258 1
+ DielectricReflectance 0.05
+ VFXMap "{F1E3F44AF5893D75}Assets/Vehicles/Wheeled/M923A1/VehParts/Data/M944A1_Lights_VFX.edds"
+ MudOpacity 1.007
+ MudColor 0.061 0.013 0.001 1
+ MudRoughness 1.98
+ MudMetalness 0
+ MudDetNormal 0
+ MudBCRMap "{AE37874A11911124}Assets/_SharedData/Dirt/ST_Mud_01_BCR.edds"
+ MudNMOMap "{96EF3CD8C8E643BA}Assets/_SharedData/Dirt/ST_Mud_01_NMO.edds"
+ MudMaskMap "{816ABEBED1A52FF3}Assets/_SharedData/DetailMask/ST_Mud_01_Mask.edds"
+ MudUVTransform MatUVTransform "{5CEAF4C55DD6D54A}" {
+  TilingU 5
+  TilingV 5
+  OffsetU 0.342
+  Rotation 38.658
+ }
+ DirtOpacity 3
+ DirtColor 0.036 0.024 0.011 1
+ DirtRoughness 0.705
+ DirtBCRMap "{366028E90066FC57}Assets/_SharedData/Dirt/ST_Dirt_Sand_BCR.edds"
+ DirtMaskMap "{A074608E879A25CB}Assets/_SharedData/DetailMask/ST_Dirt_01_Mask1.edds"
+ DirtUVTransform MatUVTransform "{5CEAF4C6F2B74EED}" {
+  TilingU 3
+  TilingV 3
+  OffsetU 0.107
+ }
+ Color_2 0.245 0.029 0.029 1
+ DetNormal_2 0
+ Color_1 0.533 0.533 0.533 1
+ BCR_1 "{B9494A70709ADE87}Assets/Vehicles/Wheeled/M923A1/VehParts/Data/M944A1_Lights_BCR.edds"
+ NMO_1 "{8191F1E2A9ED8C19}Assets/Vehicles/Wheeled/M923A1/VehParts/Data/M944A1_Lights_NMO.edds"
+ UVTransform_1 MatUVTransform "{5CEAF4C638C6FF9F}" {
+ }
+ DetNormal_1 0.805
+ Roughness_1 0.5
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

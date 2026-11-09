@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{25138B2A1092CB93}Assets/Weapons/Magazines/M2/Data/Cartridge_127x99_M33.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

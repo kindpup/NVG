@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{0C414FE8B7475368}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Cistern_CIV_FUEL_Pohona.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

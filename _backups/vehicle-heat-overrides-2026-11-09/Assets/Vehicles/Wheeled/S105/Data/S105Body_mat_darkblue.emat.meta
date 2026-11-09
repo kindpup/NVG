@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{7DB7871FD01C8B0C}Assets/Vehicles/Wheeled/S105/Data/S105Body_mat_darkblue.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

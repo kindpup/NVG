@@ -1,0 +1,15 @@
+MatPBRBasic : "{E804583583DC08A9}Assets/_BaseMaterials/Weapons_MatPBRBasic.emat" {
+ BentNormalMode Texture
+ BentNormalMap "{3F21C6374A7ABC7B}Assets/Weapons/Attachments/Optics/4x20/Data/Optic_4x20_BN.edds"
+ BCRMap "{9A4F8C8A9A8590BE}Assets/Weapons/Attachments/Optics/4x20/Data/Optic_4x20_BCR.edds"
+ NMOMap "{A297371843F2C220}Assets/Weapons/Attachments/Optics/4x20/Data/Optic_4x20_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 26
+ TITemperatureCoef1 1
+ TITemperature2 26
+ TITemperatureCoef2 1
+ TITemperature3 26
+ TITemperatureCoef3 1
+ TITemperature4 26
+ TITemperatureCoef4 1
+}

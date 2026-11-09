@@ -1,0 +1,24 @@
+MatPBRMulti {
+ Color 0.678 0.678 0.678 1
+ DielectricReflectance 0.05
+ VFXMap "{970AF41FC83BC78E}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Lights_VFX.edds"
+ UVSrcDetail "UV set 2"
+ DirtOpacity 1
+ DirtLayerSharpness 0.357
+ DirtColor 0.055 0.043 0.027 1
+ DirtRoughness 1
+ DirtBCRMap "{366028E90066FC57}Assets/_SharedData/Dirt/ST_Dirt_Sand_BCR.edds"
+ DirtMaskMap "{A074608E879A25CB}Assets/_SharedData/DetailMask/ST_Dirt_01_Mask1.edds"
+ BCR_1 "{DFA04A254D28247C}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Lights_BCR.edds"
+ NMO_1 "{E778F1B7945F76E2}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Lights_NMO.edds"
+ Roughness_1 0
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

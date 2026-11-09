@@ -1,0 +1,14 @@
+MatPBRBasic : "{E804583583DC08A9}Assets/_BaseMaterials/Weapons_MatPBRBasic.emat" {
+ RoughnessScale 1.3
+ BCRMap "{D375CB40C8D29655}Assets/Weapons/MachineGuns/M249/Data/M249_Body_1_BCR.edds"
+ NMOMap "{EBAD70D211A5C4CB}Assets/Weapons/MachineGuns/M249/Data/M249_Body_1_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 26
+ TITemperatureCoef1 1
+ TITemperature2 26
+ TITemperatureCoef2 1
+ TITemperature3 26
+ TITemperatureCoef3 1
+ TITemperature4 26
+ TITemperatureCoef4 1
+}

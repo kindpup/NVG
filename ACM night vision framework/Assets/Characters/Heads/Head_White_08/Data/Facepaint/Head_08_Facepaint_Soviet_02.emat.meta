@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{AE35BF530642F5F4}Assets/Characters/Heads/Head_White_08/Data/Facepaint/Head_08_Facepaint_Soviet_02.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

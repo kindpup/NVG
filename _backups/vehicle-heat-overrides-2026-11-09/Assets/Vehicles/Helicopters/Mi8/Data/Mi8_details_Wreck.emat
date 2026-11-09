@@ -1,0 +1,20 @@
+MatPBRBasic {
+ Color 0.584 0.584 0.584 1
+ BCRMap "{9B97AA81EF1AAA3C}Assets/_SharedData/Dirt/ST_destruct_rust_BCR.edds"
+ NMOMap "{A34F1113366DF8A2}Assets/_SharedData/Dirt/ST_destruct_rust_NMO.edds"
+ UVSrcGlobalMaps "UV set 2"
+ GlobalMapsUVTransform MatUVTransform "{495B276692766BC5}" {
+  TilingU 2
+  TilingV 2
+ }
+ DetailNormalPower 1
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 12
+ TITemperatureCoef1 1
+ TITemperature2 12
+ TITemperatureCoef2 1
+ TITemperature3 12
+ TITemperatureCoef3 1
+ TITemperature4 12
+ TITemperatureCoef4 1
+}

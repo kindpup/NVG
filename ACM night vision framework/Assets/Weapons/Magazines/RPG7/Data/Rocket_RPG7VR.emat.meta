@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{6F3508ABE581C7AB}Assets/Weapons/Magazines/RPG7/Data/Rocket_RPG7VR.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

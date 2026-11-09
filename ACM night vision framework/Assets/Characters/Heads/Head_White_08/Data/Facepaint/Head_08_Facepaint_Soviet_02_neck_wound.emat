@@ -1,0 +1,16 @@
+MatPBRSkinProfile : "{3D8DD71AB39D2267}Assets/_BaseMaterials/Characters_MatPBRSkinProfile.emat" {
+ Color 0.738 0.738 0.738 1
+ BCRMap "{65EC5671C027807B}Assets/Characters/Heads/Head_White_08/Data/Facepaint/Head_White_08_Facepaint_Soviet_02_wound_BCR.edds"
+ OpacityMap "{70A53F4EA373F142}Assets/Characters/Basebody/Data/HeadClipping_A.edds"
+ NMOMap "{400C0E24553FBB1C}Assets/Characters/Heads/Head_White_08/Data/Head_White_08_wound_NMO.edds"
+ SubsurfaceProfile "{615A5485E64FD13C}Assets/Characters/Basebody/Data/Subsurface_White.emat"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 34
+ TITemperatureCoef1 1
+ TITemperature2 34
+ TITemperatureCoef2 1
+ TITemperature3 34
+ TITemperatureCoef3 1
+ TITemperature4 34
+ TITemperatureCoef4 1
+}

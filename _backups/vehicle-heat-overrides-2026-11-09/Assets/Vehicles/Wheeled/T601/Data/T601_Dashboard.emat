@@ -1,0 +1,25 @@
+MatPBRBasic {
+ Color 1 1 1 1
+ DiffuseIBL 0.708 0.708 0.708 1
+ SpecularIBL 0.485 0.485 0.485 1
+ Emissive 0.546 0.546 0.546 0
+ EmissiveAbsoluteLV 0
+ ApplyAlbedoToEmissive 1
+ SortBias -2
+ AlphaMul 1.5
+ BlendMode AlphaBlend
+ RoughnessScale 1.5
+ MetalnessScale 0
+ EmissiveMap "{F725C4A3CFFA03D0}Assets/Vehicles/Wheeled/T601/Data/T601_dashboard_E.edds"
+ BCRMap "{F128553CDD84DBDD}Assets/Vehicles/Wheeled/T601/Data/T601_dashboard_BCR.edds"
+ OpacityMap "{E015F8FF02B1F9B5}Assets/Vehicles/Wheeled/T601/Data/T601_dashboard_A.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

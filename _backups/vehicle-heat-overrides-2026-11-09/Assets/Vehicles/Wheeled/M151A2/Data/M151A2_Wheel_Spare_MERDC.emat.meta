@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{1E76B93EC0C35CA3}Assets/Vehicles/Wheeled/M151A2/Data/M151A2_Wheel_Spare_MERDC.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

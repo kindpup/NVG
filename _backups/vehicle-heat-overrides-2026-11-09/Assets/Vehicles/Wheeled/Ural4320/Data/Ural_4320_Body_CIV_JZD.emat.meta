@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{48FF237EDB0953AD}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Body_CIV_JZD.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

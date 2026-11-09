@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{D417548C75FD6EE4}Assets/Weapons/Magazines/UK59/Data/Magazine_50rnd_UK59_Belt.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

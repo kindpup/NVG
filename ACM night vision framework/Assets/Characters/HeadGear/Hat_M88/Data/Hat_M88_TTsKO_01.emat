@@ -1,0 +1,18 @@
+MatPBRBasic : "{5CDDE2709BA9A5EE}Assets/_BaseMaterials/Characters_MatPBRBasic.emat" {
+ SurfaceProperties "{CE9253778DD8FBDE}Common/Materials/Game/metal.gamemat"
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ CavityFromAO 0.853
+ BCRMap "{A72EDFB2A8FE5816}Assets/Characters/HeadGear/Hat_M88/Data/Hat_M88_TTsKO_01_BCR.edds"
+ OpacityMap "{70A53F4EA373F142}Assets/Characters/Basebody/Data/HeadClipping_A.edds"
+ NMOMap "{2CDBCFD0F1B87CEB}Assets/Characters/HeadGear/Hat_M88/Data/Hat_M88_01_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 27
+ TITemperatureCoef1 1
+ TITemperature2 27
+ TITemperatureCoef2 1
+ TITemperature3 27
+ TITemperatureCoef3 1
+ TITemperature4 27
+ TITemperatureCoef4 1
+}

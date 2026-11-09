@@ -1,0 +1,65 @@
+MatPBRMulti {
+ CastShadow 1
+ ReceiveShadow 1
+ SurfaceProperties "{63B8E1D41F2C6F98}Common/Materials/Game/rubber.gamemat"
+ GlobalMCRMap "{9D4A608CF8B0BED9}Assets/Vehicles/Wheeled/BTR70/Data/BTR_70_base_Wheels_MCR.edds"
+ UVSrcGlobalMaps "UV set 2"
+ MaskMap "{3E2F13064F4746AD}Assets/Vehicles/Wheeled/BTR70/Data/BTR_70_base_Wheels_GLOBAL_MASK.edds"
+ VFXMap "{298B54270F5DCDF5}Assets/Vehicles/Wheeled/BTR70/Data/BTR_70_base_Wheels_VFX.edds"
+ GlobalNMOMap "{59F9518F53397C99}Assets/Vehicles/Wheeled/BTR70/Data/BTR_70_base_wheels_NMO.edds"
+ UVSrcDetail "UV set 2"
+ MudOpacity 1.025
+ MudColor 0.592 0.592 0.592 1
+ MudRoughness 1.2
+ MudDetNormal 0.8
+ MudBCRMap "{D608FA6C45C55A6F}Assets/_SharedData/Dirt/ST_Dirt02_BCR.edds"
+ MudNMOMap "{0EB8937BD911AEC9}Assets/_SharedData/Dirt/ST_Dirt_Sand_NMO.edds"
+ MudMaskMap "{2563D86FF583B1EF}Assets/_SharedData/DetailMask/ST_Metal_Rust_01_Mask1.edds"
+ MudUVTransform MatUVTransform "{2A83E7293920CC40}" {
+  TilingU 8
+  TilingV 8
+ }
+ DirtOpacity 0.426
+ DirtLayerSharpness 1.5
+ DirtColor 0.031 0.027 0.02 1
+ DirtRoughness 1
+ DirtBCRMap "{366028E90066FC57}Assets/_SharedData/Dirt/ST_Dirt_Sand_BCR.edds"
+ DirtMaskMap "{A074608E879A25CB}Assets/_SharedData/DetailMask/ST_Dirt_01_Mask1.edds"
+ DirtUVTransform MatUVTransform "{2A83E7290BA3608D}" {
+  TilingU 6
+  TilingV 6
+ }
+ Color_4 0.02 0.019 0.018 1
+ MaskSharpness_4 0.123
+ Roughness_4 1.321
+ Enabled_3 1
+ Color_3 0 0 0 1
+ BCR_3 "{B141E00CC94C086A}Assets/_SharedData/Rubber/ST_Rubber_Aged01_1m_BCR.edds"
+ NMO_3 "{89995B9E103B5AF4}Assets/_SharedData/Rubber/ST_Rubber_Aged01_1m_NMO.edds"
+ DetNormal_3 2.037
+ Roughness_3 1.571
+ Metalness_3 0
+ Enabled_2 1
+ Color_2 0.043 0.043 0.036 1
+ BCR_2 "{BB440784A103CB06}Assets/_SharedData/Metal/ST_MetalPaint_Coated_1m_BCR.edds"
+ NMO_2 "{839CBC1678749998}Assets/_SharedData/Metal/ST_MetalPaint_Coated_1m_NMO.edds"
+ MaskSharpness_2 2.929
+ Mask_2 "{C9664A554B37B2B2}Assets/_SharedData/DetailMask/ST_Damage_01_Mask1.edds"
+ DetNormal_2 0.429
+ Roughness_2 2.25
+ Metalness_2 0
+ Color_1 0.655 0.655 0.655 1
+ BCR_1 "{9B97AA81EF1AAA3C}Assets/_SharedData/Dirt/ST_destruct_rust_BCR.edds"
+ NMO_1 "{A34F1113366DF8A2}Assets/_SharedData/Dirt/ST_destruct_rust_NMO.edds"
+ DetNormal_1 0.556
+ Roughness_1 1.679
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 12
+ TITemperatureCoef1 1
+ TITemperature2 12
+ TITemperatureCoef2 1
+ TITemperature3 12
+ TITemperatureCoef3 1
+ TITemperature4 12
+ TITemperatureCoef4 1
+}

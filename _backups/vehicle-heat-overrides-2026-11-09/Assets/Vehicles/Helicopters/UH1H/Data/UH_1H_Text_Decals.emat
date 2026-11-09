@@ -1,0 +1,27 @@
+MatPBRDecal {
+ Color 0.746 0.746 0.746 1
+ Emissive 0.086 0.539 0.234 1
+ EmissiveLV -6.698
+ SortBias 7
+ AlphaTest 0.3
+ AlphaMul 1.63
+ BlendMode AlphaBlend
+ MetalnessScale 0
+ EmissiveMap "{BD71109343F13BF1}Assets/Vehicles/Helicopters/UH1H/Data/UH-1H_Text_Decals_MASK.edds"
+ BCRMap "{F712B4AAD8B0CC7A}Assets/Vehicles/Helicopters/UH1H/Data/UH-1H_Text_Decals_BCR.edds"
+ OpacityMap "{51649CF901E04B76}Assets/Vehicles/Helicopters/UH1H/Data/UH-1H_Text_Decals_GLOBAL_MASK.edds"
+ NormalPower 4
+ GBufferNormal 1
+ GBufferRoughness 1
+ GBufferMetalness 1
+ GBufferAO 1
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{BBA282A7B26939B7}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Cargo_CIV_Forest.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

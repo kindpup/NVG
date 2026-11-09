@@ -1,0 +1,14 @@
+MatPBRBasic {
+ Color 0.22 0.22 0.22 1
+ BCRMap "{5C8BE73FA7A90840}Assets/_SharedData/Stripes/ST_Fiberglass_metal_01_BCR.edds"
+ NMOMap "{2BEE868057EEA70F}Assets/_SharedData/Wood/ST_Plywood_03_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 12
+ TITemperatureCoef1 1
+ TITemperature2 12
+ TITemperatureCoef2 1
+ TITemperature3 12
+ TITemperatureCoef3 1
+ TITemperature4 12
+ TITemperatureCoef4 1
+}

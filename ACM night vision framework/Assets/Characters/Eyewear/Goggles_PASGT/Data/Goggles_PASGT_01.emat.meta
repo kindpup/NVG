@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{D2177A7A911E5C11}Assets/Characters/Eyewear/Goggles_PASGT/Data/Goggles_PASGT_01.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

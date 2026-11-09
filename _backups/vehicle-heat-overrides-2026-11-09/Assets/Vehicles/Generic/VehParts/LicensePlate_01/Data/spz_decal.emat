@@ -1,0 +1,21 @@
+MatPBRBasic {
+ Color 0.051 0.048 0.045 1
+ AlphaTest 0.3
+ AlphaMul 2
+ BlendMode AlphaBlend
+ BCRMap "{B141E00CC94C086A}Assets/_SharedData/Rubber/ST_Rubber_Aged01_1m_BCR.edds"
+ OpacityMap "{1319DF9837F550C1}Assets/_SharedData/VehicleParts/Bolts/bolt_decal_A.edds"
+ NMOMap "{047B7B07BE46CD9E}Assets/_SharedData/VehicleParts/Bolts/bolt_decal_NMO.edds"
+ HeightMap "{C971E0B9A0BFCC7F}Assets/_SharedData/VehicleParts/Bolts/bolt_decal_H.edds"
+ ParallaxScale 0.2
+ ParallaxMidlePlane 0.511
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

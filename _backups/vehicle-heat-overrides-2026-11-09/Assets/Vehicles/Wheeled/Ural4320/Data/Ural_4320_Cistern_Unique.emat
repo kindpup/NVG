@@ -1,0 +1,28 @@
+MatPBRBasic {
+ Color 0.275 0.275 0.275 1
+ DisablePriorityProbes 1
+ RoughnessScale 1.8
+ MetalnessScale 0.2
+ BCRMap "{5937EB22CE662492}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Cistern_Decals_BCR.edds"
+ NormalPower 0.3
+ NMOMap "{839CBC1678749998}Assets/_SharedData/Metal/ST_MetalPaint_Coated_1m_NMO.edds"
+ GlobalMapsUVTransform MatUVTransform "{50C8DD9687738FCE}" {
+ }
+ DetailNormalPower 0.6
+ DetailNormalMap "{5E9B5A9AF633BD94}Assets/_SharedData/Metal/ST_Steel_Battered_NMO.edds"
+ DetailNormalMapUVTransform MatUVTransform "{5CB0A2D97ED233BD}" {
+  TilingU 1.2
+  TilingV 0.6
+  OffsetU -0.449
+  OffsetV -0.206
+ }
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

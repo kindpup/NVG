@@ -1,0 +1,31 @@
+MatPBRDecal {
+ Color 1 1 1 1
+ SpecularIBL 0.212 0.212 0.212 1
+ ZBias 1
+ CastShadow 0
+ SurfaceProperties "{CE9253778DD8FBDE}Common/Materials/Game/metal.gamemat"
+ Specular 0.212 0.212 0.212 1
+ AlphaTest 0.1
+ BlendMode AlphaBlend
+ NMOMap "{37B9B0DFE4B7DEE9}Assets/_SharedData/Metal/ST_Metal_Floor_Diamond_N.edds"
+ GlobalMapsUVTransform MatUVTransform "{2B3BA76DFBB071FD}" {
+  TilingU 15
+  TilingV 15
+ }
+ GBufferAlbedo 1
+ GBufferNormal 1
+ NormalCombinePower 4
+ GBufferRoughness 1
+ GBufferMetalness 1
+ GBufferAO 1
+ HeightMap "{F69FD4F691F5B912}Assets/Vehicles/Wheeled/M923A1/Data/M923A1_Decals_H.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

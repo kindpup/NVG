@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{5538E124C48D74F7}Assets/Characters/HeadGear/Helmet_SSh68/Data/Helmet_SSH68_KLMK.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

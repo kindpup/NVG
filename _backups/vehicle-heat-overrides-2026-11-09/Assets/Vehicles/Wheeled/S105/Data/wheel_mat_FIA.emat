@@ -1,0 +1,13 @@
+MatPBRMulti : "{269388B7B7F4C2C4}Assets/Vehicles/Wheeled/S105/Data/wheel_mat.emat" {
+ Enabled_3 0
+ Color_1 0.102 0.091 0.085 1
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 28
+ TITemperatureCoef1 1
+ TITemperature2 28
+ TITemperatureCoef2 1
+ TITemperature3 28
+ TITemperatureCoef3 1
+ TITemperature4 28
+ TITemperatureCoef4 1
+}

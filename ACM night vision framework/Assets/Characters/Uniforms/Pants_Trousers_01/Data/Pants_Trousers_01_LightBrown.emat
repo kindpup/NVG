@@ -1,0 +1,19 @@
+MatPBRMulti : "{0FB93B007F4E3A39}Assets/_BaseMaterials/Characters_MatPBRMulti.emat" {
+ CavityFromAO 0.485
+ VFXMap "{26F3906E8FE6E8D6}Assets/Characters/Uniforms/Pants_Trousers_01/Data/Pants_Trousers_01_VFX.edds"
+ DirtUserOpacity 1
+ DirtOpacity 3
+ DirtRoughness 0.615
+ DirtBCRMap "{ACCA1F62E6A1BB22}Assets/Characters/Uniforms/Pants_Trousers_01/Data/Pants_Trousers_01_LightBrown_Blood_BCR.edds"
+ BCR_1 "{EFAB61BDC4FC014B}Assets/Characters/Uniforms/Pants_Trousers_01/Data/Pants_Trousers_01_LightBrown_BCR.edds"
+ NMO_1 "{D773DA2F1D8B53D5}Assets/Characters/Uniforms/Pants_Trousers_01/Data/Pants_Trousers_01_LightBrown_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 28
+ TITemperatureCoef1 1
+ TITemperature2 28
+ TITemperatureCoef2 1
+ TITemperature3 28
+ TITemperatureCoef3 1
+ TITemperature4 28
+ TITemperatureCoef4 1
+}

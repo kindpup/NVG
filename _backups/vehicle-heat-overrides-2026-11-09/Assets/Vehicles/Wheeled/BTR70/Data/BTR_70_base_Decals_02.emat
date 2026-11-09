@@ -1,0 +1,23 @@
+MatPBRDecal {
+ Color 0.682 0.682 0.682 1
+ CastShadow 0
+ SurfaceProperties "{CE9253778DD8FBDE}Common/Materials/Game/metal.gamemat"
+ AlphaTest 0.1
+ BlendMode AlphaBlend
+ RoughnessScale 0.7
+ BCRMap "{881354997C629FF8}Assets/_SharedData/Metal/ST_metal_painted_rusted_02_BCR.edds"
+ OpacityMap "{51B3BA075492C4AE}Assets/_SharedData/Decals/ST_DecalInterior_01_A.edds"
+ NMOMap "{085E33A213B1C501}Assets/_SharedData/Decals/ST_DecalInterior_01_NMO.edds"
+ GBufferAlbedo 1
+ GBufferRoughness 1
+ GBufferMetalness 1
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{9BA3538147C89E3E}Assets/Weapons/Attachments/Handguards/Handguard_M16/Data/M16A2_Handguard_01_OliveGreen_Sand_Stripes.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

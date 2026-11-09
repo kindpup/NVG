@@ -1,0 +1,20 @@
+MatPBRMulti {
+ Cull none
+ GlobalMCRMap "{9B97AA81EF1AAA3C}Assets/_SharedData/Dirt/ST_destruct_rust_BCR.edds"
+ GlobalMapsUVTransform MatUVTransform "{6066A42EEC7E3664}" {
+  TilingU 10
+  TilingV 10
+ }
+ GlobalNMOMap "{472EAD52BF7E1807}Assets/Vehicles/Wheeled/S1203/Data/s1203_wreck_NMO.edds"
+ GlobalNMOUVTransform MatUVTransform "{6066A42CF20563E8}" {
+ }
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 12
+ TITemperatureCoef1 1
+ TITemperature2 12
+ TITemperatureCoef2 1
+ TITemperature3 12
+ TITemperatureCoef3 1
+ TITemperature4 12
+ TITemperatureCoef4 1
+}

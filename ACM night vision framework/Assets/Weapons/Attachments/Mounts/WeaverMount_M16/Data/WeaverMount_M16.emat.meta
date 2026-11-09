@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{74500305A2998608}Assets/Weapons/Attachments/Mounts/WeaverMount_M16/Data/WeaverMount_M16.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

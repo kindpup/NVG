@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{E23C8007DF8CF39C}Assets/Characters/Uniforms/Jacket_KZS/Data/Jacket_KZS_standalone.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,14 @@
+MatPBRBasic : "{B08760B8D77A57A6}Assets/Characters/HeadGear/Hat_FlatCap_01/Data/Hat_FlatCap_01_Blue.emat" {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{29AC6D9E07B48BCB}Assets/Characters/HeadGear/Hat_FlatCap_01/Data/Hat_FlatCap_01_Blue_Dirty_BCR.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 27
+ TITemperatureCoef1 1
+ TITemperature2 27
+ TITemperatureCoef2 1
+ TITemperature3 27
+ TITemperatureCoef3 1
+ TITemperature4 27
+ TITemperatureCoef4 1
+}

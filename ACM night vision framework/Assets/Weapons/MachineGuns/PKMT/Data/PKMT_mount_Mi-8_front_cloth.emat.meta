@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{53814E2B9C2BCB52}Assets/Weapons/MachineGuns/PKMT/Data/PKMT_mount_Mi-8_front_cloth.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

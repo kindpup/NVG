@@ -1,0 +1,14 @@
+MatPBRBasic : "{E804583583DC08A9}Assets/_BaseMaterials/Weapons_MatPBRBasic.emat" {
+ SurfaceProperties "{EA270CE454C419FD}Common/Materials/Game/wood.gamemat"
+ BCRMap "{B7C7F546989760F8}Assets/Weapons/Rifles/M14/Data/M21_Body_Wood_BCR.edds"
+ NMOMap "{8F1F4ED441E03266}Assets/Weapons/Rifles/M14/Data/M21_body_Wood_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 26
+ TITemperatureCoef1 1
+ TITemperature2 26
+ TITemperatureCoef2 1
+ TITemperature3 26
+ TITemperatureCoef3 1
+ TITemperature4 26
+ TITemperatureCoef4 1
+}

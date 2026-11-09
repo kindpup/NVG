@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{5AA7C410C590B8F7}Assets/Weapons/Attachments/Bayonets/Bayonet_6Kh4/Data/Bayonet_6Kh4.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

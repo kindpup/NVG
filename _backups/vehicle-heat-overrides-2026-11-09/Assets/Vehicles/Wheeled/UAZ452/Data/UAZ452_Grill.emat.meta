@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{8D30525E1005FBAF}Assets/Vehicles/Wheeled/UAZ452/Data/UAZ452_Grill.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

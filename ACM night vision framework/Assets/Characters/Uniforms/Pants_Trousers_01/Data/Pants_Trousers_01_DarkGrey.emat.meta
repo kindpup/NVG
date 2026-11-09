@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{C5B6564B9002F293}Assets/Characters/Uniforms/Pants_Trousers_01/Data/Pants_Trousers_01_DarkGrey.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

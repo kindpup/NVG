@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{FBDB17144F45FE61}Assets/Weapons/Attachments/Optics/PSO1/Data/Optic_PSO1_pip.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

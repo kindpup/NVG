@@ -1,0 +1,26 @@
+MatPBRBasic {
+ Color 0.451 0.451 0.451 1
+ SpecularMul 0.5
+ MetalnessScale 1.145
+ BCRMap "{9B97AA81EF1AAA3C}Assets/_SharedData/Dirt/ST_destruct_rust_BCR.edds"
+ NMOMap "{A34F1113366DF8A2}Assets/_SharedData/Dirt/ST_destruct_rust_NMO.edds"
+ GlobalMapsUVTransform MatUVTransform "{5D6E84A27ED09EB1}" {
+  TilingU 10
+  TilingV 10
+ }
+ DetailNormalPower 1.5
+ DetailNormalMap "{D6D0FC7125B9A944}Assets/_SharedData/Metal/ST_Metal_Peel_01_NMO.edds"
+ DetailNormalMapUVTransform MatUVTransform "{5D6E84A21161A10C}" {
+  TilingU 20
+  TilingV 20
+ }
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 12
+ TITemperatureCoef1 1
+ TITemperature2 12
+ TITemperatureCoef2 1
+ TITemperature3 12
+ TITemperatureCoef3 1
+ TITemperature4 12
+ TITemperatureCoef4 1
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{22F30AC734EC02D5}Assets/Vehicles/Helicopters/UH1H/Data/UH_1H_Text_Decals.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

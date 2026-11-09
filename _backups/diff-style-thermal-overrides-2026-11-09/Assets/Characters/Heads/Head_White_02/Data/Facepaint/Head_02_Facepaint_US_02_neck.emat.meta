@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{79EA6E0ABF98169E}Assets/Characters/Heads/Head_White_02/Data/Facepaint/Head_02_Facepaint_US_02_neck.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

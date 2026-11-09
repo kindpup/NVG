@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{1C0B88B7C1D6A07D}Assets/Weapons/Grenades/RGD5/Data/Rgd5.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

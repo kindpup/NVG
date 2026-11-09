@@ -1,0 +1,20 @@
+MatPBRDecal {
+ Color 1 1 1 1
+ SurfaceProperties "{CE9253778DD8FBDE}Common/Materials/Game/metal.gamemat"
+ AlphaTest 0.488
+ OpacityMap "{BA5EEC703D0081CC}Assets/Props/Furniture/ClockTable_01/Data/ClockTable01_type_A.edds"
+ NormalPower -1
+ NMOMap "{DDE681D6D551016C}Assets/Props/Furniture/ClockTable_01/Data/ClockTable01_type_N.edds"
+ GBufferAlbedo 1
+ GBufferRoughness 1
+ GBufferMetalness 1
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

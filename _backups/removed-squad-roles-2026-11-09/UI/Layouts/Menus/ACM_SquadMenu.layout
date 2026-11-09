@@ -1,0 +1,2781 @@
+FrameWidgetClass {
+ Name "ACM_SquadMenuRoot"
+ {
+   ImageWidgetClass {
+    Name "ACM_SquadDim"
+    Slot FrameWidgetSlot {
+     Anchor 0 0 1 1
+     OffsetLeft 0
+     OffsetTop 0
+     OffsetRight 0
+     OffsetBottom 0
+    }
+    Color 0.01 0.03 0.02 0.82
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadPanel"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -620.0
+     OffsetLeft -620.0
+     PositionY -400.0
+     OffsetTop -400.0
+     SizeX 1240.0
+     OffsetRight -620.0
+     SizeY 800.0
+     OffsetBottom -400.0
+    }
+    Color 0.02 0.07 0.05 0.88
+    Size 1240.0 800.0
+   }
+   TextWidgetClass {
+    Name "ACM_SquadTitle"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -380.0
+     OffsetTop -380.0
+     SizeX 700.0
+     OffsetRight -100.0
+     SizeY 34.0
+     OffsetBottom 346.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text "SQUAD COMMAND"
+    "Font Size" 24
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadGroupNameBg"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -606.0
+     OffsetLeft -606.0
+     PositionY -348.0
+     OffsetTop -348.0
+     SizeX 712.0
+     OffsetRight -106.0
+     SizeY 32.0
+     OffsetBottom 316.0
+    }
+    Color 0.07 0.19 0.14 0.80
+   }
+   TextWidgetClass {
+    Name "ACM_SquadGroupName"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -344.0
+     OffsetTop -344.0
+     SizeX 700.0
+     OffsetRight -100.0
+     SizeY 24.0
+     OffsetBottom 320.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text ""
+    "Font Size" 17
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_SquadLeaderState"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -318.0
+     OffsetTop -318.0
+     SizeX 1180.0
+     OffsetRight -580.0
+     SizeY 20.0
+     OffsetBottom 298.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadCloseBtnPlate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 520.0
+     OffsetLeft 520.0
+     PositionY -380.0
+     OffsetTop -380.0
+     SizeX 80.0
+     OffsetRight -600.0
+     SizeY 32.0
+     OffsetBottom 348.0
+    }
+    Color 0.12 0.30 0.22 0.97
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadCloseBtn"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 520.0
+     OffsetLeft 520.0
+     PositionY -380.0
+     OffsetTop -380.0
+     SizeX 80.0
+     OffsetRight -600.0
+     SizeY 32.0
+     OffsetBottom 348.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+    TextWidgetClass {
+     Name "ACM_SquadClose"
+     Slot ButtonWidgetSlot {
+      HorizontalAlign 0
+      VerticalAlign 3
+      Padding 0 0 0 0
+     }
+     Color 0.74 0.99 0.85 1
+     Text "CLOSE"
+     "Font Size" 15
+     "Horizontal Alignment" Center
+     "No Localization" 1
+     "Vertical Alignment" Center
+    }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SquadSizeLabel"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -282.0
+     OffsetTop -282.0
+     SizeX 220.0
+     OffsetRight 380.0
+     SizeY 22.0
+     OffsetBottom 260.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text "MAX MEMBERS"
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadSizeMinusBgPlate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -374.0
+     OffsetLeft -374.0
+     PositionY -284.0
+     OffsetTop -284.0
+     SizeX 34.0
+     OffsetRight 340.0
+     SizeY 26.0
+     OffsetBottom 258.0
+    }
+    Color 0.12 0.30 0.22 0.97
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadSizeMinusBg"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -374.0
+     OffsetLeft -374.0
+     PositionY -284.0
+     OffsetTop -284.0
+     SizeX 34.0
+     OffsetRight 340.0
+     SizeY 26.0
+     OffsetBottom 258.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+    TextWidgetClass {
+     Name "ACM_SquadSizeMinus"
+     Slot ButtonWidgetSlot {
+      HorizontalAlign 0
+      VerticalAlign 3
+      Padding 0 0 0 0
+     }
+     Color 0.74 0.99 0.85 1
+     Text "-"
+     "Font Size" 18
+     "Horizontal Alignment" Center
+     "No Localization" 1
+     "Vertical Alignment" Center
+    }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadSizeValueBg"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -340.0
+     OffsetLeft -340.0
+     PositionY -286.0
+     OffsetTop -286.0
+     SizeX 72.0
+     OffsetRight 268.0
+     SizeY 30.0
+     OffsetBottom 256.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadSizeValue"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -334.0
+     OffsetLeft -334.0
+     PositionY -282.0
+     OffsetTop -282.0
+     SizeX 60.0
+     OffsetRight 274.0
+     SizeY 22.0
+     OffsetBottom 260.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text "-"
+    "Font Size" 18
+    "Horizontal Alignment" Center
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadSizePlusBgPlate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -268.0
+     OffsetLeft -268.0
+     PositionY -284.0
+     OffsetTop -284.0
+     SizeX 34.0
+     OffsetRight 234.0
+     SizeY 26.0
+     OffsetBottom 258.0
+    }
+    Color 0.12 0.30 0.22 0.97
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadSizePlusBg"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -268.0
+     OffsetLeft -268.0
+     PositionY -284.0
+     OffsetTop -284.0
+     SizeX 34.0
+     OffsetRight 234.0
+     SizeY 26.0
+     OffsetBottom 258.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+    TextWidgetClass {
+     Name "ACM_SquadSizePlus"
+     Slot ButtonWidgetSlot {
+      HorizontalAlign 0
+      VerticalAlign 3
+      Padding 0 0 0 0
+     }
+     Color 0.74 0.99 0.85 1
+     Text "+"
+     "Font Size" 18
+     "Horizontal Alignment" Center
+     "No Localization" 1
+     "Vertical Alignment" Center
+    }
+    }
+   }
+   TextWidgetClass {
+    Name "ACM_SquadRosterHdr"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -246.0
+     OffsetTop -246.0
+     SizeX 560.0
+     OffsetRight 40.0
+     SizeY 20.0
+     OffsetBottom 226.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text "ROSTER"
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadNameBg0"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -606.0
+     OffsetLeft -606.0
+     PositionY -224.0
+     OffsetTop -224.0
+     SizeX 312.0
+     OffsetRight 294.0
+     SizeY 30.0
+     OffsetBottom 194.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadName0"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -220.0
+     OffsetTop -220.0
+     SizeX 300.0
+     OffsetRight 300.0
+     SizeY 22.0
+     OffsetBottom 198.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text ""
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleBg0"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY -224.0
+     OffsetTop -224.0
+     SizeX 192.0
+     OffsetRight 108.0
+     SizeY 30.0
+     OffsetBottom 194.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadRole0"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -294.0
+     OffsetLeft -294.0
+     PositionY -220.0
+     OffsetTop -220.0
+     SizeX 180.0
+     OffsetRight 114.0
+     SizeY 22.0
+     OffsetBottom 198.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleBtnBg0Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -108.0
+     OffsetLeft -108.0
+     PositionY -222.0
+     OffsetTop -222.0
+     SizeX 110.0
+     OffsetRight -2.0
+     SizeY 26.0
+     OffsetBottom 196.0
+    }
+    Color 0.12 0.30 0.22 0.97
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleBtnBg0"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -108.0
+     OffsetLeft -108.0
+     PositionY -222.0
+     OffsetTop -222.0
+     SizeX 110.0
+     OffsetRight -2.0
+     SizeY 26.0
+     OffsetBottom 196.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+    TextWidgetClass {
+     Name "ACM_SquadRoleBtn0"
+     Slot ButtonWidgetSlot {
+      HorizontalAlign 0
+      VerticalAlign 3
+      Padding 0 0 0 0
+     }
+     Color 0.74 0.99 0.85 1
+     Text "CHANGE"
+     "Font Size" 13
+     "Horizontal Alignment" Center
+     "No Localization" 1
+     "Vertical Alignment" Center
+    }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadNameBg1"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -606.0
+     OffsetLeft -606.0
+     PositionY -194.0
+     OffsetTop -194.0
+     SizeX 312.0
+     OffsetRight 294.0
+     SizeY 30.0
+     OffsetBottom 164.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadName1"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -190.0
+     OffsetTop -190.0
+     SizeX 300.0
+     OffsetRight 300.0
+     SizeY 22.0
+     OffsetBottom 168.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text ""
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleBg1"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY -194.0
+     OffsetTop -194.0
+     SizeX 192.0
+     OffsetRight 108.0
+     SizeY 30.0
+     OffsetBottom 164.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadRole1"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -294.0
+     OffsetLeft -294.0
+     PositionY -190.0
+     OffsetTop -190.0
+     SizeX 180.0
+     OffsetRight 114.0
+     SizeY 22.0
+     OffsetBottom 168.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleBtnBg1Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -108.0
+     OffsetLeft -108.0
+     PositionY -192.0
+     OffsetTop -192.0
+     SizeX 110.0
+     OffsetRight -2.0
+     SizeY 26.0
+     OffsetBottom 166.0
+    }
+    Color 0.12 0.30 0.22 0.97
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleBtnBg1"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -108.0
+     OffsetLeft -108.0
+     PositionY -192.0
+     OffsetTop -192.0
+     SizeX 110.0
+     OffsetRight -2.0
+     SizeY 26.0
+     OffsetBottom 166.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+    TextWidgetClass {
+     Name "ACM_SquadRoleBtn1"
+     Slot ButtonWidgetSlot {
+      HorizontalAlign 0
+      VerticalAlign 3
+      Padding 0 0 0 0
+     }
+     Color 0.74 0.99 0.85 1
+     Text "CHANGE"
+     "Font Size" 13
+     "Horizontal Alignment" Center
+     "No Localization" 1
+     "Vertical Alignment" Center
+    }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadNameBg2"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -606.0
+     OffsetLeft -606.0
+     PositionY -164.0
+     OffsetTop -164.0
+     SizeX 312.0
+     OffsetRight 294.0
+     SizeY 30.0
+     OffsetBottom 134.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadName2"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -160.0
+     OffsetTop -160.0
+     SizeX 300.0
+     OffsetRight 300.0
+     SizeY 22.0
+     OffsetBottom 138.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text ""
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleBg2"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY -164.0
+     OffsetTop -164.0
+     SizeX 192.0
+     OffsetRight 108.0
+     SizeY 30.0
+     OffsetBottom 134.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadRole2"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -294.0
+     OffsetLeft -294.0
+     PositionY -160.0
+     OffsetTop -160.0
+     SizeX 180.0
+     OffsetRight 114.0
+     SizeY 22.0
+     OffsetBottom 138.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleBtnBg2Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -108.0
+     OffsetLeft -108.0
+     PositionY -162.0
+     OffsetTop -162.0
+     SizeX 110.0
+     OffsetRight -2.0
+     SizeY 26.0
+     OffsetBottom 136.0
+    }
+    Color 0.12 0.30 0.22 0.97
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleBtnBg2"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -108.0
+     OffsetLeft -108.0
+     PositionY -162.0
+     OffsetTop -162.0
+     SizeX 110.0
+     OffsetRight -2.0
+     SizeY 26.0
+     OffsetBottom 136.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+    TextWidgetClass {
+     Name "ACM_SquadRoleBtn2"
+     Slot ButtonWidgetSlot {
+      HorizontalAlign 0
+      VerticalAlign 3
+      Padding 0 0 0 0
+     }
+     Color 0.74 0.99 0.85 1
+     Text "CHANGE"
+     "Font Size" 13
+     "Horizontal Alignment" Center
+     "No Localization" 1
+     "Vertical Alignment" Center
+    }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadNameBg3"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -606.0
+     OffsetLeft -606.0
+     PositionY -134.0
+     OffsetTop -134.0
+     SizeX 312.0
+     OffsetRight 294.0
+     SizeY 30.0
+     OffsetBottom 104.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadName3"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -130.0
+     OffsetTop -130.0
+     SizeX 300.0
+     OffsetRight 300.0
+     SizeY 22.0
+     OffsetBottom 108.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text ""
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleBg3"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY -134.0
+     OffsetTop -134.0
+     SizeX 192.0
+     OffsetRight 108.0
+     SizeY 30.0
+     OffsetBottom 104.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadRole3"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -294.0
+     OffsetLeft -294.0
+     PositionY -130.0
+     OffsetTop -130.0
+     SizeX 180.0
+     OffsetRight 114.0
+     SizeY 22.0
+     OffsetBottom 108.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleBtnBg3Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -108.0
+     OffsetLeft -108.0
+     PositionY -132.0
+     OffsetTop -132.0
+     SizeX 110.0
+     OffsetRight -2.0
+     SizeY 26.0
+     OffsetBottom 106.0
+    }
+    Color 0.12 0.30 0.22 0.97
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleBtnBg3"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -108.0
+     OffsetLeft -108.0
+     PositionY -132.0
+     OffsetTop -132.0
+     SizeX 110.0
+     OffsetRight -2.0
+     SizeY 26.0
+     OffsetBottom 106.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+    TextWidgetClass {
+     Name "ACM_SquadRoleBtn3"
+     Slot ButtonWidgetSlot {
+      HorizontalAlign 0
+      VerticalAlign 3
+      Padding 0 0 0 0
+     }
+     Color 0.74 0.99 0.85 1
+     Text "CHANGE"
+     "Font Size" 13
+     "Horizontal Alignment" Center
+     "No Localization" 1
+     "Vertical Alignment" Center
+    }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadNameBg4"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -606.0
+     OffsetLeft -606.0
+     PositionY -104.0
+     OffsetTop -104.0
+     SizeX 312.0
+     OffsetRight 294.0
+     SizeY 30.0
+     OffsetBottom 74.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadName4"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -100.0
+     OffsetTop -100.0
+     SizeX 300.0
+     OffsetRight 300.0
+     SizeY 22.0
+     OffsetBottom 78.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text ""
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleBg4"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY -104.0
+     OffsetTop -104.0
+     SizeX 192.0
+     OffsetRight 108.0
+     SizeY 30.0
+     OffsetBottom 74.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadRole4"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -294.0
+     OffsetLeft -294.0
+     PositionY -100.0
+     OffsetTop -100.0
+     SizeX 180.0
+     OffsetRight 114.0
+     SizeY 22.0
+     OffsetBottom 78.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleBtnBg4Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -108.0
+     OffsetLeft -108.0
+     PositionY -102.0
+     OffsetTop -102.0
+     SizeX 110.0
+     OffsetRight -2.0
+     SizeY 26.0
+     OffsetBottom 76.0
+    }
+    Color 0.12 0.30 0.22 0.97
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleBtnBg4"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -108.0
+     OffsetLeft -108.0
+     PositionY -102.0
+     OffsetTop -102.0
+     SizeX 110.0
+     OffsetRight -2.0
+     SizeY 26.0
+     OffsetBottom 76.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+    TextWidgetClass {
+     Name "ACM_SquadRoleBtn4"
+     Slot ButtonWidgetSlot {
+      HorizontalAlign 0
+      VerticalAlign 3
+      Padding 0 0 0 0
+     }
+     Color 0.74 0.99 0.85 1
+     Text "CHANGE"
+     "Font Size" 13
+     "Horizontal Alignment" Center
+     "No Localization" 1
+     "Vertical Alignment" Center
+    }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadNameBg5"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -606.0
+     OffsetLeft -606.0
+     PositionY -74.0
+     OffsetTop -74.0
+     SizeX 312.0
+     OffsetRight 294.0
+     SizeY 30.0
+     OffsetBottom 44.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadName5"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -70.0
+     OffsetTop -70.0
+     SizeX 300.0
+     OffsetRight 300.0
+     SizeY 22.0
+     OffsetBottom 48.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text ""
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleBg5"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY -74.0
+     OffsetTop -74.0
+     SizeX 192.0
+     OffsetRight 108.0
+     SizeY 30.0
+     OffsetBottom 44.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadRole5"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -294.0
+     OffsetLeft -294.0
+     PositionY -70.0
+     OffsetTop -70.0
+     SizeX 180.0
+     OffsetRight 114.0
+     SizeY 22.0
+     OffsetBottom 48.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleBtnBg5Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -108.0
+     OffsetLeft -108.0
+     PositionY -72.0
+     OffsetTop -72.0
+     SizeX 110.0
+     OffsetRight -2.0
+     SizeY 26.0
+     OffsetBottom 46.0
+    }
+    Color 0.12 0.30 0.22 0.97
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleBtnBg5"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -108.0
+     OffsetLeft -108.0
+     PositionY -72.0
+     OffsetTop -72.0
+     SizeX 110.0
+     OffsetRight -2.0
+     SizeY 26.0
+     OffsetBottom 46.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+    TextWidgetClass {
+     Name "ACM_SquadRoleBtn5"
+     Slot ButtonWidgetSlot {
+      HorizontalAlign 0
+      VerticalAlign 3
+      Padding 0 0 0 0
+     }
+     Color 0.74 0.99 0.85 1
+     Text "CHANGE"
+     "Font Size" 13
+     "Horizontal Alignment" Center
+     "No Localization" 1
+     "Vertical Alignment" Center
+    }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadNameBg6"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -606.0
+     OffsetLeft -606.0
+     PositionY -44.0
+     OffsetTop -44.0
+     SizeX 312.0
+     OffsetRight 294.0
+     SizeY 30.0
+     OffsetBottom 14.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadName6"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -40.0
+     OffsetTop -40.0
+     SizeX 300.0
+     OffsetRight 300.0
+     SizeY 22.0
+     OffsetBottom 18.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text ""
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleBg6"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY -44.0
+     OffsetTop -44.0
+     SizeX 192.0
+     OffsetRight 108.0
+     SizeY 30.0
+     OffsetBottom 14.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadRole6"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -294.0
+     OffsetLeft -294.0
+     PositionY -40.0
+     OffsetTop -40.0
+     SizeX 180.0
+     OffsetRight 114.0
+     SizeY 22.0
+     OffsetBottom 18.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleBtnBg6Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -108.0
+     OffsetLeft -108.0
+     PositionY -42.0
+     OffsetTop -42.0
+     SizeX 110.0
+     OffsetRight -2.0
+     SizeY 26.0
+     OffsetBottom 16.0
+    }
+    Color 0.12 0.30 0.22 0.97
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleBtnBg6"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -108.0
+     OffsetLeft -108.0
+     PositionY -42.0
+     OffsetTop -42.0
+     SizeX 110.0
+     OffsetRight -2.0
+     SizeY 26.0
+     OffsetBottom 16.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+    TextWidgetClass {
+     Name "ACM_SquadRoleBtn6"
+     Slot ButtonWidgetSlot {
+      HorizontalAlign 0
+      VerticalAlign 3
+      Padding 0 0 0 0
+     }
+     Color 0.74 0.99 0.85 1
+     Text "CHANGE"
+     "Font Size" 13
+     "Horizontal Alignment" Center
+     "No Localization" 1
+     "Vertical Alignment" Center
+    }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadNameBg7"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -606.0
+     OffsetLeft -606.0
+     PositionY -14.0
+     OffsetTop -14.0
+     SizeX 312.0
+     OffsetRight 294.0
+     SizeY 30.0
+     OffsetBottom -16.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadName7"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY -10.0
+     OffsetTop -10.0
+     SizeX 300.0
+     OffsetRight 300.0
+     SizeY 22.0
+     OffsetBottom -12.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text ""
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleBg7"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY -14.0
+     OffsetTop -14.0
+     SizeX 192.0
+     OffsetRight 108.0
+     SizeY 30.0
+     OffsetBottom -16.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadRole7"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -294.0
+     OffsetLeft -294.0
+     PositionY -10.0
+     OffsetTop -10.0
+     SizeX 180.0
+     OffsetRight 114.0
+     SizeY 22.0
+     OffsetBottom -12.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleBtnBg7Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -108.0
+     OffsetLeft -108.0
+     PositionY -12.0
+     OffsetTop -12.0
+     SizeX 110.0
+     OffsetRight -2.0
+     SizeY 26.0
+     OffsetBottom -14.0
+    }
+    Color 0.12 0.30 0.22 0.97
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleBtnBg7"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -108.0
+     OffsetLeft -108.0
+     PositionY -12.0
+     OffsetTop -12.0
+     SizeX 110.0
+     OffsetRight -2.0
+     SizeY 26.0
+     OffsetBottom -14.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+    TextWidgetClass {
+     Name "ACM_SquadRoleBtn7"
+     Slot ButtonWidgetSlot {
+      HorizontalAlign 0
+      VerticalAlign 3
+      Padding 0 0 0 0
+     }
+     Color 0.74 0.99 0.85 1
+     Text "CHANGE"
+     "Font Size" 13
+     "Horizontal Alignment" Center
+     "No Localization" 1
+     "Vertical Alignment" Center
+    }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadNameBg8"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -606.0
+     OffsetLeft -606.0
+     PositionY 16.0
+     OffsetTop 16.0
+     SizeX 312.0
+     OffsetRight 294.0
+     SizeY 30.0
+     OffsetBottom -46.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadName8"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 20.0
+     OffsetTop 20.0
+     SizeX 300.0
+     OffsetRight 300.0
+     SizeY 22.0
+     OffsetBottom -42.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text ""
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleBg8"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY 16.0
+     OffsetTop 16.0
+     SizeX 192.0
+     OffsetRight 108.0
+     SizeY 30.0
+     OffsetBottom -46.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadRole8"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -294.0
+     OffsetLeft -294.0
+     PositionY 20.0
+     OffsetTop 20.0
+     SizeX 180.0
+     OffsetRight 114.0
+     SizeY 22.0
+     OffsetBottom -42.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleBtnBg8Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -108.0
+     OffsetLeft -108.0
+     PositionY 18.0
+     OffsetTop 18.0
+     SizeX 110.0
+     OffsetRight -2.0
+     SizeY 26.0
+     OffsetBottom -44.0
+    }
+    Color 0.12 0.30 0.22 0.97
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleBtnBg8"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -108.0
+     OffsetLeft -108.0
+     PositionY 18.0
+     OffsetTop 18.0
+     SizeX 110.0
+     OffsetRight -2.0
+     SizeY 26.0
+     OffsetBottom -44.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+    TextWidgetClass {
+     Name "ACM_SquadRoleBtn8"
+     Slot ButtonWidgetSlot {
+      HorizontalAlign 0
+      VerticalAlign 3
+      Padding 0 0 0 0
+     }
+     Color 0.74 0.99 0.85 1
+     Text "CHANGE"
+     "Font Size" 13
+     "Horizontal Alignment" Center
+     "No Localization" 1
+     "Vertical Alignment" Center
+    }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadNameBg9"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -606.0
+     OffsetLeft -606.0
+     PositionY 46.0
+     OffsetTop 46.0
+     SizeX 312.0
+     OffsetRight 294.0
+     SizeY 30.0
+     OffsetBottom -76.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadName9"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 50.0
+     OffsetTop 50.0
+     SizeX 300.0
+     OffsetRight 300.0
+     SizeY 22.0
+     OffsetBottom -72.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text ""
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleBg9"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY 46.0
+     OffsetTop 46.0
+     SizeX 192.0
+     OffsetRight 108.0
+     SizeY 30.0
+     OffsetBottom -76.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadRole9"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -294.0
+     OffsetLeft -294.0
+     PositionY 50.0
+     OffsetTop 50.0
+     SizeX 180.0
+     OffsetRight 114.0
+     SizeY 22.0
+     OffsetBottom -72.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleBtnBg9Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -108.0
+     OffsetLeft -108.0
+     PositionY 48.0
+     OffsetTop 48.0
+     SizeX 110.0
+     OffsetRight -2.0
+     SizeY 26.0
+     OffsetBottom -74.0
+    }
+    Color 0.12 0.30 0.22 0.97
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleBtnBg9"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -108.0
+     OffsetLeft -108.0
+     PositionY 48.0
+     OffsetTop 48.0
+     SizeX 110.0
+     OffsetRight -2.0
+     SizeY 26.0
+     OffsetBottom -74.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+    TextWidgetClass {
+     Name "ACM_SquadRoleBtn9"
+     Slot ButtonWidgetSlot {
+      HorizontalAlign 0
+      VerticalAlign 3
+      Padding 0 0 0 0
+     }
+     Color 0.74 0.99 0.85 1
+     Text "CHANGE"
+     "Font Size" 13
+     "Horizontal Alignment" Center
+     "No Localization" 1
+     "Vertical Alignment" Center
+    }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadNameBg10"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -606.0
+     OffsetLeft -606.0
+     PositionY 76.0
+     OffsetTop 76.0
+     SizeX 312.0
+     OffsetRight 294.0
+     SizeY 30.0
+     OffsetBottom -106.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadName10"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 80.0
+     OffsetTop 80.0
+     SizeX 300.0
+     OffsetRight 300.0
+     SizeY 22.0
+     OffsetBottom -102.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text ""
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleBg10"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY 76.0
+     OffsetTop 76.0
+     SizeX 192.0
+     OffsetRight 108.0
+     SizeY 30.0
+     OffsetBottom -106.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadRole10"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -294.0
+     OffsetLeft -294.0
+     PositionY 80.0
+     OffsetTop 80.0
+     SizeX 180.0
+     OffsetRight 114.0
+     SizeY 22.0
+     OffsetBottom -102.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleBtnBg10Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -108.0
+     OffsetLeft -108.0
+     PositionY 78.0
+     OffsetTop 78.0
+     SizeX 110.0
+     OffsetRight -2.0
+     SizeY 26.0
+     OffsetBottom -104.0
+    }
+    Color 0.12 0.30 0.22 0.97
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleBtnBg10"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -108.0
+     OffsetLeft -108.0
+     PositionY 78.0
+     OffsetTop 78.0
+     SizeX 110.0
+     OffsetRight -2.0
+     SizeY 26.0
+     OffsetBottom -104.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+    TextWidgetClass {
+     Name "ACM_SquadRoleBtn10"
+     Slot ButtonWidgetSlot {
+      HorizontalAlign 0
+      VerticalAlign 3
+      Padding 0 0 0 0
+     }
+     Color 0.74 0.99 0.85 1
+     Text "CHANGE"
+     "Font Size" 13
+     "Horizontal Alignment" Center
+     "No Localization" 1
+     "Vertical Alignment" Center
+    }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadNameBg11"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -606.0
+     OffsetLeft -606.0
+     PositionY 106.0
+     OffsetTop 106.0
+     SizeX 312.0
+     OffsetRight 294.0
+     SizeY 30.0
+     OffsetBottom -136.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadName11"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -600.0
+     OffsetLeft -600.0
+     PositionY 110.0
+     OffsetTop 110.0
+     SizeX 300.0
+     OffsetRight 300.0
+     SizeY 22.0
+     OffsetBottom -132.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text ""
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleBg11"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY 106.0
+     OffsetTop 106.0
+     SizeX 192.0
+     OffsetRight 108.0
+     SizeY 30.0
+     OffsetBottom -136.0
+    }
+    Color 0.05 0.14 0.10 0.75
+   }
+   TextWidgetClass {
+    Name "ACM_SquadRole11"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -294.0
+     OffsetLeft -294.0
+     PositionY 110.0
+     OffsetTop 110.0
+     SizeX 180.0
+     OffsetRight 114.0
+     SizeY 22.0
+     OffsetBottom -132.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 15
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleBtnBg11Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -108.0
+     OffsetLeft -108.0
+     PositionY 108.0
+     OffsetTop 108.0
+     SizeX 110.0
+     OffsetRight -2.0
+     SizeY 26.0
+     OffsetBottom -134.0
+    }
+    Color 0.12 0.30 0.22 0.97
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleBtnBg11"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -108.0
+     OffsetLeft -108.0
+     PositionY 108.0
+     OffsetTop 108.0
+     SizeX 110.0
+     OffsetRight -2.0
+     SizeY 26.0
+     OffsetBottom -134.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+    TextWidgetClass {
+     Name "ACM_SquadRoleBtn11"
+     Slot ButtonWidgetSlot {
+      HorizontalAlign 0
+      VerticalAlign 3
+      Padding 0 0 0 0
+     }
+     Color 0.74 0.99 0.85 1
+     Text "CHANGE"
+     "Font Size" 13
+     "Horizontal Alignment" Center
+     "No Localization" 1
+     "Vertical Alignment" Center
+    }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadNameEditBg"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 114.0
+     OffsetLeft 114.0
+     PositionY -348.0
+     OffsetTop -348.0
+     SizeX 306.0
+     OffsetRight -420.0
+     SizeY 30.0
+     OffsetBottom 318.0
+    }
+    Color 0.04 0.12 0.09 0.92
+   }
+   EditBoxWidgetClass {
+    Name "ACM_SquadNameEdit"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 120.0
+     OffsetLeft 120.0
+     PositionY -344.0
+     OffsetTop -344.0
+     SizeX 294.0
+     OffsetRight -414.0
+     SizeY 22.0
+     OffsetBottom 322.0
+    }
+    "Font Size" 15
+    "Vertical Alignment" Center
+    "Use placeholder text" 1
+    "Placeholder text" "squad name"
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadNameSavePlate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 430.0
+     OffsetLeft 430.0
+     PositionY -348.0
+     OffsetTop -348.0
+     SizeX 90.0
+     OffsetRight -520.0
+     SizeY 30.0
+     OffsetBottom 318.0
+    }
+    Color 0.12 0.30 0.22 0.97
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadNameSave"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX 430.0
+     OffsetLeft 430.0
+     PositionY -348.0
+     OffsetTop -348.0
+     SizeX 90.0
+     OffsetRight -520.0
+     SizeY 30.0
+     OffsetBottom 318.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SquadNameSaveLabel"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text "RENAME"
+      "Font Size" 14
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleDropShade"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -620.0
+     OffsetLeft -620.0
+     PositionY -400.0
+     OffsetTop -400.0
+     SizeX 1240.0
+     OffsetRight -620.0
+     SizeY 800.0
+     OffsetBottom -400.0
+    }
+    Color 0.00 0.02 0.01 0.55
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleDropCatch"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -620.0
+     OffsetLeft -620.0
+     PositionY -400.0
+     OffsetTop -400.0
+     SizeX 1240.0
+     OffsetRight -620.0
+     SizeY 800.0
+     OffsetBottom -400.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleDropPanel"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -320.0
+     OffsetLeft -320.0
+     PositionY -270.0
+     OffsetTop -270.0
+     SizeX 460.0
+     OffsetRight -140.0
+     SizeY 580.0
+     OffsetBottom -310.0
+    }
+    Color 0.03 0.10 0.07 0.97
+   }
+   TextWidgetClass {
+    Name "ACM_SquadRoleDropTitle"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY -256.0
+     OffsetTop -256.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 24.0
+     OffsetBottom 232.0
+    }
+    Color 0.74 0.99 0.85 1
+    Text "ASSIGN ROLE"
+    "Font Size" 18
+    "No Localization" 1
+   }
+   TextWidgetClass {
+    Name "ACM_SquadRoleDropWho"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY -230.0
+     OffsetTop -230.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 20.0
+     OffsetBottom 210.0
+    }
+    Color 0.55 0.86 0.70 1
+    Text ""
+    "Font Size" 14
+    "No Localization" 1
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleDropOpt0Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY -198.0
+     OffsetTop -198.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom 172.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleDropOpt0"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY -198.0
+     OffsetTop -198.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom 172.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SquadRoleDropLabel0"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 15
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleDropOpt1Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY -168.0
+     OffsetTop -168.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom 142.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleDropOpt1"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY -168.0
+     OffsetTop -168.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom 142.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SquadRoleDropLabel1"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 15
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleDropOpt2Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY -138.0
+     OffsetTop -138.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom 112.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleDropOpt2"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY -138.0
+     OffsetTop -138.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom 112.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SquadRoleDropLabel2"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 15
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleDropOpt3Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY -108.0
+     OffsetTop -108.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom 82.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleDropOpt3"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY -108.0
+     OffsetTop -108.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom 82.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SquadRoleDropLabel3"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 15
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleDropOpt4Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY -78.0
+     OffsetTop -78.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom 52.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleDropOpt4"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY -78.0
+     OffsetTop -78.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom 52.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SquadRoleDropLabel4"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 15
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleDropOpt5Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY -48.0
+     OffsetTop -48.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom 22.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleDropOpt5"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY -48.0
+     OffsetTop -48.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom 22.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SquadRoleDropLabel5"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 15
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleDropOpt6Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY -18.0
+     OffsetTop -18.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom -8.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleDropOpt6"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY -18.0
+     OffsetTop -18.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom -8.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SquadRoleDropLabel6"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 15
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleDropOpt7Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY 12.0
+     OffsetTop 12.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom -38.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleDropOpt7"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY 12.0
+     OffsetTop 12.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom -38.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SquadRoleDropLabel7"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 15
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleDropOpt8Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY 42.0
+     OffsetTop 42.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom -68.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleDropOpt8"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY 42.0
+     OffsetTop 42.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom -68.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SquadRoleDropLabel8"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 15
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleDropOpt9Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY 72.0
+     OffsetTop 72.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom -98.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleDropOpt9"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY 72.0
+     OffsetTop 72.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom -98.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SquadRoleDropLabel9"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 15
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleDropOpt10Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY 102.0
+     OffsetTop 102.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom -128.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleDropOpt10"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY 102.0
+     OffsetTop 102.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom -128.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SquadRoleDropLabel10"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 15
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleDropOpt11Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY 132.0
+     OffsetTop 132.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom -158.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleDropOpt11"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY 132.0
+     OffsetTop 132.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom -158.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SquadRoleDropLabel11"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 15
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleDropOpt12Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY 162.0
+     OffsetTop 162.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom -188.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleDropOpt12"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY 162.0
+     OffsetTop 162.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom -188.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SquadRoleDropLabel12"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 15
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleDropOpt13Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY 192.0
+     OffsetTop 192.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom -218.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleDropOpt13"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY 192.0
+     OffsetTop 192.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom -218.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SquadRoleDropLabel13"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 15
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleDropOpt14Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY 222.0
+     OffsetTop 222.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom -248.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleDropOpt14"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY 222.0
+     OffsetTop 222.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom -248.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SquadRoleDropLabel14"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 15
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleDropOpt15Plate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY 252.0
+     OffsetTop 252.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom -278.0
+    }
+    Color 0.09 0.25 0.18 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleDropOpt15"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY 252.0
+     OffsetTop 252.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom -278.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SquadRoleDropLabel15"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 15
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+   ImageWidgetClass {
+    Name "ACM_SquadRoleDropCancelPlate"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY 290.0
+     OffsetTop 290.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom -316.0
+    }
+    Color 0.22 0.10 0.10 0.95
+   }
+   ButtonWidgetClass {
+    Name "ACM_SquadRoleDropCancel"
+    Slot FrameWidgetSlot {
+     Anchor 0.5 0.5 0.5 0.5
+     PositionX -300.0
+     OffsetLeft -300.0
+     PositionY 290.0
+     OffsetTop 290.0
+     SizeX 420.0
+     OffsetRight -120.0
+     SizeY 26.0
+     OffsetBottom -316.0
+    }
+    Color 0 0 0 0
+    style blank
+    components {
+     SCR_InputButtonComponent {
+      m_sActionName "MenuSelect"
+     }
+    }
+    {
+     TextWidgetClass {
+      Name "ACM_SquadRoleDropCancelLabel"
+      Slot ButtonWidgetSlot {
+       HorizontalAlign 0
+       VerticalAlign 3
+       Padding 12 0 0 0
+      }
+      Color 0.74 0.99 0.85 1
+      Text ""
+      "Font Size" 15
+      "Vertical Alignment" Center
+      "No Localization" 1
+     }
+    }
+   }
+ }
+}

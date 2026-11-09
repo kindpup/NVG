@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{3482EC0CF6662AF0}Assets/Items/Equipment/Radios/Radio_RF10/Data/RF_10_pouch.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

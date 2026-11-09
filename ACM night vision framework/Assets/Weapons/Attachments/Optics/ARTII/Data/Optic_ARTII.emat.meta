@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{D72CC71927380543}Assets/Weapons/Attachments/Optics/ARTII/Data/Optic_ARTII.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

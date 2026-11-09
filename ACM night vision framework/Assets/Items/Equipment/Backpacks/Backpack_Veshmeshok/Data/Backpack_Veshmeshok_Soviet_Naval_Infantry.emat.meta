@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{D4CFB722177E28FA}Assets/Items/Equipment/Backpacks/Backpack_Veshmeshok/Data/Backpack_Veshmeshok_Soviet_Naval_Infantry.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

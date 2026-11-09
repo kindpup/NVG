@@ -1,0 +1,22 @@
+MatPBRMulti : "{0FB93B007F4E3A39}Assets/_BaseMaterials/Characters_MatPBRMulti.emat" {
+ SurfaceProperties "{DA94EA1EF2914EB7}Common/Materials/Game/flesh.gamemat"
+ CavityFromAO 1
+ VFXMap "{DE2881AC0C9AD813}Assets/Characters/Vests/Vest_M69/Data/Vest_M69_VFX.edds"
+ MudColor 0.392 0.004 0.004 1
+ DirtUserOpacity 1
+ DirtOpacity 3
+ DirtLayerSharpness 0.04
+ DirtRoughness 1.2
+ DirtBCRMap "{B6691177209A50B0}Assets/Characters/Vests/Vest_M69/Data/Vest_M69_wound_BCR.edds"
+ BCR_1 "{96823F9689893BE1}Assets/Characters/Vests/Vest_M69/Data/Vest_M69_BCR.edds"
+ NMO_1 "{AE5A840450FE697F}Assets/Characters/Vests/Vest_M69/Data/Vest_M69_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 27
+ TITemperatureCoef1 1
+ TITemperature2 27
+ TITemperatureCoef2 1
+ TITemperature3 27
+ TITemperatureCoef3 1
+ TITemperature4 27
+ TITemperatureCoef4 1
+}

@@ -1,0 +1,30 @@
+MatPBRBasic {
+ Emissive 0.447 0.39 0.219 1
+ EmissiveLV -12
+ EmissiveAbsoluteLV 0
+ ApplyAlbedoToEmissive 1
+ SortBias -2
+ RoughnessScale 3
+ MetalnessScale 2
+ AOScale 0.8
+ CavityFromAO 0
+ EmissiveMap "{4CF43472501E1766}Assets/Vehicles/Wheeled/T601/Data/T601_Lights_E.edds"
+ BCRMap "{B1C53D225B02A89E}Assets/Vehicles/Wheeled/T601/Data/T601_Lights_BCR.edds"
+ OpacityMap "{C160E3E526741C6B}Assets/Vehicles/Wheeled/T601/Data/T601_Lights_A.edds"
+ NMOMap "{8B355E8008D79D9B}Assets/Vehicles/Wheeled/T601/Data/T601_Lights_NMO.edds"
+ DetailNormalMapUVTransform MatUVTransform "{6196C4A6F3F86C95}" {
+ }
+ HeightMap "{1B08DCC4B13E80D5}Assets/Vehicles/Wheeled/T601/Data/T601_Lights_H.edds"
+ ParallaxScale 0.15
+ ParallaxMidlePlane 0
+ ParallaxShadowScale 0.031
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 12
+ TITemperatureCoef1 1
+ TITemperature2 12
+ TITemperatureCoef2 1
+ TITemperature3 12
+ TITemperatureCoef3 1
+ TITemperature4 12
+ TITemperatureCoef4 1
+}

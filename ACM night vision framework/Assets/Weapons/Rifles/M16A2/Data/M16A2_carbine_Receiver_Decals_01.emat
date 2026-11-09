@@ -1,0 +1,18 @@
+MatPBRBasic : "{E804583583DC08A9}Assets/_BaseMaterials/Weapons_MatPBRBasic.emat" {
+ Sort decal
+ SurfaceProperties "{3B2D2687F56BB4EF}Common/Materials/Game/WeaponParts/weapon_metal.gamemat"
+ AlphaTest 0.001
+ BlendMode AlphaBlend
+ BCRMap "{08EC55426D773A15}Assets/Weapons/Rifles/M16A2/Data/M16A2_carbine_Receiver_Decals_01_BCR.edds"
+ OpacityMap "{D4C013416BE2C590}Assets/Weapons/Rifles/M16A2/Data/M16A2_carbine_Receiver_Decals_01_A.edds"
+ NMOMap "{3034EED0B400688B}Assets/Weapons/Rifles/M16A2/Data/M16A2_carbine_Receiver_Decals_01_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 26
+ TITemperatureCoef1 1
+ TITemperature2 26
+ TITemperatureCoef2 1
+ TITemperature3 26
+ TITemperatureCoef3 1
+ TITemperature4 26
+ TITemperatureCoef4 1
+}

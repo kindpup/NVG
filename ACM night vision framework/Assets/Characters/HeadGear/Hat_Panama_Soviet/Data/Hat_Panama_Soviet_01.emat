@@ -1,0 +1,18 @@
+MatPBRBasic : "{5CDDE2709BA9A5EE}Assets/_BaseMaterials/Characters_MatPBRBasic.emat" {
+ SurfaceProperties "{CE9253778DD8FBDE}Common/Materials/Game/metal.gamemat"
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ CavityFromAO 1
+ BCRMap "{C3EA6F8CB4954AFF}Assets/Characters/HeadGear/Hat_Panama_Soviet/Data/hat_panama_soviet_01_BCR.edds"
+ OpacityMap "{70A53F4EA373F142}Assets/Characters/Basebody/Data/HeadClipping_A.edds"
+ NMOMap "{FB32D41E6DE21861}Assets/Characters/HeadGear/Hat_Panama_Soviet/Data/hat_panama_soviet_01_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 27
+ TITemperatureCoef1 1
+ TITemperature2 27
+ TITemperatureCoef2 1
+ TITemperature3 27
+ TITemperatureCoef3 1
+ TITemperature4 27
+ TITemperatureCoef4 1
+}

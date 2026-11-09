@@ -1,0 +1,15 @@
+MatPBRBasic {
+ AOScale 0.641
+ CavityFromAO 0
+ BCRMap "{12E9F74A5D7E1DB8}Assets/Vehicles/Generic/Periscopes/TNPA/Data/TNPA_BCR.edds"
+ NMOMap "{2A314CD884094F26}Assets/Vehicles/Generic/Periscopes/TNPA/Data/TNPA_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

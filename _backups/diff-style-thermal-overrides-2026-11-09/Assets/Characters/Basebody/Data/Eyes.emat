@@ -1,0 +1,11 @@
+MatPBRBasic {
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 35
+ TITemperatureCoef1 1
+ TITemperature2 35
+ TITemperatureCoef2 1
+ TITemperature3 35
+ TITemperatureCoef3 1
+ TITemperature4 35
+ TITemperatureCoef4 1
+}

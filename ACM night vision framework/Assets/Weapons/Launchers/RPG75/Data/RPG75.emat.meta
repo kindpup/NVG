@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{AA0BE3FBE9858CC8}Assets/Weapons/Launchers/RPG75/Data/RPG75.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

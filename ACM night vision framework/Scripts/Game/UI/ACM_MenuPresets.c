@@ -13,7 +13,6 @@
 //------------------------------------------------------------------------------------------------
 modded enum ChimeraMenuPreset
 {
-	ACM_SquadMenu,
 	ACM_LightsMenu,
 	ACM_LasersMenu,
 	ACM_NVGMenu,

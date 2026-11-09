@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{2858FB5CA88DCECD}Assets/Weapons/Attachments/Optics/UK59_4x8/Data/Optic_UK59_4x8.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

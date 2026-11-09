@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{4AEEA81759C6FF9B}Assets/Characters/Heads/Head_White_05/Data/Facepaint/Head_05_Facepaint_Soviet_01_neck.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

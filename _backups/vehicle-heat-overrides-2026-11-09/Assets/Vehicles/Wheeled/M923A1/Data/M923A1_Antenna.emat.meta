@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{DC03AE3BE60111BA}Assets/Vehicles/Wheeled/M923A1/Data/M923A1_Antenna.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

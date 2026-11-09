@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{AD872191631F5047}Assets/Vehicles/Wheeled/T601/Data/T601_Body_Wreck.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

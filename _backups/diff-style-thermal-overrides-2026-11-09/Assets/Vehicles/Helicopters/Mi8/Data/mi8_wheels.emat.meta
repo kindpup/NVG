@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{3640746C2006A4B7}Assets/Vehicles/Helicopters/Mi8/Data/mi8_wheels.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,15 @@
+MatPBRBasic : "{5CDDE2709BA9A5EE}Assets/_BaseMaterials/Characters_MatPBRBasic.emat" {
+ Color 0.855 0.855 0.855 1
+ CavityFromAO 1
+ BCRMap "{073E61C32AFC9446}Assets/Characters/Uniforms/Suit_KLMK/Data/Suit_KLMK_tucked_BCR.edds"
+ NMOMap "{3FE6DA51F38BC6D8}Assets/Characters/Uniforms/Suit_KLMK/Data/Suit_KLMK_tucked_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 28
+ TITemperatureCoef1 1
+ TITemperature2 28
+ TITemperatureCoef2 1
+ TITemperature3 28
+ TITemperatureCoef3 1
+ TITemperature4 28
+ TITemperatureCoef4 1
+}

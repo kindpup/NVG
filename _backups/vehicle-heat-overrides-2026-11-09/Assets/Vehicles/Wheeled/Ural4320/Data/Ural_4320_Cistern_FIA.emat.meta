@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{56882CE0AB3E610A}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Cistern_FIA.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

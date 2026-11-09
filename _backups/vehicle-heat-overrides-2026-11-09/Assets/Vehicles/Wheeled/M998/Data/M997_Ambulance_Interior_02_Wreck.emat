@@ -1,0 +1,51 @@
+MatPBRMulti {
+ SurfaceProperties "{6ADE4EF6A8AD9019}Common/Materials/Game/gravel.gamemat"
+ UVSrcGlobalMaps "UV set 2"
+ MaskMap "{5533FAA567728DBC}Assets/Vehicles/Wheeled/M998/Data/M997_Ambulance_Interior_02_GLOBAL_MASK.edds"
+ VFXMap "{18011777C088692C}Assets/Vehicles/Wheeled/M998/Data/M997_Ambulance_Interior_VFX.edds"
+ GlobalNMOMap "{687312DF9CECD840}Assets/Vehicles/Wheeled/M998/Data/M997_Ambulance_Interior_NMO.edds"
+ MudOpacity 0.98
+ MudColor 0.09 0.072 0.051 1
+ MudRoughness 1.45
+ MudBCRMap "{AE37874A11911124}Assets/_SharedData/Dirt/ST_Mud_01_BCR.edds"
+ MudNMOMap "{96EF3CD8C8E643BA}Assets/_SharedData/Dirt/ST_Mud_01_NMO.edds"
+ MudMaskMap "{816ABEBED1A52FF3}Assets/_SharedData/DetailMask/ST_Mud_01_Mask.edds"
+ DirtOpacity 0.37
+ DirtLayerSharpness 0.5
+ DirtColor 0.044 0.039 0.032 1
+ DirtRoughness 1
+ DirtBCRMap "{366028E90066FC57}Assets/_SharedData/Dirt/ST_Dirt_Sand_BCR.edds"
+ DirtMaskMap "{C9664A554B37B2B2}Assets/_SharedData/DetailMask/ST_Damage_01_Mask1.edds"
+ Color_4 0.084 0.124 0.103 1
+ BCR_4 "{5F54C1714DAA5E23}Assets/_SharedData/Plastic/ST_Plastic_Fine01_1m_BCR.edds"
+ NMO_4 "{678C7AE394DD0CBD}Assets/_SharedData/Plastic/ST_Plastic_Fine01_1m_NMO.edds"
+ DetNormal_4 3.099
+ Roughness_4 1.4
+ Color_3 0.288 0.288 0.26 1
+ BCR_3 "{0236DEFDB2549ADB}Assets/_SharedData/Plastic/ST_PlasticBase_03_BCR.edds"
+ NMO_3 "{3AEE656F6B23C845}Assets/_SharedData/Plastic/ST_PlasticBase_03_NMO.edds"
+ Roughness_3 2.69
+ Color_2 0.047 0.047 0.047 1
+ BCR_2 "{B141E00CC94C086A}Assets/_SharedData/Rubber/ST_Rubber_Aged01_1m_BCR.edds"
+ NMO_2 "{89995B9E103B5AF4}Assets/_SharedData/Rubber/ST_Rubber_Aged01_1m_NMO.edds"
+ Roughness_2 0.815
+ Color_1 0.098 0.121 0.107 1
+ BCR_1 "{9B97AA81EF1AAA3C}Assets/_SharedData/Dirt/ST_destruct_rust_BCR.edds"
+ NMO_1 "{3F131D394091DDA3}Assets/_SharedData/Plastic/ST_TarpaulinCanvas_NMO.edds"
+ UVTransform_1 MatUVTransform "{5AC293BC5EC22BC5}" {
+  TilingU 4
+  TilingV 4
+ }
+ DetNormal_1 3
+ Roughness_1 1.2
+ Metalness_1 0.5
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 12
+ TITemperatureCoef1 1
+ TITemperature2 12
+ TITemperatureCoef2 1
+ TITemperature3 12
+ TITemperatureCoef3 1
+ TITemperature4 12
+ TITemperatureCoef4 1
+}

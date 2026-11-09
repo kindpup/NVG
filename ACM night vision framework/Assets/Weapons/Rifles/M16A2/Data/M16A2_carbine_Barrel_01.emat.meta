@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{E5F534D8E719A0A5}Assets/Weapons/Rifles/M16A2/Data/M16A2_carbine_Barrel_01.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

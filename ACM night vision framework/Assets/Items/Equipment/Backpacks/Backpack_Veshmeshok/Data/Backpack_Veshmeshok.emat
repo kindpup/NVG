@@ -1,0 +1,14 @@
+MatPBRBasic : "{AD04B939A2C3F083}Assets/_BaseMaterials/Equipment_MatPBRBasic.emat" {
+ CavityFromAO 1
+ BCRMap "{3881B9591169C44D}Assets/Items/Equipment/Backpacks/Backpack_Veshmeshok/Data/T_Backpack_Veshmeshok_BCR.edds"
+ NMOMap "{005902CBC81E96D3}Assets/Items/Equipment/Backpacks/Backpack_Veshmeshok/Data/T_Backpack_Veshmeshok_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 25
+ TITemperatureCoef1 1
+ TITemperature2 25
+ TITemperatureCoef2 1
+ TITemperature3 25
+ TITemperatureCoef3 1
+ TITemperature4 25
+ TITemperatureCoef4 1
+}

@@ -1,0 +1,20 @@
+MatPBRCamo : "{2EABC97205C4A12A}Assets/Weapons/Attachments/Handguards/Handguard_M16/Data/M16A2_Handguard_01.emat" {
+ CamoAlbedoMap "{23CB2FC0292A4C28}Assets/Weapons/Rifles/M16A2/Data/T_OliveGreen_Sand_Stripes_BC.edds"
+ UVSrcCamoAlbedoMap "UV set 2"
+ CamoAlbedoMapUVTransform MatUVTransform "{5E2E8128EDC023A3}" {
+  OffsetU -0.652
+  OffsetV 0.05
+  Rotation 31.515
+ }
+ CamoCRMMap "{5918A190A6BEFB3B}Assets/Weapons/Attachments/Handguards/Handguard_M16/Data/M16A2_Handguard_01_Camo_CRM.edds"
+ CamoNormalOpacity 0
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 26
+ TITemperatureCoef1 1
+ TITemperature2 26
+ TITemperatureCoef2 1
+ TITemperature3 26
+ TITemperatureCoef3 1
+ TITemperature4 26
+ TITemperatureCoef4 1
+}

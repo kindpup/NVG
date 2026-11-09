@@ -1,0 +1,50 @@
+MatPBRMulti {
+ GlobalMCRMap "{066E36FCD1A4F959}Assets/Vehicles/Wheeled/UAZ452/Data/uaz452_interior_3_MCR.edds"
+ MaskMap "{8D347DD36F60D03F}Assets/Vehicles/Wheeled/UAZ452/Data/uaz452_interior_3_GLOBAL_MASK.edds"
+ GlobalNMOMap "{C2DD07FF7A2D3B19}Assets/Vehicles/Wheeled/UAZ452/Data/uaz452_interior_3_NMO.edds"
+ UVSrcGlobNormal "UV set 2"
+ Enabled_4 1
+ Color_4 0.048 0.048 0.048 1
+ BCR_4 "{B141E00CC94C086A}Assets/_SharedData/Rubber/ST_Rubber_Aged01_1m_BCR.edds"
+ NMO_4 "{89995B9E103B5AF4}Assets/_SharedData/Rubber/ST_Rubber_Aged01_1m_NMO.edds"
+ UVTransform_4 MatUVTransform "{5A3CD89B7819381B}" {
+  TilingU 30
+  TilingV 30
+ }
+ Metalness_4 0
+ Enabled_3 1
+ BCR_3 "{A3ACA4632706EC51}Assets/_SharedData/Rubber/ST_Rubber_Mat_BCR.edds"
+ NMO_3 "{9B741FF1FE71BECF}Assets/_SharedData/Rubber/ST_Rubber_Mat_NMO.edds"
+ UVTransform_3 MatUVTransform "{5A3CD8A4CDB29CCA}" {
+  TilingU 4
+  TilingV 4
+  Rotation 177.499
+ }
+ Enabled_2 1
+ Color_2 0.182 0.202 0.202 1
+ BCR_2 "{DDFA1BE6FC945C12}Assets/_SharedData/Metal/ST_Metal_Stainles01_1m_BCR.edds"
+ NMO_2 "{E522A07425E30E8C}Assets/_SharedData/Metal/ST_Metal_Stainles01_1m_NMO.edds"
+ UVTransform_2 MatUVTransform "{5A3CD8A4E9D175DE}" {
+  TilingU 20
+  TilingV 20
+ }
+ Color_1 0.03 0.03 0.03 1
+ BCR_1 "{5F54C1714DAA5E23}Assets/_SharedData/Plastic/ST_Plastic_Fine01_1m_BCR.edds"
+ NMO_1 "{678C7AE394DD0CBD}Assets/_SharedData/Plastic/ST_Plastic_Fine01_1m_NMO.edds"
+ UVTransform_1 MatUVTransform "{5A3CD8A77D5108C5}" {
+  TilingU 30
+  TilingV 30
+ }
+ DetNormal_1 4.796
+ Roughness_1 1.21
+ Metalness_1 0
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{2BBE9F84886F6B23}Assets/Vehicles/Wheeled/BRDM2/Data/BRDM2_body_exterior_1_int.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

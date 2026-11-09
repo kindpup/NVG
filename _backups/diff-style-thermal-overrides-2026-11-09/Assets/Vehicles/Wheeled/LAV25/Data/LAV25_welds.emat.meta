@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{2CA5C2A18CACC790}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_welds.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

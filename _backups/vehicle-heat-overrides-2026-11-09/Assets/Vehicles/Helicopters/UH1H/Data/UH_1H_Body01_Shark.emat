@@ -1,0 +1,21 @@
+MatPBRMulti : "{6224CA051369DE45}Assets/Vehicles/Helicopters/UH1H/Data/UH_1H_Body01.emat" {
+ GlobalMCRMap "{2D76333E3D691EE0}Assets/Vehicles/Helicopters/UH1H/Data/UH_1H_New_Body_Shark_MCR.edds"
+ MaskMap "{3692256EAE0C397A}Assets/Vehicles/Helicopters/UH1H/Data/UH_1H_New_Body_Shark_GLOBAL_MASK.edds"
+ MaskGreenScale 0.8
+ MaskSharpness_3 1.18
+ Mask_3 "{A585D759C4C68372}Assets/_SharedData/DetailMask/ST_Rust_02_Mask1.edds"
+ UVTransform_3 MatUVTransform "{3791E72CE3D7D24D}" {
+  TilingU 14
+  TilingV 14
+ }
+ Metalness_3 0.2
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

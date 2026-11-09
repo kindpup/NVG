@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{3B61526B79F7F629}Assets/Weapons/Attachments/Optics/AP2k/Data/Optic_AP2k_OliveGreen_Sand_Stripes.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{FCBDFABDE4E94CE0}Assets/Vehicles/Wheeled/BRDM2/Data/BRDM2_body_exterior_FIA_MLOD.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,80 @@
+MatPBRMulti {
+ Color 1 1 1 1
+ CastShadow 1
+ ReceiveShadow 1
+ DisablePriorityProbes 1
+ SurfaceProperties "{F0733D364338D7E0}Common/Materials/Game/grass.gamemat"
+ DielectricReflectance 0.03
+ CavityFromAO 0.3
+ GlobalMCRMap "{1700F15A79FC7A62}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Canvas_MCR.edds"
+ OverlayBlackPower 0.323
+ UVSrcGlobalMaps "UV set 2"
+ MaskMap "{BFB67916B0FB8399}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Canvas_FIA_GLOBAL_MASK.edds"
+ VFXMap "{EC89A3609449E552}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Canvas_VFX.edds"
+ NormalPower 1.5
+ GlobalNMOMap "{D3B3C059D275B822}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Canvas_NMO.edds"
+ DirtOpacity 0.15
+ DirtLayerSharpness 1
+ DirtColor 0.067 0.055 0.04 1
+ DirtRoughness 1
+ DirtMaskMap "{A074608E879A25CB}Assets/_SharedData/DetailMask/ST_Dirt_01_Mask1.edds"
+ DirtUVTransform MatUVTransform "{2F83A742DD870994}" {
+  TilingU 10
+  TilingV 10
+ }
+ Enabled_4 1
+ Color_4 0.105 0.105 0.105 1
+ BCR_4 "{366028E90066FC57}Assets/_SharedData/Dirt/ST_Dirt_Sand_BCR.edds"
+ NMO_4 "{61DE3875B9DBD343}Assets/_SharedData/Fabric/ST_FabricWrinkles_1m_01_NMO.edds"
+ MaskSharpness_4 3.571
+ Mask_4 "{2563D86FF583B1EF}Assets/_SharedData/DetailMask/ST_Metal_Rust_01_Mask1.edds"
+ UVTransform_4 MatUVTransform "{5A14207CD97F5270}" {
+  TilingU 8
+  TilingV 8
+ }
+ DetNormal_4 0.45
+ Metalness_4 0
+ Enabled_3 1
+ Color_3 0.074 0.043 0.036 1
+ BCR_3 "{366028E90066FC57}Assets/_SharedData/Dirt/ST_Dirt_Sand_BCR.edds"
+ NMO_3 "{61DE3875B9DBD343}Assets/_SharedData/Fabric/ST_FabricWrinkles_1m_01_NMO.edds"
+ MaskSharpness_3 1.615
+ Mask_3 "{2563D86FF583B1EF}Assets/_SharedData/DetailMask/ST_Metal_Rust_01_Mask1.edds"
+ UVTransform_3 MatUVTransform "{2F83A7423A2328FC}" {
+  TilingU 10
+  TilingV 10
+ }
+ DetNormal_3 0.45
+ Roughness_3 1.4
+ Metalness_3 0
+ Enabled_2 1
+ Color_2 0.035 0.039 0.012 1
+ BCR_2 "{6390F3AA091C74E1}Assets/_SharedData/Metal/ST_MetalPaint_Mate_1m_BCR.edds"
+ NMO_2 "{E33A5A9E39D9E660}Assets/_SharedData/Metal/ST_MetalPaint_Mate_1m_NMO.edds"
+ MaskSharpness_2 0.021
+ UVTransform_2 MatUVTransform "{2F83A74216747B3F}" {
+  TilingU 10
+  TilingV 10
+ }
+ DetNormal_2 0.45
+ Roughness_2 1.8
+ Metalness_2 0
+ Color_1 0.105 0.091 0.064 1
+ BCR_1 "{366028E90066FC57}Assets/_SharedData/Dirt/ST_Dirt_Sand_BCR.edds"
+ NMO_1 "{61DE3875B9DBD343}Assets/_SharedData/Fabric/ST_FabricWrinkles_1m_01_NMO.edds"
+ UVTransform_1 MatUVTransform "{2F83A742096DB5B7}" {
+  TilingU 10
+  TilingV 10
+ }
+ DetNormal_1 0.45
+ Roughness_1 1.2
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

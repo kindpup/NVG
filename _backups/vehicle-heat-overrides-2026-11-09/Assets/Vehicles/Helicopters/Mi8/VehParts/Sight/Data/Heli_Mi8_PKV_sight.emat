@@ -1,0 +1,13 @@
+MatPBRBasic {
+ BCRMap "{9D3558FDEC828AE5}Assets/Vehicles/Helicopters/Mi8/VehParts/Sight/Data/Heli_Mi8_PKV_sight_BCR.edds"
+ NMOMap "{A5EDE36F35F5D87B}Assets/Vehicles/Helicopters/Mi8/VehParts/Sight/Data/Heli_Mi8_PKV_sight_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

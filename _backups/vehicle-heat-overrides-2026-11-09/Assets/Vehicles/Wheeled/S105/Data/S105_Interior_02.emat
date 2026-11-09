@@ -1,0 +1,74 @@
+MatPBRMulti {
+ AOScale 0.704
+ GlobalMCRMap "{7A1B9F8AF451EC9C}Assets/Vehicles/Wheeled/S105/Data/S105_Interior_01_MCR.edds"
+ UVSrcGlobalMaps "UV set 2"
+ MaskMap "{B15EEF6A3C8D0D61}Assets/Vehicles/Wheeled/S105/Data/S105_Interior_Mask.edds"
+ VFXMap "{8D7796A9197CB42D}Assets/Vehicles/Wheeled/S105/Data/S105_Interior_VFX.edds"
+ GlobalNMOMap "{42C324182D26BE02}Assets/Vehicles/Wheeled/S105/Data/S105_Interior_01_NMO.edds"
+ UVSrcDetail "UV set 2"
+ MudOpacity 0.73
+ MudColor 0.109 0.109 0.109 1
+ MudMaskMap "{4AC0130FB7602505}Assets/_SharedData/DetailMask/ST_Scratches_03_Mask1.edds"
+ MudUVTransform MatUVTransform "{6C0C275EE603393D}" {
+  TilingU 10
+  TilingV 10
+ }
+ DirtOpacity 0.255
+ DirtLayerSharpness 0.3
+ DirtColor 0.071 0.071 0.071 1
+ DirtRoughness 2
+ DirtBCRMap "{366028E90066FC57}Assets/_SharedData/Dirt/ST_Dirt_Sand_BCR.edds"
+ DirtMaskMap "{8A50472D717443E4}Assets/_SharedData/DetailMask/ST_Dirt_02_Mask1.edds"
+ DirtUVTransform MatUVTransform "{0DD3E75961CF9C44}" {
+  TilingU 10
+  TilingV 10
+ }
+ Enabled_4 1
+ Color_4 0 0 0 1
+ BCR_4 "{4C9EDDFF4F43DD6F}Assets/_SharedData/Fabric/ST_Leather_02_BCR.edds"
+ NMO_4 "{68ADB49C7F67BB59}Assets/_SharedData/Fabric/ST_Leather_02_N.edds"
+ UVTransform_4 MatUVTransform "{5192CB3579E1B504}" {
+  TilingU 40
+  TilingV 40
+ }
+ Roughness_4 1.4
+ Metalness_4 0
+ Enabled_3 1
+ Color_3 0.191 0.191 0.191 1
+ BCR_3 "{DDFA1BE6FC945C12}Assets/_SharedData/Metal/ST_Metal_Stainles01_1m_BCR.edds"
+ NMO_3 "{E522A07425E30E8C}Assets/_SharedData/Metal/ST_Metal_Stainles01_1m_NMO.edds"
+ UVTransform_3 MatUVTransform "{515CE901AE1C8C2B}" {
+  TilingU 20
+  TilingV 20
+ }
+ DetNormal_3 0
+ Roughness_3 0
+ Enabled_2 1
+ Color_2 0.03 0.03 0.03 1
+ BCR_2 "{2C2411924177AC7B}Assets/_SharedData/Fabric/ST_Leather_01_BCR.edds"
+ NMO_2 "{D6F07D5F999E24BB}Assets/_SharedData/Fabric/ST_Leather_01_N.edds"
+ UVTransform_2 MatUVTransform "{515CE901BAA3365D}" {
+  TilingU 20
+  TilingV 20
+ }
+ Roughness_2 0.8
+ Color_1 0.105 0.105 0.105 1
+ BCR_1 "{6390F3AA091C74E1}Assets/_SharedData/Metal/ST_MetalPaint_Mate_1m_BCR.edds"
+ NMO_1 "{E33A5A9E39D9E660}Assets/_SharedData/Metal/ST_MetalPaint_Mate_1m_NMO.edds"
+ UVTransform_1 MatUVTransform "{513518D0BD53A2A1}" {
+  TilingU 13
+  TilingV 13
+ }
+ DetNormal_1 0.5
+ Roughness_1 1.2
+ Metalness_1 0
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

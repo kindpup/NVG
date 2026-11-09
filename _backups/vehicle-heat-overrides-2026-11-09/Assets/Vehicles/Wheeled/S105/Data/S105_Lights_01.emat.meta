@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{B7F433507BC90FC6}Assets/Vehicles/Wheeled/S105/Data/S105_Lights_01.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

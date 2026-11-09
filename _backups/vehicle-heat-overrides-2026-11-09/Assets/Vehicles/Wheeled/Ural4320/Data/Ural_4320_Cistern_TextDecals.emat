@@ -1,0 +1,26 @@
+MatPBRDecal {
+ Color 0.136 0.133 0.128 1
+ SpecularIBL 0.212 0.212 0.212 1
+ Specular 0.212 0.212 0.212 1
+ SpecularMul 0.5
+ AlphaTest 0.1
+ AlphaMul 3
+ BlendMode AlphaBlend
+ MetalnessScale 0
+ OpacityMap "{5937EB22CE662492}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Cistern_Decals_BCR.edds"
+ GlobalMapsUVTransform MatUVTransform "{5C930C8D6357BDCC}" {
+  TilingU 1.076
+  TilingV 0.82
+  OffsetU -0.031
+  OffsetV 0.037
+ }
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

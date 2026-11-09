@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{A6FF77E9C079452C}Assets/Characters/Uniforms/Shirt_Turtleneck_01/Data/Shirt_Turtleneck_01_Blue_Dirty.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

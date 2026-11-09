@@ -1,0 +1,22 @@
+MatPBRCamo : "{13643FFD6973916A}Assets/Weapons/Attachments/Optics/AP2k/Data/Optic_AP2k.emat" {
+ CamoAlbedoMap "{CEE23838FD6B350F}Assets/Weapons/Rifles/M16A2/Data/T_OliveGreen_Solid_BC.edds"
+ UVSrcCamoAlbedoMap "UV set 2"
+ CamoAlbedoMapUVTransform MatUVTransform "{5E3C6DB11A2FFDC3}" {
+  TilingU 2
+  TilingV 2
+  OffsetU -0.714
+  OffsetV 0.337
+  Rotation 151.515
+ }
+ CamoCRMMap "{086C8D645994D3B2}Assets/Weapons/Attachments/Optics/AP2k/Data/Optic_AP2k_Camo_CRM.edds"
+ CamoNormalOpacity 0
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 26
+ TITemperatureCoef1 1
+ TITemperature2 26
+ TITemperatureCoef2 1
+ TITemperature3 26
+ TITemperatureCoef3 1
+ TITemperature4 26
+ TITemperatureCoef4 1
+}

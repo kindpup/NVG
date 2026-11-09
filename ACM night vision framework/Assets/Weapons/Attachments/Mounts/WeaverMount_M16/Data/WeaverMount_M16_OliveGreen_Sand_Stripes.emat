@@ -1,0 +1,21 @@
+MatPBRCamo : "{0778E8C84AFFF113}Assets/_BaseMaterials/Weapons_MatPBRCamo.emat" {
+ BCRMap "{9000B41AC2F883F6}Assets/Weapons/Attachments/Mounts/WeaverMount_M16/Data/WeaverMount_M16_BCR.edds"
+ NMOMap "{A8D80F881B8FD168}Assets/Weapons/Attachments/Mounts/WeaverMount_M16/Data/WeaverMount_M16_NMO.edds"
+ CamoAlbedoMap "{23CB2FC0292A4C28}Assets/Weapons/Rifles/M16A2/Data/T_OliveGreen_Sand_Stripes_BC.edds"
+ UVSrcCamoAlbedoMap "UV set 2"
+ CamoAlbedoMapUVTransform MatUVTransform "{5E3C6DB349CC48F6}" {
+  TilingU 1.5
+  TilingV 1.5
+  OffsetU -0.101
+ }
+ CamoCRMMap "{503F0410C058EF4D}Assets/Weapons/Attachments/Mounts/WeaverMount_M16/Data/WeaverMount_M16_Camo_CRM.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 26
+ TITemperatureCoef1 1
+ TITemperature2 26
+ TITemperatureCoef2 1
+ TITemperature3 26
+ TITemperatureCoef3 1
+ TITemperature4 26
+ TITemperatureCoef4 1
+}

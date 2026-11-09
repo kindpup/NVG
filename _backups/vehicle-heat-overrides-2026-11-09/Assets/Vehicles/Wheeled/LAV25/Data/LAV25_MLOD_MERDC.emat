@@ -1,0 +1,12 @@
+MatPBRBasic : "{FD84C7E2BB37FE4B}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_MLOD.emat" {
+ BCRMap "{E371102E91CE382C}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_MLOD_MERDC_BCR.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

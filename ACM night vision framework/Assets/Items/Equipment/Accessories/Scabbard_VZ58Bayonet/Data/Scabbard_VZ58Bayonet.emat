@@ -1,0 +1,13 @@
+MatPBRBasic : "{AD04B939A2C3F083}Assets/_BaseMaterials/Equipment_MatPBRBasic.emat" {
+ BCRMap "{3B85840DE7C74D68}Assets/Items/Equipment/Accessories/Scabbard_VZ58Bayonet/Data/Scabbard_VZ58Bayonet_BCR.edds"
+ NMOMap "{035D3F9F3EB01FF6}Assets/Items/Equipment/Accessories/Scabbard_VZ58Bayonet/Data/Scabbard_VZ58Bayonet_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 25
+ TITemperatureCoef1 1
+ TITemperature2 25
+ TITemperatureCoef2 1
+ TITemperature3 25
+ TITemperatureCoef3 1
+ TITemperature4 25
+ TITemperatureCoef4 1
+}

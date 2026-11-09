@@ -1,0 +1,81 @@
+MatPBRMulti {
+ Color 1 1 1 1
+ RoughnessScale 1.5
+ GlobalMCRMap "{723A25AB00C1795E}Assets/Vehicles/Helicopters/Mi8/Data/Mi8_global_MCR.edds"
+ OverlayWhitePower 0.093
+ UVSrcGlobalMaps "UV set 2"
+ MaskMap "{B2ABAA2760E4F145}Assets/Vehicles/Helicopters/Mi8/Data/Mi8_GLOBAL_MASK.edds"
+ NormalPower 1.3
+ GlobalNMOMap "{B68914A8AB48BB1E}Assets/Vehicles/Helicopters/Mi8/Data/Mi8_global_NMO.edds"
+ UVSrcDetail "UV set 2"
+ MudColor 0.09 0.076 0.056 1
+ MudBCRMap "{366028E90066FC57}Assets/_SharedData/Dirt/ST_Dirt_Sand_BCR.edds"
+ MudNMOMap "{370535C4B4BFD3B2}Assets/_SharedData/Dirt/ST_Clay_Rough01_1m_NMO.edds"
+ MudMaskMap "{8A50472D717443E4}Assets/_SharedData/DetailMask/ST_Dirt_02_Mask1.edds"
+ MudUVTransform MatUVTransform "{4553E734FEC095FA}" {
+  TilingU 15
+  TilingV 15
+ }
+ DirtOpacity 0.034
+ DirtLayerSharpness 9.633
+ DirtColor 0.075 0.063 0.04 1
+ DirtRoughness 1
+ DirtBCRMap "{366028E90066FC57}Assets/_SharedData/Dirt/ST_Dirt_Sand_BCR.edds"
+ DirtMaskMap "{A074608E879A25CB}Assets/_SharedData/DetailMask/ST_Dirt_01_Mask1.edds"
+ DirtUVTransform MatUVTransform "{701A672FB169AFFD}" {
+  TilingU 16
+  TilingV 16
+ }
+ Color_4 0.078 0.094 0.047 1
+ BCR_4 "{6390F3AA091C74E1}Assets/_SharedData/Metal/ST_MetalPaint_Mate_1m_BCR.edds"
+ NMO_4 "{5E9B5A9AF633BD94}Assets/_SharedData/Metal/ST_Steel_Battered_NMO.edds"
+ MaskSharpness_4 4.814
+ MaskOffset_4 0.864
+ UVTransform_4 MatUVTransform "{3C9B672D229D7B95}" {
+  TilingU 5
+  TilingV 5
+ }
+ DetNormal_4 2.099
+ Metalness_4 0
+ Color_3 0.694 1 1 1
+ BCR_3 "{DDFA1BE6FC945C12}Assets/_SharedData/Metal/ST_Metal_Stainles01_1m_BCR.edds"
+ NMO_3 "{E522A07425E30E8C}Assets/_SharedData/Metal/ST_Metal_Stainles01_1m_NMO.edds"
+ UVTransform_3 MatUVTransform "{3C9B672D1E23F326}" {
+  TilingU 16
+  TilingV 16
+  Rotation 90
+ }
+ Roughness_3 2.102
+ Metalness_3 0
+ Enabled_2 1
+ Color_2 0.07 0.07 0.07 1
+ BCR_2 "{B141E00CC94C086A}Assets/_SharedData/Rubber/ST_Rubber_Aged01_1m_BCR.edds"
+ NMO_2 "{89995B9E103B5AF4}Assets/_SharedData/Rubber/ST_Rubber_Aged01_1m_NMO.edds"
+ MaskSharpness_2 0.92
+ MaskOffset_2 0.343
+ Mask_2 "{FC2938952113721E}Assets/_SharedData/DetailMask/ST_Leaks_03_Mask1.edds"
+ UVTransform_2 MatUVTransform "{3C9B672D1837B2B8}" {
+  TilingU 12
+  TilingV 12
+ }
+ Roughness_2 0.792
+ Metalness_2 0
+ Color_1 0.021 0.02 0.019 1
+ BCR_1 "{B141E00CC94C086A}Assets/_SharedData/Rubber/ST_Rubber_Aged01_1m_BCR.edds"
+ NMO_1 "{89995B9E103B5AF4}Assets/_SharedData/Rubber/ST_Rubber_Aged01_1m_NMO.edds"
+ UVTransform_1 MatUVTransform "{3C9B672D19E6808E}" {
+  TilingU 8
+  TilingV 8
+ }
+ Roughness_1 0.663
+ Metalness_1 0
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

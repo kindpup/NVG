@@ -1,0 +1,19 @@
+MatPBRDecal {
+ Color 0.644 0.644 0.644 1
+ SurfaceProperties "{F0733D364338D7E0}Common/Materials/Game/grass.gamemat"
+ AlphaTest 0.1
+ AlphaMul 1.173
+ BlendMode AlphaBlend
+ RoughnessScale 0.401
+ MetalnessScale 0
+ OpacityMap "{34DE9555EFA40441}Assets/Vehicles/Wheeled/M998/Data/M997_Ambulance_Gauges.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

@@ -1,0 +1,23 @@
+MatPBRDecal {
+ Color 1 1 1 1
+ SpecularIBL 1 0.988 0.888 1
+ AlphaTest 0.1
+ BlendMode AlphaBlend
+ MetalnessScale 0
+ BCRMap "{6390F3AA091C74E1}Assets/_SharedData/Metal/ST_MetalPaint_Mate_1m_BCR.edds"
+ OpacityMap "{A8E12576FEEA5CA4}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Com_Decals_Opacity.edds"
+ NMOMap "{B048E2B8B65EE8BE}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Com_Decals_NMO.edds"
+ GBufferAlbedo 1
+ GBufferRoughness 1
+ GBufferMetalness 1
+ GBufferAO 1
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

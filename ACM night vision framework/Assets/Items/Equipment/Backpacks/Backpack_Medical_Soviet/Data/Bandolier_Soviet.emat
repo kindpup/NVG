@@ -1,0 +1,14 @@
+MatPBRBasic : "{AD04B939A2C3F083}Assets/_BaseMaterials/Equipment_MatPBRBasic.emat" {
+ CavityFromAO 1
+ BCRMap "{C8B0E0058B2FA015}Assets/Items/Equipment/Backpacks/Backpack_Medical_Soviet/Data/Bandolier_Soviet_BCR.edds"
+ NMOMap "{F0685B975258F28B}Assets/Items/Equipment/Backpacks/Backpack_Medical_Soviet/Data/Bandolier_Soviet_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 25
+ TITemperatureCoef1 1
+ TITemperature2 25
+ TITemperatureCoef2 1
+ TITemperature3 25
+ TITemperatureCoef3 1
+ TITemperature4 25
+ TITemperatureCoef4 1
+}

@@ -1,0 +1,20 @@
+MatPBRBasic : "{5CDDE2709BA9A5EE}Assets/_BaseMaterials/Characters_MatPBRBasic.emat" {
+ Emissive 0.23 0.441 0.061 0
+ EmissiveLV -4
+ SurfaceProperties "{13581C35484F3000}Common/Materials/Game/fabric.gamemat"
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ EmissiveMap "{18F2A417E13FD1AD}Assets/Characters/HeadGear/Helmet_PASGT/data/Helmet_PASGT_01_cover_EM.edds"
+ BCRMap "{51C1C96708330767}Assets/Characters/HeadGear/Helmet_PASGT/data/Helmet_PASGT_01_cover_BCR.edds"
+ OpacityMap "{70A53F4EA373F142}Assets/Characters/Basebody/Data/HeadClipping_A.edds"
+ NMOMap "{691972F5D14455F9}Assets/Characters/HeadGear/Helmet_PASGT/data/Helmet_PASGT_01_cover_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 27
+ TITemperatureCoef1 1
+ TITemperature2 27
+ TITemperatureCoef2 1
+ TITemperature3 27
+ TITemperatureCoef3 1
+ TITemperature4 27
+ TITemperatureCoef4 1
+}

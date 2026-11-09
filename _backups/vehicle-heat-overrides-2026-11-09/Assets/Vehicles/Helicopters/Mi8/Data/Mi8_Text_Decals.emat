@@ -1,0 +1,23 @@
+MatPBRDecal {
+ Color 1 1 1 1
+ Emissive 0.468 0 0 0
+ EmissiveLV -6.411
+ SortBias 15
+ AlphaTest 0.2
+ BlendMode AlphaBlend
+ DielectricReflectance 0.02
+ EmissiveMap "{B53203523B702121}Assets/Vehicles/Helicopters/Mi8/Data/Mi8_text_decals_A.edds"
+ BCRMap "{61BFB51FCDBDA6FF}Assets/Vehicles/Helicopters/Mi8/Data/Mi8_text_decals_BCR.edds"
+ OpacityMap "{CA76B2362E06178B}Assets/Vehicles/Helicopters/Mi8/Data/Mi8_text_decals.edds"
+ NormalPower 4
+ GBufferRoughness 1
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

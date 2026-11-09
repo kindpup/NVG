@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{97DEDA1FC00C3DFB}Assets/Characters/Uniforms/Shirt_CottonShirt_01/Data/Shirt_CottonShirt_01_Deflated_V4_Dirty.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

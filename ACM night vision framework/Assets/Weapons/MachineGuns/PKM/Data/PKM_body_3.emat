@@ -1,0 +1,16 @@
+MatPBRBasic : "{E804583583DC08A9}Assets/_BaseMaterials/Weapons_MatPBRBasic.emat" {
+ Cull none
+ CastShadow 1
+ ReceiveShadow 1
+ BCRMap "{40E96C7C8021EF38}Assets/Weapons/MachineGuns/PKM/Data/PKM_body_3_BCR.edds"
+ NMOMap "{7831D7EE5956BDA6}Assets/Weapons/MachineGuns/PKM/Data/PKM_body_3_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 26
+ TITemperatureCoef1 1
+ TITemperature2 26
+ TITemperatureCoef2 1
+ TITemperature3 26
+ TITemperatureCoef3 1
+ TITemperature4 26
+ TITemperatureCoef4 1
+}

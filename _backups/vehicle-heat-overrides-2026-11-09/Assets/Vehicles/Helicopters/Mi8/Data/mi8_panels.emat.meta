@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{1BD425773404C451}Assets/Vehicles/Helicopters/Mi8/Data/mi8_panels.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

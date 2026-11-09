@@ -1,0 +1,18 @@
+MatPBRCamo : "{0778E8C84AFFF113}Assets/_BaseMaterials/Weapons_MatPBRCamo.emat" {
+ BCRMap "{9BB367E8412A9706}Assets/Weapons/Handguns/M9/data/M9_Body_BCR.edds"
+ NMOMap "{A36BDC7A985DC59C}Assets/Weapons/Handguns/M9/data/M9_Body_NMO.edds"
+ CamoCRMMap "{AED6F6E91BC05614}Assets/Weapons/Handguns/M9/data/M9_Body_CRM.edds"
+ CamoOpacity 0
+ CamoNormalOpacity 0
+ CamoRoughnessOpacity 0
+ CamoMetalnessOpacity 0
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 26
+ TITemperatureCoef1 1
+ TITemperature2 26
+ TITemperatureCoef2 1
+ TITemperature3 26
+ TITemperatureCoef3 1
+ TITemperature4 26
+ TITemperatureCoef4 1
+}

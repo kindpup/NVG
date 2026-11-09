@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{5C647270F6D50EEB}Assets/Weapons/Magazines/PM/Data/Magazine_8rnd_PM.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

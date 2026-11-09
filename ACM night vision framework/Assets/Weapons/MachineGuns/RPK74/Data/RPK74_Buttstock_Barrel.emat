@@ -1,0 +1,14 @@
+MatPBRBasic : "{E804583583DC08A9}Assets/_BaseMaterials/Weapons_MatPBRBasic.emat" {
+ Color 0.604 0.604 0.604 1
+ BCRMap "{222627AD3A118043}Assets/Weapons/MachineGuns/RPK74/Data/RPK74_Buttstock_BCR.edds"
+ NMOMap "{1AFE9C3FE366D2DD}Assets/Weapons/MachineGuns/RPK74/Data/RPK74_Buttstock_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 26
+ TITemperatureCoef1 1
+ TITemperature2 26
+ TITemperatureCoef2 1
+ TITemperature3 26
+ TITemperatureCoef3 1
+ TITemperature4 26
+ TITemperatureCoef4 1
+}

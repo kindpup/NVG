@@ -1,0 +1,14 @@
+MatPBRBasic {
+ AOScale 0.6
+ BCRMap "{328542D17B8A499E}Assets/Props/Military/Radios/Data/RadioStation_R123M_BCR.edds"
+ NMOMap "{0A5DF943A2FD1B00}Assets/Props/Military/Radios/Data/RadioStation_R123M_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

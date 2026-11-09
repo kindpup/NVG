@@ -1,0 +1,23 @@
+MatPBRBasic {
+ Emissive 0.546 0.017 0.017 0
+ EmissiveLV -6.791
+ TCModFuncs {
+  TCModShift "{5CA2A520F9C2FF8C}" {
+   Refs {
+    "ShiftV" "VehiclePartPanel.m_fMaterialVariable"
+   }
+  }
+ }
+ MetalnessScale 0
+ EmissiveMap "{2805F95944E51E85}Assets/Vehicles/Helicopters/Mi8/Data/Mi8_AGB3_Horizon_MASK.edds"
+ BCRMap "{DE773913E66165CB}Assets/Vehicles/Helicopters/Mi8/Data/Mi8_AGB3_Horizon_BCR.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

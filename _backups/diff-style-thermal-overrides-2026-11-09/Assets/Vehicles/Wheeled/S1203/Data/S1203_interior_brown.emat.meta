@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{FEBD52EF5144A3F6}Assets/Vehicles/Wheeled/S1203/Data/S1203_interior_brown.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

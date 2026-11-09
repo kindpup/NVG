@@ -2,14 +2,12 @@ ThermalImagingEffect {
  TempConversionTex "{7C2D3E4F5A6B8901}Textures/Thermal_Filter/ACM_WhiteHot.edds"
  TemperatureConversionMethod AutomaticMinMax
  TemperatureConversionClipLimit 0.01
- TemperatureRangeMin -0.142
+ TemperatureRangeMin -40
+ TemperatureRangeMax 50
  SimOverrideValues 1
  SimForceRecomputeTableOnChange 1
- SimSunIrradianceMin 728.7
- SimSunIrradianceMax 1554.9
- SimTemperatureAirMin 84.5
- SimTemperatureAirMax 59.8
- SimTemperatureWaterMin -60.7
- SimTemperatureWaterMax 100
- SimFreeAttenuationCoef 0.474
+ SimSunIrradianceMin 50
+ SimSunIrradianceMax 150
+ SimTemperatureAirMin 15
+ SimTemperatureAirMax 23
 }

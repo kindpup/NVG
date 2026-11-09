@@ -1,0 +1,20 @@
+MatPBRBasic {
+ Color 0.184 0.184 0.184 1
+ Diffuse 1 1 1 1
+ Emissive 1 0.863 0.64 0
+ EmissiveLV 0
+ ApplyAlbedoToEmissive 1
+ SurfaceProperties "{5EAA7FB0A83F90CF}Common/Materials/Game/plastic.gamemat"
+ RoughnessScale 1.247
+ EmissiveMap "{408155574B38005E}Assets/Vehicles/Wheeled/BTR70/Data/BTR_70_base_interior_Dashboard_EM.edds"
+ BCRMap "{E9076FD58CAFA806}Assets/Vehicles/Wheeled/BTR70/Data/BTR_70_base_interior_Dashboard_MCR.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

@@ -1,0 +1,15 @@
+MatPBRMulti : "{0078643DF969CA01}Assets/Vehicles/Wheeled/S1203/Data/S1203_body.emat" {
+ DiffuseIBL 0.791 0.791 0.791 1
+ Diffuse 0.815 0.801 0.772 1
+ Color_1 1 0.997 0.975 1
+ BCR_1 "{1837E633B1A92A98}Assets/_SharedData/Metal/ST_MetalPaint_Coated_02_1m_BCR.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

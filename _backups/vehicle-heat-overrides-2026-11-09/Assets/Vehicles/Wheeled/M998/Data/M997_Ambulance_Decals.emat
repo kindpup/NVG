@@ -1,0 +1,20 @@
+MatPBRDecal {
+ DisablePriorityProbes 1
+ Specular 0.627 0.627 0.627 1
+ AlphaTest 0.1
+ BlendMode AlphaBlend
+ OpacityMap "{8224A03B56477060}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Decals_A.edds"
+ NMOMap "{B0655028F9444C76}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Decals_NMO.edds"
+ GBufferAlbedo 1
+ GBufferRoughness 1
+ GBufferMetalness 1
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

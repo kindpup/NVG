@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{FD4C692542DAFA91}Assets/Weapons/Rifles/M16A2/Data/M16A2_Grip_01_OliveGreen_Solid.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

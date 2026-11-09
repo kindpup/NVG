@@ -1,0 +1,26 @@
+MatPBRDecal {
+ Color 0.474 0.474 0.474 1
+ ZBias 2
+ CastShadow 0
+ SurfaceProperties "{CE9253778DD8FBDE}Common/Materials/Game/metal.gamemat"
+ AlphaTest 0.2
+ BlendMode AlphaBlend
+ BCRMap "{35D1BEF86BAACC17}Assets/Vehicles/Wheeled/M923A1/Data/M923A1_Fuel_tank_decals_BCR.edds"
+ OpacityMap "{A67C87A76D24068C}Assets/Vehicles/Wheeled/M923A1/Data/M923A1_Fuel_tank_decals_A.edds"
+ GlobalMapsUVTransform MatUVTransform "{2B3BA76DFBB071FD}" {
+ }
+ GBufferNormal 1
+ NormalCombinePower 4
+ GBufferRoughness 1
+ GBufferMetalness 1
+ HeightMap "{F69FD4F691F5B912}Assets/Vehicles/Wheeled/M923A1/Data/M923A1_Decals_H.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

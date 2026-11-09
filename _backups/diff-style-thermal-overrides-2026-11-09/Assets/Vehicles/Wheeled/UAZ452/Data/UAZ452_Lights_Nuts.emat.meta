@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{4AE9F850E95D2C8B}Assets/Vehicles/Wheeled/UAZ452/Data/UAZ452_Lights_Nuts.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

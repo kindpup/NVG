@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{E792FF08239C932B}Assets/Vehicles/Wheeled/M923A1/Data/m923a1_COM_Decals.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

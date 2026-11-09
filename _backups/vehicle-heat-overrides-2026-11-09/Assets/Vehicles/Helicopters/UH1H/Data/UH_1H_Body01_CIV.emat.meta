@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{FFDE0DE516E4816F}Assets/Vehicles/Helicopters/UH1H/Data/UH_1H_Body01_CIV.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

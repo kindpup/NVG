@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{87B0074DD14197FD}Assets/Characters/HeadGear/Helmet_ZSh5/Data/KM_34_Mask.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

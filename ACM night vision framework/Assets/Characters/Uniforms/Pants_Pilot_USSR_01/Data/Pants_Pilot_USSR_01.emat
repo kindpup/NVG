@@ -1,0 +1,18 @@
+MatPBRMulti : "{0FB93B007F4E3A39}Assets/_BaseMaterials/Characters_MatPBRMulti.emat" {
+ VFXMap "{69B400C463CDC0FF}Assets/Characters/Uniforms/Pants_Pilot_USSR_01/Data/Pants_Pilot_USSR_VFX.edds"
+ DirtUserOpacity 1
+ DirtOpacity 3
+ DirtRoughness 1
+ DirtBCRMap "{15E15792014C8EB1}Assets/Characters/Uniforms/Pants_Pilot_USSR_01/Data/Pants_Pilot_USSR_01_Wound_BCR.edds"
+ BCR_1 "{117831B1E205B8D1}Assets/Characters/Uniforms/Pants_Pilot_USSR_01/Data/Pants_Pilot_USSR_01_BCR.edds"
+ NMO_1 "{29A08A233B72EA4F}Assets/Characters/Uniforms/Pants_Pilot_USSR_01/Data/Pants_Pilot_USSR_01_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 28
+ TITemperatureCoef1 1
+ TITemperature2 28
+ TITemperatureCoef2 1
+ TITemperature3 28
+ TITemperatureCoef3 1
+ TITemperature4 28
+ TITemperatureCoef4 1
+}

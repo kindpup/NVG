@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{726177B35E55D939}Assets/Weapons/Attachments/Camouflage/Camouflage_M21/Data/Camouflage_M21_No_Alpha.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

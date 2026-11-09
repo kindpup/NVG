@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{B055B6E75F816BB8}Assets/Characters/HeadGear/Hat_ZmijovkaCap_01/Data/Hat_ZmijovkaCap_01_green.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

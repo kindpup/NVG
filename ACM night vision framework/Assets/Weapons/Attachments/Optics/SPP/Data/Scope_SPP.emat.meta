@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{4AE5FE62955E01FC}Assets/Weapons/Attachments/Optics/SPP/Data/Scope_SPP.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

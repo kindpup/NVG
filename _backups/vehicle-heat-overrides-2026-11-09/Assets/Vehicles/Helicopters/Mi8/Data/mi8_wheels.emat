@@ -1,0 +1,16 @@
+MatPBRBasic {
+ Color 0.078 0.078 0.078 1
+ Cull none
+ CastShadow 1
+ ReceiveShadow 1
+ MetalnessScale 0
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 28
+ TITemperatureCoef1 1
+ TITemperature2 28
+ TITemperatureCoef2 1
+ TITemperature3 28
+ TITemperatureCoef3 1
+ TITemperature4 28
+ TITemperatureCoef4 1
+}

@@ -1,0 +1,20 @@
+MatPBRBasic {
+ Color 0.678 0.678 0.678 1
+ CastShadow 1
+ ReceiveShadow 1
+ BCRMap "{D608FA6C45C55A6F}Assets/_SharedData/Dirt/ST_Dirt02_BCR.edds"
+ NMOMap "{EED041FE9CB208F1}Assets/_SharedData/Dirt/ST_Dirt02_NMO.edds"
+ GlobalMapsUVTransform MatUVTransform "{146A27641D9C4A19}" {
+  TilingU 6
+  TilingV 6
+ }
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 12
+ TITemperatureCoef1 1
+ TITemperature2 12
+ TITemperatureCoef2 1
+ TITemperature3 12
+ TITemperatureCoef3 1
+ TITemperature4 12
+ TITemperatureCoef4 1
+}

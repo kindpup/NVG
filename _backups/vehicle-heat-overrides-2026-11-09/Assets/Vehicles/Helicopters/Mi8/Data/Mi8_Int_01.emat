@@ -1,0 +1,17 @@
+MatPBRMulti {
+ MaskMap "{7903A35435DCAD1A}Assets/Vehicles/Helicopters/Mi8/Data/Mi8_interior_GLOBAL_MASK.edds"
+ GlobalNMOMap "{AFE54684CB93A80F}Assets/Vehicles/Helicopters/Mi8/Data/Mi8_global_int_NMO.edds"
+ UVSrcDetail "UV set 2"
+ Enabled_2 1
+ Color_1 0.094 0.137 0.137 1
+ Roughness_1 0.83
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

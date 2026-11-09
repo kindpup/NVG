@@ -1,0 +1,22 @@
+MatPBRDecal {
+ Color 0.047 0.045 0.037 1
+ ZBias 2
+ CastShadow 0
+ SurfaceProperties "{5EAA7FB0A83F90CF}Common/Materials/Game/plastic.gamemat"
+ AlphaTest 0.1
+ BlendMode AlphaBlend
+ OpacityMap "{73AE8D2AA3232E40}Assets/Vehicles/Wheeled/M923A1/Data/M923A1_Base_interior_Dashboard_MCR.edds"
+ NMOMap "{DB56CDF6AAFFC0C9}Assets/Vehicles/Wheeled/M923A1/Data/M923A1_Base_interior_Dashboard_N.edds"
+ GBufferNormal 1
+ NormalCombinePower 1
+ GBufferMetalness 1
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

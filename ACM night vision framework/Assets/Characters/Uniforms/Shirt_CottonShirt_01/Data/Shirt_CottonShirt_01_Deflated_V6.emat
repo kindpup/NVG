@@ -1,0 +1,18 @@
+MatPBRMulti : "{0FB93B007F4E3A39}Assets/_BaseMaterials/Characters_MatPBRMulti.emat" {
+ VFXMap "{53F10F29CDA44F7E}Assets/Characters/Uniforms/Shirt_CottonShirt_01/Data/Shirt_CottonShirt_01_VFX.edds"
+ DirtUserOpacity 1
+ DirtOpacity 3
+ DirtRoughness 1.3
+ DirtBCRMap "{15F98ABDAC162A94}Assets/Characters/Uniforms/Shirt_CottonShirt_01/Data/Shirt_CottonShirt_01_Deflated_V6_Blood_BCR.edds"
+ BCR_1 "{D872E09EB0EE2B5A}Assets/Characters/Uniforms/Shirt_CottonShirt_01/Data/Shirt_CottonShirt_01_Deflated_V6_BCR.edds"
+ NMO_1 "{9F4A5902F0F21106}Assets/Characters/Uniforms/Shirt_CottonShirt_01/Data/Shirt_CottonShirt_01_Deflated_V1_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 28
+ TITemperatureCoef1 1
+ TITemperature2 28
+ TITemperatureCoef2 1
+ TITemperature3 28
+ TITemperatureCoef3 1
+ TITemperature4 28
+ TITemperatureCoef4 1
+}

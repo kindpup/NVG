@@ -64,7 +64,7 @@ class ACM_SysMenuRow
 }
 
 //------------------------------------------------------------------------------------------------
-// Click routing for a plain widget, matching ACM_SquadClickHandler. Not built on a vanilla button
+// Click routing for a plain widget. Not built on a vanilla button
 // prefab for the same reason: those carry layouts and component expectations this menu does not
 // need, and all that is wanted here is "tell me which row was clicked".
 //------------------------------------------------------------------------------------------------

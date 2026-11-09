@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{3868526D924F31F1}Assets/Vehicles/Wheeled/M923A1/Data/M923A1_Wheel_spare.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

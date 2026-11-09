@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{58D16C1887DB9427}Assets/Vehicles/Wheeled/S1203/Data/S1203_details3.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

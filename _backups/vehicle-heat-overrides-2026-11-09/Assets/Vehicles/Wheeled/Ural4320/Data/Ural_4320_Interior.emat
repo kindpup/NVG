@@ -1,0 +1,65 @@
+MatPBRMulti {
+ CastShadow 1
+ ReceiveShadow 1
+ SurfaceProperties "{F0733D364338D7E0}Common/Materials/Game/grass.gamemat"
+ SpecularMul 0.1
+ CavityFromAO 0.2
+ GlobalMCRMap "{6F573199A676D1B2}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Interior_MC.edds"
+ OverlayBlackPower 0.8
+ MaskMap "{61BC49C0AE4AFA73}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Interior_GLOBAL_MASK.edds"
+ VFXMap "{0918BD8C369D0342}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Interior_VFX.edds"
+ GlobalNMOMap "{F63FC8A62F8B65A4}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Interior_NMO.edds"
+ DirtOpacity 0.697
+ DirtLayerSharpness 0.3
+ DirtColor 0.08 0.072 0.057 1
+ DirtRoughness 1
+ DirtBCRMap "{366028E90066FC57}Assets/_SharedData/Dirt/ST_Dirt_Sand_BCR.edds"
+ DirtMaskMap "{82A0289C4982ADA1}Assets/_SharedData/DetailMask/ST_Dirt_Rock_01_Mask1.edds"
+ DirtUVTransform MatUVTransform "{701A672F53671608}" {
+  TilingU 20
+  TilingV 20
+ }
+ Enabled_4 1
+ Color_4 0.027 0.027 0.027 1
+ BCR_4 "{B888CADB9299DD3E}Assets/_SharedData/Plastic/ST_Plastic_Leather01_1m_BCR.edds"
+ NMO_4 "{805071494BEE8FA0}Assets/_SharedData/Plastic/ST_Plastic_Leather01_1m_NMO.edds"
+ UVTransform_4 MatUVTransform "{701A672EB39AC99F}" {
+  TilingU 12
+  TilingV 12
+ }
+ DetNormal_4 0
+ Roughness_4 0.75
+ AO_4 0.8
+ Enabled_3 1
+ Color_3 0.041 0.041 0.041 1
+ BCR_3 "{B141E00CC94C086A}Assets/_SharedData/Rubber/ST_Rubber_Aged01_1m_BCR.edds"
+ NMO_3 "{89995B9E103B5AF4}Assets/_SharedData/Rubber/ST_Rubber_Aged01_1m_NMO.edds"
+ UVTransform_3 MatUVTransform "{701A672EAD4E2A2B}" {
+  TilingU 0
+  TilingV 0
+ }
+ Roughness_3 0.8
+ Color_2 0.047 0.047 0.047 1
+ BCR_2 "{F829787DA88C2E39}Assets/_SharedData/Plastic/ST_Plastic_Leather02_1m_BCR.edds"
+ NMO_2 "{C0F1C3EF71FB7CA7}Assets/_SharedData/Plastic/ST_Plastic_Leather02_1m_NMO.edds"
+ UVTransform_2 MatUVTransform "{701A672EBE919759}" {
+  TilingU 8
+  TilingV 8
+ }
+ Color_1 0.05 0.05 0.05 1
+ BCR_1 "{B888CADB9299DD3E}Assets/_SharedData/Plastic/ST_Plastic_Leather01_1m_BCR.edds"
+ NMO_1 "{805071494BEE8FA0}Assets/_SharedData/Plastic/ST_Plastic_Leather01_1m_NMO.edds"
+ UVTransform_1 MatUVTransform "{701A672F4F8E7E3C}" {
+  TilingU 12
+  TilingV 12
+ }
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

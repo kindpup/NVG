@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{4094491EDE122D98}Assets/Vehicles/Helicopters/Mi8/Data/Mi8_ControlPanelLights.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

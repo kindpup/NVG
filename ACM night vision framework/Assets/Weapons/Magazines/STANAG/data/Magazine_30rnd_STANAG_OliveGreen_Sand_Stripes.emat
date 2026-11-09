@@ -1,0 +1,23 @@
+MatPBRCamo : "{0778E8C84AFFF113}Assets/_BaseMaterials/Weapons_MatPBRCamo.emat" {
+ BCRMap "{0A50054535B2B56C}Assets/Weapons/Magazines/STANAG/data/Magazine_30rnd_STANAG_BCR.edds"
+ NMOMap "{3288BED7ECC5E7F2}Assets/Weapons/Magazines/STANAG/data/Magazine_30rnd_STANAG_NMO.edds"
+ CamoAlbedoMap "{23CB2FC0292A4C28}Assets/Weapons/Rifles/M16A2/Data/T_OliveGreen_Sand_Stripes_BC.edds"
+ UVSrcCamoAlbedoMap "UV set 2"
+ CamoAlbedoMapUVTransform MatUVTransform "{5E3E7191272AB588}" {
+  TilingU 1.25
+  TilingV 1.25
+  OffsetU -0.235
+  Rotation 35.152
+ }
+ CamoCRMMap "{AF11A2DB961B4325}Assets/Weapons/Magazines/STANAG/data/Magazine_30rnd_STANAG_Camo_CRM.edds"
+ CamoNormalOpacity 0
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 26
+ TITemperatureCoef1 1
+ TITemperature2 26
+ TITemperatureCoef2 1
+ TITemperature3 26
+ TITemperatureCoef3 1
+ TITemperature4 26
+ TITemperatureCoef4 1
+}

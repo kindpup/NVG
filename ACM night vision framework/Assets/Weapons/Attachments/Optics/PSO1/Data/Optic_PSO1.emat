@@ -1,0 +1,30 @@
+MatPBRMulti : "{BB608145673B977E}Assets/_BaseMaterials/Weapons_MatPBRMulti.emat" {
+ RoughnessScale 0.7
+ MetalnessScale 1.2
+ MaskMap "{7427CED2DBB26ADB}Assets/Weapons/Attachments/Optics/PSO1/Data/Optic_PSO1_GLOBAL_MASK.edds"
+ MaskRedScale 0.881
+ GlobalNMOMap "{C41CB1A60ED346F3}Assets/Weapons/Attachments/Optics/PSO1/Data/Optic_PSO1_NMO.edds"
+ Enabled_2 1
+ Color_2 0.036 0.037 0.038 1
+ BCR_2 "{9FD070C8FDF71A6D}Assets/_SharedData/Metal/ST_Metal_Hammer_01_BCR.edds"
+ NMO_2 "{A708CB5A248048F3}Assets/_SharedData/Metal/ST_Metal_Hammer_01_NMO.edds"
+ MaskSharpness_2 1
+ Mask_2 "{AF3EED70E19D46AB}Assets/_SharedData/DetailMask/ST_Scratches_02_MASK1.edds"
+ UVTransform_2 MatUVTransform "{56E0E6AD481B7F12}" {
+  TilingU 5
+  TilingV 5
+ }
+ DetNormal_2 0.4
+ Roughness_2 2
+ Metalness_2 0
+ BCR_1 "{FCC40A34D7A4146D}Assets/Weapons/Attachments/Optics/PSO1/Data/Optic_PSO1_BCR.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 26
+ TITemperatureCoef1 1
+ TITemperature2 26
+ TITemperatureCoef2 1
+ TITemperature3 26
+ TITemperatureCoef3 1
+ TITemperature4 26
+ TITemperatureCoef4 1
+}

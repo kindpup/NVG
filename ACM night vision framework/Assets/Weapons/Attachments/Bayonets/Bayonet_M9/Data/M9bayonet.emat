@@ -1,0 +1,18 @@
+MatPBRMulti : "{BB608145673B977E}Assets/_BaseMaterials/Weapons_MatPBRMulti.emat" {
+ VFXMap "{C74BC84481B07CA0}Assets/Weapons/Attachments/Bayonets/Bayonet_M9/Data/M9_VFX.edds"
+ DirtUserOpacity 1
+ DirtOpacity 3
+ DirtRoughness 0.97
+ DirtBCRMap "{5ABAFD44BA06D8E9}Assets/Weapons/Attachments/Bayonets/Bayonet_M9/Data/BayonetM9_Blood_BCR.edds"
+ BCR_1 "{8A5D65A308C9B8E8}Assets/Weapons/Attachments/Bayonets/Bayonet_M9/Data/BayonetM9_BCR.edds"
+ NMO_1 "{B285DE31D1BEEA76}Assets/Weapons/Attachments/Bayonets/Bayonet_M9/Data/BayonetM9_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 26
+ TITemperatureCoef1 1
+ TITemperature2 26
+ TITemperatureCoef2 1
+ TITemperature3 26
+ TITemperatureCoef3 1
+ TITemperature4 26
+ TITemperatureCoef4 1
+}

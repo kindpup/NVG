@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{2F703CC1EA02F3DD}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Body_wreck_static.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

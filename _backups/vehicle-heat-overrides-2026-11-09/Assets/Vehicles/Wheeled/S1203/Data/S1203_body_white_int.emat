@@ -1,0 +1,12 @@
+MatPBRMulti : "{45598D558C15A300}Assets/Vehicles/Wheeled/S1203/Data/S1203_body_white.emat" {
+ DisablePriorityProbes 0
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

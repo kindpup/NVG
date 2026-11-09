@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{269BE810858CFE4F}Assets/Vehicles/Wheeled/S1203/Data/S1203_body_blue.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

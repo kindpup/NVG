@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------------------------
 // ACM_PlayerControlWatcher.c
-// Registers the squad / system menu keybinds once the local player controller and input manager
+// Registers the system menu keybinds once the local player controller and input manager
 // are ready.
 //------------------------------------------------------------------------------------------------
 
@@ -15,19 +15,13 @@ modded class SCR_PlayerController
 		if (this != GetGame().GetPlayerController())
 			return;
 
-		// Squad command keybind, registered from here so it needs no prefab entry.
+		// System menu keybinds, registered from here so they need no prefab entry.
 		//
 		// Idempotent - it attaches on the first call that finds an input manager and does nothing
 		// afterwards. Driven from this event rather than from init because on a client the local
 		// controller and the input manager are not both ready when components are built, and a
 		// listener that fails to attach once fails silently for the whole session.
-		ACM_SquadMenuOpener.EnsureRegistered();
-
-		// The per-system menus register the same way and for the same reasons.
 		ACM_SystemMenuOpener.EnsureRegistered();
-
-		// Remote Feed toggle / cycle keys.
-		ACM_RemoteFeedInput.EnsureRegistered();
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -51,8 +45,6 @@ modded class SCR_PlayerController
 		if (this != GetGame().GetPlayerController())
 			return;
 
-		ACM_SquadMenuOpener.EnsureRegistered();
 		ACM_SystemMenuOpener.EnsureRegistered();
-		ACM_RemoteFeedInput.EnsureRegistered();
 	}
 }

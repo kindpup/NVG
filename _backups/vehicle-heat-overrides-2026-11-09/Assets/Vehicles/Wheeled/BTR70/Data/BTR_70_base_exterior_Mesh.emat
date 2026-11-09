@@ -1,0 +1,25 @@
+MatPBRBasic {
+ Color 0.04 0.038 0.023 1
+ Cull none
+ SurfaceProperties "{CE9253778DD8FBDE}Common/Materials/Game/metal.gamemat"
+ SpecularMul 0.5
+ AlphaTest 0.5
+ RoughnessScale 2.5
+ BCRMap "{6390F3AA091C74E1}Assets/_SharedData/Metal/ST_MetalPaint_Mate_1m_BCR.edds"
+ OpacityMap "{F39A7C87629B66E8}Assets/Vehicles/Wheeled/BTR70/Data/BTR_70_base_exterior_Mesh_A.edds"
+ NormalPower 1.1
+ NMOMap "{942211218ACAE648}Assets/Vehicles/Wheeled/BTR70/Data/BTR_70_base_exterior_Mesh_N.edds"
+ GlobalMapsUVTransform MatUVTransform "{23526731EE4B65C6}" {
+  TilingU 8
+  TilingV 8
+ }
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

@@ -1,0 +1,20 @@
+MatPBRDecal {
+ Color 0.638 0.638 0.638 1
+ SpecularIBL 0.515 0.515 0.515 1
+ Specular 0.356 0.356 0.356 1
+ AlphaTest 0.86
+ AlphaMul 0.956
+ BlendMode AlphaBlend
+ MetalnessScale 0
+ BCRMap "{BE12B15E6F65E764}Assets/Vehicles/Helicopters/Mi8/Data/Decals_Nation_RussianStar_BCR.edds"
+ OpacityMap "{DC93AD7C03DC7CEF}Assets/Vehicles/Helicopters/Mi8/Data/Decals_Nation_RussianStar_A.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

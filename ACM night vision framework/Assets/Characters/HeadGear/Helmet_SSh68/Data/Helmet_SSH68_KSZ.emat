@@ -1,0 +1,17 @@
+MatPBRBasic : "{5CDDE2709BA9A5EE}Assets/_BaseMaterials/Characters_MatPBRBasic.emat" {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ CavityFromAO 0.875
+ BCRMap "{799B2AF1D02670F7}Assets/Characters/HeadGear/Helmet_SSh68/Data/Helmet_SSH68_KZS_BCR.edds"
+ OpacityMap "{70A53F4EA373F142}Assets/Characters/Basebody/Data/HeadClipping_A.edds"
+ NMOMap "{4143916309512269}Assets/Characters/HeadGear/Helmet_SSh68/Data/Helmet_SSH68_KZS_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 27
+ TITemperatureCoef1 1
+ TITemperature2 27
+ TITemperatureCoef2 1
+ TITemperature3 27
+ TITemperatureCoef3 1
+ TITemperature4 27
+ TITemperatureCoef4 1
+}

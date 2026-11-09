@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{E720DDE8F9617E76}Assets/Weapons/MachineGuns/M60D/Data/M60D_body_0.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

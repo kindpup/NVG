@@ -1,0 +1,21 @@
+MatPBRBasic {
+ Color 0.283 0.283 0.283 1
+ SpecularIBL 0.212 0.212 0.212 1
+ Emissive 0.451 0.418 0.362 0
+ EmissiveLV 4
+ ApplyAlbedoToEmissive 1
+ Specular 0.212 0.212 0.212 1
+ RoughnessScale 1.767
+ MetalnessScale 0
+ EmissiveMap "{D1ADAABEEF77B9A8}Assets/Vehicles/Wheeled/M998/Data/Gauges_EM.edds"
+ BCRMap "{6B85220BD1631DD0}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Gauges_BCR.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

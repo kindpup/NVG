@@ -1,0 +1,65 @@
+MatPBRMulti {
+ SpecularIBL 0.212 0.212 0.212 1
+ Specular 0.212 0.212 0.212 1
+ MaskMap "{3623DF61A16A41EF}Assets/Vehicles/Wheeled/M923A1/Data/M923A1_Antenna_Mask.edds"
+ VFXMap "{914D834B226375D1}Assets/Vehicles/Wheeled/M923A1/Data/M923A1_Antenna_VFX.edds"
+ MudOpacity 1.004
+ MudColor 0.091 0.082 0.07 1
+ MudRoughness 1.664
+ MudDetNormal 2.059
+ MudBCRMap "{AE37874A11911124}Assets/_SharedData/Dirt/ST_Mud_01_BCR.edds"
+ MudNMOMap "{96EF3CD8C8E643BA}Assets/_SharedData/Dirt/ST_Mud_01_NMO.edds"
+ MudMaskMap "{816ABEBED1A52FF3}Assets/_SharedData/DetailMask/ST_Mud_01_Mask.edds"
+ MudUVTransform MatUVTransform "{52A6A78E0BB4411B}" {
+  TilingU 2
+  TilingV 2
+  Rotation 10
+ }
+ Enabled_4 1
+ Color_4 0.026 0.011 0.004 1
+ BCR_4 "{DFE62D48EAC7B13B}Assets/_SharedData/Metal/ST_Steel_Battered_02_BCR.edds"
+ NMO_4 "{C2AC9474786C75F8}Assets/_SharedData/Metal/ST_Steel_Base_01_NMO.edds"
+ UVTransform_4 MatUVTransform "{528E9D312E69EDCC}" {
+  TilingU 6
+  TilingV 6
+ }
+ DetNormal_4 1.169
+ Roughness_4 1.926
+ Metalness_4 0.208
+ Enabled_3 1
+ Color_3 0.078 0.082 0.059 1
+ BCR_3 "{DFE62D48EAC7B13B}Assets/_SharedData/Metal/ST_Steel_Battered_02_BCR.edds"
+ NMO_3 "{C2AC9474786C75F8}Assets/_SharedData/Metal/ST_Steel_Base_01_NMO.edds"
+ UVTransform_3 MatUVTransform "{528E9D3118CCE906}" {
+  TilingU 5
+  TilingV 5
+ }
+ Metalness_3 0.262
+ Enabled_2 1
+ Color_2 0.043 0.043 0.043 1
+ BCR_2 "{B141E00CC94C086A}Assets/_SharedData/Rubber/ST_Rubber_Aged01_1m_BCR.edds"
+ NMO_2 "{89995B9E103B5AF4}Assets/_SharedData/Rubber/ST_Rubber_Aged01_1m_NMO.edds"
+ UVTransform_2 MatUVTransform "{528E9D0B9326AF1F}" {
+  TilingU 5
+  TilingV 5
+ }
+ Color_1 0.216 0.216 0.215 1
+ BCR_1 "{DFE62D48EAC7B13B}Assets/_SharedData/Metal/ST_Steel_Battered_02_BCR.edds"
+ NMO_1 "{C2AC9474786C75F8}Assets/_SharedData/Metal/ST_Steel_Base_01_NMO.edds"
+ UVTransform_1 MatUVTransform "{528E9D35BB86A3B1}" {
+  TilingU 2
+  TilingV 2
+ }
+ DetNormal_1 2.186
+ Roughness_1 1.805
+ Metalness_1 0.551
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

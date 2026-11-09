@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{8264AE9AB6E662D4}Assets/Items/Equipment/Backpacks/Backpack_TeamWeaponBag/Data/Backpack_TeamWeaponBag_US.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

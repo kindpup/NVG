@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{ACAC42AB5515FA58}Assets/Vehicles/Wheeled/S105/Data/S105_Wreck_Interior.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{BC4053685C7CAF5E}Assets/Vehicles/Wheeled/UAZ469/Data/UAZ469_Body_CIV_RED.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

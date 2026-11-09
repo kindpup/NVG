@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{51B11E659FBA3CED}Assets/Characters/HeadGear/Hat_TruckerCap_01/Data/Hat_TruckerCap_01_v1.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

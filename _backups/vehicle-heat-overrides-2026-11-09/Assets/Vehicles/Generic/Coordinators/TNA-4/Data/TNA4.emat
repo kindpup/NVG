@@ -1,0 +1,14 @@
+MatPBRBasic {
+ AOScale 0.6
+ BCRMap "{682644F0636F2480}Assets/Vehicles/Generic/Coordinators/TNA-4/Data/TNA4_BCR.edds"
+ NMOMap "{50FEFF62BA18761E}Assets/Vehicles/Generic/Coordinators/TNA-4/Data/TNA4_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

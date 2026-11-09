@@ -1,0 +1,20 @@
+MatPBRDecal {
+ BlendMode AlphaBlend
+ OpacityMap "{A6DBCF9160D982A1}Assets/Vehicles/Wheeled/M923A1/VehParts/Data/M944A1_Decals_A.edds"
+ NMOMap "{F19D58D19E7D56F0}Assets/Vehicles/Wheeled/M923A1/VehParts/Data/M944A1_Decals_NMO.edds"
+ GlobalMapsUVTransform MatUVTransform "{5CEA99D4DE21F0A7}" {
+ }
+ GBufferAlbedo 1
+ GBufferRoughness 1
+ GBufferMetalness 1
+ GBufferAO 1
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

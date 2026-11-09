@@ -2,7 +2,7 @@
 // ACM_SystemMenuOpener.c
 // Owns the five system-menu keybinds and nothing else.
 //
-// Same shape as ACM_SquadMenuOpener and for the same reason: not a ScriptComponent, because a
+// Not a ScriptComponent, because a
 // component that has to be added to the player controller prefab by hand fails silently when it is
 // missing - the action binds, the key shows in settings, pressing it does nothing, and no error is
 // logged anywhere to say why. Registration is driven from the modded SCR_PlayerController instead,

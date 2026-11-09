@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{085707BC7250F40D}Assets/Vehicles/Helicopters/UH1H/Data/M23Subsystem_Beams.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

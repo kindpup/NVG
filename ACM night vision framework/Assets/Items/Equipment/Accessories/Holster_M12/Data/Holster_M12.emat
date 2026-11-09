@@ -1,0 +1,13 @@
+MatPBRBasic : "{AD04B939A2C3F083}Assets/_BaseMaterials/Equipment_MatPBRBasic.emat" {
+ BCRMap "{E3D6606E99EF03FB}Assets/Items/Equipment/Accessories/Holster_M12/Data/Holster_M12_BCR.edds"
+ NMOMap "{DB0EDBFC40985165}Assets/Items/Equipment/Accessories/Holster_M12/Data/Holster_M12_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 25
+ TITemperatureCoef1 1
+ TITemperature2 25
+ TITemperatureCoef2 1
+ TITemperature3 25
+ TITemperatureCoef3 1
+ TITemperature4 25
+ TITemperatureCoef4 1
+}

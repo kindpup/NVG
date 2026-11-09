@@ -1,0 +1,22 @@
+MatPBRCamo : "{0778E8C84AFFF113}Assets/_BaseMaterials/Weapons_MatPBRCamo.emat" {
+ Cull none
+ AlphaTest 0.4
+ BCRMap "{833943B8F07259C2}Assets/_SharedData/Weapons/Camouflage/Camouflage_M21_BCR.edds"
+ OpacityMap "{AFDA5AFC4FF765B4}Assets/_SharedData/Weapons/Camouflage/Camouflage_M21_A.edds"
+ NMOMap "{BBE1F82A29050B5C}Assets/_SharedData/Weapons/Camouflage/Camouflage_M21_NMO.edds"
+ CamoAlbedoMap "{643FC02D8E732C5D}Assets/_SharedData/Weapons/Camouflage/Camo_01_BCR.edds"
+ UVSrcCamoAlbedoMap "UV set 2"
+ CamoBlendMode Multiply
+ CamoNormalOpacity 0
+ CamoRoughnessOpacity 0
+ CamoMetalnessOpacity 0
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 26
+ TITemperatureCoef1 1
+ TITemperature2 26
+ TITemperatureCoef2 1
+ TITemperature3 26
+ TITemperatureCoef3 1
+ TITemperature4 26
+ TITemperatureCoef4 1
+}

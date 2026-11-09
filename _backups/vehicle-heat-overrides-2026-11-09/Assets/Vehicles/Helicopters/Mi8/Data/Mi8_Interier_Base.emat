@@ -1,0 +1,81 @@
+MatPBRMulti {
+ SurfaceProperties "{F0733D364338D7E0}Common/Materials/Game/grass.gamemat"
+ AOScale 1.6
+ GlobalMCRMap "{2BAB44A090918879}Assets/Vehicles/Helicopters/Mi8/Data/Mi8_interior_MCR.edds"
+ OverlayWhitePower 0.093
+ UVSrcGlobalMaps "UV set 2"
+ MaskMap "{7903A35435DCAD1A}Assets/Vehicles/Helicopters/Mi8/Data/Mi8_interior_GLOBAL_MASK.edds"
+ VFXMap "{6301FA9A15826B8B}Assets/Vehicles/Helicopters/Mi8/Data/Mi8_interior_VFX.edds"
+ UseGlobAOOnly 1
+ GlobalAOMap "{C17B6BBC14982BE4}Assets/Vehicles/Helicopters/Mi8/Data/Mi8_global_int_AO.edds"
+ UVSrcGlobNormal "UV set 2"
+ UVSrcDetail "UV set 2"
+ MudOpacity 0.915
+ MudColor 0.087 0.102 0.11 1
+ MudRoughness 4
+ MudMetalness 0.6
+ MudBCRMap "{35DFF427FFCD66ED}Assets/_SharedData/Metal/ST_Metal_Fine01_1m_BCR.edds"
+ MudMaskMap "{4AC0130FB7602505}Assets/_SharedData/DetailMask/ST_Scratches_03_Mask1.edds"
+ MudUVTransform MatUVTransform "{4553E734FEC095FA}" {
+  TilingU 30
+  TilingV 30
+ }
+ DirtOpacity 0.25
+ DirtLayerSharpness 1.276
+ DirtColor 0.012 0.009 0.005 1
+ DirtRoughness 3
+ DirtBCRMap "{AE37874A11911124}Assets/_SharedData/Dirt/ST_Mud_01_BCR.edds"
+ DirtMaskMap "{2563D86FF583B1EF}Assets/_SharedData/DetailMask/ST_Metal_Rust_01_Mask1.edds"
+ DirtUVTransform MatUVTransform "{701A672FB169AFFD}" {
+  TilingU 50
+  TilingV 50
+ }
+ Enabled_4 1
+ Color_4 0.878 0.715 0.533 1
+ BCR_4 "{07CBA6AB99E68F3D}Assets/_SharedData/Plastic/ST_TarpaulinCanvas_BCR.edds"
+ NMO_4 "{3F131D394091DDA3}Assets/_SharedData/Plastic/ST_TarpaulinCanvas_NMO.edds"
+ MaskUVScale_4 0.001
+ UVTransform_4 MatUVTransform "{3C9B672D229D7B95}" {
+  TilingU 40
+  TilingV 40
+ }
+ DetNormal_4 10
+ Roughness_4 1.5
+ Enabled_3 1
+ Color_3 0.682 0.611 0.53 1
+ BCR_3 "{85874A9648F12928}Assets/_SharedData/Fabric/ST_Leather_Upholstery_Square_01_BCR.edds"
+ NMO_3 "{BD5FF10491867BB6}Assets/_SharedData/Fabric/ST_Leather_Upholstery_Square_01_NMO.edds"
+ UVTransform_3 MatUVTransform "{3C9B672D1E23F326}" {
+  TilingU 25
+  TilingV 25
+  Rotation 30
+ }
+ Enabled_2 1
+ Color_2 0.627 0.537 0.381 1
+ BCR_2 "{07CBA6AB99E68F3D}Assets/_SharedData/Plastic/ST_TarpaulinCanvas_BCR.edds"
+ NMO_2 "{3F131D394091DDA3}Assets/_SharedData/Plastic/ST_TarpaulinCanvas_NMO.edds"
+ MaskUVScale_2 0.001
+ UVTransform_2 MatUVTransform "{3C9B672D1837B2B8}" {
+  TilingU 30
+  TilingV 30
+ }
+ DetNormal_2 1.42
+ Color_1 0.305 0.305 0.305 1
+ BCR_1 "{6390F3AA091C74E1}Assets/_SharedData/Metal/ST_MetalPaint_Mate_1m_BCR.edds"
+ NMO_1 "{E33A5A9E39D9E660}Assets/_SharedData/Metal/ST_MetalPaint_Mate_1m_NMO.edds"
+ UVTransform_1 MatUVTransform "{3C9B672D19E6808E}" {
+  TilingU 15
+  TilingV 15
+ }
+ DetNormal_1 0.568
+ Roughness_1 1.5
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

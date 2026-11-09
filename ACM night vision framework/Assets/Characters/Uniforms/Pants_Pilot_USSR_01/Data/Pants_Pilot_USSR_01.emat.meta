@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{4E5C4C3AC4E0954A}Assets/Characters/Uniforms/Pants_Pilot_USSR_01/Data/Pants_Pilot_USSR_01.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

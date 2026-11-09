@@ -1,0 +1,21 @@
+MatPBRBasic {
+ Color 0.753 0.753 0.753 1
+ SortBias 4
+ AlphaMul 1.5
+ BlendMode AlphaBlend
+ RoughnessScale 1.5
+ MetalnessScale 1.8
+ BCRMap "{C3E14C21E63015EC}Assets/Vehicles/Wheeled/T601/Data/T601_Decals_BCR.edds"
+ OpacityMap "{132AF3DB0AA089BC}Assets/Vehicles/Wheeled/T601/Data/T601_Decals_A.edds"
+ NMOMap "{FB39F7B33F474772}Assets/Vehicles/Wheeled/T601/Data/T601_Decals_NMO.edds"
+ ParallaxMidlePlane 0.5
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

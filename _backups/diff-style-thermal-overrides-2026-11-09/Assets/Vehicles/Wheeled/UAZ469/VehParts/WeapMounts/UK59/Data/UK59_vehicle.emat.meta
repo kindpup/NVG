@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{4212953F91FE7991}Assets/Vehicles/Wheeled/UAZ469/VehParts/WeapMounts/UK59/Data/UK59_vehicle.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,24 @@
+MatPBRCamo : "{0778E8C84AFFF113}Assets/_BaseMaterials/Weapons_MatPBRCamo.emat" {
+ BCRMap "{B80F26943F02FE9C}Assets/Weapons/Attachments/Muzzle/Suppressor_M16/Data/Suppressor_M16_BCR.edds"
+ NMOMap "{80D79D06E675AC02}Assets/Weapons/Attachments/Muzzle/Suppressor_M16/Data/Suppressor_M16_NMO.edds"
+ CamoAlbedoMap "{23CB2FC0292A4C28}Assets/Weapons/Rifles/M16A2/Data/T_OliveGreen_Sand_Stripes_BC.edds"
+ UVSrcCamoAlbedoMap "UV set 2"
+ CamoAlbedoMapUVTransform MatUVTransform "{5E3E71B71B3AD520}" {
+  TilingU 1.2
+  TilingV 1.2
+  OffsetU -0.457
+  OffsetV -0.673
+  Rotation 179.393
+ }
+ CamoCRMMap "{421ACB9107BC0E30}Assets/Weapons/Attachments/Muzzle/Suppressor_M16/Data/Suppressor_M16_Camo_CRM.edds"
+ CamoNormalOpacity 0
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 26
+ TITemperatureCoef1 1
+ TITemperature2 26
+ TITemperatureCoef2 1
+ TITemperature3 26
+ TITemperatureCoef3 1
+ TITemperature4 26
+ TITemperatureCoef4 1
+}

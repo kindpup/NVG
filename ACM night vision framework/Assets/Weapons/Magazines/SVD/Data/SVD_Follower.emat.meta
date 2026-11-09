@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{1F364C2ED67E9DC7}Assets/Weapons/Magazines/SVD/Data/SVD_Follower.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

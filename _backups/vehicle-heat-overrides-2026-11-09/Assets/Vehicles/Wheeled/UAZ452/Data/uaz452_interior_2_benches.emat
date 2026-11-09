@@ -1,0 +1,14 @@
+MatPBRMulti : "{4C0F37B631C033E8}Assets/Vehicles/Wheeled/UAZ452/Data/uaz452_interior_2.emat" {
+ AOScale 1.153
+ GlobalNMOMap "{06D03752BC7DAB81}Assets/Vehicles/Wheeled/UAZ452/Data/uaz452_interior_1_benches_NMO.edds"
+ AOTexcoordsFromBCR 0
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

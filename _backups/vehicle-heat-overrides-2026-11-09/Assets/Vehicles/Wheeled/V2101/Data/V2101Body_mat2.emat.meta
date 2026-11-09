@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{64F424C08B0E92B0}Assets/Vehicles/Wheeled/V2101/Data/V2101Body_mat2.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,68 @@
+MatPBRMulti {
+ Cull none
+ GlobalMCRMap "{C884D79DAF7F0B7A}Assets/Vehicles/Wheeled/M923A1/VehParts/Data/M944A1_Body_MCR.edds"
+ OverlayWhitePower 0
+ UVSrcGlobalMaps "UV set 2"
+ GlobalMapsUVTransform MatUVTransform "{5CF09956181D34E0}" {
+ }
+ MaskMap "{8A183C448EA6C383}Assets/Vehicles/Wheeled/M923A1/VehParts/Data/M944A1_Body_GLOBAL_MASK.edds"
+ VFXMap "{7C45E33658927856}Assets/Vehicles/Wheeled/M923A1/VehParts/Data/M944A1_Body_VFX.edds"
+ GlobalNMOMap "{27A21E0B6CC3108D}Assets/_SharedData/Vehicle/ST_Dents_01_NMO.edds"
+ GlobalNMOUVTransform MatUVTransform "{5CF0E34CD20E8F06}" {
+  TilingU 4
+  TilingV 4
+  OffsetV 0.51
+  Rotation 0
+ }
+ UVSrcDetail "UV set 2"
+ MudColor 0.117 0.093 0.065 1
+ MudRoughness 1.3
+ MudBCRMap "{E65447EA94F2BD03}Assets/_SharedData/Dirt/ST_Grease_Oil01_1m_BCR.edds"
+ MudNMOMap "{DE8CFC784D85EF9D}Assets/_SharedData/Dirt/ST_Grease_Oil01_1m_NMO.edds"
+ MudMaskMap "{816ABEBED1A52FF3}Assets/_SharedData/DetailMask/ST_Mud_01_Mask.edds"
+ MudUVTransform MatUVTransform "{5CFA6DC249C7DD0F}" {
+  TilingU 8
+  TilingV 8
+ }
+ DirtOpacity 0.701
+ DirtLayerSharpness 0
+ DirtColor 0.191 0.191 0.191 1
+ DirtRoughness 1
+ DirtBCRMap "{D9F47D76A9247FD3}Assets/_SharedData/Metal/ST_Metal_Rust_01_BCR.edds"
+ DirtMaskMap "{C9664A554B37B2B2}Assets/_SharedData/DetailMask/ST_Damage_01_Mask1.edds"
+ DirtUVTransform MatUVTransform "{5CF0995027FD1A33}" {
+  TilingU 10
+  TilingV 10
+ }
+ Enabled_3 1
+ Color_3 0.423 0.292 0.181 1
+ BCR_3 "{9B97AA81EF1AAA3C}Assets/_SharedData/Dirt/ST_destruct_rust_BCR.edds"
+ NMO_3 "{37B9B0DFE4B7DEE9}Assets/_SharedData/Metal/ST_Metal_Floor_Diamond_N.edds"
+ UVTransform_3 MatUVTransform "{5CF099508D31B163}" {
+  TilingU 10.64
+  TilingV 10.64
+  OffsetU 0.396
+  OffsetV 0.483
+ }
+ Enabled_2 1
+ Color_1 0.423 0.292 0.181 1
+ BCR_1 "{9B97AA81EF1AAA3C}Assets/_SharedData/Dirt/ST_destruct_rust_BCR.edds"
+ NMO_1 "{A34F1113366DF8A2}Assets/_SharedData/Dirt/ST_destruct_rust_NMO.edds"
+ UVTransform_1 MatUVTransform "{5CF09957DDE6C057}" {
+  TilingU 4
+  TilingV 6
+  OffsetU 0.067
+ }
+ DetNormal_1 0.6
+ Roughness_1 1.2
+ Metalness_1 0.5
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 12
+ TITemperatureCoef1 1
+ TITemperature2 12
+ TITemperatureCoef2 1
+ TITemperature3 12
+ TITemperatureCoef3 1
+ TITemperature4 12
+ TITemperatureCoef4 1
+}

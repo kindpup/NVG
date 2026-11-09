@@ -1,0 +1,24 @@
+MatPBRDecal {
+ CastShadow 0
+ DisablePriorityProbes 1
+ SurfaceProperties "{CE9253778DD8FBDE}Common/Materials/Game/metal.gamemat"
+ AlphaTest 0.1
+ BlendMode AlphaBlend
+ OpacityMap "{154CDD131C1D17F6}Assets/Vehicles/Wheeled/BTR70/Data/BTR_70_base_decals_01_A.edds"
+ NormalPower 0.7
+ NMOMap "{940472EC374C2A91}Assets/Vehicles/Wheeled/BTR70/Data/BTR_70_base_decals_01_N.edds"
+ GBufferAlbedo 1
+ NormalCombinePower 4
+ GBufferRoughness 1
+ GBufferMetalness 1
+ GBufferAO 1
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

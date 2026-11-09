@@ -1,0 +1,18 @@
+MatPBRBasic : "{5CDDE2709BA9A5EE}Assets/_BaseMaterials/Characters_MatPBRBasic.emat" {
+ Cull none
+ Sort translucent
+ AlphaMul 1.5
+ BlendMode AlphaBlend
+ BCRMap "{6A8B4ADEF9D6F937}Assets/Characters/Vests/Vest_SRU21P/Data/Vest_SRU21P_BCR.edds"
+ OpacityMap "{89757CD027801C45}Assets/Characters/Vests/Vest_SRU21P/Data/Vest_SRU21P_A.edds"
+ NMOMap "{5253F14C20A1ABA9}Assets/Characters/Vests/Vest_SRU21P/Data/Vest_SRU21P_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 27
+ TITemperatureCoef1 1
+ TITemperature2 27
+ TITemperatureCoef2 1
+ TITemperature3 27
+ TITemperatureCoef3 1
+ TITemperature4 27
+ TITemperatureCoef4 1
+}

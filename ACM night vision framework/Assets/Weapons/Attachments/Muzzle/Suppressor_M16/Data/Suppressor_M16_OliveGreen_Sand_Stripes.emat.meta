@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{B3A475026B753ABD}Assets/Weapons/Attachments/Muzzle/Suppressor_M16/Data/Suppressor_M16_OliveGreen_Sand_Stripes.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

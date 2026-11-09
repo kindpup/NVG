@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{72A72A91405F454F}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_wheel_Wreck.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

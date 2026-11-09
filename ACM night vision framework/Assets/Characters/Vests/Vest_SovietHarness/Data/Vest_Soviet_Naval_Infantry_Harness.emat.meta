@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{FA9D0035D4FA0996}Assets/Characters/Vests/Vest_SovietHarness/Data/Vest_Soviet_Naval_Infantry_Harness.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

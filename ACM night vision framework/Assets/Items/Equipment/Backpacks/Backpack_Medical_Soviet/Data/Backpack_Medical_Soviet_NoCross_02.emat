@@ -1,0 +1,13 @@
+MatPBRBasic : "{91A4EE342C0C5C8A}Assets/Items/Equipment/Backpacks/Backpack_Medical_Soviet/Data/Backpack_Medical_Soviet.emat" {
+ BCRMap "{BAB3468CD9C15863}Assets/Items/Equipment/Backpacks/Backpack_Medical_Soviet/Data/Backpack_Medical_Soviet_NoCross_02_BCR.edds"
+ NMOMap "{826BFD1E00B60AFD}Assets/Items/Equipment/Backpacks/Backpack_Medical_Soviet/Data/Backpack_Medical_Soviet_NoCross_02_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 25
+ TITemperatureCoef1 1
+ TITemperature2 25
+ TITemperatureCoef2 1
+ TITemperature3 25
+ TITemperatureCoef3 1
+ TITemperature4 25
+ TITemperatureCoef4 1
+}

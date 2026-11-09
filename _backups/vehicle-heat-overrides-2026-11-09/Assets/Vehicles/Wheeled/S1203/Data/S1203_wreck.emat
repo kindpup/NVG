@@ -1,0 +1,38 @@
+MatPBRMulti {
+ Cull none
+ GlobalMapsUVTransform MatUVTransform "{6066A4218D476B33}" {
+  TilingU 10
+  TilingV 10
+ }
+ GlobalNMOUVTransform MatUVTransform "{6066A423726B4B8D}" {
+ }
+ Enabled_2 1
+ Color_2 0.604 0.528 0.484 1
+ BCR_2 "{9B97AA81EF1AAA3C}Assets/_SharedData/Dirt/ST_destruct_rust_BCR.edds"
+ NMO_2 "{96EF3CD8C8E643BA}Assets/_SharedData/Dirt/ST_Mud_01_NMO.edds"
+ MaskSharpness_2 3.093
+ MaskOffset_2 0.165
+ Mask_2 "{37524A19D6A23FC6}Assets/_SharedData/DetailMask/ST_Paint_peeling_02_Mask1.edds"
+ MaskUVScale_2 0.2
+ UVTransform_2 MatUVTransform "{62C87D92FFA1C230}" {
+  TilingU 20
+  TilingV 20
+ }
+ DetNormal_2 2
+ Color_1 0.651 0.597 0.542 1
+ BCR_1 "{9B97AA81EF1AAA3C}Assets/_SharedData/Dirt/ST_destruct_rust_BCR.edds"
+ NMO_1 "{A34F1113366DF8A2}Assets/_SharedData/Dirt/ST_destruct_rust_NMO.edds"
+ UVTransform_1 MatUVTransform "{62C87D92089D20F7}" {
+  TilingU 7
+  TilingV 7
+ }
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 12
+ TITemperatureCoef1 1
+ TITemperature2 12
+ TITemperatureCoef2 1
+ TITemperature3 12
+ TITemperatureCoef3 1
+ TITemperature4 12
+ TITemperatureCoef4 1
+}

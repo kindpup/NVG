@@ -1,0 +1,24 @@
+MatPBRDecal {
+ ZWrite 0
+ CastShadow 0
+ DisablePriorityProbes 1
+ AlphaTest 0.1
+ BlendMode AlphaBlend
+ CavityFromAO 0.781
+ BCRMap "{BB440784A103CB06}Assets/_SharedData/Metal/ST_MetalPaint_Coated_1m_BCR.edds"
+ OpacityMap "{C8763B9D2C5FD692}Assets/Vehicles/Helicopters/UH1H/Data/UH-1H_Decals_GLOBAL_MASK.edds"
+ NMOMap "{A82B9E3950895A07}Assets/Vehicles/Helicopters/UH1H/Data/UH-1H_Decals_NMO.edds"
+ GBufferAlbedo 1
+ GBufferRoughness 1
+ GBufferMetalness 1
+ GBufferAO 1
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

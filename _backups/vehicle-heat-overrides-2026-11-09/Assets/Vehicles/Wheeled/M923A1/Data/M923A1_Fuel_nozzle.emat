@@ -1,0 +1,61 @@
+MatPBRMulti {
+ UVSrcGlobalMaps "UV set 2"
+ MaskMap "{9FA95C1CA8394AB3}Assets/Vehicles/Wheeled/M923A1/Data/M923A1_Fuel_nozzle_GLOBAL_MASK.edds"
+ Enabled_4 1
+ Color_4 0.091 0.083 0.072 1
+ BCR_4 "{15A4D0147C0F3804}Assets/_SharedData/Plaster/ST_Plaster_Damaged_01_BCR.edds"
+ MaskSharpness_4 0.739
+ MaskOffset_4 0.007
+ Mask_4 "{C9664A554B37B2B2}Assets/_SharedData/DetailMask/ST_Damage_01_Mask1.edds"
+ UVTransform_4 MatUVTransform "{56D83D795EE01424}" {
+  TilingU 10
+  TilingV 10
+  OffsetU 0.26
+ }
+ Roughness_4 5
+ Metalness_4 0
+ Enabled_3 1
+ Color_3 0.078 0.068 0.055 1
+ BCR_3 "{FA742FE6A11B2766}Assets/_SharedData/Metal/ST_Steel_Base_01_BCR.edds"
+ NMO_3 "{C2AC9474786C75F8}Assets/_SharedData/Metal/ST_Steel_Base_01_NMO.edds"
+ MaskSharpness_3 1.556
+ MaskOffset_3 0.077
+ Mask_3 "{A585D759C4C68372}Assets/_SharedData/DetailMask/ST_Rust_02_Mask1.edds"
+ UVTransform_3 MatUVTransform "{56D83D68918FA9F2}" {
+  TilingU 4
+  TilingV 4
+ }
+ DetNormal_3 0
+ Roughness_3 1.887
+ Enabled_2 1
+ Color_2 0.136 0.114 0.063 1
+ BCR_2 "{8EADB31D864DD0FC}Assets/_SharedData/Metal/ST_MetalBare_01_BCR.edds"
+ NMO_2 "{C2AC9474786C75F8}Assets/_SharedData/Metal/ST_Steel_Base_01_NMO.edds"
+ MaskSharpness_2 9.961
+ MaskOffset_2 0.058
+ Mask_2 "{AF3EED70E19D46AB}Assets/_SharedData/DetailMask/ST_Scratches_02_MASK1.edds"
+ UVTransform_2 MatUVTransform "{56D83D4FCDC0F818}" {
+  TilingU 20
+  TilingV 20
+ }
+ DetNormal_2 5
+ Color_1 0.047 0.05 0.022 1
+ BCR_1 "{DDFA1BE6FC945C12}Assets/_SharedData/Metal/ST_Metal_Stainles01_1m_BCR.edds"
+ NMO_1 "{E522A07425E30E8C}Assets/_SharedData/Metal/ST_Metal_Stainles01_1m_NMO.edds"
+ UVTransform_1 MatUVTransform "{56D83D4F757F7B3E}" {
+  TilingU 4
+  TilingV 4
+ }
+ DetNormal_1 5
+ Roughness_1 3.953
+ Metalness_1 0
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

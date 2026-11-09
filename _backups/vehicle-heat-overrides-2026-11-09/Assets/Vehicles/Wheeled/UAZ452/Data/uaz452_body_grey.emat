@@ -1,0 +1,20 @@
+MatPBRMulti : "{0B26CD1D86CDA51B}Assets/Vehicles/Wheeled/UAZ452/Data/uaz452_body.emat" {
+ Color_2 0.246 0.246 0.246 1
+ MaskOffset_2 0.044
+ MaskUVScale_2 1
+ Color_1 0.129 0.144 0.142 1
+ BCR_1
+ NMO_1 "{839CBC1678749998}Assets/_SharedData/Metal/ST_MetalPaint_Coated_1m_NMO.edds"
+ DetNormal_1 0.1
+ Roughness_1 0.1
+ Metalness_1 0
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

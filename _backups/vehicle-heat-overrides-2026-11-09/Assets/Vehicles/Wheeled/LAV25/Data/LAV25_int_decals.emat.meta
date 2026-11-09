@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{0CAB12D406BF728F}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_int_decals.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

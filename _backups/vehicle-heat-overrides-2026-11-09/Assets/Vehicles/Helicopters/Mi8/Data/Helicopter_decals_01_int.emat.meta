@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{A99B12B6CBA6FE16}Assets/Vehicles/Helicopters/Mi8/Data/Helicopter_decals_01_int.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

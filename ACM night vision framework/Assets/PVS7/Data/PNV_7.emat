@@ -1,5 +1,0 @@
-MatPBRBasic {
- AllowUserAlphaBias 1
- BCRMap "{3E231DA6E48F104A}Assets/PVS7/Data/PNV_7_BCR.edds"
- NMOMap "{06FBA6343DF842D4}Assets/PVS7/Data/PNV_7_NMO.edds"
-}

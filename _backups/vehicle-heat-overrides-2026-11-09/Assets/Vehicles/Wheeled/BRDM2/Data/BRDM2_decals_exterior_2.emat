@@ -1,0 +1,25 @@
+MatPBRDecal {
+ Color 0.02 0.019 0.007 1
+ DisableInteriorProbes 1
+ SurfaceProperties "{CE9253778DD8FBDE}Common/Materials/Game/metal.gamemat"
+ AlphaTest 0.1
+ AlphaMul 1.662
+ BlendMode AlphaBlend
+ OpacityMap "{35D1BE199D383206}Assets/Vehicles/Wheeled/BRDM2/Data/BRDM2_welds_A.edds"
+ NormalPower 1.471
+ NMOMap "{733797E902D066C2}Assets/Vehicles/Wheeled/BRDM2/Data/BRDM2_welds_NMO.edds"
+ GlobalMapsUVTransform MatUVTransform "{5CB8631FB3826EC3}" {
+ }
+ GBufferRoughness 1
+ GBufferMetalness 1
+ GBufferAO 1
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

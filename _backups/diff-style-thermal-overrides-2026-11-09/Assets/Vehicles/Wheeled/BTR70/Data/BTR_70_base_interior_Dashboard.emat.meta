@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{D58E7C281088A79A}Assets/Vehicles/Wheeled/BTR70/Data/BTR_70_base_interior_Dashboard.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

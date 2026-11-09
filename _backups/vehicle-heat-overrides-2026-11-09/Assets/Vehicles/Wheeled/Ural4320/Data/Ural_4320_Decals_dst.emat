@@ -1,0 +1,20 @@
+MatPBRDecal {
+ CastShadow 0
+ Specular 0.627 0.627 0.627 1
+ AlphaTest 0.1
+ BlendMode AlphaBlend
+ OpacityMap "{8C0CDAA63C76576E}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Decals_dst_A.edds"
+ NMOMap "{C2010CDFCBCA2591}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Decals_dst_NMO.edds"
+ GBufferAlbedo 1
+ GBufferRoughness 1
+ GBufferMetalness 1
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 12
+ TITemperatureCoef1 1
+ TITemperature2 12
+ TITemperatureCoef2 1
+ TITemperature3 12
+ TITemperatureCoef3 1
+ TITemperature4 12
+ TITemperatureCoef4 1
+}

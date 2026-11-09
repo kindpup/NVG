@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{8E0D0CF85941C91D}Assets/Vehicles/Wheeled/V2101/Data/V2101_decal02.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

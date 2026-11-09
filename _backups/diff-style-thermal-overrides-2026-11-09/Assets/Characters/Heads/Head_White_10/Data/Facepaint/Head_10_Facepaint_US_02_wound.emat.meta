@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{65708BB73358CAA8}Assets/Characters/Heads/Head_White_10/Data/Facepaint/Head_10_Facepaint_US_02_wound.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

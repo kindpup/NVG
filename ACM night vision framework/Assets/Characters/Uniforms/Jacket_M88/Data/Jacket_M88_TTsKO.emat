@@ -1,0 +1,20 @@
+MatPBRMulti : "{0FB93B007F4E3A39}Assets/_BaseMaterials/Characters_MatPBRMulti.emat" {
+ SurfaceProperties "{DA94EA1EF2914EB7}Common/Materials/Game/flesh.gamemat"
+ CavityFromAO 1
+ VFXMap "{67BEDC50A146C9C0}Assets/Characters/Uniforms/Jacket_M88/Data/Jacket_M88_01_VFX.edds"
+ DirtUserOpacity 1
+ DirtOpacity 3
+ DirtRoughness 1.2
+ DirtBCRMap "{589BC66C283D5537}Assets/Characters/Uniforms/Jacket_M88/Data/Jacket_M88_TTsKO_wound_BCR.edds"
+ BCR_1 "{A743F09E79DBABFD}Assets/Characters/Uniforms/Jacket_M88/Data/Jacket_M88_TTsKO_BCR.edds"
+ NMO_1 "{9F9B4B0CA0ACF963}Assets/Characters/Uniforms/Jacket_M88/Data/Jacket_M88_TTsKO_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 28
+ TITemperatureCoef1 1
+ TITemperature2 28
+ TITemperatureCoef2 1
+ TITemperature3 28
+ TITemperatureCoef3 1
+ TITemperature4 28
+ TITemperatureCoef4 1
+}

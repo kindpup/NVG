@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{FD0B9D2C941D98EE}Assets/Items/Equipment/Radios/Radio_RF10/Data/Radio_RF10_MLOD.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

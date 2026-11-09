@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{06472FA1D1733B8E}Assets/Characters/HeadGear/Helmet_TSh4/Data/Helmet_TSh4_01.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

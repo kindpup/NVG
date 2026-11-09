@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{75C5C69FCAA2FA7C}Assets/Characters/Heads/Head_White_03/Data/Facepaint/Head_03_Facepaint_US_01_neck_wound.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

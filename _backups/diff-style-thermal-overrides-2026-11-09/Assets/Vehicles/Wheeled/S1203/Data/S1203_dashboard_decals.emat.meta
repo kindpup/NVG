@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{D60C6024930A4C5B}Assets/Vehicles/Wheeled/S1203/Data/S1203_dashboard_decals.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

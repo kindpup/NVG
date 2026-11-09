@@ -1,0 +1,15 @@
+MatPBRBasic : "{EC8B1EFF631F3A47}Assets/Vehicles/Generic/Data/Vehicle_Lights_Parabola_EM.emat" {
+ DisablePriorityProbes 1
+ EmissiveMap "{103777A0CE59DEBC}Assets/Vehicles/Wheeled/S1203/Data/S1203_lights_Emission.edds"
+ BCRMap "{B1EA6B51A10B5EE2}Assets/Vehicles/Wheeled/S1203/Data/S1203_lights_BCR.edds"
+ NMOMap "{8932D0C3787C0C7C}Assets/Vehicles/Wheeled/S1203/Data/S1203_lights_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

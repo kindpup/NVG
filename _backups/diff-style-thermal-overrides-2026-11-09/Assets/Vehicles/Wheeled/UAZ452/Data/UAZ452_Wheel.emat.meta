@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{71AF02A6BBE9A3D4}Assets/Vehicles/Wheeled/UAZ452/Data/UAZ452_Wheel.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

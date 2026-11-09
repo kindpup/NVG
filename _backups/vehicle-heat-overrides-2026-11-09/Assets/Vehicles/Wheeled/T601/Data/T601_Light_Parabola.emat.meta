@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{E2641188BCE49AFA}Assets/Vehicles/Wheeled/T601/Data/T601_Light_Parabola.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

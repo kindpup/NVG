@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{2767D4CF1B1A4159}Assets/Vehicles/Wheeled/BRDM2/Data/BRDM2_EXT_MLOD_mat.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

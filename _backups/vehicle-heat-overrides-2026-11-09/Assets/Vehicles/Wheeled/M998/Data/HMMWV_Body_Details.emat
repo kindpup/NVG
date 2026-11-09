@@ -1,0 +1,80 @@
+MatPBRMulti {
+ CastShadow 1
+ ReceiveShadow 1
+ DisablePriorityProbes 1
+ SurfaceProperties "{6ADE4EF6A8AD9019}Common/Materials/Game/gravel.gamemat"
+ GlobalMCRMap "{932A559107858200}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Base_MCR.edds"
+ OverlayWhitePower 0.2
+ UVSrcGlobalMaps "UV set 2"
+ MaskMap "{00AE67E13B68C7EA}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Base_GLOBAL_MASK.edds"
+ VFXMap "{1A1DA685DD4F1FF6}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Base_VFX.edds"
+ GlobalNMOMap "{57996492AC0C4040}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Base_NMO.edds"
+ MudOpacity 0.98
+ MudColor 0.072 0.062 0.053 1
+ MudRoughness 1.45
+ MudBCRMap "{AE37874A11911124}Assets/_SharedData/Dirt/ST_Mud_01_BCR.edds"
+ MudNMOMap "{96EF3CD8C8E643BA}Assets/_SharedData/Dirt/ST_Mud_01_NMO.edds"
+ MudMaskMap "{816ABEBED1A52FF3}Assets/_SharedData/DetailMask/ST_Mud_01_Mask.edds"
+ MudUVTransform MatUVTransform "{60B3674A17EB9F41}" {
+  TilingU 8
+  TilingV 8
+ }
+ DirtOpacity 0.37
+ DirtLayerSharpness 0.5
+ DirtColor 0.063 0.056 0.047 1
+ DirtRoughness 1
+ DirtBCRMap "{366028E90066FC57}Assets/_SharedData/Dirt/ST_Dirt_Sand_BCR.edds"
+ DirtMaskMap "{C9664A554B37B2B2}Assets/_SharedData/DetailMask/ST_Damage_01_Mask1.edds"
+ DirtUVTransform MatUVTransform "{60B3674A7BB1B59D}" {
+  TilingU 15
+  TilingV 15
+  Rotation 90
+ }
+ Enabled_4 1
+ Color_4 0.072 0.067 0.056 1
+ BCR_4 "{07CBA6AB99E68F3D}Assets/_SharedData/Plastic/ST_TarpaulinCanvas_BCR.edds"
+ NMO_4 "{3F131D394091DDA3}Assets/_SharedData/Plastic/ST_TarpaulinCanvas_NMO.edds"
+ UVTransform_4 MatUVTransform "{60B3674A649618E8}" {
+  TilingU 12
+  TilingV 12
+ }
+ DetNormal_4 3.099
+ Roughness_4 1.4
+ Enabled_3 1
+ Color_3 0.107 0.107 0.107 1
+ BCR_3 "{DDFA1BE6FC945C12}Assets/_SharedData/Metal/ST_Metal_Stainles01_1m_BCR.edds"
+ NMO_3 "{E522A07425E30E8C}Assets/_SharedData/Metal/ST_Metal_Stainles01_1m_NMO.edds"
+ UVTransform_3 MatUVTransform "{50A68D9A90E0CF86}" {
+  TilingU 5
+  TilingV 5
+ }
+ Roughness_3 2.69
+ Enabled_2 1
+ Color_2 0.033 0.033 0.033 1
+ BCR_2 "{B141E00CC94C086A}Assets/_SharedData/Rubber/ST_Rubber_Aged01_1m_BCR.edds"
+ NMO_2 "{89995B9E103B5AF4}Assets/_SharedData/Rubber/ST_Rubber_Aged01_1m_NMO.edds"
+ UVTransform_2 MatUVTransform "{60B3674B90BF29EC}" {
+  TilingU 12
+  TilingV 12
+ }
+ Roughness_2 0.7
+ Color_1 0.115 0.117 0.097 1
+ BCR_1 "{8EADB31D864DD0FC}Assets/_SharedData/Metal/ST_MetalBare_01_BCR.edds"
+ NMO_1 "{0470164F98BC8DD2}Assets/_SharedData/Metal/ST_MetalBare_01_NMO.edds"
+ UVTransform_1 MatUVTransform "{60B3674B81006249}" {
+  TilingU 4.5
+  TilingV 4.5
+ }
+ DetNormal_1 0.5
+ Roughness_1 1.2
+ Metalness_1 0.5
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{DD8E67D38C21D0C0}Assets/Characters/HeadGear/Hat_Ushanka_01/Data/Hat_Ushanka_01.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

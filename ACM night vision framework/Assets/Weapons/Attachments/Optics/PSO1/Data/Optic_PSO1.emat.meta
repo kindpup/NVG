@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{1B41AF7E6D76CC62}Assets/Weapons/Attachments/Optics/PSO1/Data/Optic_PSO1.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

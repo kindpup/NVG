@@ -1,0 +1,26 @@
+MatPBRBasic : "{E804583583DC08A9}Assets/_BaseMaterials/Weapons_MatPBRBasic.emat" {
+ Sort decal
+ TCModFuncs {
+  TCModShift "{612CD0FB09F5C66F}" {
+   ShiftU 2.1
+   Refs {
+	"ShiftU" "SCR_AnimatedBeltComponent.m_fBeltProgress"
+    }
+  }
+ }
+ BlendMode AlphaBlend
+ BCRMap "{D6C122DBB27EB95D}Assets/Weapons/Magazines/M60/Data/M60D_BulletBelt_BCR.edds"
+ OpacityMap "{327B843A7DD608E9}Assets/Weapons/Magazines/M60/Data/M60D_BulletBelt_A.edds"
+ NMOMap "{EE1999496B09EBC3}Assets/Weapons/Magazines/M60/Data/M60D_BulletBelt_NMO.edds"
+ HeightMap "{D7CB6DCA49F38E72}Assets/Weapons/Magazines/M60/Data/M60D_BulletBelt_height.edds"
+ ParallaxScale 0.03
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 26
+ TITemperatureCoef1 1
+ TITemperature2 26
+ TITemperatureCoef2 1
+ TITemperature3 26
+ TITemperatureCoef3 1
+ TITemperature4 26
+ TITemperatureCoef4 1
+}

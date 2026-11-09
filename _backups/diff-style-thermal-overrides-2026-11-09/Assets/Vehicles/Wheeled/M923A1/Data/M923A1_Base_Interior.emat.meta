@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{3D4CFD73267AD3FF}Assets/Vehicles/Wheeled/M923A1/Data/M923A1_Base_Interior.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

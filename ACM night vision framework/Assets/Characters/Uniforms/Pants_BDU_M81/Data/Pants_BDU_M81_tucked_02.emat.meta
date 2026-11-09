@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{0720A935A8DABB7B}Assets/Characters/Uniforms/Pants_BDU_M81/Data/Pants_BDU_M81_tucked_02.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

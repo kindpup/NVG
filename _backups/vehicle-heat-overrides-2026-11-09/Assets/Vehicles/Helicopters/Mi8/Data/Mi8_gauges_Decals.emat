@@ -1,0 +1,16 @@
+MatPBRBasic {
+ SortBias 15
+ AlphaMul 0
+ DielectricReflectance 0.02
+ BCRMap "{40DBF92399A8FB90}Assets/Vehicles/Helicopters/Mi8/Data/Mi8_gauges_decals.edds"
+ OpacityMap "{CCB9D6204D9ACE01}Assets/Vehicles/Helicopters/Mi8/Data/Mi8_gauges_GLOBAL_MASK.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

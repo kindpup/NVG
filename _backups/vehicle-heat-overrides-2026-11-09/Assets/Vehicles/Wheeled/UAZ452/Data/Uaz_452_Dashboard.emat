@@ -1,0 +1,18 @@
+MatPBRBasic {
+ Emissive 1 0.79 0.558 0
+ EmissiveLV 0
+ ApplyAlbedoToEmissive 1
+ RoughnessScale 0.767
+ EmissiveMap "{0A34523DDAAC6081}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Dashboard_EM.edds"
+ BCRMap "{D2276DEB2810E276}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Dashboard_BCR.edds"
+ NMOMap "{E522A07425E30E8C}Assets/_SharedData/Metal/ST_Metal_Stainles01_1m_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

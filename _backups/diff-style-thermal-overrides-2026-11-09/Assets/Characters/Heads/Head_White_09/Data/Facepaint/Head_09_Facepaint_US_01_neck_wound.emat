@@ -1,0 +1,11 @@
+MatPBRSkinProfile {
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 34
+ TITemperatureCoef1 1
+ TITemperature2 34
+ TITemperatureCoef2 1
+ TITemperature3 34
+ TITemperatureCoef3 1
+ TITemperature4 34
+ TITemperatureCoef4 1
+}

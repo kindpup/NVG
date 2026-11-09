@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{1754022C919BD0D8}Assets/Items/Equipment/Backpacks/Backpack_RPG_Assistant/Data/Backpack_RPG_Assistant_Soviet_Naval_Infantry.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{B175D93FDBC246E6}Assets/Characters/Heads/Head_Asian_02/Data/Facepaint/Head_Asian_02_Facepaint_US_02.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

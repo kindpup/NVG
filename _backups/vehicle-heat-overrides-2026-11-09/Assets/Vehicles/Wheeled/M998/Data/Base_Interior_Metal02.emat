@@ -1,0 +1,15 @@
+MatPBRBasic {
+ Color 0.212 0.212 0.212 1
+ RoughnessScale 0.599
+ MetalnessScale 2.698
+ NMOMap "{12492EF18AA12664}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Base02_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

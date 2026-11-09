@@ -1,0 +1,73 @@
+MatPBRMulti {
+ Cull none
+ SurfaceProperties "{CE9253778DD8FBDE}Common/Materials/Game/metal.gamemat"
+ GlobalMCRMap "{7CCCEB649A52BDA8}Assets/Vehicles/Helicopters/UH1H/Data/UH_1H_New_Interior_MCR.edds"
+ OverlayBlackPower 0.66
+ UVSrcGlobalMaps "UV set 2"
+ MaskMap "{2ADB30D3E3FD9ADA}Assets/Vehicles/Helicopters/UH1H/Data/UH_1H_New_Interior_GLOBAL_MASK.edds"
+ VFXMap "{B85B12AB14EDF929}Assets/Vehicles/Helicopters/UH1H/Data/UH_1H_New_Interior_VFX.edds"
+ GlobalNMOMap "{C829170348894845}Assets/Vehicles/Helicopters/UH1H/Data/UH_1H_New_Interior_NMO.edds"
+ UVSrcDetail "UV set 2"
+ MudColor 0.086 0.102 0.11 1
+ MudRoughness 3
+ MudBCRMap "{35DFF427FFCD66ED}Assets/_SharedData/Metal/ST_Metal_Fine01_1m_BCR.edds"
+ MudMaskMap "{4AC0130FB7602505}Assets/_SharedData/DetailMask/ST_Scratches_03_Mask1.edds"
+ MudUVTransform MatUVTransform "{5132A72AFC29AD8C}" {
+  TilingU 40
+  TilingV 40
+ }
+ DirtOpacity 1.87
+ DirtLayerSharpness 0.24
+ DirtColor 0.043 0.035 0.02 1
+ DirtRoughness 1
+ DirtBCRMap "{366028E90066FC57}Assets/_SharedData/Dirt/ST_Dirt_Sand_BCR.edds"
+ DirtMaskMap "{DE18086A9CA88FBA}Assets/_SharedData/DetailMask/ST_Dirt_04_Mask1.edds"
+ DirtUVTransform MatUVTransform "{4FCB272D7FE8834B}" {
+  TilingU 30
+  TilingV 30
+ }
+ Enabled_4 1
+ Color_4 0.455 0.455 0.455 1
+ BCR_4 "{881354997C629FF8}Assets/_SharedData/Metal/ST_metal_painted_rusted_02_BCR.edds"
+ NMO_4 "{7D7AE742451C496E}Assets/_SharedData/Metal/ST_Metal_Floor_01_NMO.edds"
+ UVTransform_4 MatUVTransform "{508CED5DEC67C4FE}" {
+  TilingU 60
+  TilingV 60
+ }
+ DetNormal_4 0.5
+ AO_4 1.3
+ Enabled_3 1
+ Color_3 0.694 0.694 0.694 1
+ BCR_3 "{28E3190B20D0089D}Assets/_SharedData/Fabric/ST_Leather_Upholstery_Diamond_02_BCR.edds"
+ NMO_3 "{103BA299F9A75A03}Assets/_SharedData/Fabric/ST_Leather_Upholstery_Diamond_02_NMO.edds"
+ UVTransform_3 MatUVTransform "{508CED5E55508423}" {
+  TilingU 25
+  TilingV 25
+ }
+ Roughness_3 1.3
+ Enabled_2 1
+ Color_2 0.31 0.278 0.204 1
+ BCR_2 "{794A8F488BA2687E}Assets/_SharedData/Fabric/ST_Fabric_Rough01_1m_BCR.edds"
+ NMO_2 "{419234DA52D53AE0}Assets/_SharedData/Fabric/ST_Fabric_Rough01_1m_NMO.edds"
+ UVTransform_2 MatUVTransform "{508CE4A86AA8308F}" {
+  TilingU 30
+  TilingV 30
+ }
+ Color_1 0.051 0.051 0.051 1
+ BCR_1 "{F829787DA88C2E39}Assets/_SharedData/Plastic/ST_Plastic_Leather02_1m_BCR.edds"
+ NMO_1 "{C0F1C3EF71FB7CA7}Assets/_SharedData/Plastic/ST_Plastic_Leather02_1m_NMO.edds"
+ UVTransform_1 MatUVTransform "{508CFABF5B2C3E02}" {
+  TilingU 30
+  TilingV 30
+ }
+ DetNormal_1 2
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

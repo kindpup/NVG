@@ -1,0 +1,12 @@
+# Raw 3D model sources and their texture sources are not published here:
+# several models come from third-party/purchased asset packs whose licenses forbid
+# redistributing source files. Keep them local; Workbench builds from the local copies.
+*.fbx
+*.FBX
+*.blend
+*.blend1
+*.psd
+**/Assets/**/*.png
+**/Assets/**/*.tif
+**/Assets/**/*.tiff
+**/Assets/**/*.tga

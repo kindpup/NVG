@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{8EB48D5DDBBCD704}Assets/Weapons/Attachments/Optics/1P29/Data/Optic_1P29_eyecup.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

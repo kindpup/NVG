@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{56DF9A5509A462A4}Assets/Vehicles/Wheeled/M923A1/Data/M923A1_Cargo_canvas_int.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

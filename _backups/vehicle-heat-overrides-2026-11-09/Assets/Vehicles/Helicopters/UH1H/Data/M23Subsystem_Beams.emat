@@ -1,0 +1,16 @@
+MatPBRBasic {
+ Color 0.027 0.024 0.017 1
+ DisablePriorityProbes 1
+ RoughnessScale 1.645
+ BCRMap "{6390F3AA091C74E1}Assets/_SharedData/Metal/ST_MetalPaint_Mate_1m_BCR.edds"
+ NMOMap "{4CD588FAEA1D47AD}Assets/Vehicles/Helicopters/UH1H/Data/M23Subsystem_Beam_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

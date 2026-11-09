@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{66CBD1E897AB2D8B}Assets/Weapons/Attachments/Underbarrel/M203/Data/M203_carbine.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -7,128 +7,6 @@
 // Constants for imageset
 const string ACM_RADIAL_IMAGESET = "{C258361975CC6C9D}UI/Textures/Icons/ACM_RadialMenu_Icons.imageset";
 
-//------------------------------------------------------------------------------------------------
-// SETTINGS -> TACTICAL ROLE
-//
-// The radial menu is only a FRONTEND for the role API. It owns no role state, caches nothing and
-// makes no decisions - it calls ACM_TacticalRoleComponent.RequestSetTacticalRole and stops. A
-// mission framework, a loadout system, a squad leader assigning roles or an admin override all
-// call the same method, and none of them route through here.
-//
-// Structurally this is the same three-level shape the mod already uses for PEQ-15 -> IR Laser
-// Colour -> Red, so it needs no new menu machinery. Roles are split across two sub-categories
-// because fifteen wedges on one ring is unreadable - the existing submenus all sit at eight or
-// fewer, and that is the geometry this menu was built for.
-//------------------------------------------------------------------------------------------------
-
-//------------------------------------------------------------------------------------------------
-// One role. Selecting it applies immediately - no confirm step, matching every other setting in
-// this menu - and the entry marks itself so the current role is visible without leaving the ring.
-//------------------------------------------------------------------------------------------------
-class ACM_TacticalRoleEntry : SCR_SelectionMenuEntry
-{
-	protected ACM_ETacticalRole m_eRole;
-	protected string m_sDisplayName;
-	protected bool m_bPerformed;
-
-	void ACM_TacticalRoleEntry(ACM_ETacticalRole role, string displayName)
-	{
-		m_eRole = role;
-		m_sDisplayName = displayName;
-
-		// One shared icon: the imageset has no per-role art yet, and inventing fifteen names that
-		// resolve to nothing would leave every wedge blank rather than merely identical.
-		SetIcon(ACM_RADIAL_IMAGESET, "category");
-		SetName(m_sDisplayName);
-	}
-
-	override void Update()
-	{
-		ACM_TacticalRoleComponent registry = ACM_TacticalRoleComponent.GetInstance();
-
-		if (registry && registry.GetLocalTacticalRole() == m_eRole)
-			SetName(string.Format("%1 [ACTIVE]", m_sDisplayName));
-		else
-			SetName(m_sDisplayName);
-	}
-
-	override void OnPerform()
-	{
-		// Same double-fire guard the mod's other dynamic entries use.
-		if (m_bPerformed)
-			return;
-
-		m_bPerformed = true;
-
-		ACM_TacticalRoleComponent registry = ACM_TacticalRoleComponent.GetInstance();
-		if (!registry)
-			return;
-
-		registry.RequestSetTacticalRole(m_eRole);
-
-		// Feedback, because the menu closes on perform and the marker change happens out on other
-		// people's displays rather than on the selecting player's own.
-		SCR_HintManagerComponent.ShowCustomHint(string.Format("Tactical Role: %1", m_sDisplayName), "ACM", 3);
-	}
-}
-
-//------------------------------------------------------------------------------------------------
-// A group of roles.
-//------------------------------------------------------------------------------------------------
-class ACM_TacticalRoleGroupCategory : SCR_SelectionMenuCategoryEntry
-{
-	void ACM_TacticalRoleGroupCategory(string name)
-	{
-		SetIcon(ACM_RADIAL_IMAGESET, "category");
-		SetName(name);
-	}
-}
-
-//------------------------------------------------------------------------------------------------
-// The Tactical Role root. Its label carries the current role, so a player can read what they are
-// set to without opening it - the same pattern the light colour categories use.
-//------------------------------------------------------------------------------------------------
-class ACM_TacticalRoleCategory : SCR_SelectionMenuCategoryEntry
-{
-	void ACM_TacticalRoleCategory()
-	{
-		SetIcon(ACM_RADIAL_IMAGESET, "category");
-		Update();
-	}
-
-	override void Update()
-	{
-		ACM_TacticalRoleComponent registry = ACM_TacticalRoleComponent.GetInstance();
-		if (!registry)
-		{
-			SetName("Tactical Role");
-			return;
-		}
-
-		ACM_ETacticalRole declared = registry.GetLocalTacticalRole();
-
-		// Declared and effective are shown differently on purpose. A player who has chosen sees
-		// their choice; one who has not sees what the fallback is currently deriving for them,
-		// marked as automatic so it is never mistaken for a selection they made.
-		if (declared != ACM_ETacticalRole.UNASSIGNED)
-		{
-			SetName(string.Format("Tactical Role [%1]", ACM_TacticalRoleCatalog.GetPreset(declared).m_sDisplayName));
-			return;
-		}
-
-		IEntity local = SCR_PlayerController.GetLocalControlledEntity();
-		PlayerController controller = GetGame().GetPlayerController();
-		if (!local || !controller)
-		{
-			SetName("Tactical Role");
-			return;
-		}
-
-		ACM_ETacticalRole effective = registry.GetEffectiveTacticalRole(controller.GetPlayerId(), local);
-		SetName(string.Format("Tactical Role [Auto: %1]", ACM_TacticalRoleCatalog.GetPreset(effective).m_sDisplayName));
-	}
-}
-
 [EntityEditorProps(category: "GameScripted/UI/RadialMenu", description: "ACM Attachment Radial Menu")]
 class ACM_RadialMenuItemsComponentClass : SCR_RadialMenuItemsComponentClass {}
 
@@ -504,60 +382,12 @@ class ACM_RadialMenuItemsComponent : SCR_RadialMenuItemsComponent
 		AddWeaponAttachmentEntries(radialMenu, character);
 		AddEquipmentEntries(radialMenu, character);
 		AddVehicleEntries(radialMenu, character);
-		AddTacticalRoleEntries(radialMenu);
 		
 		
 		if (!radialMenu.GetEntryCount())
 			GetGame().GetCallqueue().Call(radialMenu.Close);
 	}
 
-	//------------------------------------------------------------------------------------------------
-	// Tactical Role branch.
-	//
-	// Unlike every other branch in this menu, this one is PLAYER-scoped rather than gear-scoped: it
-	// describes the person, not a device they are carrying, so it is added whether or not any ACM
-	// hardware is equipped. That is a deliberate change in behaviour - the menu used to close itself
-	// when a player had no ACM gear, and now it always has at least this one entry.
-	//------------------------------------------------------------------------------------------------
-	protected void AddTacticalRoleEntries(notnull SCR_RadialMenu radialMenu)
-	{
-		if (!ACM_TacticalRoleComponent.GetInstance())
-			return;
-
-		ACM_TacticalRoleCategory root = new ACM_TacticalRoleCategory();
-
-		ACM_TacticalRoleGroupCategory infantry = new ACM_TacticalRoleGroupCategory("Infantry");
-		AddRole(infantry, ACM_ETacticalRole.RIFLEMAN);
-		AddRole(infantry, ACM_ETacticalRole.AUTOMATIC_RIFLEMAN);
-		AddRole(infantry, ACM_ETacticalRole.GRENADIER);
-		AddRole(infantry, ACM_ETacticalRole.MARKSMAN);
-		AddRole(infantry, ACM_ETacticalRole.MEDIC);
-		AddRole(infantry, ACM_ETacticalRole.COMBAT_ENGINEER);
-		AddRole(infantry, ACM_ETacticalRole.SPECIAL_OPERATIONS);
-		AddRole(infantry, ACM_ETacticalRole.UNASSIGNED);
-
-		ACM_TacticalRoleGroupCategory command = new ACM_TacticalRoleGroupCategory("Command & Support");
-		AddRole(command, ACM_ETacticalRole.TEAM_LEADER);
-		AddRole(command, ACM_ETacticalRole.SQUAD_LEADER);
-		AddRole(command, ACM_ETacticalRole.PLATOON_LEADER);
-		AddRole(command, ACM_ETacticalRole.RADIO_OPERATOR);
-		AddRole(command, ACM_ETacticalRole.JTAC);
-		AddRole(command, ACM_ETacticalRole.UAV_OPERATOR);
-		AddRole(command, ACM_ETacticalRole.CREW);
-		AddRole(command, ACM_ETacticalRole.PILOT);
-
-		root.AddEntry(infantry);
-		root.AddEntry(command);
-
-		radialMenu.AddEntry(root);
-	}
-
-	//------------------------------------------------------------------------------------------------
-	protected void AddRole(ACM_TacticalRoleGroupCategory category, ACM_ETacticalRole role)
-	{
-		ACM_TacticalRolePreset preset = ACM_TacticalRoleCatalog.GetPreset(role);
-		category.AddEntry(new ACM_TacticalRoleEntry(role, preset.m_sDisplayName));
-	}
 }
 
 //------------------------------------------------------------------------------------------------

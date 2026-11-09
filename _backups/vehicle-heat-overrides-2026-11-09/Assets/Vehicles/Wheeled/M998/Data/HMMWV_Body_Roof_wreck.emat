@@ -1,0 +1,49 @@
+MatPBRMulti {
+ CastShadow 1
+ ReceiveShadow 1
+ SurfaceProperties "{6ADE4EF6A8AD9019}Common/Materials/Game/gravel.gamemat"
+ UVSrcGlobalMaps "UV set 2"
+ MaskMap "{7699496876C32491}Assets/Vehicles/Wheeled/M998/Data/HMMWV_M1025_GLOBAL_MASK.edds"
+ VFXMap "{C923676B4BD2D4C9}Assets/Vehicles/Wheeled/M998/Data/HMMWV_M1025_VFX.edds"
+ MudMetalness 0
+ DirtOpacity 1.038
+ DirtLayerSharpness 1
+ DirtColor 0.003 0.003 0.002 1
+ DirtRoughness 1
+ DirtMaskMap "{C9664A554B37B2B2}Assets/_SharedData/DetailMask/ST_Damage_01_Mask1.edds"
+ DirtUVTransform MatUVTransform "{60B3674A7BB1B59D}" {
+  TilingU 15
+  TilingV 15
+  Rotation 90
+ }
+ Enabled_4 1
+ Color_4 0.768 0.768 0.768 1
+ BCR_4 "{9B97AA81EF1AAA3C}Assets/_SharedData/Dirt/ST_destruct_rust_BCR.edds"
+ NMO_4 "{A34F1113366DF8A2}Assets/_SharedData/Dirt/ST_destruct_rust_NMO.edds"
+ MaskSharpness_4 2
+ MaskOffset_4 0.6
+ Mask_4 "{C9664A554B37B2B2}Assets/_SharedData/DetailMask/ST_Damage_01_Mask1.edds"
+ UVTransform_4 MatUVTransform "{52F2D2C753E47824}" {
+  TilingU 4
+  TilingV 4
+ }
+ Metalness_4 0
+ Metalness_3 0
+ Metalness_2 0
+ Color_1 0.028 0.03 0.016 1
+ NMO_1 "{E33A5A9E39D9E660}Assets/_SharedData/Metal/ST_MetalPaint_Mate_1m_NMO.edds"
+ UVTransform_1 MatUVTransform "{60B3674B81006249}" {
+  TilingU 10
+  TilingV 10
+ }
+ Roughness_1 0.685
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 12
+ TITemperatureCoef1 1
+ TITemperature2 12
+ TITemperatureCoef2 1
+ TITemperature3 12
+ TITemperatureCoef3 1
+ TITemperature4 12
+ TITemperatureCoef4 1
+}

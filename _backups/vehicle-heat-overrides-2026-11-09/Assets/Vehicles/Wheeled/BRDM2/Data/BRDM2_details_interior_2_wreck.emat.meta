@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{7F1B3E9E3750DE42}Assets/Vehicles/Wheeled/BRDM2/Data/BRDM2_details_interior_2_wreck.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

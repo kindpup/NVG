@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{A4427F555B5B7CEE}Assets/Weapons/Attachments/Optics/PSO1/Data/ak74_pso1_tritium.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

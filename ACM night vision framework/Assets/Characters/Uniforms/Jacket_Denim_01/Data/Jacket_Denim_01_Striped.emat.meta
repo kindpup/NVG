@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{283C1FA30F71D4D0}Assets/Characters/Uniforms/Jacket_Denim_01/Data/Jacket_Denim_01_Striped.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

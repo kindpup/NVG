@@ -148,15 +148,6 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 	// the same camera we wrote to. Writing default values to slots we never owned
 	// (or to a stale camId after the active camera changed) corrupts another mod's
 	// or the engine's own postprocess binding and crashes natively next render.
-	// Mirroring to a second camera.
-	//
-	// The remote feed renders through its own world camera slot, and post-process effects are
-	// attached per camera index - so a feed camera gets no night vision at all unless the same
-	// chain is applied to it. This is the only handle it needs: which instance currently owns the
-	// effects, and a counter that changes whenever the chain does, so a mirror can tell it has
-	// gone stale without re-applying four effects every tick.
-	protected static ACM_NightVisionComponent s_EffectOwner;
-	protected static int s_iEffectVersion;
 
 	protected int m_iAppliedCamId = -1;
 	protected bool m_bSlot8Applied;
@@ -679,71 +670,6 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 	//------------------------------------------------------------------------------------------------
 	// Visual effects
 	//------------------------------------------------------------------------------------------------
-	// Changes whenever the night vision chain is switched on, off, or reconfigured. A mirror
-	// compares against this rather than re-applying every frame.
-	//------------------------------------------------------------------------------------------------
-	static int GetEffectVersion()
-	{
-		return s_iEffectVersion;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	// Copies the ACTIVE night vision chain onto another camera index, so a second view - the IVAS
-	// remote feed - looks through the same tube the wearer does.
-	//
-	// Returns false when nothing is active, which is not a failure: it means the goggles are up and
-	// the second camera should be clean rather than tinted.
-	//------------------------------------------------------------------------------------------------
-	static bool MirrorEffectsTo(int camId)
-	{
-		if (!s_EffectOwner || camId < 0)
-			return false;
-
-		return s_EffectOwner.ApplyChainTo(camId);
-	}
-
-	//------------------------------------------------------------------------------------------------
-	static void ClearMirroredEffects(int camId)
-	{
-		BaseWorld world = GetGame().GetWorld();
-		if (!world || camId < 0)
-			return;
-
-		world.SetCameraPostProcessEffect(camId, 11, PostProcessEffectType.ThermalImaging, "");
-		world.SetCameraPostProcessEffect(camId, 9, PostProcessEffectType.None, "");
-		world.SetCameraPostProcessEffect(camId, 8, PostProcessEffectType.None, "");
-		world.SetCameraPostProcessEffect(camId, 16, PostProcessEffectType.HDR, DEFAULT_HDR);
-	}
-
-	//------------------------------------------------------------------------------------------------
-	// The same four slots, the same materials, on a different camera. Brightness is deliberately NOT
-	// set here - the feed drives its own exposure from the main camera's, which already carries
-	// whatever night vision did to it.
-	//------------------------------------------------------------------------------------------------
-	protected bool ApplyChainTo(int camId)
-	{
-		BaseWorld world = GetGame().GetWorld();
-		if (!world || m_iAppliedCamId < 0)
-			return false;
-
-		world.SetCameraPostProcessEffect(camId, 11, PostProcessEffectType.ThermalImaging, "");
-
-		if (m_bSlot9Applied && !m_GrainMaterial.IsEmpty())
-			world.SetCameraPostProcessEffect(camId, 9, PostProcessEffectType.FilmGrain, m_GrainMaterial);
-
-		if (m_bSlot8Applied && !m_BlemishMaterial.IsEmpty())
-			world.SetCameraPostProcessEffect(camId, 8, PostProcessEffectType.FilmGrain, m_BlemishMaterial);
-
-		if (m_bSlot16Applied)
-		{
-			ResourceName hdrMat = GetCurrentPhosphorMaterial();
-			if (!hdrMat.IsEmpty())
-				world.SetCameraPostProcessEffect(camId, 16, PostProcessEffectType.HDR, hdrMat);
-		}
-
-		return true;
-	}
-
 	//------------------------------------------------------------------------------------------------
 	protected void DisableVanillaNightGrain(bool disable)
 	{
@@ -798,12 +724,6 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 		m_bSlot16Applied = false;
 		m_bHDRBrightnessApplied = false;
 		m_iAppliedCamId = -1;
-		
-		if (s_EffectOwner == this)
-		{
-			s_EffectOwner = null;
-			s_iEffectVersion++;
-		}
 	}
 	
 	void ApplyVisualEffect(bool enable, bool force = false, bool touchDetection = true)
@@ -857,9 +777,7 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 			DisableVanillaNightGrain(!useTubes);
 
 			m_iAppliedCamId = camId;
-			s_EffectOwner = this;
-			s_iEffectVersion++;
-			
+
 			world.SetCameraPostProcessEffect(camId, 11, PostProcessEffectType.ThermalImaging, "");
 			
 			if (!m_GrainMaterial.IsEmpty())

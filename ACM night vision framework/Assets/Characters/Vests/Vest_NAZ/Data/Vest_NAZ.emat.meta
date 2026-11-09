@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{15B2058FF7D70D55}Assets/Characters/Vests/Vest_NAZ/Data/Vest_NAZ.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

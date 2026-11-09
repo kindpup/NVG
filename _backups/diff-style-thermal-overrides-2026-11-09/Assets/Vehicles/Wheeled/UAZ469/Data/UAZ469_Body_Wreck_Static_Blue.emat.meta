@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{99DC6BE8BD7B2B4B}Assets/Vehicles/Wheeled/UAZ469/Data/UAZ469_Body_Wreck_Static_Blue.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

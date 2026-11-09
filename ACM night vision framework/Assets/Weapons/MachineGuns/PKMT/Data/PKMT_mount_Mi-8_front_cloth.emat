@@ -1,0 +1,16 @@
+MatPBRBasic : "{E804583583DC08A9}Assets/_BaseMaterials/Weapons_MatPBRBasic.emat" {
+ Color 0.156 0.153 0.147 1
+ Cull none
+ RoughnessScale 1.257
+ BCRMap "{07CBA6AB99E68F3D}Assets/_SharedData/Plastic/ST_TarpaulinCanvas_BCR.edds"
+ NMOMap "{353AE0CE63B35A5F}Assets/Weapons/MachineGuns/PKMT/Data/PKMT_mount_Mi-8_front_cloth.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 26
+ TITemperatureCoef1 1
+ TITemperature2 26
+ TITemperatureCoef2 1
+ TITemperature3 26
+ TITemperatureCoef3 1
+ TITemperature4 26
+ TITemperatureCoef4 1
+}

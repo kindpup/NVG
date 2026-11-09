@@ -1,2 +1,15 @@
 MatPBRSkinProfile : "{3D8DD71AB39D2267}Assets/_BaseMaterials/Characters_MatPBRSkinProfile.emat" {
+ BCRMap "{11994EDF15C1DD6E}Assets/Characters/Basebody/Data/Body_White_01_BCR.edds"
+ NMOMap "{2202EDA869F59B62}Assets/Characters/Basebody/Data/Body_NMO.edds"
+ SubsurfaceMask "{F99F9CF9B3F24A40}Assets/Characters/Basebody/Data/Basebody_01_Male_Body_Subsurface_Mask.edds"
+ SubsurfaceProfile "{615A5485E64FD13C}Assets/Characters/Basebody/Data/Subsurface_White.emat"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 33
+ TITemperatureCoef1 1
+ TITemperature2 33
+ TITemperatureCoef2 1
+ TITemperature3 33
+ TITemperatureCoef3 1
+ TITemperature4 33
+ TITemperatureCoef4 1
 }

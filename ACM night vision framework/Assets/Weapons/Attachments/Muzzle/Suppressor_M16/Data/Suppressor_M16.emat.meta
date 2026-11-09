@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{2667FB635686AE96}Assets/Weapons/Attachments/Muzzle/Suppressor_M16/Data/Suppressor_M16.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

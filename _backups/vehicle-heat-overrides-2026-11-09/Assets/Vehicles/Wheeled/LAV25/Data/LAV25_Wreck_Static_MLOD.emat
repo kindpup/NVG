@@ -1,0 +1,13 @@
+MatPBRBasic {
+ MetalnessScale 0
+ BCRMap "{65320A68554F9B68}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_Wreck_Static_MLOD_BCR.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 12
+ TITemperatureCoef1 1
+ TITemperature2 12
+ TITemperatureCoef2 1
+ TITemperature3 12
+ TITemperatureCoef3 1
+ TITemperature4 12
+ TITemperatureCoef4 1
+}

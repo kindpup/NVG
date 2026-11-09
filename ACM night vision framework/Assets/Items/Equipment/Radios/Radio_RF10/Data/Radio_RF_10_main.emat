@@ -1,0 +1,19 @@
+MatPBRBasic : "{AD04B939A2C3F083}Assets/_BaseMaterials/Equipment_MatPBRBasic.emat" {
+ Emissive 0.175 0.175 0.175 0
+ EmissiveLV 4.235
+ EmissiveAbsoluteLV 0
+ BlendMode AlphaBlend
+ EmissiveMap "{D8C0F0288E97AD67}Assets/Items/Equipment/Radios/Radio_RF10/Data/Radio_RF10_LP_EM.edds"
+ BCRMap "{5668CB34A0AA2944}Assets/Items/Equipment/Radios/Radio_RF10/Data/Radio_RF10_LP_BCR.edds"
+ OpacityMap "{BC5CA0A12136AEDA}Assets/Items/Equipment/Radios/Radio_RF10/Data/Radio_RF10_LP_A.edds"
+ NMOMap "{6EB070A679DD7BDA}Assets/Items/Equipment/Radios/Radio_RF10/Data/Radio_RF10_LP_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 25
+ TITemperatureCoef1 1
+ TITemperature2 25
+ TITemperatureCoef2 1
+ TITemperature3 25
+ TITemperatureCoef3 1
+ TITemperature4 25
+ TITemperatureCoef4 1
+}

@@ -1,0 +1,14 @@
+MatPBRBasic {
+ DiffuseIBL 0.279 0.279 0.279 1
+ MetalnessScale 0
+ BCRMap "{DD034BD0D2FB2FA1}Assets/Vehicles/Wheeled/BRDM2/Data/BRDM2_static_interior_MLOD_BCR.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

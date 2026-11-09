@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{A1D885EC1F1E1C63}Assets/Items/Equipment/Radios/Radio_R107M/Data/Radio_R107M_01_Mlod.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

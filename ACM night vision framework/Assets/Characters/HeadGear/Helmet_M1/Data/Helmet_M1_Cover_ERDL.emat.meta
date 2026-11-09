@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{14732CE37E394654}Assets/Characters/HeadGear/Helmet_M1/Data/Helmet_M1_Cover_ERDL.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

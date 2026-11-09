@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{5684330D5EA3D994}Assets/Vehicles/Wheeled/M923A1/VehParts/Data/M923A1_repair_box_Decals_Plates.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

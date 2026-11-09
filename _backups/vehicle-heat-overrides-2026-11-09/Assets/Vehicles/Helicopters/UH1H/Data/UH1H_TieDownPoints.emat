@@ -1,0 +1,23 @@
+MatPBRDecal {
+ AlphaTest 0.3
+ BlendMode AlphaBlend
+ AOScale 1.437
+ CavityFromAO 0
+ GlobalAOPower 0.552
+ BCRMap "{D60CDD1B44D4BDBA}Assets/Vehicles/Helicopters/UH1H/Data/UH1H_TieDownPoints_BCR.edds"
+ OpacityMap "{C44752ACEBEA12C1}Assets/Vehicles/Helicopters/UH1H/Data/UH1H_TieDownPoints_A.edds"
+ NMOMap "{EED466899DA3EF24}Assets/Vehicles/Helicopters/UH1H/Data/UH1H_TieDownPoints_NMO.edds"
+ GBufferMetalness 1
+ GBufferAO 1
+ ParallaxScale 0.2
+ ParallaxMidlePlane 0.486
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

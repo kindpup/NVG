@@ -1,0 +1,22 @@
+MatPBRBasic {
+ Emissive 0.875 0.725 0.344 1
+ EmissiveLV 2.102
+ EmissiveAbsoluteLV 0
+ SortBias -2
+ EmissiveMap "{0959A371C015109E}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_lights_E.edds"
+ BCRMap "{E94EE5CEF3FADC11}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_lights_BCR.edds"
+ OpacityMap "{1E699F2D0D5EEAFB}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_lights_A.edds"
+ NMOMap "{D1965E5C2A8D8E8F}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_lights_NMO.edds"
+ HeightMap "{C401A00C9A147645}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_lights_H.edds"
+ ParallaxScale 0.1
+ ParallaxMidlePlane 0.046
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

@@ -1,0 +1,63 @@
+MatPBRMulti {
+ SpecularIBL 0.319 0.319 0.319 1
+ GlobalMCRMap "{88617470446F5C7A}Assets/Vehicles/Wheeled/BTR70/Data/BTR_70_base_interior_Components_1_MCR.edds"
+ UVSrcGlobalMaps "UV set 2"
+ MaskMap "{96CBA8403F8F19D9}Assets/Vehicles/Wheeled/BTR70/Data/BTR_70_base_interior_Components_1_GLOBAL_MASK.edds"
+ VFXMap "{3CA040DBB3822F56}Assets/Vehicles/Wheeled/BTR70/Data/BTR_70_base_interior_Components_1_VFX.edds"
+ GlobalNMOMap "{4CD24573EFE69E3A}Assets/Vehicles/Wheeled/BTR70/Data/BTR_70_base_interior_Components_1_NMO.edds"
+ UVSrcDetail "UV set 2"
+ DirtOpacity 0.222
+ DirtLayerSharpness 0.556
+ DirtColor 0.016 0.012 0.006 1
+ DirtRoughness 2.099
+ DirtBCRMap "{366028E90066FC57}Assets/_SharedData/Dirt/ST_Dirt_Sand_BCR.edds"
+ DirtMaskMap "{0EB8937BD911AEC9}Assets/_SharedData/Dirt/ST_Dirt_Sand_NMO.edds"
+ DirtUVTransform MatUVTransform "{50F9675CDEEFB095}" {
+  TilingU 10
+  TilingV 10
+ }
+ Enabled_4 1
+ Color_4 0.242 0.242 0.242 1
+ BCR_4 "{B141E00CC94C086A}Assets/_SharedData/Rubber/ST_Rubber_Aged01_1m_BCR.edds"
+ NMO_4 "{89995B9E103B5AF4}Assets/_SharedData/Rubber/ST_Rubber_Aged01_1m_NMO.edds"
+ UVTransform_4 MatUVTransform "{1361E74D66EC3ECF}" {
+  TilingU 40
+  TilingV 40
+ }
+ Enabled_3 1
+ Color_3 0.091 0.088 0.078 1
+ BCR_3 "{F829787DA88C2E39}Assets/_SharedData/Plastic/ST_Plastic_Leather02_1m_BCR.edds"
+ NMO_3 "{C0F1C3EF71FB7CA7}Assets/_SharedData/Plastic/ST_Plastic_Leather02_1m_NMO.edds"
+ UVTransform_3 MatUVTransform "{1361E74C01BDD22B}" {
+  TilingU 7
+  TilingV 7
+ }
+ Enabled_2 1
+ Color_2 0.198 0.158 0.112 1
+ BCR_2 "{F829787DA88C2E39}Assets/_SharedData/Plastic/ST_Plastic_Leather02_1m_BCR.edds"
+ NMO_2 "{61DE3875B9DBD343}Assets/_SharedData/Fabric/ST_FabricWrinkles_1m_01_NMO.edds"
+ UVTransform_2 MatUVTransform "{1361E74FEFA062B4}" {
+  TilingU 10
+  TilingV 10
+ }
+ DetNormal_2 0.3
+ Roughness_2 2
+ Color_1 0.098 0.085 0.078 1
+ BCR_1 "{B141E00CC94C086A}Assets/_SharedData/Rubber/ST_Rubber_Aged01_1m_BCR.edds"
+ NMO_1 "{678C7AE394DD0CBD}Assets/_SharedData/Plastic/ST_Plastic_Fine01_1m_NMO.edds"
+ UVTransform_1 MatUVTransform "{4E92A74BF4132945}" {
+  TilingU 10
+  TilingV 10
+ }
+ DetNormal_1 0.3
+ Roughness_1 0.69
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

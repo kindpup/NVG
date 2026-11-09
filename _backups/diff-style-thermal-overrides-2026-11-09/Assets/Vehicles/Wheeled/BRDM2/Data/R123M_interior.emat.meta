@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{1AAB38F866667428}Assets/Vehicles/Wheeled/BRDM2/Data/R123M_interior.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

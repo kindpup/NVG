@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{5952E8652D37E60D}Assets/Characters/HeadGear/Hat_RadiovkaBeret_01/Data/Hat_RadiovkaBeret_01_Brown.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

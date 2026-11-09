@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{886D687237205C93}Assets/Weapons/Magazines/RPG75/Data/RPG75_rocket.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

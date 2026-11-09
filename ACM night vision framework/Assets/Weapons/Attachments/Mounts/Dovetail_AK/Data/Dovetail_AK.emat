@@ -1,0 +1,14 @@
+MatPBRBasic : "{E804583583DC08A9}Assets/_BaseMaterials/Weapons_MatPBRBasic.emat" {
+ SurfaceProperties "{439C1A3B5A3C7EE6}Common/Materials/Physics/metal.physmat"
+ BCRMap "{DDD9A007668230A0}Assets/Weapons/Attachments/Mounts/Dovetail_AK/Data/DoveTail_BCR.edds"
+ NMOMap "{E5011B95BFF5623E}Assets/Weapons/Attachments/Mounts/Dovetail_AK/Data/DoveTail_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 26
+ TITemperatureCoef1 1
+ TITemperature2 26
+ TITemperatureCoef2 1
+ TITemperature3 26
+ TITemperatureCoef3 1
+ TITemperature4 26
+ TITemperatureCoef4 1
+}

@@ -1,0 +1,38 @@
+MatPBR2Layers : "{4461333114AAEC99}Assets/_BaseMaterials/Weapons_MatPBR2Layers.emat" {
+ Color 0.014 0.014 0.014 1
+ SpecularIBL 0.468 0.468 0.468 1
+ Cull none
+ Specular 0.658 0.658 0.658 1
+ SpecularMul 0.441
+ MetalnessScale 0.2
+ BCRMap "{8EADB31D864DD0FC}Assets/_SharedData/Metal/ST_MetalBare_01_BCR.edds"
+ OpacityMap "{0470164F98BC8DD2}Assets/_SharedData/Metal/ST_MetalBare_01_NMO.edds"
+ NormalPower 2.618
+ NMOMap "{20EF5DA168DE7806}Assets/_SharedData/Metal/ST_MetalPaint_Coated_02_1m_NMO.edds"
+ GlobalMapsUVTransform MatUVTransform "{5CA89189B02292D8}" {
+  TilingU 0.2
+  TilingV 0.2
+  Rotation 63.529
+ }
+ Color2 0.089 0.089 0.089 1
+ RoughnessScale2 0
+ MetalnessScale2 2.206
+ MaskMap "{4AC0130FB7602505}Assets/_SharedData/DetailMask/ST_Scratches_03_Mask1.edds"
+ MaskMapUVTransform MatUVTransform "{5CA891884F50D943}" {
+  TilingU 0.2
+  TilingV 0.2
+  OffsetU 0.074
+  OffsetV 0.103
+  Rotation 39.706
+ }
+ MaskScale 0.515
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 26
+ TITemperatureCoef1 1
+ TITemperature2 26
+ TITemperatureCoef2 1
+ TITemperature3 26
+ TITemperatureCoef3 1
+ TITemperature4 26
+ TITemperatureCoef4 1
+}

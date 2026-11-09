@@ -1,0 +1,13 @@
+MatPBRBasic : "{AD04B939A2C3F083}Assets/_BaseMaterials/Equipment_MatPBRBasic.emat" {
+ BCRMap "{31A88AD0EBD7B2CC}Assets/Items/Equipment/Radios/Radio_R148/Data/Radio_R148_02_BCR.edds"
+ NMOMap "{0970314232A0E052}Assets/Items/Equipment/Radios/Radio_R148/Data/Radio_R148_02_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 25
+ TITemperatureCoef1 1
+ TITemperature2 25
+ TITemperatureCoef2 1
+ TITemperature3 25
+ TITemperatureCoef3 1
+ TITemperature4 25
+ TITemperatureCoef4 1
+}

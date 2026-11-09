@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{90EB60B10B9403F3}Assets/Vehicles/Wheeled/UAZ469/Data/UAZ469_Details_FIA_int.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,14 @@
+MatPBRBasic : "{5CDDE2709BA9A5EE}Assets/_BaseMaterials/Characters_MatPBRBasic.emat" {
+ CavityFromAO 1
+ BCRMap "{19B02FD3ECDB8B9F}Assets/Characters/Vests/Vest_ALICE/Data/Vest_ALICE_BCR.edds"
+ NMOMap "{2168944135ACD901}Assets/Characters/Vests/Vest_ALICE/Data/Vest_ALICE_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 27
+ TITemperatureCoef1 1
+ TITemperature2 27
+ TITemperatureCoef2 1
+ TITemperature3 27
+ TITemperatureCoef3 1
+ TITemperature4 27
+ TITemperatureCoef4 1
+}

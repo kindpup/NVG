@@ -1,0 +1,19 @@
+MatPBRMulti : "{0FB93B007F4E3A39}Assets/_BaseMaterials/Characters_MatPBRMulti.emat" {
+ CavityFromAO 1
+ VFXMap "{AD709B82B5634455}Assets/Characters/Uniforms/Jacket_BDU_M81/Data/Jacket_BDU_M81_rolledup_VFX.edds"
+ DirtUserOpacity 1
+ DirtOpacity 3
+ DirtRoughness 1
+ DirtBCRMap "{EF2FDEDD3B952E43}Assets/Characters/Uniforms/Jacket_BDU_M81/Data/Jacket_BDU_M81_rolledup_02_Blood_BCR.edds"
+ BCR_1 "{36058AF59557DF9C}Assets/Characters/Uniforms/Jacket_BDU_M81/Data/Jacket_BDU_M81_rolledup_02_BCR.edds"
+ NMO_1 "{0EDD31674C208D02}Assets/Characters/Uniforms/Jacket_BDU_M81/Data/Jacket_BDU_M81_rolledup_02_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 28
+ TITemperatureCoef1 1
+ TITemperature2 28
+ TITemperatureCoef2 1
+ TITemperature3 28
+ TITemperatureCoef3 1
+ TITemperature4 28
+ TITemperatureCoef4 1
+}

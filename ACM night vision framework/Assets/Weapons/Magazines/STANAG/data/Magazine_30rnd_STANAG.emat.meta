@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{1B438B9DAAE7CA13}Assets/Weapons/Magazines/STANAG/data/Magazine_30rnd_STANAG.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

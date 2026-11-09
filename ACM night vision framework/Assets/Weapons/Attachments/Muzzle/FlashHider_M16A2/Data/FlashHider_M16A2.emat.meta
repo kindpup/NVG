@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{C3A65539EA9E8204}Assets/Weapons/Attachments/Muzzle/FlashHider_M16A2/Data/FlashHider_M16A2.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

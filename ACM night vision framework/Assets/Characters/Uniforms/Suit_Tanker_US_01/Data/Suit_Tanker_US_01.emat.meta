@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{F1BE72E4767F5217}Assets/Characters/Uniforms/Suit_Tanker_US_01/Data/Suit_Tanker_US_01.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

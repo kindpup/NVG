@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{610A9FF68DEA9B7C}Assets/Weapons/Rifles/AKS74U/Data/AKS74U_Receiver2.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

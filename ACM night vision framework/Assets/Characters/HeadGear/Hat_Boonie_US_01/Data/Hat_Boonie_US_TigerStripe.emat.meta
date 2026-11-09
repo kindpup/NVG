@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{829AA7B1ACF9E19E}Assets/Characters/HeadGear/Hat_Boonie_US_01/Data/Hat_Boonie_US_TigerStripe.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

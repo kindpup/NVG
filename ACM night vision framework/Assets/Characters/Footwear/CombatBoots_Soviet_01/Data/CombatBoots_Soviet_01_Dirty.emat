@@ -1,0 +1,12 @@
+MatPBRBasic : "{89BE6ABEB120DF39}Assets/Characters/Footwear/CombatBoots_Soviet_01/Data/CombatBoots_Soviet_01.emat" {
+ BCRMap "{F407A0C5ECE98A4E}Assets/Characters/Footwear/CombatBoots_Soviet_01/Data/CombatBoots_Soviet_01_Dirty_BCR.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 26
+ TITemperatureCoef1 1
+ TITemperature2 26
+ TITemperatureCoef2 1
+ TITemperature3 26
+ TITemperatureCoef3 1
+ TITemperature4 26
+ TITemperatureCoef4 1
+}

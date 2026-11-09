@@ -1,0 +1,21 @@
+MatPBRDecal {
+ Color 0.027 0.027 0.027 1
+ ZBias 1
+ SortBias 1
+ DisablePriorityProbes 1
+ AlphaTest 0.1
+ AlphaMul 0.7
+ BlendMode AlphaBlend
+ DielectricReflectance 0.02
+ OpacityMap "{79F38ED8ECF12590}Assets/Vehicles/Helicopters/UH1H/Data/UH-1H_Text_Decals_Ext_GLOBAL_MASK.edds"
+ GBufferRoughness 1
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

@@ -1,0 +1,66 @@
+MatPBRMulti {
+ DisableInteriorProbes 0
+ GlobalMapsUVTransform MatUVTransform "{5DC97228D8B6E7D2}" {
+ }
+ MaskMap "{CB06A3BEF01870C3}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_int_details_GLOBAL_MASK.edds"
+ MaskGreenScale 0.538
+ UVSrcGlobNormal "UV set 2"
+ MudColor 0.133 0.107 0.061 1
+ MudRoughness 2
+ MudMetalness 0.011
+ MudDetNormal 1.146
+ MudBCRMap "{AE37874A11911124}Assets/_SharedData/Dirt/ST_Mud_01_BCR.edds"
+ MudNMOMap "{96EF3CD8C8E643BA}Assets/_SharedData/Dirt/ST_Mud_01_NMO.edds"
+ MudMaskMap "{816ABEBED1A52FF3}Assets/_SharedData/DetailMask/ST_Mud_01_Mask.edds"
+ DirtLayerSharpness 1.752
+ DirtColor 0.138 0.102 0.063 1
+ DirtRoughness 1.606
+ DirtBCRMap "{366028E90066FC57}Assets/_SharedData/Dirt/ST_Dirt_Sand_BCR.edds"
+ DirtMaskMap "{DE18086A9CA88FBA}Assets/_SharedData/DetailMask/ST_Dirt_04_Mask1.edds"
+ Enabled_4 1
+ Color_4 0 0 0 1
+ BCR_4 "{A3ACA4632706EC51}Assets/_SharedData/Rubber/ST_Rubber_Mat_BCR.edds"
+ NMO_4 "{9B741FF1FE71BECF}Assets/_SharedData/Rubber/ST_Rubber_Mat_NMO.edds"
+ UVTransform_4 MatUVTransform "{5DC97227AB2CB397}" {
+  TilingU 10
+  TilingV 10
+ }
+ Color_3 1 1 1 1
+ NMO_3 "{3680180770DDE0EE}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_int_grid_NMO.edds"
+ MaskSharpness_3 0.9
+ Mask_3 "{2941C6A3988FFC55}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_int_grid_A.edds"
+ UVTransform_3 MatUVTransform "{5DC9722912C1979A}" {
+  TilingU 10
+  TilingV 10
+ }
+ Roughness_3 0
+ Enabled_2 1
+ Color_2 0.188 0.17 0.108 1
+ BCR_2 "{07CBA6AB99E68F3D}Assets/_SharedData/Plastic/ST_TarpaulinCanvas_BCR.edds"
+ NMO_2 "{C7975CEFA31B4FED}Assets/_SharedData/Fabric/ST_Cloth_Pattern_N.edds"
+ Mask_2 "{DE18086A9CA88FBA}Assets/_SharedData/DetailMask/ST_Dirt_04_Mask1.edds"
+ UVTransform_2 MatUVTransform "{5DC972265F27698F}" {
+  TilingU 15
+  TilingV 15
+ }
+ Metalness_2 0
+ AO_2 0.806
+ Color_1 1 1 1 1
+ BCR_1 "{296C3ED2E0D8FF10}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_belts_BCR.edds"
+ NMO_1 "{11B4854039AFAD8E}Assets/Vehicles/Wheeled/LAV25/Data/LAV25_belts_NMO.edds"
+ UVTransform_1 MatUVTransform "{5DC9722B76137192}" {
+  TilingU 8
+  TilingV 8
+ }
+ Roughness_1 0.951
+ Metalness_1 2.679
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{492FEE9AC5BB2526}Assets/Items/Equipment/Backpacks/Backpack_RPG_Gunner/Data/Backpack_RPG_Gunner_Soviet_Naval_Infantry.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

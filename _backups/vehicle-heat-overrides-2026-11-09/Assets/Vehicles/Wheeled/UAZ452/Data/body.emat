@@ -1,0 +1,21 @@
+MatPBRBasic {
+ Color 0.066 0.067 0.048 1
+ DisablePriorityProbes 1
+ RoughnessScale 0.436
+ MetalnessScale 0.064
+ BCRMap "{8EADB31D864DD0FC}Assets/_SharedData/Metal/ST_MetalBare_01_BCR.edds"
+ NMOMap "{0470164F98BC8DD2}Assets/_SharedData/Metal/ST_MetalBare_01_NMO.edds"
+ GlobalMapsUVTransform MatUVTransform "{5A3CD8A7B444EE1C}" {
+  TilingU 20
+  TilingV 20
+ }
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

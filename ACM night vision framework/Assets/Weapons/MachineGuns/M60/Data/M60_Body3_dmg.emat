@@ -1,0 +1,17 @@
+MatPBRBasic : "{A5F8F3FEB8A64F56}Assets/Weapons/MachineGuns/M60/Data/M60_Body3.emat" {
+ GlobalLayerMode Manual
+ GlobalLayerAngleStart 100
+ GlobalLayerAngleEnd 180
+ GlobalLayerPosition 0.1
+ GlobalLayerContrast 0.1
+ GlobalLayerBCRMap "{6D8737C0F8379954}Assets/Structures/Military/Radar/MobileRadar_01/Data/basecooler_Rust_BCR.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 26
+ TITemperatureCoef1 1
+ TITemperature2 26
+ TITemperatureCoef2 1
+ TITemperature3 26
+ TITemperatureCoef3 1
+ TITemperature4 26
+ TITemperatureCoef4 1
+}

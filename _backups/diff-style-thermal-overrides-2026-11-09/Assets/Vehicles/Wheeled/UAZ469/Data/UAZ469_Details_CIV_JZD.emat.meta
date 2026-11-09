@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{C07D98C6059ECF54}Assets/Vehicles/Wheeled/UAZ469/Data/UAZ469_Details_CIV_JZD.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

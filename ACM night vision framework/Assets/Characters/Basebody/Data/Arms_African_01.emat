@@ -1,2 +1,14 @@
 MatPBRSkinProfile : "{3D8DD71AB39D2267}Assets/_BaseMaterials/Characters_MatPBRSkinProfile.emat" {
+ BCRMap "{0F3EC4BC350A2454}Assets/Characters/Basebody/Data/Arms_African_01_BCR.edds"
+ NMOMap "{46E1269855E5D2AA}Assets/Characters/Basebody/Data/Arms_NMO.edds"
+ SubsurfaceProfile "{180FDD85469771BB}Assets/Characters/Basebody/Data/Subsurface_Black.emat"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 32
+ TITemperatureCoef1 1
+ TITemperature2 32
+ TITemperatureCoef2 1
+ TITemperature3 32
+ TITemperatureCoef3 1
+ TITemperature4 32
+ TITemperatureCoef4 1
 }

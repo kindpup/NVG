@@ -1,0 +1,12 @@
+MatPBRDecal : "{23D9697A283FB7DF}Assets/Vehicles/Helicopters/Mi8/Data/Helicopter_decals_01.emat" {
+ DisablePriorityProbes 0
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 22
+ TITemperatureCoef1 1
+ TITemperature2 22
+ TITemperatureCoef2 1
+ TITemperature3 22
+ TITemperatureCoef3 1
+ TITemperature4 22
+ TITemperatureCoef4 1
+}

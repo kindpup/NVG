@@ -1,0 +1,18 @@
+MatPBRBasic {
+ Color 0.141 0.141 0.141 1
+ Cull none
+ CastShadow 1
+ ReceiveShadow 1
+ RoughnessScale 2.204
+ MetalnessScale 0
+ BCRMap "{E65447EA94F2BD03}Assets/_SharedData/Dirt/ST_Grease_Oil01_1m_BCR.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 12
+ TITemperatureCoef1 1
+ TITemperature2 12
+ TITemperatureCoef2 1
+ TITemperature3 12
+ TITemperatureCoef3 1
+ TITemperature4 12
+ TITemperatureCoef4 1
+}

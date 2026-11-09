@@ -1,0 +1,28 @@
+MatPBRDecal {
+ SpecularIBL 0.823 0.756 0.59 1
+ CastShadow 0
+ DisablePriorityProbes 1
+ Specular 0.418 0.402 0.326 1
+ AlphaTest 0.1
+ BlendMode AlphaBlend
+ MetalnessScale 0
+ OpacityMap "{F6D7C6EA84BAC737}Assets/Vehicles/Helicopters/Mi8/Data/Helicopter_decals_01_A.edds"
+ NMOMap "{9C213A089A5F6C0C}Assets/Vehicles/Helicopters/Mi8/Data/Helicopter_decals_01_NMO.edds"
+ GBufferAlbedo 1
+ GBufferRoughness 1
+ GBufferMetalness 1
+ GBufferAO 1
+ HeightMap "{2CBFF9CB13F05B89}Assets/Vehicles/Helicopters/Mi8/Data/Helicopter_decals_01_H.edds"
+ ParallaxScale 0.02
+ ParallaxMidlePlane 0.8
+ ParallaxShadowScale 0.3
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

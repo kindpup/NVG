@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{E3FAF6D4D026E1C8}Assets/Characters/Uniforms/Jacket_Raincoat_01/Data/Jacket_Raincoat_01_Orange.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

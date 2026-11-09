@@ -1,0 +1,15 @@
+MatPBRBasic : "{2009A926463DED91}Assets/Vehicles/Generic/Data/Vehicle_Lights_EM.emat" {
+ EmissiveMap "{7DD0F6FEEB4F8BF0}Assets/Vehicles/Wheeled/S105/Data/S105Lights_EM.edds"
+ BCRMap "{7FB55DF1BD6C4FEA}Assets/Vehicles/Wheeled/S105/Data/S105Lights_BCR.edds"
+ OpacityMap "{77E02649B4F9663D}Assets/Vehicles/Wheeled/S105/Data/S105Lights_A.edds"
+ NMOMap "{83F52C665A29FDE9}Assets/Vehicles/Wheeled/S105/Data/S105Lights_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

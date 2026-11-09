@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{7557F7D3E2583088}Assets/Vehicles/Wheeled/V2101/Data/V2101InteriorDecal_mat.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

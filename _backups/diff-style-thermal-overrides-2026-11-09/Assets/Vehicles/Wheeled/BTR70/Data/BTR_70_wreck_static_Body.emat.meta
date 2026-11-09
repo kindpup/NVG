@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{6C234D702CE52371}Assets/Vehicles/Wheeled/BTR70/Data/BTR_70_wreck_static_Body.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

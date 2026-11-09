@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{35D747E785C4D90F}Assets/Vehicles/Helicopters/Mi8/Data/MI8_Flag_decals_CIV_01.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

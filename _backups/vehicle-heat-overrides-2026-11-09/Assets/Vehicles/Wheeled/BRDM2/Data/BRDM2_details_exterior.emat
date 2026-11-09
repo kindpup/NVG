@@ -1,0 +1,48 @@
+MatPBRMulti {
+ DisablePriorityProbes 1
+ GlobalMCRMap "{CDFB0A8901B1832D}Assets/Vehicles/Wheeled/BRDM2/Data/BRDM2_details_MCR.edds"
+ MaskMap "{BC489218C0842EC5}Assets/Vehicles/Wheeled/BRDM2/Data/BRDM2_details_GLOBAL_MASK.edds"
+ VFXMap "{793A3E22F65CF001}Assets/Vehicles/Wheeled/BRDM2/Data/BRDM2_details_VFX.edds"
+ UVSrcGlobNormal "UV set 2"
+ Enabled_4 1
+ Color_4 0.022 0.022 0.022 1
+ BCR_4 "{B141E00CC94C086A}Assets/_SharedData/Rubber/ST_Rubber_Aged01_1m_BCR.edds"
+ NMO_4 "{89995B9E103B5AF4}Assets/_SharedData/Rubber/ST_Rubber_Aged01_1m_NMO.edds"
+ UVTransform_4 MatUVTransform "{5CD292FD19B1797A}" {
+  TilingU 20
+  TilingV 20
+ }
+ Metalness_4 0
+ Enabled_3 1
+ Color_3 0.283 0.256 0.214 1
+ BCR_3 "{5A510F568950549E}Assets/_SharedData/Wood/ST_WoodPlain_Mid_02_BCR.edds"
+ NMO_3 "{227995E1E63B8447}Assets/_SharedData/Wood/ST_WoodPlain_Mid_01_NMO.edds"
+ UVTransform_3 MatUVTransform "{5CD292FD646D3A3E}" {
+  TilingU 10
+  TilingV 10
+ }
+ Roughness_3 0.913
+ Metalness_3 0
+ Enabled_2 1
+ Color_2 0.258 0.258 0.258 1
+ BCR_2 "{6D8FCF72B491F7C5}Assets/_SharedData/Fabric/ST_Rope_BW_BCR.edds"
+ NMO_2 "{555774E06DE6A55B}Assets/_SharedData/Fabric/ST_Rope_BW_NMO.edds"
+ UVTransform_2 MatUVTransform "{5CD292FFFBBDDC3B}" {
+  TilingU 30
+  TilingV 30
+ }
+ Roughness_2 0.85
+ Color_1 0.101 0.099 0.093 1
+ BCR_1 "{DDFA1BE6FC945C12}Assets/_SharedData/Metal/ST_Metal_Stainles01_1m_BCR.edds"
+ NMO_1 "{E522A07425E30E8C}Assets/_SharedData/Metal/ST_Metal_Stainles01_1m_NMO.edds"
+ Roughness_1 1.49
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

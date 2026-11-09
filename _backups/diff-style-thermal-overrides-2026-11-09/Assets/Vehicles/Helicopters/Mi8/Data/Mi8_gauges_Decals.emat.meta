@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{266057C666306A9D}Assets/Vehicles/Helicopters/Mi8/Data/Mi8_gauges_Decals.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{15B9BC7BACA2531D}Assets/Characters/HeadGear/Helmet_SPH4/Data/Helmet_SPH4_USFlag_01.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

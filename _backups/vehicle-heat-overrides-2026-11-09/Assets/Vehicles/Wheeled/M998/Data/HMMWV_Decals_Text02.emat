@@ -1,0 +1,22 @@
+MatPBRDecal {
+ Color 0.034 0.034 0.034 1
+ CastShadow 0
+ SurfaceProperties "{F0733D364338D7E0}Common/Materials/Game/grass.gamemat"
+ AlphaTest 0.1
+ AlphaMul 1.173
+ BlendMode AlphaBlend
+ RoughnessScale 0.401
+ MetalnessScale 0
+ OpacityMap "{6B85220BD1631DD0}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Gauges_BCR.edds"
+ GlobalMapsUVTransform MatUVTransform "{14AAE7325358B2BC}" {
+ }
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

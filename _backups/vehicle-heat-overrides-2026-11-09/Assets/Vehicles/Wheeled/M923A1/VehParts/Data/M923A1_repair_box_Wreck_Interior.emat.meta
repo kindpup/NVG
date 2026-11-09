@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{203C3C4A098034E3}Assets/Vehicles/Wheeled/M923A1/VehParts/Data/M923A1_repair_box_Wreck_Interior.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

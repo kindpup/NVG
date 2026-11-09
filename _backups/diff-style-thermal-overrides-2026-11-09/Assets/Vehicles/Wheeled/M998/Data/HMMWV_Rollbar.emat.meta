@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{B7C3F905CC287B94}Assets/Vehicles/Wheeled/M998/Data/HMMWV_Rollbar.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

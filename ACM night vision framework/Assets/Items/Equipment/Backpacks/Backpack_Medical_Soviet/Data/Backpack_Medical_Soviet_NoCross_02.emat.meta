@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{D5E326B527A2BE76}Assets/Items/Equipment/Backpacks/Backpack_Medical_Soviet/Data/Backpack_Medical_Soviet_NoCross_02.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

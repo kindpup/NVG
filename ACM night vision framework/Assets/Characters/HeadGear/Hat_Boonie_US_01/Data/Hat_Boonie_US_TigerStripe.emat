@@ -1,0 +1,16 @@
+MatPBRBasic : "{5CDDE2709BA9A5EE}Assets/_BaseMaterials/Characters_MatPBRBasic.emat" {
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{D886E9AD4C5FF5F8}Assets/Characters/HeadGear/Hat_Boonie_US_01/Data/Hat_Boonie_US_TigerStripe_BCR.edds"
+ OpacityMap "{70A53F4EA373F142}Assets/Characters/Basebody/Data/HeadClipping_A.edds"
+ NMOMap "{E05E523F9528A766}Assets/Characters/HeadGear/Hat_Boonie_US_01/Data/Hat_Boonie_US_TigerStripe_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 27
+ TITemperatureCoef1 1
+ TITemperature2 27
+ TITemperatureCoef2 1
+ TITemperature3 27
+ TITemperatureCoef3 1
+ TITemperature4 27
+ TITemperatureCoef4 1
+}

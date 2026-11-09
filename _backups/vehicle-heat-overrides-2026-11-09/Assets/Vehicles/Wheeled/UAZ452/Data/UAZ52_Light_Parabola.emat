@@ -1,0 +1,19 @@
+MatPBRBasic : "{EC8B1EFF631F3A47}Assets/Vehicles/Generic/Data/Vehicle_Lights_Parabola_EM.emat" {
+ SortBias -2
+ DisablePriorityProbes 1
+ EmissiveMap "{8C8D442C6716EFFA}Assets/Vehicles/Wheeled/UAZ452/Data/UAZ452_lights_E.edds"
+ BCRMap "{C9D37BE3909B148A}Assets/Vehicles/Wheeled/UAZ452/Data/uaz452_lights_BCR.edds"
+ NMOMap "{F10BC07149EC4614}Assets/Vehicles/Wheeled/UAZ452/Data/uaz452_lights_NMO.edds"
+ HeightMap "{4E8765262E984937}Assets/Vehicles/Wheeled/UAZ452/Data/uaz452_lights_H.edds"
+ ParallaxScale 0.1
+ ParallaxMidlePlane 0.046
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}

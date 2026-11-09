@@ -1,0 +1,19 @@
+MatPBRMulti : "{0FB93B007F4E3A39}Assets/_BaseMaterials/Characters_MatPBRMulti.emat" {
+ CavityFromAO 0.504
+ VFXMap "{782FC0A4318FFA67}Assets/Characters/Uniforms/Shirt_Turtleneck_01/Data/Turtleneck_VFX_Mask.edds"
+ DirtUserOpacity 1
+ DirtOpacity 3
+ DirtRoughness 1.5
+ DirtBCRMap "{D4BF2E81F0C1FD58}Assets/Characters/Uniforms/Shirt_Turtleneck_01/Data/Shirt_Turtleneck_01_Blue_Blood_BCR.edds"
+ BCR_1 "{631841A60A35F07D}Assets/Characters/Uniforms/Shirt_Turtleneck_01/Data/Shirt_Turtleneck_01_Blue_BCR.edds"
+ NMO_1 "{E18A32A20EFF22A2}Assets/Characters/Uniforms/Shirt_Turtleneck_01/Data/Shirt_Turtleneck_01_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 28
+ TITemperatureCoef1 1
+ TITemperature2 28
+ TITemperatureCoef2 1
+ TITemperature3 28
+ TITemperatureCoef3 1
+ TITemperature4 28
+ TITemperatureCoef4 1
+}

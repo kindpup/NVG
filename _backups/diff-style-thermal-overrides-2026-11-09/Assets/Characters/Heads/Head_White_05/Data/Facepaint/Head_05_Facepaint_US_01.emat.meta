@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{67C964D48D2BEC8A}Assets/Characters/Heads/Head_White_05/Data/Facepaint/Head_05_Facepaint_US_01.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,16 @@
+MatPBRBasic {
+ BCRMap "{AB26B3D153311C81}Assets/Vehicles/Wheeled/UAZ452/Data/uaz452_interior_labels_BCR.edds"
+ NMOMap "{93FE08438A464E1F}Assets/Vehicles/Wheeled/UAZ452/Data/uaz452_interior_labels_NMO.edds"
+ HeightMap "{F76EE73817011B12}Assets/Vehicles/Wheeled/UAZ452/Data/uaz452_interior_labels_H.edds"
+ ParallaxScale 0.037
+ ParallaxMidlePlane 0.56
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 24
+ TITemperatureCoef1 1
+ TITemperature2 24
+ TITemperatureCoef2 1
+ TITemperature3 24
+ TITemperatureCoef3 1
+ TITemperature4 24
+ TITemperatureCoef4 1
+}
