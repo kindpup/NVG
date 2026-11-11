@@ -1,0 +1,32 @@
+MatPBRBasicGlass {
+ Color 1 1 1 1
+ Diffuse 1 1 1 1
+ ZWrite 0
+ Cull none
+ Sort translucent
+ SurfaceProperties "{3DC7C8A918E3F4A5}Common/Materials/Game/glass.gamemat"
+ SpecularMul 0.025
+ WetnessScale 0
+ AlphaTest 0
+ BlendMode AlphaBlend
+ CrossFade 0
+ RoughnessScale 1.903
+ MetalnessScale 0
+ DielectricReflectance 0.08
+ BCRMap "{DEDB059AE8055A6C}Assets/Structures/Infrastructure/Landlines/PhoneBooth_E/Data/PhoneBooth_USSR_01_Window_Glass_BCR.edds"
+ OpacityMap "{CA5FF8C58CAD1AB2}Assets/Structures/Infrastructure/Landlines/PhoneBooth_E/Data/PhoneBooth_USSR_01_Window_Glass_A.edds"
+ NormalPower 0.05
+ NMOMap "{5E9B5A9AF633BD94}Assets/_SharedData/Metal/ST_Steel_Battered_NMO.edds"
+ DetailNormalPower 0
+ FresnelPower 1.2
+ FresnelBias 0.15
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 7.7
+ TITemperatureCoef1 1
+ TITemperature2 7.7
+ TITemperatureCoef2 1
+ TITemperature3 7.7
+ TITemperatureCoef3 1
+ TITemperature4 7.7
+ TITemperatureCoef4 1
+}

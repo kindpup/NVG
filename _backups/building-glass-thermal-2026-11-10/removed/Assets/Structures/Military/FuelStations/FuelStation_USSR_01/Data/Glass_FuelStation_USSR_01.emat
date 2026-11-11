@@ -1,0 +1,28 @@
+MatPBRBasicGlass {
+ Color 0.205 0.205 0.205 1
+ SortBias -1
+ DisableInteriorProbes 1
+ AlphaMul 2.5
+ RoughnessScale 2.5
+ MetalnessScale 0
+ BCRMap "{8AE673587A0D92DD}Assets/_SharedData/Glass/ST_Glass_Streaks_Dirty_01_BCR.edds"
+ OpacityMap "{A730977A76334925}Assets/_SharedData/Glass/ST_Glass_Test_01_A.edds"
+ GlobalMapsUVTransform MatUVTransform "{65B6236D38E1F6A4}" {
+  OffsetV -0.146
+ }
+ FresnelPower 2
+ FresnelBias 0.09
+ Backscatterig 0
+ ChromaticIntensity 0.13
+ DimIntensity 0.19
+ AlbedoRefractionTint 1
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 7.7
+ TITemperatureCoef1 1
+ TITemperature2 7.7
+ TITemperatureCoef2 1
+ TITemperature3 7.7
+ TITemperatureCoef3 1
+ TITemperature4 7.7
+ TITemperatureCoef4 1
+}

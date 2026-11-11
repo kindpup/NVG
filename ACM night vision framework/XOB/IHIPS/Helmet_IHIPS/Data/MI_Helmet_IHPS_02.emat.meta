@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{4EF9BEEE04C46737}Assets/Characters/HeadGear/Helmet_IHIPS/Data/MI_Helmet_IHPS_02.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,6 +1,7 @@
 ThermalImagingEffect {
  TempConversionTex "{7C2D3E4F5A6B8901}Textures/Thermal_Filter/ACM_WhiteHot.edds"
  TemperatureConversionMethod AutomaticMinMax
+ TemperatureChangeSpeed 0.25
  TemperatureConversionClipLimit 0.01
  TemperatureRangeMin -40
  TemperatureRangeMax 50

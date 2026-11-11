@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{22B9010A1BAC8F89}Assets/Structures/Infrastructure/Power/TransformerSubstation_01/Data/TransformerSubstation_01_Glass.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

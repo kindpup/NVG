@@ -170,7 +170,7 @@ class ACM_NVGThermalFlipComponent : ScriptComponent
 			if (ACM_NVGTubeView.Acquire(this, m_eTubeLayout, m_aCustomTubes, m_fTubeEdgeSoftness, m_fTubeResolutionScale, m_fTubeEdgeDistortion, m_fTubeRimDarkness))
 			{
 				m_bUsingTubeView = true;
-				return ACM_NVGTubeView.CAMERA_INDEX;
+				return ACM_NVGTubeView.GetEffectCamera();
 			}
 		}
 
@@ -257,9 +257,11 @@ class ACM_NVGThermalFlipComponent : ScriptComponent
 			return;
 
 		// The tube camera index never changes; the view keeps itself aligned with the main camera.
+		// In performance mode the chain is on the main camera itself, which can change (vehicles).
 		if (m_bUsingTubeView)
 		{
-			if (!ACM_NVGTubeView.IsActiveFor(this) || m_iMode != m_iAppliedMode)
+			bool cameraMoved = ACM_NVGTubeView.RendersOnMainCamera() && m_World.GetCurrentCameraId() != m_iAppliedCamera;
+			if (!ACM_NVGTubeView.IsActiveFor(this) || m_iMode != m_iAppliedMode || cameraMoved)
 				ApplyCurrentMode();
 			return;
 		}

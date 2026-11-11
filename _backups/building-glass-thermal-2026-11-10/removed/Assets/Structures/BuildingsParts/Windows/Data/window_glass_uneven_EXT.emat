@@ -1,0 +1,51 @@
+MatPBRBasicGlass {
+ DiffuseIBL 0.624 0.624 0.624 1
+ SpecularIBL 0.855 0.846 0.832 1
+ Diffuse 0.259 0.268 0.27 1
+ ZWrite 0
+ Cull none
+ Sort translucent
+ SurfaceProperties "{3DC7C8A918E3F4A5}Common/Materials/Game/glass.gamemat"
+ Specular 0.238 0.238 0.238 1
+ SpecularMul 0.328
+ AlphaTest 0.386
+ AlphaMul 0.532
+ BlendMode AlphaBlend
+ CrossFade 0
+ RoughnessScale 1.067
+ MetalnessScale 0.777
+ DielectricReflectance 0.076
+ CavityFromAO 0.6
+ GlobalAOPower 0.5
+ BCRMap "{8B59275E8F260750}Assets/_SharedData/Glass/ST_Glass_Test_01_BCR.edds"
+ NormalPower 0.222
+ NMOMap "{21B34AB0A942361D}Assets/Structures/BuildingsParts/Windows/Data/window_glass_uneven_INT_NMO.edds"
+ GlobalMapsUVTransform MatUVTransform "{6642B54AEA4A991D}" {
+  TilingU 2.59
+  TilingV 2.46
+ }
+ DetailNormalPower 0.201
+ DetailNormalMap "{21B34AB0A942361D}Assets/Structures/BuildingsParts/Windows/Data/window_glass_uneven_INT_NMO.edds"
+ DetailNormalMapUVTransform MatUVTransform "{654CDC000816754E}" {
+  TilingU 2.01
+  TilingV 2.1
+  Rotation 180
+ }
+ ManualCascadesShadows 1
+ FrontFaceInterior 1
+ FresnelPower 1.29
+ FresnelBias 0.13
+ Backscatterig 0.3
+ RefractionIntensity 0.019
+ ApplyWorldNormal 1
+ RefractionColor 1 1 1 1
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 7.7
+ TITemperatureCoef1 1
+ TITemperature2 7.7
+ TITemperatureCoef2 1
+ TITemperature3 7.7
+ TITemperatureCoef3 1
+ TITemperature4 7.7
+ TITemperatureCoef4 1
+}

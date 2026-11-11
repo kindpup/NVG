@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{E4C4C9ACF3F7E546}Assets/Characters/HeadGear/SM_Opscore_FAST_MT_Helmet/SM_Opscore_FAST_MT_Helmet_V2.anm"
+ Configurations {
+  FBXAnimResourceClass PC {
+  }
+  FBXAnimResourceClass XBOX_ONE : PC {
+  }
+  FBXAnimResourceClass XBOX_SERIES : PC {
+  }
+  FBXAnimResourceClass PS4 : PC {
+  }
+  FBXAnimResourceClass PS5 : PC {
+  }
+  FBXAnimResourceClass HEADLESS : PC {
+  }
+ }
+}

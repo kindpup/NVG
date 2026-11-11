@@ -1,0 +1,24 @@
+MatPBRBasicGlass {
+ ZWrite 0
+ Cull none
+ Sort translucent
+ ReceiveShadow 0
+ SurfaceProperties "{3DC7C8A918E3F4A5}Common/Materials/Game/glass.gamemat"
+ AlphaTest 0.001
+ AlphaMul 0.15
+ BlendMode AlphaBlend
+ CrossFade 0
+ BCRMap "{E05D515EDE26551C}Assets/_SharedData/Glass/ST_Glass_Dirt_01_BCR.edds" 
+ NormalPower 0.15
+ NMOMap "{5E9B5A9AF633BD94}Assets/_SharedData/Metal/ST_Steel_Battered_NMO.edds" 
+ FrontFaceInterior 1
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 7.7
+ TITemperatureCoef1 1
+ TITemperature2 7.7
+ TITemperatureCoef2 1
+ TITemperature3 7.7
+ TITemperatureCoef3 1
+ TITemperature4 7.7
+ TITemperatureCoef4 1
+}

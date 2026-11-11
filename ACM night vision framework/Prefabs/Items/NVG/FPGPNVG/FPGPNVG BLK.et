@@ -93,6 +93,11 @@ GameEntity {
      m_sName "Amber"
      m_Material "{843375C9FB51E38B}Assets/Shaders/NVSystem/Colors/ACM_V2_AMBERPhosphor_HDR.emat"
     }
+    ACM_PhosphorColorOption "{6B09657371C4EEA5}" {
+     m_sName "Teal (ENVG-B)"
+     m_Material "{A9FE51940312F46B}Assets/Shaders/NVSystem/Colors/ACM_V2_TealPhosphor_HDR.emat"
+     m_vFaceGlowColor 0.55 1 0.98
+    }
    }
   }
   ACM_ThermalComponentV2 "{69A2562AEECD2633}" {

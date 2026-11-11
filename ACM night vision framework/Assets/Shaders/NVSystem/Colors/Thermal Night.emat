@@ -1,4 +1,5 @@
 HDREffect {
+ HDR 0
  VisiblePercentBlack 99
  TargetBrightness 0.03
  SpeedDarkToBright 20

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{2A1A7C891CD5F476}Assets/Structures/Commercial/FuelStations/FuelStation_E_01/Data/fuelstation_glass.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

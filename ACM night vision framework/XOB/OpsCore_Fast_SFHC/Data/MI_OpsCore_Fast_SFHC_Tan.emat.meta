@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{2B6941520FCE1260}XOB/OpsCore_Fast_SFHC/Data/MI_OpsCore_Fast_SFHC_Tan.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

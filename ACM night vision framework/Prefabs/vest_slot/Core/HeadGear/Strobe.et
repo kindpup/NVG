@@ -1,0 +1,103 @@
+GenericEntity {
+ ID "6ACE2B68DC71E7C4"
+ components {
+  Persistence "{6ACE2B68DC71E7CE}" {
+  }
+  SignalsManagerComponent "{6ACE2B68DC71E7FF}" {
+  }
+  ACM_EquipmentStorageComponent "{6ACE2B68DC71E7F9}" {
+   Attributes SCR_ItemAttributeCollection "{6ACE2B68DC71E7FB}" {
+    ItemDisplayName UIInfo "{6ACE2B68DC71E7FA}" {
+     Name "ACM_HellStar_Strobe"
+     Description "ACM_HellStar_Strobe"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{6ACE2B68DC71E7E7}" {
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{6ACE2B68DC71E7E6}" {
+      PreviewWornModel 1
+      PreviewModel "{6B4E7ED9ABA73FE9}XOB/Vest_CRYE_AVS_V1/Vest_CRYE_AVS_V1__TQ.xob"
+     }
+    }
+   }
+   CapacityCoefficient 0.15
+  }
+  InventoryItemComponent "{6ACE2B68DC71E7E2}" {
+   Enabled 0
+   Attributes SCR_ItemAttributeCollection "{6ACE2B68DC71E7EE}" {
+    CustomAttributes {
+     WeaponAttachmentAttributes "{6ACE2B68DC71E7E9}" {
+     }
+     PreviewRenderAttributes "{6ACE2B68DC71E7EB}" {
+      CameraDistanceToItem 1
+      ItemRenderRotation 0 0 0
+      FOV 10
+     }
+    }
+   }
+  }
+  MeshObject "{6ACE2B68DC71E414}" {
+   Object "{7ADBEB708F5CAFDD}XOB/OpsCore_Fast_SFHC/SKM_SHC_V2_Strobe.xob"
+  }
+  SCR_SoundDataComponent "{6ACE2B68DC71E416}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{6ACE2B68DC71E405}" {
+     m_sSoundProject "{0026043E3CD828D0}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic_Metallic.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{6ACE2B68DC71E404}" {
+     m_sSoundProject "{0026043E3CD828D0}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic_Metallic.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{6ACE2B68DC71E407}" {
+     m_sSoundProject "{7F55C292FBA55048}Sounds/Items/_SharedData/Drop/Items_Drop_Generic_Metallic.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{6ACE2B68DC71E401}" {
+   AreaType ACM_AVS_M_Strobe "{6ACE2B68EC4256BF}" {
+   }
+   WornModel "{7ADBEB708F5CAFDD}XOB/OpsCore_Fast_SFHC/SKM_SHC_V2_Strobe.xob"
+   ItemModel "{7ADBEB708F5CAFDD}XOB/OpsCore_Fast_SFHC/SKM_SHC_V2_Strobe.xob"
+  }
+  ActionsManagerComponent "{6ACE2B68DC71E402}" {
+   ActionContexts {
+    UserActionContext "{6ACE2B68DC71E40C}" {
+     UIInfo SCR_ActionContextUIInfo "{6ACE2B68DC71E40E}" {
+     }
+     ContextName "user"
+     Position PointInfo "{6ACE2B68DC71E409}" {
+     }
+     Radius 0.1
+    }
+   }
+   additionalActions {
+    SCR_EquipWeaponAttachment "{6ACE2B68DC71E40A}" {
+     ParentContextList {
+      "user"
+     }
+     UIInfo SCR_ActionUIInfo "{6ACE2B68DC71E435}" {
+      Name "#AR-UserAction_AttachToWeapon"
+     }
+    }
+    SCR_PickUpItemAction "{6ACE2B68DC71E43B}" {
+     ParentContextList {
+      "user"
+     }
+     UIInfo SCR_ActionUIInfo "{6ACE2B68DC71E43A}" {
+      Name "#AR-Inventory_Pickup"
+      m_sIconName "pick-up"
+     }
+    }
+   }
+  }
+  RplComponent "{6ACE2B68DC71E424}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{6ACE2B68DC71E427}" {
+  }
+ }
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{9609CB90A5AD51C0}Assets/Structures/Military/FuelStations/FuelStation_USSR_01/Data/Glass_FuelStation_USSR_01.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

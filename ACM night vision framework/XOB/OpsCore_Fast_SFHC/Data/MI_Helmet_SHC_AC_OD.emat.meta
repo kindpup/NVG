@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{81E2464DE40E8082}XOB/OpsCore_Fast_SFHC/Data/MI_Helmet_SHC_AC_OD.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

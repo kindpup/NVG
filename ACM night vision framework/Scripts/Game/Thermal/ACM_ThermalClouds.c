@@ -14,8 +14,37 @@
 // Side effect: while thermal is on, this player sees no clouds in the normal view outside the tubes
 // either (at night that is barely visible).
 //------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------
+//! Re-applies the clear sky at the end of every frame. In multiplayer the weather is driven by the
+//! server's replicated state and the weather system can rewrite the cloud material later in the
+//! frame than the call queue and the camera hook run, so on some frames the clouds came back and the
+//! thermal sky flickered (far less visible in Workbench single player). POSTFRAME is the last word.
+class ACM_ThermalCloudsTickerClass : GenericEntityClass
+{
+}
+
+class ACM_ThermalCloudsTicker : GenericEntity
+{
+	void ACM_ThermalCloudsTicker(IEntitySource src, IEntity parent)
+	{
+		SetFlags(EntityFlags.ACTIVE, false);
+		SetEventMask(EntityEvent.FRAME | EntityEvent.POSTFRAME);
+	}
+
+	override protected void EOnFrame(IEntity owner, float timeSlice)
+	{
+		ACM_ThermalClouds.Maintain();
+	}
+
+	override protected void EOnPostFrame(IEntity owner, float timeSlice)
+	{
+		ACM_ThermalClouds.Maintain();
+	}
+}
+
 class ACM_ThermalClouds
 {
+	protected static ACM_ThermalCloudsTicker s_Ticker;
 	protected static const ResourceName CLOUDS_MATERIAL = "{D3683C927920C51D}Terrains/Common/Sky/Clouds/Clouds_Volumetric.emat";
 
 	//! Material parameters (names as in Clouds_Volumetric.emat) forced to 0 while thermal is on.
@@ -86,6 +115,9 @@ class ACM_ThermalClouds
 			GetGame().GetCallqueue().Remove(Maintain);
 			GetGame().GetCallqueue().CallLater(Maintain, 0, true);
 		}
+
+		if (!s_Ticker && GetGame() && GetGame().GetWorld())
+			s_Ticker = ACM_ThermalCloudsTicker.Cast(GetGame().SpawnEntity(ACM_ThermalCloudsTicker, GetGame().GetWorld()));
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -93,6 +125,12 @@ class ACM_ThermalClouds
 	{
 		if (GetGame() && GetGame().GetCallqueue())
 			GetGame().GetCallqueue().Remove(Maintain);
+
+		if (s_Ticker)
+		{
+			delete s_Ticker;
+			s_Ticker = null;
+		}
 
 		Material material = GetCloudMaterial();
 		if (material)

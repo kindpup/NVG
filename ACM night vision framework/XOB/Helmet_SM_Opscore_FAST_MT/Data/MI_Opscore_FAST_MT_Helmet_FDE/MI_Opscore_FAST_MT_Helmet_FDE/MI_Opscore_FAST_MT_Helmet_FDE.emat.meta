@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{28557C09D27132D2}Assets/Characters/HeadGear/SM_Opscore_FAST_MT_Helmet/Data/MI_Opscore_FAST_MT_Helmet_FDE.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

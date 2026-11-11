@@ -1,0 +1,102 @@
+GenericEntity {
+ ID "6ACE16E849F53B3C"
+ components {
+  Persistence "{6ACE16E849F53B26}" {
+  }
+  SignalsManagerComponent "{6ACE16E849F53B2C}" {
+  }
+  ACM_EquipmentStorageComponent "{6ACE16E849F53B2E}" {
+   Attributes SCR_ItemAttributeCollection "{6ACE16E849F53B28}" {
+    ItemDisplayName UIInfo "{6ACE16E849F53B2A}" {
+     Name "Vest_CRYE_AVS_V1__TQ"
+     Description "TQ_2"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{6ACE16E849F53B55}" {
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{6ACE16E849F53B57}" {
+      PreviewModel "{6B4E7ED9ABA73FE9}XOB/Vest_CRYE_AVS_V1/Vest_CRYE_AVS_V1__TQ.xob"
+     }
+    }
+   }
+   CapacityCoefficient 0.15
+  }
+  InventoryItemComponent "{6ACE16E849F53B51}" {
+   Enabled 0
+   Attributes SCR_ItemAttributeCollection "{6ACE16E849F53B53}" {
+    CustomAttributes {
+     WeaponAttachmentAttributes "{6ACE16E849F53B52}" {
+     }
+     PreviewRenderAttributes "{6ACE16E849F4A41F}" {
+      CameraDistanceToItem 1
+      ItemRenderRotation 0 0 0
+      FOV 10
+     }
+    }
+   }
+  }
+  MeshObject "{6ACE16E849F4A412}" {
+   Object "{03C5F4903EEDFCCC}XOB/OpsCore_Fast_SFHC/EarPro_OpsCore_AMP_Mount_Wire.xob"
+  }
+  SCR_SoundDataComponent "{6ACE16E849F4A414}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{6ACE16E849F4A4D2}" {
+     m_sSoundProject "{0026043E3CD828D0}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic_Metallic.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{6ACE16E849F4A4D4}" {
+     m_sSoundProject "{0026043E3CD828D0}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic_Metallic.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{6ACE16E849F4A4D5}" {
+     m_sSoundProject "{7F55C292FBA55048}Sounds/Items/_SharedData/Drop/Items_Drop_Generic_Metallic.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{6ACE16E849F4A4D7}" {
+   AreaType ACM_AVS_M_EarPro_Mount_Wire "{6ACE16E87CB8A1A4}" {
+   }
+   WornModel "{03C5F4903EEDFCCC}XOB/OpsCore_Fast_SFHC/EarPro_OpsCore_AMP_Mount_Wire.xob"
+   ItemModel "{03C5F4903EEDFCCC}XOB/OpsCore_Fast_SFHC/EarPro_OpsCore_AMP_Mount_Wire.xob"
+  }
+  ActionsManagerComponent "{6ACE16E849F4A4CB}" {
+   ActionContexts {
+    UserActionContext "{6ACE16E849F4A4CD}" {
+     UIInfo SCR_ActionContextUIInfo "{6ACE16E849F4A4CE}" {
+     }
+     ContextName "user"
+     Position PointInfo "{6ACE16E849F4A4C0}" {
+     }
+     Radius 0.1
+    }
+   }
+   additionalActions {
+    SCR_EquipWeaponAttachment "{6ACE16E849F4A4C5}" {
+     ParentContextList {
+      "user"
+     }
+     UIInfo SCR_ActionUIInfo "{6ACE16E849F4A4C6}" {
+      Name "#AR-UserAction_AttachToWeapon"
+     }
+    }
+    SCR_PickUpItemAction "{6ACE16E849F4A4F0}" {
+     ParentContextList {
+      "user"
+     }
+     UIInfo SCR_ActionUIInfo "{6ACE16E849F4A4F1}" {
+      Name "#AR-Inventory_Pickup"
+      m_sIconName "pick-up"
+     }
+    }
+   }
+  }
+  RplComponent "{6ACE16E849F4A4F4}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{6ACE16E849F4A4F6}" {
+  }
+ }
+}

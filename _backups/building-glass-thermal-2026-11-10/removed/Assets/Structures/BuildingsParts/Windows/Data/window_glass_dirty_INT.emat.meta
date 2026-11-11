@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{280506CBF7623C8E}Assets/Structures/BuildingsParts/Windows/Data/window_glass_dirty_INT.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

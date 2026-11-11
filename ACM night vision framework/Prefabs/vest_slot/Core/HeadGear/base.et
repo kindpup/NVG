@@ -1,0 +1,102 @@
+GenericEntity {
+ ID "6AC86CDD07D0C0C3"
+ components {
+  Persistence "{6AC86CDD07D0C0ED}" {
+  }
+  SignalsManagerComponent "{6AC86CDD07D0C095}" {
+  }
+  ACM_EquipmentStorageComponent "{6AC86CDD07D0C097}" {
+   Attributes SCR_ItemAttributeCollection "{6AC86CDD07D0C089}" {
+    ItemDisplayName UIInfo "{6AC86CDD07D0C08A}" {
+     Name "Vest_CRYE_AVS_V1__TQ"
+     Description "TQ_2"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{6AC86CDD07D0C08C}" {
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{6AC86CDD07D0C08F}" {
+      PreviewModel "{6B4E7ED9ABA73FE9}XOB/Vest_CRYE_AVS_V1/Vest_CRYE_AVS_V1__TQ.xob"
+     }
+    }
+   }
+   CapacityCoefficient 0.15
+  }
+  InventoryItemComponent "{6AC86CDD07D0C082}" {
+   Enabled 0
+   Attributes SCR_ItemAttributeCollection "{6AC86CDD07D0C083}" {
+    CustomAttributes {
+     WeaponAttachmentAttributes "{6AC86CDD07D0C084}" {
+     }
+     PreviewRenderAttributes "{6AC86CDD07D0C085}" {
+      CameraDistanceToItem 1
+      ItemRenderRotation 0 0 0
+      FOV 10
+     }
+    }
+   }
+  }
+  MeshObject "{6AC86CDD07D0C087}" {
+   Object "{6B4E7ED9ABA73FE9}XOB/Vest_CRYE_AVS_V1/Vest_CRYE_AVS_V1__TQ.xob"
+  }
+  SCR_SoundDataComponent "{6AC86CDD07D0C0B8}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{6AC86CDD07D0C164}" {
+     m_sSoundProject "{0026043E3CD828D0}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic_Metallic.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{6AC86CDD07D0C165}" {
+     m_sSoundProject "{0026043E3CD828D0}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic_Metallic.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{6AC86CDD07D0C167}" {
+     m_sSoundProject "{7F55C292FBA55048}Sounds/Items/_SharedData/Drop/Items_Drop_Generic_Metallic.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{6AC86CDD07D0C118}" {
+   AreaType ACM_TQ_2 "{6AC86CDD07D0C11A}" {
+   }
+   WornModel "{6B4E7ED9ABA73FE9}XOB/Vest_CRYE_AVS_V1/Vest_CRYE_AVS_V1__TQ.xob"
+   ItemModel "{6B4E7ED9ABA73FE9}XOB/Vest_CRYE_AVS_V1/Vest_CRYE_AVS_V1__TQ.xob"
+  }
+  ActionsManagerComponent "{6AC86CDD07D0C11B}" {
+   ActionContexts {
+    UserActionContext "{6AC86CDD07D0C113}" {
+     UIInfo SCR_ActionContextUIInfo "{6AC86CDD07D0C114}" {
+     }
+     ContextName "user"
+     Position PointInfo "{6AC86CDD07D0C117}" {
+     }
+     Radius 0.1
+    }
+   }
+   additionalActions {
+    SCR_EquipWeaponAttachment "{6AC86CDD07D0C109}" {
+     ParentContextList {
+      "user"
+     }
+     UIInfo SCR_ActionUIInfo "{6AC86CDD07D0C10A}" {
+      Name "#AR-UserAction_AttachToWeapon"
+     }
+    }
+    SCR_PickUpItemAction "{6AC86CDD07D0C103}" {
+     ParentContextList {
+      "user"
+     }
+     UIInfo SCR_ActionUIInfo "{6AC86CDD07D0C104}" {
+      Name "#AR-Inventory_Pickup"
+      m_sIconName "pick-up"
+     }
+    }
+   }
+  }
+  RplComponent "{6AC86CDD07D0C106}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{6AC86CDD07D0C139}" {
+  }
+ }
+}

@@ -1,0 +1,19 @@
+ThermalImagingEffect {
+ TempConversionTex "{4E161856721218D3}Textures/Thermal_Filter/thermal colors/Outlined_Orange.edds"
+ TemperatureDisplayMin 0
+ TemperatureDisplayMax 40
+ ApplyShadows 1
+ ApplyAO 1
+ DownsizeMethod Blur
+ DownsizePercent 100
+ BlurAmount 0.8
+ UpsampleMethod Bilinear
+ TemperatureRangeMin -40
+ TemperatureRangeMax 50
+ SimOverrideValues 1
+ SimForceRecomputeTableOnChange 1
+ SimSunIrradianceMin 50
+ SimSunIrradianceMax 150
+ SimTemperatureAirMin 15
+ SimTemperatureAirMax 23
+}

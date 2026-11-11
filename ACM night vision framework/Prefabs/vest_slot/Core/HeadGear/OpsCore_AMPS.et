@@ -1,0 +1,102 @@
+GenericEntity {
+ ID "6ACE21ED3FB480F7"
+ components {
+  Persistence "{6ACE21ED3FB480F8}" {
+  }
+  SignalsManagerComponent "{6ACE21ED3FB48116}" {
+  }
+  ACM_EquipmentStorageComponent "{6ACE21ED3FB48113}" {
+   Attributes SCR_ItemAttributeCollection "{6ACE21ED3FB4811F}" {
+    ItemDisplayName UIInfo "{6ACE21ED3FB48119}" {
+     Name "ACM_OpsCore_AMPS"
+     Description "ACM_OpsCore_AMPS"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{6ACE21ED3FB4811B}" {
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{6ACE21ED3FB48104}" {
+      PreviewModel "{6B4E7ED9ABA73FE9}XOB/Vest_CRYE_AVS_V1/Vest_CRYE_AVS_V1__TQ.xob"
+     }
+    }
+   }
+   CapacityCoefficient 0.15
+  }
+  InventoryItemComponent "{6ACE21ED3FB48101}" {
+   Enabled 0
+   Attributes SCR_ItemAttributeCollection "{6ACE21ED3FB48103}" {
+    CustomAttributes {
+     WeaponAttachmentAttributes "{6ACE21ED3FB4810D}" {
+     }
+     PreviewRenderAttributes "{6ACE21ED3FB4810C}" {
+      CameraDistanceToItem 1
+      ItemRenderRotation 0 0 0
+      FOV 10
+     }
+    }
+   }
+  }
+  MeshObject "{6ACE21ED3FB48108}" {
+   Object "{E86722EBC669204B}XOB/OpsCore_Fast_SFHC/OpsCore_Fast_SFHC_AMPSfbx.xob"
+  }
+  SCR_SoundDataComponent "{6ACE21ED3FB4810B}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{6ACE21ED3FB48120}" {
+     m_sSoundProject "{0026043E3CD828D0}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic_Metallic.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{6ACE21ED3FB48122}" {
+     m_sSoundProject "{0026043E3CD828D0}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic_Metallic.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{6ACE21ED3FB4812C}" {
+     m_sSoundProject "{7F55C292FBA55048}Sounds/Items/_SharedData/Drop/Items_Drop_Generic_Metallic.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{6ACE21ED3FB48129}" {
+   AreaType ACM_AVS_M_EarPro_OpsCore_AMP "{6ACE21ED203BD48D}" {
+   }
+   WornModel "{E86722EBC669204B}XOB/OpsCore_Fast_SFHC/OpsCore_Fast_SFHC_AMPSfbx.xob"
+   ItemModel "{E86722EBC669204B}XOB/OpsCore_Fast_SFHC/OpsCore_Fast_SFHC_AMPSfbx.xob"
+  }
+  ActionsManagerComponent "{6ACE21ED3FB48154}" {
+   ActionContexts {
+    UserActionContext "{6ACE21ED3FB48156}" {
+     UIInfo SCR_ActionContextUIInfo "{6ACE21ED3FB48150}" {
+     }
+     ContextName "user"
+     Position PointInfo "{6ACE21ED3FB4815D}" {
+     }
+     Radius 0.1
+    }
+   }
+   additionalActions {
+    SCR_EquipWeaponAttachment "{6ACE21ED3FB4815E}" {
+     ParentContextList {
+      "user"
+     }
+     UIInfo SCR_ActionUIInfo "{6ACE21ED3FB48158}" {
+      Name "#AR-UserAction_AttachToWeapon"
+     }
+    }
+    SCR_PickUpItemAction "{6ACE21ED3FB48148}" {
+     ParentContextList {
+      "user"
+     }
+     UIInfo SCR_ActionUIInfo "{6ACE21ED3FB4814A}" {
+      Name "#AR-Inventory_Pickup"
+      m_sIconName "pick-up"
+     }
+    }
+   }
+  }
+  RplComponent "{6ACE21ED3FB48174}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{6ACE21ED3FB48176}" {
+  }
+ }
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{1853CA03644A6F7B}Assets/Structures/BuildingsParts/Windows/Win_GlassBlock_01/Data/Win_GlassBlock_01_Glass_Ext.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

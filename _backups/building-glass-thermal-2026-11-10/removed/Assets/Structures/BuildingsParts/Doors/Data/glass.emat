@@ -1,0 +1,20 @@
+MatPBRBasic {
+ Color 0.259 0.522 0.686 1
+ ZWrite 0
+ Cull none
+ ReceiveShadow 1
+ SurfaceProperties "{F0733D364338D7E0}Common/Materials/Game/grass.gamemat"
+ AlphaMul 0.5
+ BlendMode AlphaBlend
+ RoughnessScale 0.074
+ DielectricReflectance 0.043
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 7.7
+ TITemperatureCoef1 1
+ TITemperature2 7.7
+ TITemperatureCoef2 1
+ TITemperature3 7.7
+ TITemperatureCoef3 1
+ TITemperature4 7.7
+ TITemperatureCoef4 1
+}

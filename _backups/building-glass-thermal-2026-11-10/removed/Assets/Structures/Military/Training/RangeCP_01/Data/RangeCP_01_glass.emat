@@ -1,0 +1,20 @@
+MatPBRBasicGlass {
+ Color 0.591 0.591 0.591 1
+ SurfaceProperties "{3DC7C8A918E3F4A5}Common/Materials/Game/glass.gamemat"
+ AlphaMul 0.5
+ BlendMode AlphaBlend
+ RoughnessScale 0.5
+ MetalnessScale 0.5
+ BCRMap "{A043D8C9EE6F946D}Assets/Structures/Military/Training/RangeCP_01/Data/RangeCP_01_US_BCR.edds" 
+ OpacityMap "{D8C8AF946F85B04F}Assets/Structures/Military/Training/RangeCP_01/Data/RangeCP_01_Opacity_A.edds" 
+ NMOMap "{989B635B3718C6F3}Assets/Structures/Military/Training/RangeCP_01/Data/RangeCP_01_NMO.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 7.7
+ TITemperatureCoef1 1
+ TITemperature2 7.7
+ TITemperatureCoef2 1
+ TITemperature3 7.7
+ TITemperatureCoef3 1
+ TITemperature4 7.7
+ TITemperatureCoef4 1
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{4FAEFEC368A5B59D}Assets/Structures/BuildingsParts/Windows/Data/window_glass_atlas.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

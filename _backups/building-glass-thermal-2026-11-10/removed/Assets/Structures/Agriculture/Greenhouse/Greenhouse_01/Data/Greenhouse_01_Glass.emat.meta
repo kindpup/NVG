@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{7F01D99925A88C27}Assets/Structures/Agriculture/Greenhouse/Greenhouse_01/Data/Greenhouse_01_Glass.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

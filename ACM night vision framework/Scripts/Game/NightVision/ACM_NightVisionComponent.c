@@ -50,7 +50,8 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 	protected ResourceName m_BlemishMaterial;
 	
 	// Brightness/Gain settings
-	[Attribute("1.5", UIWidgets.Slider, desc: "Starting brightness multiplier", category: "ACM NVG - Brightness", params: "0.05 20 0.05")]
+	// Gain on top of the naked-eye exposure (phosphor materials run with automatic HDR off).
+	[Attribute("1.5", UIWidgets.Slider, desc: "Starting brightness: gain over the naked-eye exposure", category: "ACM NVG - Brightness", params: "0.05 20 0.05")]
 	protected float m_fBaseBrightness;
 	
 	[Attribute("0", UIWidgets.CheckBox, desc: "Allow manual brightness adjustment", category: "ACM NVG - Brightness")]
@@ -100,6 +101,12 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 	[Attribute("0.85", UIWidgets.Slider, desc: "Render resolution of the night vision picture. Lower = faster; grain hides the softness.", category: "ACM NVG - Tubes", params: "0.3 1 0.05")]
 	protected float m_fTubeResolutionScale;
 
+	[Attribute("-0.5", UIWidgets.Slider, desc: "Exposure of the naked-eye surroundings outside the tubes while the goggles are on, in light stops (0 = unchanged, negative = darker).", category: "ACM NVG - Tubes", params: "-4 0 0.1")]
+	protected float m_fSurroundEV;
+
+	//! Main camera the surroundings exposure offset was written to (-1 = none).
+	protected int m_iSurroundCam = -1;
+
 	[Attribute("0.12", UIWidgets.Slider, desc: "Lens distortion towards the tube edge. 0 = none. Needs the radial tube mask texture.", category: "ACM NVG - Tubes", params: "0 0.5 0.01")]
 	protected float m_fTubeEdgeDistortion;
 
@@ -134,6 +141,24 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 	// Brightness adjustment rate limiting
 	protected float m_fBrightnessAdjustCooldown;
 	protected static const float BRIGHTNESS_ADJUST_RATE = 0.05;
+
+	// Brightness guard: the manual exposure we set on the tube camera can be dropped back to the
+	// engine's automatic exposure by something else (another device's revert, a tube view rebuild).
+	// When that happened the picture "auto-corrected" and the brightness keys stopped reaching the
+	// camera until the goggles were cycled. The guard re-asserts it a few times a second.
+	protected float m_fBrightnessGuardTimer;
+	protected int m_iBrightnessGuardLogs;
+	protected static const float BRIGHTNESS_GUARD_INTERVAL = 0.25;
+	protected static const int BRIGHTNESS_GUARD_MAX_LOGS = 8;
+
+	// Exposure reference. The phosphor HDR materials run with automatic HDR OFF ("HDR 0", like
+	// vanilla scopes); with it on, the tube camera re-metered the scene every frame and cancelled
+	// the user's brightness ("auto-corrects", keys do nothing). With it off the camera's HDR
+	// brightness is the final exposure, so it is the naked-eye exposure (sampled from the main
+	// camera when the goggles switch on, or on reset) times the user's brightness as a gain.
+	protected float m_fExposureReference = -1;
+	//! Exposure factor when the night vision chain runs on the main camera (see GetAppliedExposure).
+	protected static const float MAIN_CAMERA_GAIN_SCALE = 0.5;
 	
 	// State stability - prevent random shutoffs from brief inventory glitches
 	protected int m_iNotWornFrameCount;
@@ -551,11 +576,132 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 		if (newVal != m_fCurrentBrightness)
 		{
 			m_fCurrentBrightness = newVal;
-			
-			// Only update brightness on the camera we already applied to.
+
+			// Only update brightness on the camera we already applied to. If the effects were lost,
+			// the guard restores them (with this new value) instead of the key silently doing nothing.
 			if (m_bHDRBrightnessApplied && IsAppliedCameraLive(world))
-				world.SetCameraHDRBrightness(m_iAppliedCamId, m_fCurrentBrightness);
+				world.SetCameraHDRBrightness(m_iAppliedCamId, GetAppliedExposure());
+			else
+				EnforceBrightness();
 		}
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Exposure written to the camera: naked-eye exposure times the user's brightness (gain).
+	protected float GetAppliedExposure()
+	{
+		// With the chain on the MAIN camera (dark UI surroundings) the same gain came out about twice
+		// as bright as on the separate tube camera (flat green at 1.5), so it is halved there; the
+		// brightness numbers the player sees mean the same in both modes.
+		float gain = m_fCurrentBrightness;
+		if (m_bUsingTubeView && ACM_NVGTubeView.RendersOnMainCamera())
+			gain *= MAIN_CAMERA_GAIN_SCALE;
+
+		if (m_fExposureReference <= 0)
+			return gain;
+
+		return m_fExposureReference * gain;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Read the exposure the naked eye is adapted to from the main camera (still automatic).
+	protected void SampleExposureReference(BaseWorld world, int mainCamId)
+	{
+		if (!world || mainCamId < 0)
+			return;
+
+		// Full-screen mode puts our own manual exposure on the main camera; never read that back.
+		if (m_bHDRBrightnessApplied && mainCamId == m_iAppliedCamId)
+			return;
+
+		float e = world.GetCameraHDRBrightness(mainCamId);
+		if (e > 0)
+			m_fExposureReference = e;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Keep the manual exposure on the camera we drive. Restores the whole effect chain if it was
+	//! lost, re-applies the brightness if the camera was put back on automatic exposure.
+	protected void EnforceBrightness()
+	{
+		if (!m_bActivated || !m_bIsWorn || m_bMenuOpen || !m_CharacterOwner)
+			return;
+		if (m_CharacterOwner != SCR_PlayerController.GetLocalControlledEntity())
+			return;
+
+		BaseWorld world = GetGame().GetWorld();
+		if (!world)
+			return;
+
+		// Another device owns the tube view right now; its camera settings are its own business.
+		if (m_bUsingTubeView && ACM_NVGTubeView.IsUp() && !ACM_NVGTubeView.IsActiveFor(this))
+			return;
+
+		bool tubesLost = m_bUsingTubeView && !ACM_NVGTubeView.IsActiveFor(this);
+		if (!m_bHDRBrightnessApplied || !IsAppliedCameraLive(world) || tubesLost)
+		{
+			LogBrightnessGuard("effects lost (applied=" + m_bHDRBrightnessApplied.ToString() + " cam=" + m_iAppliedCamId.ToString() + " tubesLost=" + tubesLost.ToString() + "), re-applying");
+			ApplyVisualEffect(true, true, false);
+			return;
+		}
+
+		// Relative tolerance: the exposure is now eye exposure x gain and can be large. A brightness
+		// key press lands one frame later, so a small lag right after a press is normal.
+		float expected = GetAppliedExposure();
+		float actual = world.GetCameraHDRBrightness(m_iAppliedCamId);
+		if (Math.AbsFloat(actual - expected) > Math.Max(0.01, expected * 0.02))
+		{
+			LogBrightnessGuard("camera " + m_iAppliedCamId.ToString() + " exposure " + actual.ToString() + " != " + expected.ToString() + " (gain " + m_fCurrentBrightness.ToString() + " x eye " + m_fExposureReference.ToString() + "), re-applying");
+			world.SetCameraHDRBrightness(m_iAppliedCamId, expected);
+		}
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Darkens the naked-eye view around the tubes (the main camera; the tubes are their own camera)
+	//! by m_fSurroundEV stops. Re-asserted from the guard, which also follows camera changes.
+	protected void ApplySurroundDim()
+	{
+		BaseWorld world = GetGame().GetWorld();
+		if (!world)
+			return;
+
+		// Only with the separate tube camera: in main-camera mode this would darken the tubes too.
+		if (!m_bUsingTubeView || ACM_NVGTubeView.RendersOnMainCamera() || m_fSurroundEV == 0)
+		{
+			ClearSurroundDim();
+			return;
+		}
+
+		int cam = world.GetCurrentCameraId();
+		if (cam < 0)
+			return;
+
+		if (cam != m_iSurroundCam)
+			ClearSurroundDim();
+
+		world.AdjustCameraEV(cam, m_fSurroundEV);
+		m_iSurroundCam = cam;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected void ClearSurroundDim()
+	{
+		if (m_iSurroundCam < 0)
+			return;
+
+		BaseWorld world = GetGame().GetWorld();
+		if (world)
+			world.AdjustCameraEV(m_iSurroundCam, 0);
+		m_iSurroundCam = -1;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected void LogBrightnessGuard(string msg)
+	{
+		if (m_iBrightnessGuardLogs >= BRIGHTNESS_GUARD_MAX_LOGS)
+			return;
+		m_iBrightnessGuardLogs++;
+		Print("[ACM NVG] Brightness guard: " + msg, LogLevel.WARNING);
 	}
 	
 	protected void ResetBrightness()
@@ -563,14 +709,19 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 		if (!m_bActivated)
 			return;
 		
-		if (m_fCurrentBrightness != m_fBaseBrightness)
-		{
-			m_fCurrentBrightness = m_fBaseBrightness;
-			
-			BaseWorld world = GetGame().GetWorld();
-			if (world && m_bHDRBrightnessApplied && IsAppliedCameraLive(world))
-				world.SetCameraHDRBrightness(m_iAppliedCamId, m_fCurrentBrightness);
-		}
+		// Reset = default gain AND re-read the naked-eye exposure (e.g. after walking from a lit
+		// room into a dark field).
+		m_fCurrentBrightness = m_fBaseBrightness;
+
+		BaseWorld world = GetGame().GetWorld();
+		if (!world)
+			return;
+
+		if (m_bUsingTubeView)
+			SampleExposureReference(world, world.GetCurrentCameraId());
+
+		if (m_bHDRBrightnessApplied && IsAppliedCameraLive(world))
+			world.SetCameraHDRBrightness(m_iAppliedCamId, GetAppliedExposure());
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -581,7 +732,9 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 		if (m_iAppliedCamId < 0 || !world)
 			return false;
 
-		if (m_bUsingTubeView)
+		// Performance mode puts the chain on the main camera, which can change (vehicles), so check it.
+
+		if (m_bUsingTubeView && !ACM_NVGTubeView.RendersOnMainCamera())
 			return true;
 
 		return m_iAppliedCamId == world.GetCurrentCameraId();
@@ -729,6 +882,8 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 	// only on the camera we wrote them to. Safe to call when nothing is applied.
 	protected void RevertAppliedEffects()
 	{
+		ClearSurroundDim();
+
 		if (m_iAppliedCamId < 0)
 		{
 			m_bSlot8Applied = false;
@@ -794,7 +949,7 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 			{
 				if (ACM_NVGTubeView.Acquire(this, m_eTubeLayout, m_aCustomTubes, m_fTubeEdgeSoftness, m_fTubeResolutionScale, m_fTubeEdgeDistortion, m_fTubeRimDarkness))
 				{
-					camId = ACM_NVGTubeView.CAMERA_INDEX;
+					camId = ACM_NVGTubeView.GetEffectCamera();
 					useTubes = true;
 				}
 			}
@@ -814,7 +969,7 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 
 			// Vanilla night noise is the naked-eye view. With tubes, that is what surrounds them,
 			// so it stays on; only the full-screen effect replaces it.
-			DisableVanillaNightGrain(!useTubes);
+			DisableVanillaNightGrain(!useTubes || ACM_NVGTubeView.RendersOnMainCamera());
 
 			m_iAppliedCamId = camId;
 
@@ -841,13 +996,32 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 			
 			if (m_fCurrentBrightness < 0 || m_fCurrentBrightness < m_fMinBrightness)
 				m_fCurrentBrightness = m_fBaseBrightness;
-			
-			world.SetCameraHDRBrightness(camId, m_fCurrentBrightness);
+
+			// First apply of a session: take the naked-eye exposure as the reference. Later
+			// re-applies (colour change, menu close, guard) keep it, so brightness stays put.
+			if (m_fExposureReference <= 0)
+				SampleExposureReference(world, world.GetCurrentCameraId());
+
+			world.SetCameraHDRBrightness(camId, GetAppliedExposure());
 			m_bHDRBrightnessApplied = true;
+
+			// The naked-eye surroundings around the tubes use the same eye exposure (locked), so they
+			// look like the night, not brightened to daylight by their own automatic exposure.
+			if (m_bUsingTubeView)
+				ACM_NVGTubeView.SetPeripheryExposure(m_fExposureReference);
+
+			// Surroundings one shade darker (tube-camera mode only).
+			if (isLocalPlayer)
+				ApplySurroundDim();
 			
 			if (m_bManualBrightnessEnabled)
 			{
+				// AddActionListener does not deduplicate, and this runs on every re-apply (colour
+				// change, menu close, brightness guard), so drop any earlier registration first.
 				InputManager im = GetGame().GetInputManager();
+				im.RemoveActionListener("ACM_NV_Increase", EActionTrigger.PRESSED, IncreaseBrightness);
+				im.RemoveActionListener("ACM_NV_Decrease", EActionTrigger.PRESSED, DecreaseBrightness);
+				im.RemoveActionListener("ACM_NV_Reset", EActionTrigger.DOWN, ResetBrightness);
 				im.AddActionListener("ACM_NV_Increase", EActionTrigger.PRESSED, IncreaseBrightness);
 				im.AddActionListener("ACM_NV_Decrease", EActionTrigger.PRESSED, DecreaseBrightness);
 				im.AddActionListener("ACM_NV_Reset", EActionTrigger.DOWN, ResetBrightness);
@@ -860,6 +1034,10 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 
 			RevertAppliedEffects();
 			ReleaseTubeView();
+
+			// Switched off for real (not just a menu): read the eye exposure afresh next time.
+			if (!m_bActivated)
+				m_fExposureReference = -1;
 
 			DisableVanillaNightGrain(false);
 			
@@ -1124,6 +1302,18 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 			// note in ApplyVisualEffect. Tearing the detection system down here, and trusting
 			// something else to raise it on the way back out, is the whole of the menu bug.
 			ApplyVisualEffect(!m_bMenuOpen && m_bActivated, true, false);
+		}
+
+		// Brightness guard (see m_fBrightnessGuardTimer).
+		if (m_bActivated && !m_bMenuOpen)
+		{
+			m_fBrightnessGuardTimer += timeSlice;
+			if (m_fBrightnessGuardTimer >= BRIGHTNESS_GUARD_INTERVAL)
+			{
+				m_fBrightnessGuardTimer = 0;
+				EnforceBrightness();
+				ApplySurroundDim();
+			}
 		}
 	}
 	

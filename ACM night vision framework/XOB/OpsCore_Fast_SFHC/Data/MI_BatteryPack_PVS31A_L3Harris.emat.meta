@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{3432F9EBC93E6135}XOB/OpsCore_Fast_SFHC/Data/MI_BatteryPack_PVS31A_L3Harris.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

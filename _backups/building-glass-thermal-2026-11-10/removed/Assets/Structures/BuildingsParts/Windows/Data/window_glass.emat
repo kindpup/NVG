@@ -1,0 +1,42 @@
+MatPBRBasicGlass {
+ Color 1 0.95 0.896 1
+ DiffuseIBL 0.73 0.715 0.631 1
+ SpecularIBL 0.493 0.503 0.515 1
+ Diffuse 0.277 0.289 0.305 1
+ ZWrite 0
+ Cull none
+ Sort translucent
+ SurfaceProperties "{3DC7C8A918E3F4A5}Common/Materials/Game/glass.gamemat"
+ Specular 0.386 0.386 0.386 1
+ SpecularMul 0.025
+ WetnessScale 0
+ AlphaTest 0.01
+ AlphaMul 0.243
+ BlendMode AlphaBlend
+ CrossFade 0
+ RoughnessScale 0.407
+ MetalnessScale 0.8
+ DielectricReflectance 0.09
+ BCRMap "{93AAE26DAA1992E6}Assets/_SharedData/Glass/ST_Glass_Streaks_01_NoColor_BCR.edds"
+ NormalPower 0.04
+ NMOMap "{C2AC9474786C75F8}Assets/_SharedData/Metal/ST_Steel_Base_01_NMO.edds"
+ DetailNormalPower 0.1
+ DetailNormalMap "{5E9B5A9AF633BD94}Assets/_SharedData/Metal/ST_Steel_Battered_NMO.edds"
+ DetailNormalMapUVTransform MatUVTransform "{608C7436C44474A9}" {
+  TilingU 0.15
+  TilingV 0.15
+ }
+ FrontFaceInterior 1
+ FresnelPower 1.333
+ FresnelBias 0.05
+ Backscatterig 0.8
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 7.7
+ TITemperatureCoef1 1
+ TITemperature2 7.7
+ TITemperatureCoef2 1
+ TITemperature3 7.7
+ TITemperatureCoef3 1
+ TITemperature4 7.7
+ TITemperatureCoef4 1
+}

@@ -1,0 +1,52 @@
+MetaFileClass {
+ Name "{30A634195C5422EF}XOB/IHIPS/Helmet_IHIPS/SM_Helmet_IHPS.xob"
+ Configurations {
+  FBXResourceClass PC {
+   ExportSkinning 1
+   Rotate 0 180 0
+   MaterialAssigns {
+    MaterialAssignClass "{6973188482AE3C7E}" {
+     SourceMaterial "MI_Helmet_IHPS_01"
+     AssignedMaterial "{101197ADBB49E938}XOB/IHIPS/Helmet_IHIPS/Data/MI_Helmet_IHPS_01.emat"
+    }
+    MaterialAssignClass "{69731884C116131D}" {
+     SourceMaterial "MI_Helmet_IHPS_02"
+     AssignedMaterial "{4EF9BEEE04C46737}XOB/IHIPS/Helmet_IHIPS/Data/MI_Helmet_IHPS_02.emat"
+    }
+   }
+   MeshParams {
+    MeshParam SM_Helmet_IHPS {
+    }
+    MeshParam SM_Helmet_IHPS_Rails {
+    }
+    MeshParam SM_Helmet_IHPS_Cover {
+    }
+   }
+   Common TXOCommonClass "{6973188482CB59C9}" : "{0877E7C4BB2B2C9A}Configs/System/ResourceTypes/PC/MeshObjectCommon.conf" {
+   }
+   ApplicationVendor "Blender Foundation"
+   ApplicationName "Blender (stable FBX IO)"
+   ApplicationVersion "5.0.0"
+  }
+  FBXResourceClass XBOX_ONE : PC {
+   Common TXOCommonClass "{6973188482CB5E89}" : "{9D5B6207F7628CE2}Configs/System/ResourceTypes/XBOX_ONE/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass XBOX_SERIES : PC {
+   Common TXOCommonClass "{6973188482CB5F4A}" : "{DD9F02115C764647}Configs/System/ResourceTypes/XBOX_SERIES/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass PS4 : PC {
+   Common TXOCommonClass "{6973188482CB5F1C}" : "{53EC476BC921D99A}Configs/System/ResourceTypes/PS4/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass PS5 : PC {
+   Common TXOCommonClass "{6973188482CB5F37}" : "{F62AA8E7B8EA9D26}Configs/System/ResourceTypes/PS5/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass HEADLESS : PC {
+   Common TXOCommonClass "{6973188482CB5FC3}" : "{3A5B3356978039E8}Configs/System/ResourceTypes/HEADLESS/MeshObjectCommon.conf" {
+   }
+  }
+ }
+}

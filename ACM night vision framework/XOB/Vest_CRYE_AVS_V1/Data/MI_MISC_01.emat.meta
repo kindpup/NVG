@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{1F4CF453A5CCA440}XOB/Vest_CRYE_AVS_V1/Data/MI_MISC_01.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

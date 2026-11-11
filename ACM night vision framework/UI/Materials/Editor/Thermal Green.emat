@@ -1,7 +1,7 @@
 ThermalImagingEffect {
- TempConversionTex "{5DC1AEA34F8D6BE9}Textures/Thermal_Filter/thermal colors/Green.edds"
- TemperatureConversionMethod AutomaticMinMax
- TemperatureConversionClipLimit 0.01
+ TempConversionTex "{EBB306EF8A64AA07}Textures/Thermal_Filter/thermal colors/Fixed_Green.edds"
+ TemperatureDisplayMin 0
+ TemperatureDisplayMax 40
  TemperatureRangeMin -40
  TemperatureRangeMax 50
  SimOverrideValues 1

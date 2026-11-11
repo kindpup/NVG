@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{A23EBC9A8DA8D4DB}Assets/Structures/Infrastructure/Landlines/PhoneBooth_E/Data/PhoneBooth_USSR_01_Window_Glass.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -610,7 +610,9 @@ class ACM_ThermalComponentV2 : SCR_GadgetComponent
 		if (m_iAppliedCamId < 0 || !world)
 			return false;
 
-		if (m_bUsingTubeView)
+		// Performance mode puts the chain on the main camera, which can change (vehicles), so check it.
+
+		if (m_bUsingTubeView && !ACM_NVGTubeView.RendersOnMainCamera())
 			return true;
 
 		return m_iAppliedCamId == world.GetCurrentCameraId();
@@ -788,7 +790,7 @@ class ACM_ThermalComponentV2 : SCR_GadgetComponent
 			{
 				if (ACM_NVGTubeView.Acquire(this, m_eTubeLayout, m_aCustomTubes, m_fTubeEdgeSoftness, m_fTubeResolutionScale, m_fTubeEdgeDistortion, m_fTubeRimDarkness))
 				{
-					camId = ACM_NVGTubeView.CAMERA_INDEX;
+					camId = ACM_NVGTubeView.GetEffectCamera();
 					useTubes = true;
 				}
 			}

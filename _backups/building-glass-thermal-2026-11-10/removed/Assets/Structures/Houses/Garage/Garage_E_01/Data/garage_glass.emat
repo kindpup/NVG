@@ -1,0 +1,22 @@
+MatPBRBasic {
+ Color 0.195 0.244 0.267 1
+ ZWrite 0
+ Cull none
+ Sort translucent
+ SortBias 1
+ ReceiveShadow 1
+ SurfaceProperties "{3DC7C8A918E3F4A5}Common/Materials/Game/glass.gamemat"
+ AlphaTest 0.05
+ AlphaMul 0.5
+ BlendMode AlphaBlend
+ RoughnessScale 0.01
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 7.7
+ TITemperatureCoef1 1
+ TITemperature2 7.7
+ TITemperatureCoef2 1
+ TITemperature3 7.7
+ TITemperatureCoef3 1
+ TITemperature4 7.7
+ TITemperatureCoef4 1
+}

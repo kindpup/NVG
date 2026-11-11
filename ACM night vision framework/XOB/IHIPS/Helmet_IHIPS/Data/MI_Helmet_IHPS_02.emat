@@ -1,0 +1,4 @@
+MatPBRBasic {
+ BCRMap "{B288312F64842A32}Assets/Characters/HeadGear/IHIPs/Data/MI_Helmet_IHPS_02/cavr_02_BCR.edds"
+ NMOMap "{8A508ABDBDF378AC}Assets/Characters/HeadGear/IHIPs/Data/MI_Helmet_IHPS_02/cavr_02_NMO.edds"
+}

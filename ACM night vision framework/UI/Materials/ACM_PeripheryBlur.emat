@@ -1,0 +1,4 @@
+GaussFilterEffect {
+ Enabled 1
+ Intensity 0.5
+}

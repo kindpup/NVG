@@ -1,0 +1,14 @@
+ThermalImagingEffect {
+ TempConversionTex "{5DC1AEA34F8D6BE9}Textures/Thermal_Filter/thermal colors/Green.edds"
+ TemperatureConversionMethod AutomaticMinMax
+ TemperatureChangeSpeed 0.25
+ TemperatureConversionClipLimit 0.01
+ TemperatureRangeMin -40
+ TemperatureRangeMax 50
+ SimOverrideValues 1
+ SimForceRecomputeTableOnChange 1
+ SimSunIrradianceMin 50
+ SimSunIrradianceMax 150
+ SimTemperatureAirMin 15
+ SimTemperatureAirMax 23
+}

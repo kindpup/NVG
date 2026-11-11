@@ -1,0 +1,22 @@
+MatPBRBasic {
+ Color 0.517 0.686 0.686 1
+ ZWrite 0
+ Sort translucent
+ ReceiveShadow 1
+ AlphaTest 0.001
+ AlphaMul 0.033
+ BlendMode AlphaBlend
+ RoughnessScale 0.643
+ MetalnessScale 0.818
+ DielectricReflectance 0.05
+ BCRMap "{D79C65F312586EE0}Assets/Structures/Infrastructure/Power/TransformerSubstation_01/Data/TransformerSubstation_01_Details_BCR.edds"
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 7.7
+ TITemperatureCoef1 1
+ TITemperature2 7.7
+ TITemperatureCoef2 1
+ TITemperature3 7.7
+ TITemperatureCoef3 1
+ TITemperature4 7.7
+ TITemperatureCoef4 1
+}

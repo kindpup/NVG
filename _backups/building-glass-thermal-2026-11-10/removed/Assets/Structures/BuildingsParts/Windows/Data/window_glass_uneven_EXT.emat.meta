@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{0A11BCBCE1D63AB2}Assets/Structures/BuildingsParts/Windows/Data/window_glass_uneven_EXT.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

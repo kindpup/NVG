@@ -1,0 +1,4 @@
+MatPBRBasic {
+ BCRMap "{487FC965340C89DF}Assets/Characters/HeadGear/SM_Opscore_FAST_MT_Helmet/Data/MI_Opscore_FAST_MT_Helmet_FDE/MI_Opscore_FAST_MT_Helmet_MC/Opscore_FAST_XP_MC_BCR.edds"
+ NMOMap "{82D21A2C45091595}Assets/Characters/HeadGear/SM_Opscore_FAST_MT_Helmet/Data/MI_Opscore_FAST_MT_Helmet_FDE/MI_Opscore_FAST_MT_Helmet_MC/Opscore_FAST_XP_NMO.edds"
+}

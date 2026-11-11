@@ -62,6 +62,125 @@ class ACM_NVGTubeView : GenericEntity
 	//! World camera index used for the night vision render. Vanilla PIP uses 8, the remote feed 11-15.
 	static const int CAMERA_INDEX = 20;
 
+	//! PERFORMANCE MODE. true: the night vision chain goes on the MAIN camera and this view only draws
+	//! a black overlay with soft holes where the tubes are. Camera 20 no longer renders the world, which
+	//! removes a whole extra scene render (NV + ECOTI drew the world three times: ~120 -> ~35 FPS).
+	//! Camera 20 is still positioned every frame because the ECOTI thermal camera copies it.
+	//! false: the old look (naked-eye view around the tubes, edge distortion) at the old cost.
+	static const bool MAIN_CAMERA_NV = false;
+
+	//! MAIN_CAMERA_NV + PERIPHERY_VIEW: the areas outside the tubes show the naked-eye view again (the
+	//! original look), rendered by camera 20 as a CHEAP peripheral pass: low resolution, no night vision
+	//! chain, short draw distance. The tubes themselves are the main camera at full quality.
+	//! false: solid darkness outside the tubes (cheapest).
+	static const bool PERIPHERY_VIEW = false;
+	//! Render scale of the peripheral naked-eye view (it is dark, off-centre and seen in passing). The
+	//! upscale from this low resolution is what softens / blurs the surroundings.
+	protected static const float PERIPHERY_RESOLUTION_SCALE = 0.35;
+	//! Surroundings exposure in light stops while the goggles are on (-2 = a quarter of the naked-eye
+	//! brightness: dark around the tubes, still readable).
+	protected static const float PERIPHERY_EV = -2.0;
+	//! Gaussian blur on the surroundings (cheap: the periphery is rendered at low resolution).
+	//! Strength is the material's Intensity (0-1).
+	protected static const ResourceName PERIPHERY_BLUR = "{F51B0FE3E868ABDD}UI/Materials/ACM_PeripheryBlur.emat";
+	protected static const int PERIPHERY_BLUR_SLOT = 7;
+	//! Draw distance of the peripheral view in metres (the ECOTI camera keeps the full view distance).
+	protected static const float PERIPHERY_FAR_PLANE = 1000;
+	//! Naked-eye exposure for the peripheral camera (automatic, like the normal view).
+	protected static const ResourceName PERIPHERY_HDR = "{9DEECCABE8357209}Common/Postprocess/HDR.emat";
+	protected static const int PERIPHERY_HDR_SLOT = 16;
+
+	//! Opacity of the darkness outside the tubes in MAIN_CAMERA_NV mode without the periphery view.
+	//! 1 = solid. Anything below lets the night vision picture underneath show through, and with it
+	//! the phosphor colour, so the background changed colour with the goggles.
+	protected static const float OUTSIDE_DARKNESS = 1.0;
+	//! Black bands covering the screen outside the tubes' clip frames (MAIN_CAMERA_NV mode).
+	protected ref array<ImageWidget> m_aOutsideWidgets = {};
+
+	//------------------------------------------------------------------------------------------------
+	// RENDER CROP (performance, same look)
+	//
+	// The night vision and thermal cameras used to render the WHOLE screen although only the tubes
+	// (night vision) and the centre circle (thermal) are ever shown. Each render target is now sized to
+	// a box centred on the screen that just contains what is shown, and its camera's vertical FOV is
+	// narrowed by the same ratio (the engine derives the horizontal FOV from the box's aspect), so the
+	// picture lines up exactly as before. Fewer pixels AND a narrower view (fewer objects drawn).
+	//------------------------------------------------------------------------------------------------
+	protected static const bool CROP_RENDERS = false;
+	//! Half extents of the crop boxes in screen heights from the screen centre (screen = 0.5 high).
+	protected float m_fNVCropHalfW = -1;
+	protected float m_fNVCropHalfH = 0.5;
+	protected float m_fFusionCropHalfW = -1;
+	protected float m_fFusionCropHalfH = 0.5;
+	protected bool m_bCropFovDirty = true;
+	//! Unscaled screen size the crops were computed for.
+	protected float m_fCropScreenW = -1;
+	protected float m_fCropScreenH = -1;
+
+	//------------------------------------------------------------------------------------------------
+	//! True when devices should put their effect chain on the main camera (see MAIN_CAMERA_NV).
+	static bool RendersOnMainCamera()
+	{
+		return MAIN_CAMERA_NV;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! True when the areas outside the tubes show a rendered naked-eye view (not plain darkness).
+	static bool ShowsPeriphery()
+	{
+		return MAIN_CAMERA_NV && PERIPHERY_VIEW;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! The naked-eye exposure (main camera's automatic exposure before the night vision took it over).
+	//! The periphery camera is LOCKED to it, darkened by PERIPHERY_EV, like vanilla PIP scopes copy the
+	//! main camera's exposure. With its own automatic HDR it brightened a night scene to daylight.
+	protected float m_fPeripheryExposure = -1;
+
+	static void SetPeripheryExposure(float nakedEyeExposure)
+	{
+		if (!s_Instance || !ShowsPeriphery() || nakedEyeExposure <= 0)
+			return;
+
+		s_Instance.m_fPeripheryExposure = nakedEyeExposure;
+		s_Instance.ApplyPeripheryExposure();
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected void ApplyPeripheryExposure()
+	{
+		BaseWorld world = GetWorld();
+		if (!world || !ShowsPeriphery())
+			return;
+
+		if (m_fPeripheryExposure > 0)
+		{
+			// Darkening baked into the locked exposure (2^EV), so it does not depend on how the engine
+			// combines an EV offset with manual exposure.
+			world.AdjustCameraEV(CAMERA_INDEX, 0);
+			world.SetCameraHDRBrightness(CAMERA_INDEX, m_fPeripheryExposure * Math.Pow(2, PERIPHERY_EV));
+			return;
+		}
+
+		// No reference yet: automatic exposure with the EV offset.
+		world.SetCameraHDRBrightness(CAMERA_INDEX, -1);
+		world.AdjustCameraEV(CAMERA_INDEX, PERIPHERY_EV);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! The camera a device using the tube view applies its post-process chain to.
+	static int GetEffectCamera()
+	{
+		if (MAIN_CAMERA_NV)
+		{
+			if (!GetGame() || !GetGame().GetWorld())
+				return -1;
+			return GetGame().GetWorld().GetCurrentCameraId();
+		}
+
+		return CAMERA_INDEX;
+	}
+
 	protected static const ResourceName LAYOUT = "{E3F1A9B2C4D74A62}UI/Layouts/ACM_NVG_DualTubeOverlay.layout";
 	//! Alpha = distance from the centre (0 centre, 1 rim). Lets softness be tuned at runtime.
 	protected static const ResourceName MASK_RADIAL = "{7688B9B44C3F0674}Textures/ACM_NVG_TubeMaskSoft.edds";
@@ -124,7 +243,8 @@ class ACM_NVGTubeView : GenericEntity
 	protected static const int FUSION_PP_THERMAL_SLOT = 11;
 	protected static const int FUSION_PP_HDR_SLOT = 16;
 	protected static const ResourceName FUSION_DEFAULT_HDR = "{9DEECCABE8357209}Common/Postprocess/HDR.emat";
-	//! Full resolution: the overlay shows thin outlines, which go soft at lower resolutions.
+	//! Full resolution: the overlay shows thin outlines, which go soft at lower resolutions. (The
+	//! outline material shrinks it to 60% itself; don't lower both or the outlines smear into streaks.)
 	protected static const float FUSION_RESOLUTION_SCALE = 1.0;
 
 	protected RTTextureWidget m_wFusionTexture;
@@ -204,6 +324,22 @@ class ACM_NVGTubeView : GenericEntity
 	}
 
 	//------------------------------------------------------------------------------------------------
+	//! This frame's camera FOV, reported by the local player's camera item from its OnUpdate (see
+	//! ACM_CameraFOVReport.c). MEASUREMENT ONLY: compared against the FOV the camera really used, logged
+	//! by DiagCameraSync, never applied to the tube cameras.
+	protected static float s_fReportedFOV = -1;
+	protected static float s_fReportedWorldTime = -1;
+
+	static void ReportCameraFOV(float fov)
+	{
+		if (fov <= 0 || !GetGame() || !GetGame().GetWorld())
+			return;
+
+		s_fReportedFOV = fov;
+		s_fReportedWorldTime = GetGame().GetWorld().GetWorldTime();
+	}
+
+	//------------------------------------------------------------------------------------------------
 	protected void ApplyCameraTransform(vector transformWS[4])
 	{
 		BaseWorld world = GetWorld();
@@ -214,6 +350,38 @@ class ACM_NVGTubeView : GenericEntity
 		if (m_bFusionOn)
 			world.SetCameraEx(FUSION_CAMERA_INDEX, transformWS);
 		m_fHookWorldTime = world.GetWorldTime();
+		m_iFramesSinceHook = 0;
+		m_iDiagHookCalls++;
+
+		// FOV in the same place as the transform. SyncCamera runs BEFORE the player camera's update
+		// each frame, so the FOV it read was always last frame's while the transform here is this
+		// frame's: one frame apart. Invisible while the FOV is steady, but in ADS it changes every
+		// frame (zoom-in, focus, recoil kick), which made the tube picture jitter against the aim.
+		CameraManager cameraManager = GetGame().GetCameraManager();
+		if (cameraManager)
+		{
+			CameraBase mainCamera = cameraManager.CurrentCamera();
+			if (mainCamera)
+			{
+				float fov = mainCamera.GetVerticalFOV();
+				m_fHookFOV = fov;
+
+				// Measurement: remember this frame's reported FOV next to what the camera said here.
+				if (s_fReportedFOV > 0 && s_fReportedWorldTime == world.GetWorldTime())
+				{
+					m_fCheckReported = s_fReportedFOV;
+					m_fCheckCameraAtHook = fov;
+				}
+				if (fov > 0 && (fov != m_fAppliedFOV || m_bCropFovDirty))
+				{
+					m_fAppliedFOV = fov;
+					m_bCropFovDirty = false;
+					world.SetCameraVerticalFOV(CAMERA_INDEX, CropFOV(fov, m_fNVCropHalfH));
+					if (m_bFusionOn)
+						world.SetCameraVerticalFOV(FUSION_CAMERA_INDEX, CropFOV(fov, m_fFusionCropHalfH));
+				}
+			}
+		}
 
 		if (!m_bHookSeen)
 		{
@@ -328,27 +496,88 @@ class ACM_NVGTubeView : GenericEntity
 		if (!m_wRenderTexture || !m_wRenderTarget || !m_wImages)
 			return Fail("layout is missing ACMTubeRT / ACMTubeTarget / ACMTubeImages");
 
-		// Below the HUD, above the 3D scene.
-		m_wRoot.SetZOrder(-100);
+		// Default layer, NOT negative. In the retail game the 3D world view is itself a workspace layer
+		// at the default order, so a negative z-order (the old -100) put the tubes BEHIND the world and
+		// nothing showed - while in Workbench, where the world is not a widget, it looked fine. At the
+		// same order, widgets created later draw on top, and the tube view is created after the world.
+		m_wRoot.SetZOrder(0);
+		UpdateHudLayer();
 
 		BaseWorld world = GetWorld();
 		world.SetCameraType(CAMERA_INDEX, CameraType.PERSPECTIVE);
-		world.SetCameraFarPlane(CAMERA_INDEX, GetGame().GetViewDistance());
+		float buildFar = GetGame().GetViewDistance();
+		if (ShowsPeriphery())
+			buildFar = Math.Min(buildFar, PERIPHERY_FAR_PLANE);
+		world.SetCameraFarPlane(CAMERA_INDEX, buildFar);
 		SyncCamera();
 
-		m_wRenderTarget.SetWorld(world, CAMERA_INDEX);
-		m_wRenderTarget.SetRefresh(1, 0);
-		m_wRenderTarget.SetResolutionScale(resolutionScale, resolutionScale);
 		m_fResolutionScale = resolutionScale;
 
-		// Vanilla PIP always registers the render texture with an entity before it is used; do the
-		// same so the engine creates and updates it.
-		m_wRenderTexture.SetRenderTarget(this);
-		m_bRenderTargetSet = true;
+		// Performance mode without the periphery: camera 20 is never bound, so it renders nothing.
+		// With the periphery it renders the cheap naked-eye pass shown around the tubes.
+		if (!MAIN_CAMERA_NV || PERIPHERY_VIEW)
+		{
+			float scale = resolutionScale;
+			if (MAIN_CAMERA_NV)
+			{
+				scale = PERIPHERY_RESOLUTION_SCALE;
+				world.SetCameraPostProcessEffect(CAMERA_INDEX, PERIPHERY_HDR_SLOT, PostProcessEffectType.HDR, PERIPHERY_HDR);
+				world.SetCameraPostProcessEffect(CAMERA_INDEX, PERIPHERY_BLUR_SLOT, PostProcessEffectType.GaussFilter, PERIPHERY_BLUR);
+				ApplyPeripheryExposure();
+			}
+
+			m_wRenderTarget.SetWorld(world, CAMERA_INDEX);
+			m_wRenderTarget.SetRefresh(1, 0);
+			m_wRenderTarget.SetResolutionScale(scale, scale);
+
+			// Vanilla PIP always registers the render texture with an entity before it is used; do the
+			// same so the engine creates and updates it.
+			m_wRenderTexture.SetRenderTarget(this);
+			m_bRenderTargetSet = true;
+		}
 
 		m_bReady = true;
+		ACM_MPDiag.Log("TubeView built: layout ok, rt=" + (m_wRenderTexture != null).ToString() + " target=" + (m_wRenderTarget != null).ToString() + " images frame=" + (m_wImages != null).ToString() + " thermal rt=" + (m_wFusionTexture != null).ToString() + " camera=" + CAMERA_INDEX.ToString() + " scale=" + resolutionScale.ToString());
 		Print("[ACM NVG] Tube view created on camera " + CAMERA_INDEX.ToString() + " at resolution scale " + resolutionScale.ToString(4, 2) + ".", LogLevel.DEBUG);
 		return true;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Keeps the view BELOW the HUD but above the 3D world. Created at the workspace it drew over the
+	//! HUD (same z-order, created later), which hid it as soon as the surroundings became opaque.
+	//! Like vanilla's scope overlay (SCR_2DOpticsDisplay, z-order -1 in the HUD root), it lives in the
+	//! HUD root at the very bottom. While the HUD is hidden the HUD root is invisible and would take
+	//! the tubes with it, so then the view goes back to the workspace (z-order 0, as before).
+	protected static const int HUD_LAYER_Z = -1000;
+
+	protected void UpdateHudLayer()
+	{
+		// Only needed when the outside is opaque (main-camera modes). The original two-camera view is
+		// see-through outside the tubes and stays where it always was: the workspace at z-order 0.
+		if (!m_wRoot || !MAIN_CAMERA_NV)
+			return;
+
+		WorkspaceWidget workspace = GetGame().GetWorkspace();
+		Widget hudRoot;
+		SCR_HUDManagerComponent hud = SCR_HUDManagerComponent.GetHUDManager();
+		if (hud)
+			hudRoot = hud.GetHUDRootWidget();
+
+		if (hudRoot && hudRoot.IsVisible())
+		{
+			if (m_wRoot.GetParent() != hudRoot)
+			{
+				hudRoot.AddChild(m_wRoot);
+				m_wRoot.SetZOrder(HUD_LAYER_Z);
+			}
+			return;
+		}
+
+		if (workspace && m_wRoot.GetParent() != workspace)
+		{
+			workspace.AddChild(m_wRoot);
+			m_wRoot.SetZOrder(0);
+		}
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -366,7 +595,8 @@ class ACM_NVGTubeView : GenericEntity
 		if (resolutionScale != m_fResolutionScale && m_wRenderTarget)
 		{
 			m_fResolutionScale = resolutionScale;
-			m_wRenderTarget.SetResolutionScale(resolutionScale, resolutionScale);
+			if (!MAIN_CAMERA_NV)
+				m_wRenderTarget.SetResolutionScale(resolutionScale, resolutionScale);
 		}
 
 		float newSoftness = Math.Clamp(softness, 0.0, 0.6);
@@ -409,6 +639,16 @@ class ACM_NVGTubeView : GenericEntity
 	{
 		StopFusion(fromDestructor);
 		m_bReady = false;
+
+		// Camera 20 is ours, but hand it back neutral for the other modes.
+		if (ShowsPeriphery() && GetGame() && GetGame().GetWorld())
+		{
+			GetGame().GetWorld().AdjustCameraEV(CAMERA_INDEX, 0);
+			GetGame().GetWorld().SetCameraHDRBrightness(CAMERA_INDEX, -1);
+			GetGame().GetWorld().SetCameraPostProcessEffect(CAMERA_INDEX, PERIPHERY_BLUR_SLOT, PostProcessEffectType.None, "");
+		}
+
+		m_aOutsideWidgets.Clear();
 		m_aTubeWidgets.Clear();
 		m_aLayerTube.Clear();
 		m_aLayerScale.Clear();
@@ -453,16 +693,36 @@ class ACM_NVGTubeView : GenericEntity
 		m_aLayerScale.Clear();
 		m_aRimWidgets.Clear();
 		m_aRimTube.Clear();
+		foreach (ImageWidget oldBand : m_aOutsideWidgets)
+		{
+			if (oldBand)
+				oldBand.RemoveFromHierarchy();
+		}
+		m_aOutsideWidgets.Clear();
 
 		WorkspaceWidget workspace = GetGame().GetWorkspace();
 		if (!workspace || !m_wImages || !m_wRenderTexture)
 			return;
 
-		// Edge distortion needs the soft radial mask to blend its rings together.
+		// Edge distortion needs the soft radial mask to blend its rings together. In performance
+		// mode there is no separate render to sample, so each tube is a single darkness "hole".
 		bool radial = HasRadialMask(workspace);
 		int layers = 1;
-		if (radial && m_fDistortion > 0)
+		if (radial && m_fDistortion > 0 && !MAIN_CAMERA_NV)
 			layers = DISTORTION_LAYERS;
+
+		// Performance mode: black bands for everything outside the tubes' clip frames (above and
+		// below each tube, gaps between tubes, screen sides). Positioned in UpdateTubeLayout.
+		if (MAIN_CAMERA_NV)
+		{
+			int bandCount = m_aTubes.Count() * 3 + 1;
+			for (int b = 0; b < bandCount; b++)
+			{
+				ImageWidget band = CreateDarkImage(workspace, m_wImages);
+				if (band)
+					m_aOutsideWidgets.Insert(band);
+			}
+		}
 
 		for (int tubeIndex = 0; tubeIndex < m_aTubes.Count(); tubeIndex++)
 		{
@@ -476,6 +736,23 @@ class ACM_NVGTubeView : GenericEntity
 			FrameSlot.SetAnchorMax(clip, 0, 0);
 			FrameSlot.SetAlignment(clip, 0, 0);
 			m_aClipFrames.Insert(clip);
+
+			if (MAIN_CAMERA_NV)
+			{
+				// Black outside the circle, clear inside (the main camera's night vision shows through).
+				ImageWidget hole = CreateDarkImage(workspace, clip);
+				if (hole)
+				{
+					ApplyHoleMask(hole, radial);
+					m_aTubeWidgets.Insert(hole);
+					m_aLayerTube.Insert(tubeIndex);
+					m_aLayerScale.Insert(1.0);
+				}
+
+				if (m_fRimStrength > 0)
+					CreateRim(workspace, tubeIndex, clip);
+				continue;
+			}
 
 			// Outermost ring first so the rings inside it draw on top.
 			for (int layer = 0; layer < layers; layer++)
@@ -514,6 +791,13 @@ class ACM_NVGTubeView : GenericEntity
 		m_iFramesSinceBuild = 0;
 		UpdateTubeLayout();
 
+		string rebuilt = "TubeView rebuilt: tubes=" + m_aTubes.Count().ToString() + " clips=" + m_aClipFrames.Count().ToString();
+		rebuilt = rebuilt + " images=" + m_aTubeWidgets.Count().ToString() + " rims=" + m_aRimWidgets.Count().ToString();
+		rebuilt = rebuilt + " radialMask=" + radial.ToString() + " rimMaskMissing=" + s_bRimMaskLogged.ToString() + " fusion=" + m_bFusionOn.ToString();
+		ACM_MPDiag.Log(rebuilt);
+		m_iDiagBeats = 0;
+		m_fDiagTimer = 0;
+
 		// The fused thermal circle lived in a clip frame that was just replaced.
 		m_wFusionImage = null;
 		if (m_bFusionOn)
@@ -528,7 +812,12 @@ class ACM_NVGTubeView : GenericEntity
 		if (s_bRimMaskLogged)
 			return;
 
-		ImageWidget rim = ImageWidget.Cast(workspace.CreateWidget(WidgetType.ImageWidgetTypeID, WidgetFlags.VISIBLE | WidgetFlags.BLEND | WidgetFlags.STRETCH | WidgetFlags.IGNORE_CURSOR | WidgetFlags.NOFOCUS, Color.Black, 0, parent));
+		// Diagnostics: draw the outline red so it is visible on a dark screen (proves the overlay renders).
+		Color rimColor = Color.Black;
+		if (ACM_MPDiag.ENABLED)
+			rimColor = Color.Red;
+
+		ImageWidget rim = ImageWidget.Cast(workspace.CreateWidget(WidgetType.ImageWidgetTypeID, WidgetFlags.VISIBLE | WidgetFlags.BLEND | WidgetFlags.STRETCH | WidgetFlags.IGNORE_CURSOR | WidgetFlags.NOFOCUS, rimColor, 0, parent));
 		if (!rim)
 			return;
 
@@ -558,19 +847,213 @@ class ACM_NVGTubeView : GenericEntity
 	}
 
 	//------------------------------------------------------------------------------------------------
+	//! The overlay piece used outside the tubes: the peripheral naked-eye render (PERIPHERY_VIEW) or a
+	//! plain black image (no texture draws as solid colour).
+	protected ImageWidget CreateDarkImage(WorkspaceWidget workspace, Widget parent)
+	{
+		bool periphery = ShowsPeriphery() && m_wRenderTexture;
+		int flags = WidgetFlags.VISIBLE | WidgetFlags.BLEND | WidgetFlags.STRETCH | WidgetFlags.IGNORE_CURSOR | WidgetFlags.NOFOCUS;
+		Color color = Color.Black;
+		if (periphery)
+		{
+			flags |= WidgetFlags.CUSTOMUV;
+			color = Color.White;
+		}
+
+		ImageWidget image = ImageWidget.Cast(workspace.CreateWidget(WidgetType.ImageWidgetTypeID, flags, color, 0, parent));
+		if (!image)
+			return null;
+
+		if (periphery)
+		{
+			image.SetImageTexture(0, m_wRenderTexture);
+			image.SetImage(0);
+		}
+		else
+		{
+			image.SetOpacity(OUTSIDE_DARKNESS);
+		}
+		FrameSlot.SetAnchorMin(image, 0, 0);
+		FrameSlot.SetAnchorMax(image, 0, 0);
+		FrameSlot.SetAlignment(image, 0, 0);
+		FrameSlot.SetPos(image, 0, 0);
+		FrameSlot.SetSize(image, 0, 0);
+		return image;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! The inverse of the tube mask: opaque outside the circle (soft edge), transparent inside.
+	protected void ApplyHoleMask(ImageWidget image, bool radial)
+	{
+		if (radial && image.LoadMaskTexture(MASK_RADIAL))
+		{
+			// Radial alpha = distance from the centre; INVERTED keeps what is beyond the tube rim.
+			image.SetMaskMode(ImageMaskMode.INVERTED);
+			float width = Math.Max(m_fSoftness, 0.005);
+			image.SetMaskProgress(Math.Clamp(0.98 - width, 0.0, 1.0));
+			image.SetMaskTransitionWidth(width);
+			return;
+		}
+
+		// Hard-edged fallback mask has alpha 1 inside the circle; REGULAR keeps the outside.
+		if (image.LoadMaskTexture(MASK_FALLBACK))
+		{
+			image.SetMaskMode(ImageMaskMode.REGULAR);
+			image.SetMaskProgress(0.5);
+			image.SetMaskTransitionWidth(0.1);
+		}
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Performance mode: places the black bands around the tubes. Coordinates in screen heights from
+	//! the screen centre, converted to unscaled pixels.
+	protected void LayoutOutsideBands(float screenW, float screenH)
+	{
+		if (m_aOutsideWidgets.IsEmpty())
+			return;
+
+		float halfW = screenW * 0.5 / screenH;
+
+		// Clip columns sorted left to right.
+		array<int> order = {};
+		for (int i = 0; i < m_aTubes.Count(); i++)
+		{
+			if (!m_aTubes[i])
+				continue;
+
+			float lo, hi;
+			GetClipBounds(i, lo, hi);
+			int insertAt = order.Count();
+			for (int k = 0; k < order.Count(); k++)
+			{
+				float otherLo, otherHi;
+				GetClipBounds(order[k], otherLo, otherHi);
+				if (lo < otherLo)
+				{
+					insertAt = k;
+					break;
+				}
+			}
+			order.InsertAt(i, insertAt);
+		}
+
+		int band = 0;
+		float cursor = -halfW;
+		foreach (int tubeIndex : order)
+		{
+			ACM_NVGTube tube = m_aTubes[tubeIndex];
+			float clipLo, clipHi;
+			GetClipBounds(tubeIndex, clipLo, clipHi);
+
+			// Gap (or the screen's left side) before this column: full height.
+			if (clipLo > cursor)
+				band = PlaceBand(band, cursor, -0.5, clipLo, 0.5, screenW, screenH);
+
+			// Above and below the tube, across its column.
+			band = PlaceBand(band, clipLo, -0.5, clipHi, tube.m_fCenterY - tube.m_fRadius, screenW, screenH);
+			band = PlaceBand(band, clipLo, tube.m_fCenterY + tube.m_fRadius, clipHi, 0.5, screenW, screenH);
+
+			cursor = Math.Max(cursor, clipHi);
+		}
+
+		// The screen's right side.
+		if (cursor < halfW)
+			band = PlaceBand(band, cursor, -0.5, halfW, 0.5, screenW, screenH);
+
+		// Unused bands collapse to nothing.
+		while (band < m_aOutsideWidgets.Count())
+		{
+			if (m_aOutsideWidgets[band])
+				FrameSlot.SetSize(m_aOutsideWidgets[band], 0, 0);
+			band++;
+		}
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Screen-space edge (unscaled units) for x / y in screen heights from the centre, rounded so every
+	//! overlay piece that shares an edge lands on exactly the same coordinate.
+	protected float EdgeX(float x, float screenW, float screenH)
+	{
+		return Math.Round(screenW * 0.5 + x * screenH);
+	}
+
+	protected float EdgeY(float y, float screenH)
+	{
+		return Math.Round(screenH * 0.5 + y * screenH);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected int PlaceBand(int band, float x0, float y0, float x1, float y1, float screenW, float screenH)
+	{
+		if (band >= m_aOutsideWidgets.Count())
+			return band;
+
+		ImageWidget image = m_aOutsideWidgets[band];
+		if (image)
+		{
+			if (x1 <= x0 || y1 <= y0)
+			{
+				FrameSlot.SetSize(image, 0, 0);
+			}
+			else
+			{
+				// Edges rounded with the same formula as the clip frames, so neighbouring pieces share
+				// their edges exactly: no overlap (overlapping see-through darkness showed as lines)
+				// and no gap.
+				float left = EdgeX(x0, screenW, screenH);
+				float top = EdgeY(y0, screenH);
+				float width = EdgeX(x1, screenW, screenH) - left;
+				float height = EdgeY(y1, screenH) - top;
+				FrameSlot.SetPos(image, left, top);
+				FrameSlot.SetSize(image, width, height);
+
+				// Periphery view: show the part of the naked-eye render that sits behind this piece.
+				if (ShowsPeriphery())
+				{
+					float uv[4][2];
+					uv[0][0] = left / screenW;				uv[0][1] = top / screenH;
+					uv[1][0] = (left + width) / screenW;	uv[1][1] = top / screenH;
+					uv[2][0] = (left + width) / screenW;	uv[2][1] = (top + height) / screenH;
+					uv[3][0] = left / screenW;				uv[3][1] = (top + height) / screenH;
+					image.SetUV(uv);
+				}
+			}
+		}
+
+		return band + 1;
+	}
+
+	//------------------------------------------------------------------------------------------------
 	//! Points every tube image at the render texture again (after it has been allocated / resized).
 	protected void RelinkRenderTexture()
 	{
 		if (!m_wRenderTexture)
 			return;
 
-		foreach (ImageWidget image : m_aTubeWidgets)
+		// Performance mode: the tube images are darkness holes and stay untextured, unless they show
+		// the peripheral naked-eye render (then the outside bands need linking as well).
+		if (!MAIN_CAMERA_NV || PERIPHERY_VIEW)
 		{
-			if (!image)
-				continue;
+			foreach (ImageWidget image : m_aTubeWidgets)
+			{
+				if (!image)
+					continue;
 
-			image.SetImageTexture(0, m_wRenderTexture);
-			image.SetImage(0);
+				image.SetImageTexture(0, m_wRenderTexture);
+				image.SetImage(0);
+			}
+		}
+
+		if (ShowsPeriphery())
+		{
+			foreach (ImageWidget band : m_aOutsideWidgets)
+			{
+				if (!band)
+					continue;
+
+				band.SetImageTexture(0, m_wRenderTexture);
+				band.SetImage(0);
+			}
 		}
 
 		if (m_bFusionOn && m_wFusionImage && m_wFusionTexture)
@@ -672,6 +1155,99 @@ class ACM_NVGTubeView : GenericEntity
 	}
 
 	//------------------------------------------------------------------------------------------------
+	// RENDER CROP
+	//------------------------------------------------------------------------------------------------
+	//! Vertical FOV that shows the centre `halfH` (screen heights) of a view whose full vertical FOV
+	//! is `fov` (degrees). Full screen (0.5) returns the FOV unchanged.
+	protected float CropFOV(float fov, float halfH)
+	{
+		if (fov <= 0 || halfH <= 0 || halfH >= 0.5)
+			return fov;
+
+		float t = Math.Tan(fov * 0.5 * Math.DEG2RAD) * (halfH / 0.5);
+		return 2 * Math.Atan2(t, 1) * Math.RAD2DEG;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Sizes a render-target texture widget to a screen-centred box (half extents in screen heights).
+	protected void SetCropSlot(Widget widget, float halfW, float halfH)
+	{
+		// Crop off: leave the layout's own full-screen anchoring untouched.
+		if (!CROP_RENDERS || !widget || m_fCropScreenH <= 0)
+			return;
+
+		float widthPx = halfW * 2 * m_fCropScreenH;
+		float heightPx = halfH * 2 * m_fCropScreenH;
+		FrameSlot.SetAnchorMin(widget, 0, 0);
+		FrameSlot.SetAnchorMax(widget, 0, 0);
+		FrameSlot.SetAlignment(widget, 0, 0);
+		FrameSlot.SetPos(widget, m_fCropScreenW * 0.5 - widthPx * 0.5, m_fCropScreenH * 0.5 - heightPx * 0.5);
+		FrameSlot.SetSize(widget, widthPx, heightPx);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Night vision crop: the box around all tubes, widened for the edge-distortion rings (they sample
+	//! up to m_fDistortion beyond the tube) plus a little slack for filtering.
+	protected void ComputeTubeCrop(float screenW, float screenH)
+	{
+		m_fCropScreenW = screenW;
+		m_fCropScreenH = screenH;
+		float maxHalfW = screenW * 0.5 / screenH;
+
+		m_fNVCropHalfW = maxHalfW;
+		m_fNVCropHalfH = 0.5;
+
+		// Main-camera modes use camera 20 for full-screen pieces (or not at all): no crop.
+		if (CROP_RENDERS && !MAIN_CAMERA_NV)
+		{
+			float halfW = 0;
+			float halfH = 0;
+			float margin = 1.0 + m_fDistortion;
+			foreach (ACM_NVGTube tube : m_aTubes)
+			{
+				if (!tube)
+					continue;
+
+				halfW = Math.Max(halfW, Math.AbsFloat(tube.m_fCenterX) + tube.m_fRadius * margin);
+				halfH = Math.Max(halfH, Math.AbsFloat(tube.m_fCenterY) + tube.m_fRadius * margin);
+			}
+
+			if (halfW > 0 && halfH > 0)
+			{
+				m_fNVCropHalfW = Math.Min(halfW + 0.01, maxHalfW);
+				m_fNVCropHalfH = Math.Min(halfH + 0.01, 0.5);
+			}
+		}
+
+		SetCropSlot(m_wRenderTexture, m_fNVCropHalfW, m_fNVCropHalfH);
+		m_bCropFovDirty = true;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Thermal crop: the box around the fused circle in the centre tube.
+	protected void ComputeFusionCrop()
+	{
+		if (m_fCropScreenH <= 0)
+			return;
+
+		float maxHalfW = m_fCropScreenW * 0.5 / m_fCropScreenH;
+		m_fFusionCropHalfW = maxHalfW;
+		m_fFusionCropHalfH = 0.5;
+
+		int center = GetCenterTubeIndex();
+		if (CROP_RENDERS && center >= 0 && m_aTubes[center])
+		{
+			ACM_NVGTube tube = m_aTubes[center];
+			float radius = tube.m_fRadius * m_fFusionRadius;
+			m_fFusionCropHalfW = Math.Min(Math.AbsFloat(tube.m_fCenterX) + radius + 0.01, maxHalfW);
+			m_fFusionCropHalfH = Math.Min(Math.AbsFloat(tube.m_fCenterY) + radius + 0.01, 0.5);
+		}
+
+		SetCropSlot(m_wFusionTexture, m_fFusionCropHalfW, m_fFusionCropHalfH);
+		m_bCropFovDirty = true;
+	}
+
+	//------------------------------------------------------------------------------------------------
 	//! Positions each tube and points its UVs at the matching region of the render.
 	//! Only does work when the screen size changes.
 	protected void UpdateTubeLayout()
@@ -691,6 +1267,9 @@ class ACM_NVGTubeView : GenericEntity
 		m_iLayoutWidth = pixelWidth;
 		m_iLayoutHeight = pixelHeight;
 
+		// Crop boxes first: the image UVs below map into them.
+		ComputeTubeCrop(workspace.DPIUnscale(pixelWidth), workspace.DPIUnscale(pixelHeight));
+
 		// Screen size changed: the fused circle follows the centre tube.
 		PositionFusionImage();
 
@@ -699,6 +1278,9 @@ class ACM_NVGTubeView : GenericEntity
 
 		float screenW = workspace.DPIUnscale(pixelWidth);
 		float screenH = workspace.DPIUnscale(pixelHeight);
+
+		if (MAIN_CAMERA_NV)
+			LayoutOutsideBands(screenW, screenH);
 
 		// Clip frames: each tube's box, cut at the straight seams with its neighbours.
 		for (int c = 0; c < m_aClipFrames.Count(); c++)
@@ -711,8 +1293,20 @@ class ACM_NVGTubeView : GenericEntity
 			float clipLo, clipHi;
 			GetClipBounds(c, clipLo, clipHi);
 
-			FrameSlot.SetPos(clip, screenW * 0.5 + clipLo * screenH, screenH * 0.5 + (clipTube.m_fCenterY - clipTube.m_fRadius) * screenH);
-			FrameSlot.SetSize(clip, (clipHi - clipLo) * screenH, clipTube.m_fRadius * 2 * screenH);
+			if (MAIN_CAMERA_NV)
+			{
+				// Rounded shared edges (see EdgeX): seams between clip frames and the outside bands line
+				// up exactly, so the see-through darkness never doubles up into visible lines.
+				float clipLeft = EdgeX(clipLo, screenW, screenH);
+				float clipTop = EdgeY(clipTube.m_fCenterY - clipTube.m_fRadius, screenH);
+				FrameSlot.SetPos(clip, clipLeft, clipTop);
+				FrameSlot.SetSize(clip, EdgeX(clipHi, screenW, screenH) - clipLeft, EdgeY(clipTube.m_fCenterY + clipTube.m_fRadius, screenH) - clipTop);
+			}
+			else
+			{
+				FrameSlot.SetPos(clip, screenW * 0.5 + clipLo * screenH, screenH * 0.5 + (clipTube.m_fCenterY - clipTube.m_fRadius) * screenH);
+				FrameSlot.SetSize(clip, (clipHi - clipLo) * screenH, clipTube.m_fRadius * 2 * screenH);
+			}
 		}
 
 		for (int i = 0; i < m_aTubeWidgets.Count(); i++)
@@ -737,12 +1331,18 @@ class ACM_NVGTubeView : GenericEntity
 			FrameSlot.SetSize(image, size, size);
 
 			// Sample the region behind the tube; distortion rings sample a slightly larger area
-			// around the same centre, which squeezes the picture towards the rim.
+			// around the same centre, which squeezes the picture towards the rim. The render covers
+			// only the crop box, so UVs are relative to that box.
+			float nvWidth = m_fNVCropHalfW * 2 * screenH;
+			float nvHeight = m_fNVCropHalfH * 2 * screenH;
+			float nvLeft = screenW * 0.5 - nvWidth * 0.5;
+			float nvTop = screenH * 0.5 - nvHeight * 0.5;
+
 			float scale = m_aLayerScale[i];
-			float centerU = (left + size * 0.5) / screenW;
-			float centerV = (top + size * 0.5) / screenH;
-			float halfU = size * 0.5 * scale / screenW;
-			float halfV = size * 0.5 * scale / screenH;
+			float centerU = (left + size * 0.5 - nvLeft) / nvWidth;
+			float centerV = (top + size * 0.5 - nvTop) / nvHeight;
+			float halfU = size * 0.5 * scale / nvWidth;
+			float halfV = size * 0.5 * scale / nvHeight;
 
 			float u0 = centerU - halfU;
 			float v0 = centerV - halfV;
@@ -812,6 +1412,66 @@ class ACM_NVGTubeView : GenericEntity
 	//! World time of the last transform pushed by the player-camera hook (one value per frame).
 	protected float m_fHookWorldTime = -1;
 	protected bool m_bHookSeen;
+	//! FOV read at the hook, and post-frames since the hook last ran (hook is "live" for ~3 frames).
+	protected float m_fHookFOV = -1;
+	protected int m_iFramesSinceHook = 1000;
+
+	//! Camera sync diagnostics (TEMPORARY): logged every 5 s for the first minute of a tube view.
+	protected int m_iDiagHookCalls;
+	protected int m_iDiagFallbackWrites;
+	protected int m_iDiagFovLate;
+	protected int m_iDiagFrames;
+
+	//! Reported-FOV measurement (ACM_CameraFOVReport.c). Not applied, only logged.
+	protected float m_fCheckReported = -1;
+	protected float m_fCheckCameraAtHook = -1;
+	protected int m_iDiagReports;
+	protected int m_iDiagReportedMatch;
+	protected float m_fDiagReportedMaxMiss;
+	protected int m_iDiagHookStale;
+	protected string m_sDiagSample;
+	protected int m_iDiagSyncLogs;
+	protected float m_fDiagSyncTimer;
+
+	//------------------------------------------------------------------------------------------------
+	protected void DiagCameraSync(float timeSlice)
+	{
+		if (m_iDiagSyncLogs >= 24)
+			return;
+
+		m_iDiagFrames++;
+		m_fDiagSyncTimer += timeSlice;
+		if (m_fDiagSyncTimer < 5)
+			return;
+
+		m_iDiagSyncLogs++;
+		string line = "[ACM NVG] Tube camera sync (5 s): frames=" + m_iDiagFrames.ToString();
+		line = line + " hookCalls=" + m_iDiagHookCalls.ToString();
+		line = line + " fallbackWrites=" + m_iDiagFallbackWrites.ToString();
+		line = line + " fovChangedAfterHook=" + m_iDiagFovLate.ToString();
+		Print(line, LogLevel.WARNING);
+
+		// Measurement result: reportedMatchesFinal should equal reports; hookStale > 0 = frames where
+		// the value in use today was a frame late (those are the jitter frames).
+		string fovLine = "[ACM NVG] FOV check (5 s): reports=" + m_iDiagReports.ToString();
+		fovLine = fovLine + " reportedMatchesFinal=" + m_iDiagReportedMatch.ToString();
+		fovLine = fovLine + " reportedMaxMiss=" + m_fDiagReportedMaxMiss.ToString();
+		fovLine = fovLine + " hookStale=" + m_iDiagHookStale.ToString();
+		if (!m_sDiagSample.IsEmpty())
+			fovLine = fovLine + " sample[" + m_sDiagSample + "]";
+		Print(fovLine, LogLevel.WARNING);
+
+		m_fDiagSyncTimer = 0;
+		m_iDiagFrames = 0;
+		m_iDiagHookCalls = 0;
+		m_iDiagFallbackWrites = 0;
+		m_iDiagFovLate = 0;
+		m_iDiagReports = 0;
+		m_iDiagReportedMatch = 0;
+		m_fDiagReportedMaxMiss = 0;
+		m_iDiagHookStale = 0;
+		m_sDiagSample = string.Empty;
+	}
 
 	//! Last frame's raw world-camera read, used to predict the current frame (fallback path only).
 	protected vector m_aPrevRead[4];
@@ -874,12 +1534,45 @@ class ACM_NVGTubeView : GenericEntity
 		// The player-camera hook already set this frame's exact view; don't overwrite it with a guess.
 		// (If the hook runs after this, its write wins anyway.)
 		if (!m_bHookSeen || m_fHookWorldTime != world.GetWorldTime())
+		{
 			world.SetCameraEx(CAMERA_INDEX, mat);
+			m_iDiagFallbackWrites++;
+		}
 
-		if (fov != m_fAppliedFOV)
+		// The hook sets the FOV together with the transform. Only drive it from here when the hook is
+		// not running (vehicle cameras, spectating): this read is last frame's FOV.
+		m_iFramesSinceHook++;
+		bool hookLive = m_bHookSeen && m_iFramesSinceHook <= 3;
+
+		// Measurement: this runs before the player camera's update, so `fov` is the FOV the camera
+		// really ended last frame with. Did the reported value (or the hook-time value) match it?
+		if (m_fCheckReported > 0 && fov > 0)
+		{
+			m_iDiagReports++;
+			float missReported = Math.AbsFloat(fov - m_fCheckReported);
+			float missHook = Math.AbsFloat(fov - m_fCheckCameraAtHook);
+			if (missReported < 0.01)
+				m_iDiagReportedMatch++;
+			else
+				m_fDiagReportedMaxMiss = Math.Max(m_fDiagReportedMaxMiss, missReported);
+
+			if (missHook >= 0.01)
+			{
+				m_iDiagHookStale++;
+				m_sDiagSample = "reported=" + m_fCheckReported.ToString() + " atHook=" + m_fCheckCameraAtHook.ToString() + " final=" + fov.ToString();
+			}
+
+			m_fCheckReported = -1;
+		}
+		if (hookLive && m_fHookFOV > 0 && fov != m_fHookFOV)
+			m_iDiagFovLate++;
+
+		// m_fAppliedFOV is the main view's FOV; each camera gets the narrower FOV of its crop box.
+		if (!hookLive && (fov != m_fAppliedFOV || m_bCropFovDirty))
 		{
 			m_fAppliedFOV = fov;
-			world.SetCameraVerticalFOV(CAMERA_INDEX, fov);
+			m_bCropFovDirty = false;
+			world.SetCameraVerticalFOV(CAMERA_INDEX, CropFOV(fov, m_fNVCropHalfH));
 		}
 
 		if (nearPlane != m_fAppliedNear && nearPlane > 0)
@@ -889,11 +1582,16 @@ class ACM_NVGTubeView : GenericEntity
 		}
 
 		// Follow the player's view distance setting if it changes while the view is up.
+		// m_fAppliedFar is the full view distance (the ECOTI camera uses it); the peripheral naked-eye
+		// pass is capped shorter, which cuts how much of the world it has to draw.
 		float farPlane = GetGame().GetViewDistance();
 		if (farPlane != m_fAppliedFar && farPlane > 0)
 		{
 			m_fAppliedFar = farPlane;
-			world.SetCameraFarPlane(CAMERA_INDEX, farPlane);
+			float tubeFar = farPlane;
+			if (ShowsPeriphery())
+				tubeFar = Math.Min(farPlane, PERIPHERY_FAR_PLANE);
+			world.SetCameraFarPlane(CAMERA_INDEX, tubeFar);
 		}
 
 		// The fused thermal camera always matches the night vision camera exactly.
@@ -902,7 +1600,8 @@ class ACM_NVGTubeView : GenericEntity
 			if (!m_bHookSeen || m_fHookWorldTime != world.GetWorldTime())
 				world.SetCameraEx(FUSION_CAMERA_INDEX, mat);
 
-			world.SetCameraVerticalFOV(FUSION_CAMERA_INDEX, m_fAppliedFOV);
+			if (!hookLive)
+				world.SetCameraVerticalFOV(FUSION_CAMERA_INDEX, CropFOV(m_fAppliedFOV, m_fFusionCropHalfH));
 			if (m_fAppliedNear > 0)
 				world.SetCameraNearPlane(FUSION_CAMERA_INDEX, m_fAppliedNear);
 			if (m_fAppliedFar > 0)
@@ -960,7 +1659,7 @@ class ACM_NVGTubeView : GenericEntity
 			world.SetCameraType(FUSION_CAMERA_INDEX, CameraType.PERSPECTIVE);
 			world.SetCameraEx(FUSION_CAMERA_INDEX, mat);
 			if (m_fAppliedFOV > 0)
-				world.SetCameraVerticalFOV(FUSION_CAMERA_INDEX, m_fAppliedFOV);
+				world.SetCameraVerticalFOV(FUSION_CAMERA_INDEX, CropFOV(m_fAppliedFOV, m_fFusionCropHalfH));
 			if (m_fAppliedNear > 0)
 				world.SetCameraNearPlane(FUSION_CAMERA_INDEX, m_fAppliedNear);
 			world.SetCameraFarPlane(FUSION_CAMERA_INDEX, GetGame().GetViewDistance());
@@ -1114,11 +1813,22 @@ class ACM_NVGTubeView : GenericEntity
 		float left = screenW * 0.5 + (tube.m_fCenterX - radius) * screenH;
 		float top = screenH * 0.5 + (tube.m_fCenterY - radius) * screenH;
 
+		// The thermal render covers only its crop box; UVs are relative to that box.
+		ComputeFusionCrop();
+		float fusionWidth = m_fFusionCropHalfW * 2 * screenH;
+		float fusionHeight = m_fFusionCropHalfH * 2 * screenH;
+		float fusionLeft = screenW * 0.5 - fusionWidth * 0.5;
+		float fusionTop = screenH * 0.5 - fusionHeight * 0.5;
+		float u0 = (left - fusionLeft) / fusionWidth;
+		float u1 = (left + size - fusionLeft) / fusionWidth;
+		float v0 = (top - fusionTop) / fusionHeight;
+		float v1 = (top + size - fusionTop) / fusionHeight;
+
 		float uv[4][2];
-		uv[0][0] = left / screenW;			uv[0][1] = top / screenH;
-		uv[1][0] = (left + size) / screenW;	uv[1][1] = top / screenH;
-		uv[2][0] = (left + size) / screenW;	uv[2][1] = (top + size) / screenH;
-		uv[3][0] = left / screenW;			uv[3][1] = (top + size) / screenH;
+		uv[0][0] = u0;	uv[0][1] = v0;
+		uv[1][0] = u1;	uv[1][1] = v0;
+		uv[2][0] = u1;	uv[2][1] = v1;
+		uv[3][0] = u0;	uv[3][1] = v1;
 		m_wFusionImage.SetUV(uv);
 	}
 
@@ -1129,10 +1839,71 @@ class ACM_NVGTubeView : GenericEntity
 			return;
 
 		SyncCamera();
+		UpdateHudLayer();
 		UpdateTubeLayout();
 
 		// The engine only refreshes the render texture when an image links to it (it stayed live for
 		// exactly the frames it was re-linked and froze afterwards), so link it every frame.
 		RelinkRenderTexture();
+
+		DiagHeartbeat(timeSlice);
+		DiagCameraSync(timeSlice);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	// TEMPORARY diagnostics: a few status lines after each rebuild (see ACM_MPDiag).
+	protected int m_iDiagBeats;
+	protected float m_fDiagTimer;
+
+	protected void DiagHeartbeat(float timeSlice)
+	{
+		if (!ACM_MPDiag.ENABLED || m_iDiagBeats >= 4)
+			return;
+
+		m_fDiagTimer += timeSlice;
+		if (m_fDiagTimer < 1.5)
+			return;
+
+		m_fDiagTimer = 0;
+		m_iDiagBeats++;
+
+		WorkspaceWidget workspace = GetGame().GetWorkspace();
+		string ws = "none";
+		if (workspace)
+			ws = workspace.GetWidth().ToString() + "x" + workspace.GetHeight().ToString();
+
+		string root = "null";
+		if (m_wRoot)
+			root = "visible=" + m_wRoot.IsVisible().ToString();
+
+		string img = "none";
+		if (!m_aTubeWidgets.IsEmpty() && m_aTubeWidgets[0])
+		{
+			float x, y, w, h;
+			m_aTubeWidgets[0].GetScreenPos(x, y);
+			m_aTubeWidgets[0].GetScreenSize(w, h);
+			img = "pos=" + x.ToString() + "," + y.ToString() + " size=" + w.ToString() + "x" + h.ToString() + " visible=" + m_aTubeWidgets[0].IsVisible().ToString();
+		}
+
+		string rt = "null";
+		if (m_wRenderTexture)
+		{
+			float rw, rh;
+			m_wRenderTexture.GetScreenSize(rw, rh);
+			rt = rw.ToString() + "x" + rh.ToString() + " visible=" + m_wRenderTexture.IsVisible().ToString();
+		}
+
+		vector cam[4];
+		GetWorld().GetCamera(CAMERA_INDEX, cam);
+
+		string beat = m_iDiagBeats.ToString();
+		string line = "TubeView beat " + beat + ": workspace=" + ws;
+		line = line + " root[" + root + "]";
+		line = line + " image0[" + img + "]";
+		line = line + " rtWidget[" + rt + "]";
+		line = line + " targetSet=" + m_bRenderTargetSet.ToString();
+		line = line + " hookSeen=" + m_bHookSeen.ToString();
+		line = line + " cam20pos=" + cam[3].ToString();
+		ACM_MPDiag.Log(line);
 	}
 }

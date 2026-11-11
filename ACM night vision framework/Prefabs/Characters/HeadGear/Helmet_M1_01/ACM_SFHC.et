@@ -1,0 +1,79 @@
+GameEntity : "{24ADFCA3516E758B}Prefabs/Characters/HeadGear/Helmet_M1_01/Helmet_M1_01_base.et" {
+ ID "5112706CD4157AC7"
+ components {
+  ACM_ClothAreaExtensionComponent "{6ACE16E94D7E09E0}" {
+  }
+  ACM_ClothNodeStorageComponent "{6ACE16E97DF4B294}" {
+   Attributes SCR_ItemAttributeCollection "{6ACE16E97718DFD5}" {
+    ItemDisplayName UIInfo "{6ACE16E96ABC71C7}" {
+     Name "OpsCore_Fast_SFHC"
+     Description "OpsCore_Fast_SFHC"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{6ACE16E96ED4F9C8}" {
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{6ACE16E96D202DE8}" {
+    }
+   }
+  }
+  MeshObject "{5112706CD4157AE0}" {
+   Object "{10F2D0419D848662}XOB/OpsCore_Fast_SFHC/OpsCore_Fast_SFHC.xob"
+  }
+  SCR_HeadgearInventoryItemComponent "{5244E4431E28A759}" {
+   Enabled 0
+   Attributes SCR_ItemAttributeCollection "{5244E4431DA56D64}" {
+    ItemDisplayName UIInfo "{5244E443130B31B9}" {
+     Name "#AR-Headgear_Helmet_M1_Olive_Name"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5112706CD4157AF8}" {
+   Slots {
+    LoadoutSlotInfo ACM_AVS_M_BatteryPack {
+     AreaType ACM_AVS_M_BatteryPack "{6ACE1983E427A65F}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_BatteryPack_Jack {
+     AreaType AVS_M_BatteryPack_Jack "{6ACE198041667B92}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_EarPro_Mount_Wire {
+     AreaType ACM_AVS_M_EarPro_Mount_Wire "{6ACE19807DF8E37F}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_EarPro_OpsCore_AMP {
+     AreaType ACM_AVS_M_EarPro_OpsCore_AMP "{6ACE19806A29298C}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_Light_Left {
+     AreaType ACM_AVS_M_Light_Left "{6ACE19806D146F97}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_Light_right {
+     AreaType ACM_AVS_M_Light_right "{6ACE19806159F7EA}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_NVG_Mount {
+     PivotID "Head"
+     Offset -0.0024 0.0507 -0.1271
+     Angles 0 180 0
+     AreaType ACM_NV_Slotted "{6ACE19809AFD87D0}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_Patch_Left {
+     AreaType ACM_AVS_M_Light_Left "{6ACE19809D0C1535}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_Patch_Right {
+     AreaType ACM_AVS_M_Patch_Right "{6ACE198095EB9A28}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_Strobe {
+     AreaType ACM_AVS_M_Strobe "{6ACE198086CACBF3}" {
+     }
+    }
+   }
+   WornModel "{10F2D0419D848662}XOB/OpsCore_Fast_SFHC/OpsCore_Fast_SFHC.xob"
+   ItemModel "{10F2D0419D848662}XOB/OpsCore_Fast_SFHC/OpsCore_Fast_SFHC.xob"
+  }
+ }
+}

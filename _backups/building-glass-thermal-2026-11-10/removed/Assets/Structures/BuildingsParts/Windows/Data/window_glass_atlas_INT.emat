@@ -1,0 +1,22 @@
+MatPBRBasicGlass : "{4FAEFEC368A5B59D}Assets/Structures/BuildingsParts/Windows/Data/window_glass_atlas.emat" {
+ DiffuseIBL 0.871 0.853 0.753 1
+ SpecularIBL 0.597 0.606 0.624 1
+ AlphaTest 0.015
+ AlphaMul 0.83
+ RoughnessScale 1.1
+ MetalnessScale 0.8
+ DielectricReflectance 0.098
+ FrontFaceInterior 0
+ FresnelPower 2.006
+ FresnelBias 0.32
+ Backscatterig 0.9
+ TIMap "{EC04953DABA57F8F}Textures/Thermal_Filter/ACM_TIMask_White.edds"
+ TITemperature1 7.7
+ TITemperatureCoef1 1
+ TITemperature2 7.7
+ TITemperatureCoef2 1
+ TITemperature3 7.7
+ TITemperatureCoef3 1
+ TITemperature4 7.7
+ TITemperatureCoef4 1
+}

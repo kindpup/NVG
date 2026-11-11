@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{B10BC845D373D1E8}Assets/Structures/Commercial/Pubs/PubVillage_E_2L01/Data/Pub_Village_E_01_L_Glass.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}
