@@ -102,6 +102,9 @@ class ACM_ThermalComponentV2 : SCR_GadgetComponent
 	[Attribute("0", UIWidgets.CheckBox, desc: "Fused thermal (F-Pano): the thermal key overlays thermal on the night vision in a smaller circle inside the centre tube, instead of switching the whole view to thermal.", category: "ACM Thermal - Fusion")]
 	protected bool m_bFusionOverlay;
 
+	[Attribute("0", UIWidgets.CheckBox, desc: "ECOTI outline only: the thermal key toggles just the outline overlay on and off (no Fused / Thermal palette modes). Needs Fused thermal on.", category: "ACM Thermal - Fusion")]
+	protected bool m_bEcotiOutlineOnly;
+
 	[Attribute("0.8", UIWidgets.Slider, desc: "Size of the fused thermal circle as a fraction of the centre tube.", category: "ACM Thermal - Fusion", params: "0.2 1 0.01")]
 	protected float m_fFusionRadius;
 
@@ -652,7 +655,8 @@ class ACM_ThermalComponentV2 : SCR_GadgetComponent
 
 		// ECOTI: while the circle is on, the key steps OUTLINE -> FUSED -> THERMAL; one more press
 		// after THERMAL switches it off (falls through below).
-		if (m_bFusionOverlay && m_bActivated && m_eEcotiMode != ACM_EEcotiMode.THERMAL)
+		// Outline-only devices (ECOTI without thermal palettes): the key just switches the outline on/off.
+		if (m_bFusionOverlay && m_bActivated && m_eEcotiMode != ACM_EEcotiMode.THERMAL && !m_bEcotiOutlineOnly)
 		{
 			if (m_eEcotiMode == ACM_EEcotiMode.OUTLINE)
 				m_eEcotiMode = ACM_EEcotiMode.FUSED;

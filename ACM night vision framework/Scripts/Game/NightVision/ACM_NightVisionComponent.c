@@ -104,6 +104,9 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 	[Attribute("-0.5", UIWidgets.Slider, desc: "Exposure of the naked-eye surroundings outside the tubes while the goggles are on, in light stops (0 = unchanged, negative = darker).", category: "ACM NVG - Tubes", params: "-4 0 0.1")]
 	protected float m_fSurroundEV;
 
+	[Attribute("0", UIWidgets.CheckBox, desc: "Optimized view: the night vision is drawn on the main camera and the surroundings outside the tubes are dark. No second world render (much better FPS). Off: separate tube camera with the naked-eye view around the tubes.", category: "ACM NVG - Tubes")]
+	protected bool m_bOptimizedTubeView;
+
 	//! Main camera the surroundings exposure offset was written to (-1 = none).
 	protected int m_iSurroundCam = -1;
 
@@ -947,7 +950,7 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 			bool useTubes = false;
 			if (isLocalPlayer && m_eTubeLayout != ACM_ENVGTubeLayout.FULLSCREEN)
 			{
-				if (ACM_NVGTubeView.Acquire(this, m_eTubeLayout, m_aCustomTubes, m_fTubeEdgeSoftness, m_fTubeResolutionScale, m_fTubeEdgeDistortion, m_fTubeRimDarkness))
+				if (ACM_NVGTubeView.Acquire(this, m_eTubeLayout, m_aCustomTubes, m_fTubeEdgeSoftness, m_fTubeResolutionScale, m_fTubeEdgeDistortion, m_fTubeRimDarkness, m_bOptimizedTubeView))
 				{
 					camId = ACM_NVGTubeView.GetEffectCamera();
 					useTubes = true;
@@ -1676,6 +1679,68 @@ class ACM_NightVisionComponent : SCR_GadgetComponent
 		}
 	}
 	
+	//------------------------------------------------------------------------------------------------
+	// WATCHDOG (called by ACM_NVGTubeView while this device owns the tubes)
+	//
+	// Taking off the helmet / headstrap with the goggles still mounted and switched on never reaches
+	// this component: the goggles get no ModeSwitch (they are still in the mount's slot), and once the
+	// mount is in storage the item's gadget update stops, so the worn check in Update never runs. The
+	// night vision, tubes and ECOTI stayed on screen. The tube view keeps ticking locally, so it asks.
+	//------------------------------------------------------------------------------------------------
+	bool ACM_IsStillWorn()
+	{
+		if (!m_bActivated)
+			return false;
+
+		if (!m_CharacterOwner || m_CharacterOwner != SCR_PlayerController.GetLocalControlledEntity())
+			return false;
+
+		return CheckIsWorn();
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! Full local shutdown, independent of the owner reference (which may already be stale).
+	void ACM_ForceOff()
+	{
+		ACM_MPDiag.Log("NV watchdog: device no longer worn, switching off " + GetOwner().ToString());
+
+		// ECOTI / thermal on the same device first, so its overlay and clear-sky owner go too.
+		ACM_ThermalComponentV2 thermal = GetThermalComponent();
+		if (thermal)
+			thermal.HostModeSwitch(EGadgetMode.ON_GROUND, null);
+
+		m_bIsWorn = false;
+		m_bActivated = false;
+		m_iNotWornFrameCount = 0;
+		UpdateFaceGlow(true);
+
+		UnregisterInputs();
+		m_bInputsRegistered = false;
+
+		SetDeviceVisible(true);
+		RevertAppliedEffects();
+		ReleaseTubeView();
+		DisableVanillaNightGrain(false);
+		m_fExposureReference = -1;
+
+		if (m_bManualBrightnessEnabled)
+		{
+			InputManager im = GetGame().GetInputManager();
+			if (im)
+			{
+				im.RemoveActionListener("ACM_NV_Increase", EActionTrigger.PRESSED, IncreaseBrightness);
+				im.RemoveActionListener("ACM_NV_Decrease", EActionTrigger.PRESSED, DecreaseBrightness);
+				im.RemoveActionListener("ACM_NV_Reset", EActionTrigger.DOWN, ResetBrightness);
+			}
+		}
+
+		ACM_IRSystem ir = ACM_IRSystem.GetInstance();
+		if (ir)
+			ir.SetIRVisibility(false);
+
+		UpdateAnimationTo(false, "Watchdog");
+	}
+
 	protected void ClearNVGEffects()
 	{
 		// Only clear if we're the local player and actually had NVG active

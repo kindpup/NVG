@@ -65,6 +65,7 @@ GameEntity {
    }
   }
   ACM_NightVisionComponent "{68544149216AEB57}" {
+   m_bOptimizedTubeView 1
    m_eTubeLayout PANORAMIC
    m_eUseMask CUSTOM
    m_HDRMaterial "{59F26A676C5E62F6}Assets/Shaders/NVSystem/Colors/Thermal Night.emat"
@@ -96,6 +97,9 @@ GameEntity {
    }
   }
   ACM_ThermalComponentV2 "{AD92ADA873E5CFFE}" {
+   m_bFusionOverlay 1
+   m_bEcotiOutlineOnly 1
+   m_fFusionOpacity 1
    m_eTubeLayout PANORAMIC
    m_aPalettes {
     ACM_ThermalPalette "{FCA75E54F4F9423C}" {

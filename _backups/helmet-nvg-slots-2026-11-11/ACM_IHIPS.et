@@ -1,0 +1,77 @@
+GameEntity : "{24ADFCA3516E758B}Prefabs/Characters/HeadGear/Helmet_M1_01/Helmet_M1_01_base.et" {
+ ID "5112706CD4157AC7"
+ components {
+  ACM_ClothAreaExtensionComponent "{6ACE2B680BF2704F}" {
+  }
+  ACM_ClothNodeStorageComponent "{6ACE2B680BF27076}" {
+   Attributes SCR_ItemAttributeCollection "{6ACE2B680BF27070}" {
+    ItemDisplayName UIInfo "{6ACE2B680BF27072}" {
+     Name "ACM_IHIPS"
+     Description "ACM_IHIPS"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{6ACE2B680BF2707C}" {
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{6ACE2B680BF2707E}" {
+    }
+   }
+  }
+  MeshObject "{5112706CD4157AE0}" {
+   Object "{30A634195C5422EF}XOB/IHIPS/Helmet_IHIPS/SM_Helmet_IHPS.xob"
+  }
+  SCR_HeadgearInventoryItemComponent "{5244E4431E28A759}" {
+   Enabled 0
+   Attributes SCR_ItemAttributeCollection "{5244E4431DA56D64}" {
+    ItemDisplayName UIInfo "{5244E443130B31B9}" {
+     Name "#AR-Headgear_Helmet_M1_Olive_Name"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5112706CD4157AF8}" {
+   Slots {
+    LoadoutSlotInfo ACM_AVS_M_BatteryPack {
+     AreaType ACM_AVS_M_BatteryPack "{6ACE2B680BF27066}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_BatteryPack_Jack {
+    }
+    LoadoutSlotInfo ACM_AVS_M_EarPro_Mount_Wire {
+     AreaType ACM_AVS_M_EarPro_Mount_Wire "{6ACE2B680BF27060}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_EarPro_OpsCore_AMP {
+     AreaType ACM_AVS_M_EarPro_OpsCore_AMP "{6ACE2B680BF27063}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_Light_Left {
+     AreaType ACM_AVS_M_Light_Left "{6ACE2B680BF27062}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_Light_right {
+     AreaType ACM_AVS_M_Light_right "{6ACE2B680BF2706D}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_NVG_Mount {
+     PivotID "Head"
+     Offset -0.0024 0.0507 -0.1271
+     Angles 0 180 0
+     AreaType ACM_NV_Slotted "{6ACE2B680BF2706C}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_Patch_Left {
+     AreaType ACM_AVS_M_Light_Left "{6ACE2B680BF2706F}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_Patch_Right {
+     AreaType ACM_AVS_M_Patch_Right "{6ACE2B680BF27086}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_Strobe {
+     AreaType ACM_AVS_M_Strobe "{6ACE2B680BF27081}" {
+     }
+    }
+   }
+   WornModel "{30A634195C5422EF}XOB/IHIPS/Helmet_IHIPS/SM_Helmet_IHPS.xob"
+   ItemModel "{DEA615F71BCD2366}XOB/IHIPS/Helmet_IHIPS/HelPBR_Helmet_IHPS_item.xob"
+  }
+ }
+}

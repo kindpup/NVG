@@ -67,6 +67,7 @@ GameEntity {
    }
   }
   ACM_NightVisionComponent "{68544131BDAFFCC5}" {
+   m_bOptimizedTubeView 1
    m_eTubeLayout DUAL
    m_eUseMask CUSTOM
    m_HDRMaterial "{59F26A676C5E62F6}Assets/Shaders/NVSystem/Colors/Thermal Night.emat"

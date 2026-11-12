@@ -67,9 +67,10 @@ class ACM_NVGTubeView : GenericEntity
 	//! removes a whole extra scene render (NV + ECOTI drew the world three times: ~120 -> ~35 FPS).
 	//! Camera 20 is still positioned every frame because the ECOTI thermal camera copies it.
 	//! false: the old look (naked-eye view around the tubes, edge distortion) at the old cost.
-	static const bool MAIN_CAMERA_NV = false;
+	//! Set per device by Acquire (optimizedView); see m_bMainCameraNV.
+	protected bool m_bMainCameraNV;
 
-	//! MAIN_CAMERA_NV + PERIPHERY_VIEW: the areas outside the tubes show the naked-eye view again (the
+	//! m_bMainCameraNV + PERIPHERY_VIEW: the areas outside the tubes show the naked-eye view again (the
 	//! original look), rendered by camera 20 as a CHEAP peripheral pass: low resolution, no night vision
 	//! chain, short draw distance. The tubes themselves are the main camera at full quality.
 	//! false: solid darkness outside the tubes (cheapest).
@@ -90,11 +91,11 @@ class ACM_NVGTubeView : GenericEntity
 	protected static const ResourceName PERIPHERY_HDR = "{9DEECCABE8357209}Common/Postprocess/HDR.emat";
 	protected static const int PERIPHERY_HDR_SLOT = 16;
 
-	//! Opacity of the darkness outside the tubes in MAIN_CAMERA_NV mode without the periphery view.
+	//! Opacity of the darkness outside the tubes in m_bMainCameraNV mode without the periphery view.
 	//! 1 = solid. Anything below lets the night vision picture underneath show through, and with it
 	//! the phosphor colour, so the background changed colour with the goggles.
 	protected static const float OUTSIDE_DARKNESS = 1.0;
-	//! Black bands covering the screen outside the tubes' clip frames (MAIN_CAMERA_NV mode).
+	//! Black bands covering the screen outside the tubes' clip frames (m_bMainCameraNV mode).
 	protected ref array<ImageWidget> m_aOutsideWidgets = {};
 
 	//------------------------------------------------------------------------------------------------
@@ -118,17 +119,17 @@ class ACM_NVGTubeView : GenericEntity
 	protected float m_fCropScreenH = -1;
 
 	//------------------------------------------------------------------------------------------------
-	//! True when devices should put their effect chain on the main camera (see MAIN_CAMERA_NV).
+	//! True when devices should put their effect chain on the main camera (see m_bMainCameraNV).
 	static bool RendersOnMainCamera()
 	{
-		return MAIN_CAMERA_NV;
+		return s_Instance && s_Instance.m_bMainCameraNV;
 	}
 
 	//------------------------------------------------------------------------------------------------
 	//! True when the areas outside the tubes show a rendered naked-eye view (not plain darkness).
 	static bool ShowsPeriphery()
 	{
-		return MAIN_CAMERA_NV && PERIPHERY_VIEW;
+		return s_Instance && s_Instance.m_bMainCameraNV && PERIPHERY_VIEW;
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -171,7 +172,7 @@ class ACM_NVGTubeView : GenericEntity
 	//! The camera a device using the tube view applies its post-process chain to.
 	static int GetEffectCamera()
 	{
-		if (MAIN_CAMERA_NV)
+		if (RendersOnMainCamera())
 		{
 			if (!GetGame() || !GetGame().GetWorld())
 				return -1;
@@ -242,6 +243,11 @@ class ACM_NVGTubeView : GenericEntity
 	static const int FUSION_CAMERA_INDEX = 21;
 	protected static const int FUSION_PP_THERMAL_SLOT = 11;
 	protected static const int FUSION_PP_HDR_SLOT = 16;
+	//! Fixed exposure of the thermal camera. Its automatic exposure kept re-metering the thermal picture
+	//! (vanilla HDR.emat adapts almost instantly), so the whole thermal image pumped / flashed whenever
+	//! the scene changed - worst in multiplayer with more moving heat. 1.0 passes the thermal palette
+	//! through the tonemapper unchanged (same fix as the ACM Core / FlightCORE thermal sights).
+	protected static const float FUSION_EXPOSURE = 1.0;
 	protected static const ResourceName FUSION_DEFAULT_HDR = "{9DEECCABE8357209}Common/Postprocess/HDR.emat";
 	//! Full resolution: the overlay shows thin outlines, which go soft at lower resolutions. (The
 	//! outline material shrinks it to 60% itself; don't lower both or the outlines smear into streaks.)
@@ -265,7 +271,9 @@ class ACM_NVGTubeView : GenericEntity
 	//------------------------------------------------------------------------------------------------
 	//! Show (or re-shape) the tube view for this owner. Returns null if it could not be built, in
 	//! which case the caller should fall back to a full-screen effect on the main camera.
-	static ACM_NVGTubeView Acquire(Managed owner, ACM_ENVGTubeLayout layout, array<ref ACM_NVGTube> customTubes, float softness, float resolutionScale, float edgeDistortion = 0.12, float rimStrength = 1.0)
+	//! optimizedView: night vision on the MAIN camera with dark surroundings (no second world render);
+	//! false: the separate tube camera with the naked-eye view around the tubes (F-Pano).
+	static ACM_NVGTubeView Acquire(Managed owner, ACM_ENVGTubeLayout layout, array<ref ACM_NVGTube> customTubes, float softness, float resolutionScale, float edgeDistortion = 0.12, float rimStrength = 1.0, bool optimizedView = false)
 	{
 		if (!owner || layout == ACM_ENVGTubeLayout.FULLSCREEN)
 			return null;
@@ -278,12 +286,21 @@ class ACM_NVGTubeView : GenericEntity
 		if (tubes.IsEmpty())
 			return null;
 
+		// The two modes bind the cameras and widgets differently, so a mode change rebuilds the view.
+		if (s_Instance && s_Instance.m_bMainCameraNV != optimizedView)
+		{
+			s_Instance.Teardown();
+			delete s_Instance;
+			s_Instance = null;
+		}
+
 		if (!s_Instance)
 		{
 			s_Instance = ACM_NVGTubeView.Cast(GetGame().SpawnEntity(ACM_NVGTubeView, GetGame().GetWorld()));
 			if (!s_Instance)
 				return null;
 
+			s_Instance.m_bMainCameraNV = optimizedView;
 			if (!s_Instance.Build(resolutionScale))
 			{
 				delete s_Instance;
@@ -515,10 +532,10 @@ class ACM_NVGTubeView : GenericEntity
 
 		// Performance mode without the periphery: camera 20 is never bound, so it renders nothing.
 		// With the periphery it renders the cheap naked-eye pass shown around the tubes.
-		if (!MAIN_CAMERA_NV || PERIPHERY_VIEW)
+		if (!m_bMainCameraNV || PERIPHERY_VIEW)
 		{
 			float scale = resolutionScale;
-			if (MAIN_CAMERA_NV)
+			if (m_bMainCameraNV)
 			{
 				scale = PERIPHERY_RESOLUTION_SCALE;
 				world.SetCameraPostProcessEffect(CAMERA_INDEX, PERIPHERY_HDR_SLOT, PostProcessEffectType.HDR, PERIPHERY_HDR);
@@ -554,7 +571,7 @@ class ACM_NVGTubeView : GenericEntity
 	{
 		// Only needed when the outside is opaque (main-camera modes). The original two-camera view is
 		// see-through outside the tubes and stays where it always was: the workspace at z-order 0.
-		if (!m_wRoot || !MAIN_CAMERA_NV)
+		if (!m_wRoot || !m_bMainCameraNV)
 			return;
 
 		WorkspaceWidget workspace = GetGame().GetWorkspace();
@@ -595,7 +612,7 @@ class ACM_NVGTubeView : GenericEntity
 		if (resolutionScale != m_fResolutionScale && m_wRenderTarget)
 		{
 			m_fResolutionScale = resolutionScale;
-			if (!MAIN_CAMERA_NV)
+			if (!m_bMainCameraNV)
 				m_wRenderTarget.SetResolutionScale(resolutionScale, resolutionScale);
 		}
 
@@ -708,12 +725,12 @@ class ACM_NVGTubeView : GenericEntity
 		// mode there is no separate render to sample, so each tube is a single darkness "hole".
 		bool radial = HasRadialMask(workspace);
 		int layers = 1;
-		if (radial && m_fDistortion > 0 && !MAIN_CAMERA_NV)
+		if (radial && m_fDistortion > 0 && !m_bMainCameraNV)
 			layers = DISTORTION_LAYERS;
 
 		// Performance mode: black bands for everything outside the tubes' clip frames (above and
 		// below each tube, gaps between tubes, screen sides). Positioned in UpdateTubeLayout.
-		if (MAIN_CAMERA_NV)
+		if (m_bMainCameraNV)
 		{
 			int bandCount = m_aTubes.Count() * 3 + 1;
 			for (int b = 0; b < bandCount; b++)
@@ -737,7 +754,7 @@ class ACM_NVGTubeView : GenericEntity
 			FrameSlot.SetAlignment(clip, 0, 0);
 			m_aClipFrames.Insert(clip);
 
-			if (MAIN_CAMERA_NV)
+			if (m_bMainCameraNV)
 			{
 				// Black outside the circle, clear inside (the main camera's night vision shows through).
 				ImageWidget hole = CreateDarkImage(workspace, clip);
@@ -1032,7 +1049,7 @@ class ACM_NVGTubeView : GenericEntity
 
 		// Performance mode: the tube images are darkness holes and stay untextured, unless they show
 		// the peripheral naked-eye render (then the outside bands need linking as well).
-		if (!MAIN_CAMERA_NV || PERIPHERY_VIEW)
+		if (!m_bMainCameraNV || PERIPHERY_VIEW)
 		{
 			foreach (ImageWidget image : m_aTubeWidgets)
 			{
@@ -1198,7 +1215,7 @@ class ACM_NVGTubeView : GenericEntity
 		m_fNVCropHalfH = 0.5;
 
 		// Main-camera modes use camera 20 for full-screen pieces (or not at all): no crop.
-		if (CROP_RENDERS && !MAIN_CAMERA_NV)
+		if (CROP_RENDERS && !m_bMainCameraNV)
 		{
 			float halfW = 0;
 			float halfH = 0;
@@ -1279,7 +1296,7 @@ class ACM_NVGTubeView : GenericEntity
 		float screenW = workspace.DPIUnscale(pixelWidth);
 		float screenH = workspace.DPIUnscale(pixelHeight);
 
-		if (MAIN_CAMERA_NV)
+		if (m_bMainCameraNV)
 			LayoutOutsideBands(screenW, screenH);
 
 		// Clip frames: each tube's box, cut at the straight seams with its neighbours.
@@ -1293,7 +1310,7 @@ class ACM_NVGTubeView : GenericEntity
 			float clipLo, clipHi;
 			GetClipBounds(c, clipLo, clipHi);
 
-			if (MAIN_CAMERA_NV)
+			if (m_bMainCameraNV)
 			{
 				// Rounded shared edges (see EdgeX): seams between clip frames and the outside bands line
 				// up exactly, so the see-through darkness never doubles up into visible lines.
@@ -1327,8 +1344,20 @@ class ACM_NVGTubeView : GenericEntity
 			// Positioned inside the tube's clip frame, so relative to the frame's left edge.
 			float tubeLo, tubeHi;
 			GetClipBounds(tubeIndex, tubeLo, tubeHi);
-			FrameSlot.SetPos(image, (tube.m_fCenterX - tube.m_fRadius - tubeLo) * screenH, 0);
-			FrameSlot.SetSize(image, size, size);
+			if (m_bMainCameraNV)
+			{
+				// Darkness hole: the clip frame is snapped to whole pixels, the tube size is not, so an
+				// exact-size hole fell up to a pixel short of the frame's right/bottom edge and the night
+				// vision showed through as a thin line. One pixel of overhang on every side; the clip
+				// frame cuts it off, so it always reaches the frame edges.
+				FrameSlot.SetPos(image, (tube.m_fCenterX - tube.m_fRadius - tubeLo) * screenH - 1, -1);
+				FrameSlot.SetSize(image, size + 2, size + 2);
+			}
+			else
+			{
+				FrameSlot.SetPos(image, (tube.m_fCenterX - tube.m_fRadius - tubeLo) * screenH, 0);
+				FrameSlot.SetSize(image, size, size);
+			}
 
 			// Sample the region behind the tube; distortion rings sample a slightly larger area
 			// around the same centre, which squeezes the picture towards the rim. The render covers
@@ -1606,6 +1635,9 @@ class ACM_NVGTubeView : GenericEntity
 				world.SetCameraNearPlane(FUSION_CAMERA_INDEX, m_fAppliedNear);
 			if (m_fAppliedFar > 0)
 				world.SetCameraFarPlane(FUSION_CAMERA_INDEX, m_fAppliedFar);
+
+			// Keep the thermal exposure locked (cheap; nothing else may hand it back to automatic).
+			world.SetCameraHDRBrightness(FUSION_CAMERA_INDEX, FUSION_EXPOSURE);
 		}
 	}
 
@@ -1684,6 +1716,8 @@ class ACM_NVGTubeView : GenericEntity
 			world.SetCameraPostProcessEffect(FUSION_CAMERA_INDEX, FUSION_PP_THERMAL_SLOT, PostProcessEffectType.ThermalImaging, thermalMaterial);
 		}
 
+		world.SetCameraHDRBrightness(FUSION_CAMERA_INDEX, FUSION_EXPOSURE);
+
 		if (!m_wFusionImage)
 			CreateFusionImage();
 		else
@@ -1714,6 +1748,9 @@ class ACM_NVGTubeView : GenericEntity
 			world.SetCameraPostProcessEffect(FUSION_CAMERA_INDEX, FUSION_PP_THERMAL_SLOT, PostProcessEffectType.ThermalImaging, string.Empty);
 			world.SetCameraPostProcessEffect(FUSION_CAMERA_INDEX, FUSION_PP_HDR_SLOT, PostProcessEffectType.HDR, FUSION_DEFAULT_HDR);
 		}
+
+		if (world)
+			world.SetCameraHDRBrightness(FUSION_CAMERA_INDEX, -1);
 
 		if (m_bFusionTargetSet && m_wFusionTexture && !fromDestructor)
 			m_wFusionTexture.RemoveRenderTarget(this);
@@ -1838,6 +1875,9 @@ class ACM_NVGTubeView : GenericEntity
 		if (!m_bReady)
 			return;
 
+		if (CheckOwnerStillWorn(timeSlice))
+			return;
+
 		SyncCamera();
 		UpdateHudLayer();
 		UpdateTubeLayout();
@@ -1848,6 +1888,75 @@ class ACM_NVGTubeView : GenericEntity
 
 		DiagHeartbeat(timeSlice);
 		DiagCameraSync(timeSlice);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	// OWNER WATCHDOG
+	//
+	// Taking off the helmet / headstrap with the goggles still on and switched on never reached the
+	// device (no ModeSwitch for a device still in its mount, and its update stops once the mount is in
+	// storage), so the tubes stayed on screen. This view ticks locally every frame, so it checks the
+	// owner a few times a second and has it switch off after a few failed checks in a row (one or two
+	// can be a brief inventory transfer). The switch-off runs on the call queue, not inside this
+	// event, because it deletes this entity.
+	//------------------------------------------------------------------------------------------------
+	//! Every frame, first miss: the picture goes the moment the goggles come off (user request).
+	protected static const float OWNER_CHECK_INTERVAL = 0;
+	protected static const int OWNER_MISSES_TO_RELEASE = 1;
+	protected float m_fOwnerCheckTimer;
+	protected int m_iOwnerMisses;
+
+	//! Returns true when the view is being shut down (skip the rest of the frame).
+	protected bool CheckOwnerStillWorn(float timeSlice)
+	{
+		if (OWNER_CHECK_INTERVAL > 0)
+		{
+			m_fOwnerCheckTimer += timeSlice;
+			if (m_fOwnerCheckTimer < OWNER_CHECK_INTERVAL)
+				return false;
+			m_fOwnerCheckTimer = 0;
+		}
+
+		// Owner gone entirely (device deleted without cleaning up): drop the view itself.
+		if (!m_Owner)
+		{
+			GetGame().GetCallqueue().CallLater(ReleaseOrphan, 0, false);
+			return true;
+		}
+
+		ACM_NightVisionComponent nvg = ACM_NightVisionComponent.Cast(m_Owner);
+		if (!nvg)
+			return false;
+
+		if (nvg.ACM_IsStillWorn())
+		{
+			m_iOwnerMisses = 0;
+			return false;
+		}
+
+		m_iOwnerMisses++;
+		if (m_iOwnerMisses < OWNER_MISSES_TO_RELEASE)
+			return false;
+
+		m_iOwnerMisses = 0;
+
+		// Hide the tubes in this very frame; the full shutdown follows on the next call-queue tick.
+		if (m_wRoot)
+			m_wRoot.SetVisible(false);
+
+		GetGame().GetCallqueue().CallLater(nvg.ACM_ForceOff, 0, false);
+		return true;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	static void ReleaseOrphan()
+	{
+		if (!s_Instance || s_Instance.m_Owner)
+			return;
+
+		s_Instance.Teardown();
+		delete s_Instance;
+		s_Instance = null;
 	}
 
 	//------------------------------------------------------------------------------------------------

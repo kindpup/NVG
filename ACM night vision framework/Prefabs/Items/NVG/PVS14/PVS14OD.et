@@ -69,6 +69,7 @@ GameEntity {
    }
   }
   ACM_NightVisionComponent "{68544143A3433F66}" {
+   m_bOptimizedTubeView 1
    m_eTubeLayout SINGLE
    m_eUseMask CUSTOM
    m_HDRMaterial "{59F26A676C5E62F6}Assets/Shaders/NVSystem/Colors/Thermal Night.emat"
@@ -98,6 +99,21 @@ GameEntity {
      m_Material "{843375C9FB51E38B}Assets/Shaders/NVSystem/Colors/ACM_V2_AMBERPhosphor_HDR.emat"
     }
    }
+  }
+  ACM_ThermalComponentV2 "{732FC80AC167D021}" {
+   m_bFusionOverlay 1
+   m_bEcotiOutlineOnly 1
+   m_fFusionOpacity 1
+   m_eTubeLayout SINGLE
+   m_aPalettes {
+    ACM_ThermalPalette "{E17601D89B90A1E5}" {
+     m_sName "White Hot"
+     m_Material "{A131B20E9E1745E0}UI/Materials/Editor/Thermal WH.emat"
+     m_fDefaultBrightness 1
+    }
+   }
+   m_bManualBrightnessEnabled 1
+   m_fBrightnessStep 0.25
   }
   BaseLoadoutClothComponent "{68544143A343EDF9}" {
    AreaType ACM_NV_Slotted "{68544143A343EDF8}" {

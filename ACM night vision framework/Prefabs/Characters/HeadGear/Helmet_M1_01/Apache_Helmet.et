@@ -6,8 +6,8 @@ GameEntity : "{24ADFCA3516E758B}Prefabs/Characters/HeadGear/Helmet_M1_01/Helmet_
   ACM_ClothNodeStorageComponent "{6AD17AE22C083336}" {
    Attributes SCR_ItemAttributeCollection "{6AD17AE22C083328}" {
     ItemDisplayName UIInfo "{6AD17AE22C08332A}" {
-     Name "OpsCore_Fast_SFHC"
-     Description "OpsCore_Fast_SFHC"
+     Name "Apache_Helmet"
+     Description "Apache_Helmet"
     }
     ItemPhysAttributes ItemPhysicalAttributes "{6AD17AE22C08332C}" {
     }
@@ -16,7 +16,7 @@ GameEntity : "{24ADFCA3516E758B}Prefabs/Characters/HeadGear/Helmet_M1_01/Helmet_
    }
   }
   MeshObject "{5112706CD4157AE0}" {
-   Object "{10F2D0419D848662}XOB/OpsCore_Fast_SFHC/OpsCore_Fast_SFHC.xob"
+   Object "{8EE0228FA595FE4F}XOB/Apache_Helmet/Apache_Helmet.xob"
   }
   SCR_HeadgearInventoryItemComponent "{5244E4431E28A759}" {
    Enabled 0

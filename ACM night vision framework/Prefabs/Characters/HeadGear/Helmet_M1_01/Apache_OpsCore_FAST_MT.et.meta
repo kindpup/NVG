@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{ED52E7ADFE8A449B}Prefabs/Characters/HeadGear/Helmet_M1_01/Apache_OpsCore_FAST_MT.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,4 +1,7 @@
 MatPBRBasic {
- BCRMap "{4740E98108D3E2E2}Assets/Characters/HeadGear/IHIPs/Data/base_tan_BCR.edds"
- NMOMap "{32EE620519A0B455}Assets/Characters/HeadGear/IHIPs/Data/MI_Helmet_IHPS_01/base_tan_NMO.edds"
+ Cull none
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{4740E98108D3E2E2}XOB/IHIPS/Helmet_IHIPS/Data/base_tan_BCR.edds"
+ NMOMap "{32EE620519A0B455}XOB/IHIPS/Helmet_IHIPS/Data/base_tan_NMO.edds"
 }
