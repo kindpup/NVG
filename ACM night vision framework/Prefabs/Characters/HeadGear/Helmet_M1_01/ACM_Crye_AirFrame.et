@@ -75,7 +75,7 @@ GameEntity : "{24ADFCA3516E758B}Prefabs/Characters/HeadGear/Helmet_M1_01/Helmet_
     }
    }
    WornModel "{04D92714EF8D409F}XOB/Helmet_CRYE_Airframe/Helmet_CRYE_Airframe.xob"
-   ItemModel "{04D92714EF8D409F}XOB/Helmet_CRYE_Airframe/Helmet_CRYE_Airframe.xob"
+   ItemModel "{01E04E8BCAEBFB54}XOB/Helmet_CRYE_Airframe/CryeAirFrameGround.xob"
   }
  }
 }

@@ -1,0 +1,8 @@
+MatPBRBasic {
+ DisableInteriorProbes 1
+ DisablePriorityProbes 1
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{64A1E61A8AA5D2BE}XOB/Helmet_CRYE_Airframe/Data/CryeAirFram_MC_BCR.edds"
+ NMOMap "{5C795D8853D28020}XOB/Helmet_CRYE_Airframe/Data/CryeAirFram_MC_NMO.edds"
+}

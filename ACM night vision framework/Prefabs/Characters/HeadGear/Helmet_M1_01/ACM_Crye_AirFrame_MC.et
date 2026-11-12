@@ -1,0 +1,93 @@
+GameEntity : "{24ADFCA3516E758B}Prefabs/Characters/HeadGear/Helmet_M1_01/Helmet_M1_01_base.et" {
+ ID "5112706CD4157AC7"
+ components {
+  ACM_ClothAreaExtensionComponent "{6AD8A05FA831448B}" {
+  }
+  ACM_ClothNodeStorageComponent "{6AD8A05FA83144B9}" {
+   Attributes SCR_ItemAttributeCollection "{6AD8A05FA83144BA}" {
+    ItemDisplayName UIInfo "{6AD8A05FA83144A4}" {
+     Name "ACM_CryeAirFrame_MC"
+     Description "ACM_CryeAirFrame_MC"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{6AD8A05FA83144A6}" {
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{6AD8A05FA83144A1}" {
+    }
+   }
+  }
+  MeshObject "{5112706CD4157AE0}" {
+   Object "{04D92714EF8D409F}XOB/Helmet_CRYE_Airframe/Helmet_CRYE_Airframe.xob"
+   Materials {
+    MaterialAssignClass "{6AD8A05FA79FB6A5}" {
+     SourceMaterial "MI_Helmet_CRYE_Airframe_Tan"
+     AssignedMaterial "{9C65A14D59E3E2AA}XOB/Helmet_CRYE_Airframe/Data/MI_Helmet_CRYE_Airframe_MC.emat"
+    }
+   }
+  }
+  SCR_HeadgearInventoryItemComponent "{5244E4431E28A759}" {
+   Enabled 0
+   Attributes SCR_ItemAttributeCollection "{5244E4431DA56D64}" {
+    ItemDisplayName UIInfo "{5244E443130B31B9}" {
+     Name "#AR-Headgear_Helmet_M1_Olive_Name"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5112706CD4157AF8}" {
+   Slots {
+    LoadoutSlotInfo ACM_AVS_M_BatteryPack {
+     AreaType ACM_AVS_M_BatteryPack "{6AD8A05FA83144A8}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_BatteryPack_Jack {
+    }
+    LoadoutSlotInfo ACM_AVS_M_EarPro_Mount_Wire {
+     AreaType ACM_AVS_M_EarPro_Mount_Wire "{6AD8A05FA83144AB}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_EarPro_OpsCore_AMP {
+     AreaType ACM_AVS_M_EarPro_OpsCore_AMP "{6AD8A05FA83144D5}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_Light_Left {
+     AreaType ACM_AVS_M_Light_Left "{6AD8A05FA830FBB2}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_Light_right {
+     AreaType ACM_AVS_M_Light_right "{6AD8A05FA830FBB1}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_NVG_Mount {
+     PivotID "Head"
+     Offset -0.0024 0.0507 -0.1271
+     Angles 0 180 0
+     AreaType ACM_NV_Slotted "{6AD8A05FA830FBB7}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_Patch_Left {
+     AreaType ACM_AVS_M_Light_Left "{6AD8A05FA830FBB4}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_Patch_Right {
+     AreaType ACM_AVS_M_Patch_Right "{6AD8A05FA830FA6C}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_M_Strobe {
+     AreaType ACM_AVS_M_Strobe "{6AD8A05FA830FA6D}" {
+     }
+    }
+    LoadoutSlotInfo ACM_AVS_A_Helmet_CRYE_Airframe_Cover {
+     AreaType ACM_AVS_A_Helmet_CRYE_Airframe_Cover "{6AD8A05FA830FA53}" {
+     }
+    }
+   }
+   WornModel "{04D92714EF8D409F}XOB/Helmet_CRYE_Airframe/Helmet_CRYE_Airframe.xob"
+   WornMaterialsOverride {
+    "{9C65A14D59E3E2AA}XOB/Helmet_CRYE_Airframe/Data/MI_Helmet_CRYE_Airframe_MC.emat"
+   }
+   ItemModel "{01E04E8BCAEBFB54}XOB/Helmet_CRYE_Airframe/CryeAirFrameGround.xob"
+   ItemMaterialsOverride {
+    "{9C65A14D59E3E2AA}XOB/Helmet_CRYE_Airframe/Data/MI_Helmet_CRYE_Airframe_MC.emat"
+   }
+  }
+ }
+}
