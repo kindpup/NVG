@@ -1,0 +1,44 @@
+MetaFileClass {
+ Name "{9E15B8D390F7ED21}XOB/Helmet_CRYE_Airframe/Attachments/Strobe.xob"
+ Configurations {
+  FBXResourceClass PC {
+   ExportSkinning 1
+   Rotate 0 180 0
+   MaterialAssigns {
+    MaterialAssignClass "{6AE654EDD341B249}" {
+     SourceMaterial "MI_Helmet_Strobe_CS_HELSTAR_6_G3"
+     AssignedMaterial "{C037982374DB94B4}XOB/Helmet_CRYE_Airframe/Attachments/Data/MI_Helmet_Strobe_CS_HELSTAR_6_G3.emat"
+    }
+   }
+   MeshParams {
+    MeshParam Helmet_Strobe_CS_HELSTAR_6_G3 {
+    }
+   }
+   Common TXOCommonClass "{6AE654EDD3EA78B9}" : "{0877E7C4BB2B2C9A}Configs/System/ResourceTypes/PC/MeshObjectCommon.conf" {
+   }
+   ApplicationVendor "Blender Foundation"
+   ApplicationName "Blender (stable FBX IO)"
+   ApplicationVersion "5.0.1"
+  }
+  FBXResourceClass XBOX_ONE : PC {
+   Common TXOCommonClass "{6AE654EDD3EA7916}" : "{9D5B6207F7628CE2}Configs/System/ResourceTypes/XBOX_ONE/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass XBOX_SERIES : PC {
+   Common TXOCommonClass "{6AE654EDD3EA7937}" : "{DD9F02115C764647}Configs/System/ResourceTypes/XBOX_SERIES/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass PS4 : PC {
+   Common TXOCommonClass "{6AE654EDD3EA792F}" : "{53EC476BC921D99A}Configs/System/ResourceTypes/PS4/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass PS5 : PC {
+   Common TXOCommonClass "{6AE654EDD3EA7958}" : "{F62AA8E7B8EA9D26}Configs/System/ResourceTypes/PS5/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass HEADLESS : PC {
+   Common TXOCommonClass "{6AE654EDD3EA7976}" : "{3A5B3356978039E8}Configs/System/ResourceTypes/HEADLESS/MeshObjectCommon.conf" {
+   }
+  }
+ }
+}

@@ -29,6 +29,7 @@ GameEntity : "{24ADFCA3516E758B}Prefabs/Characters/HeadGear/Helmet_M1_01/Helmet_
   BaseLoadoutClothComponent "{5112706CD4157AF8}" {
    Slots {
     LoadoutSlotInfo ACM_AVS_M_BatteryPack {
+     Offset 0 0 0.0076
      AreaType ACM_AVS_M_BatteryPack "{6ACE2B680BF27066}" {
      }
     }

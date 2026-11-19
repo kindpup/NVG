@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{C037982374DB94B4}XOB/Helmet_CRYE_Airframe/Attachments/Data/MI_Helmet_Strobe_CS_HELSTAR_6_G3.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

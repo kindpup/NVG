@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{240F47FB0D558E09}XOB/Helmet_CRYE_Airframe/Attachments/Data/MI_NVG_Counterweight_OpsCore_Kit_Coyote.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}
