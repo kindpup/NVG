@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{834D57C6B710D475}XOB/Helmet_CRYE_Airframe/Attachments/Data/MI_Patch_3DMA_02.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -12,6 +12,66 @@ GameEntity {
   SoundComponent "{685441318314603D}" {
    DistanceManagement 0
   }
+  ACM_NightVisionComponent "{685441318314603F}" {
+   m_eUseMask CUSTOM
+   m_HDRMaterial "{59F26A676C5E62F6}Assets/Shaders/NVSystem/Colors/Thermal Night.emat"
+   m_GrainMaterial "{758640022A160027}Assets/Shaders/NVSystem/Grains/ACM_V2_FilmGrain.emat"
+   m_bManualBrightnessEnabled 1
+   m_fBrightnessStep 0.25
+   m_sAnimationSignal "w_nvRotator"
+   m_aPhosphorColors {
+    ACM_PhosphorColorOption "{6854413183146033}" {
+     m_sName "Red"
+     m_Material "{335461E3DAF37CD9}Assets/Shaders/NVSystem/Colors/ACM_V2_RedPhosphor_HDR.emat"
+    }
+    ACM_PhosphorColorOption "{6854413183146032}" {
+     m_sName "White"
+     m_Material "{59F26A676C5E62F6}Assets/Shaders/NVSystem/Colors/Thermal Night.emat"
+    }
+    ACM_PhosphorColorOption "{6854413183145DA5}" {
+     m_sName "Green"
+     m_Material "{B277CCF517222C0C}Assets/Shaders/NVSystem/Colors/ACM_V2_GreenPhosphor_HDR.emat"
+    }
+    ACM_PhosphorColorOption "{6854413183145DA3}" {
+     m_sName "Blue"
+     m_Material "{ED769E2936B8E743}Assets/Shaders/NVSystem/Colors/ACM_V2_BLUEPhosphor_HDR.emat"
+    }
+    ACM_PhosphorColorOption "{6854413183178AB6}" {
+     m_sName "Amber"
+     m_Material "{843375C9FB51E38B}Assets/Shaders/NVSystem/Colors/ACM_V2_AMBERPhosphor_HDR.emat"
+    }
+   }
+   m_eTubeLayout PANORAMIC
+   m_bOptimizedTubeView 1
+  }
+  ACM_ThermalComponentV2 "{CDDF8014B58D588E}" {
+   m_aPalettes {
+    ACM_ThermalPalette "{1F6C025482037626}" {
+     m_sName "White Hot"
+     m_Material "{A131B20E9E1745E0}UI/Materials/Editor/Thermal WH.emat"
+     m_fDefaultBrightness 1
+    }
+    ACM_ThermalPalette "{0DCC5C2A12ACEB9C}" {
+     m_sName "Flir"
+     m_Material "{D4308E4CC5BAEAC0}UI/Materials/Editor/Thermal Flir.emat"
+    }
+    ACM_ThermalPalette "{132891A61FE66B46}" {
+     m_sName "Green"
+     m_Material "{18ECC73E26AFA56A}UI/Materials/Editor/Thermal Green.emat"
+    }
+    ACM_ThermalPalette "{3D5EF5B0AA23889B}" {
+     m_sName "Orange"
+     m_Material "{C15D807755CDCB98}UI/Materials/Editor/Thermal Orange.emat"
+    }
+   }
+   m_bManualBrightnessEnabled 1
+   m_fBrightnessStep 0.25
+   m_sAnimationSignal "w_nvRotator"
+   m_eTubeLayout PANORAMIC
+   m_bFusionOverlay 1
+   m_bEcotiOutlineOnly 1
+   m_fFusionOpacity 1
+  }
   InventoryItemComponent "{6854413183178AB4}" {
    Attributes SCR_ItemAttributeCollection "{6854413183178AAB}" {
     ItemDisplayName SCR_InventoryUIInfo "{6854413183178AAA}" {
@@ -45,8 +105,6 @@ GameEntity {
   }
   MeshObject "{6854413183178A52}" {
    Object "{FF1BBF60071B0FF1}Assets/GPNVG.xob"
-   Materials {
-   }
    InheritVisibility 1
   }
   RigidBody "{6854413183178A55}" {
@@ -64,68 +122,8 @@ GameEntity {
     }
    }
   }
-  ACM_NightVisionComponent "{685441318314603F}" {
-   m_bOptimizedTubeView 1
-   m_eTubeLayout PANORAMIC
-   m_eUseMask CUSTOM
-   m_HDRMaterial "{59F26A676C5E62F6}Assets/Shaders/NVSystem/Colors/Thermal Night.emat"
-   m_GrainMaterial "{758640022A160027}Assets/Shaders/NVSystem/Grains/ACM_V2_FilmGrain.emat"
-   m_bManualBrightnessEnabled 1
-   m_fBrightnessStep 0.25
-   m_sAnimationSignal "w_nvRotator"
-   m_aPhosphorColors {
-    ACM_PhosphorColorOption "{6854413183146033}" {
-     m_sName "Red"
-     m_Material "{335461E3DAF37CD9}Assets/Shaders/NVSystem/Colors/ACM_V2_RedPhosphor_HDR.emat"
-    }
-    ACM_PhosphorColorOption "{6854413183146032}" {
-     m_sName "White"
-     m_Material "{59F26A676C5E62F6}Assets/Shaders/NVSystem/Colors/Thermal Night.emat"
-    }
-    ACM_PhosphorColorOption "{6854413183145DA5}" {
-     m_sName "Green"
-     m_Material "{B277CCF517222C0C}Assets/Shaders/NVSystem/Colors/ACM_V2_GreenPhosphor_HDR.emat"
-    }
-    ACM_PhosphorColorOption "{6854413183145DA3}" {
-     m_sName "Blue"
-     m_Material "{ED769E2936B8E743}Assets/Shaders/NVSystem/Colors/ACM_V2_BLUEPhosphor_HDR.emat"
-    }
-    ACM_PhosphorColorOption "{6854413183178AB6}" {
-     m_sName "Amber"
-     m_Material "{843375C9FB51E38B}Assets/Shaders/NVSystem/Colors/ACM_V2_AMBERPhosphor_HDR.emat"
-    }
-   }
-  }
-  ACM_ThermalComponentV2 "{CDDF8014B58D588E}" {
-   m_bFusionOverlay 1
-   m_bEcotiOutlineOnly 1
-   m_fFusionOpacity 1
-   m_eTubeLayout PANORAMIC
-   m_aPalettes {
-    ACM_ThermalPalette "{1F6C025482037626}" {
-     m_sName "White Hot"
-     m_Material "{A131B20E9E1745E0}UI/Materials/Editor/Thermal WH.emat"
-     m_fDefaultBrightness 1
-    }
-    ACM_ThermalPalette "{0DCC5C2A12ACEB9C}" {
-     m_sName "Flir"
-     m_Material "{D4308E4CC5BAEAC0}UI/Materials/Editor/Thermal Flir.emat"
-    }
-    ACM_ThermalPalette "{132891A61FE66B46}" {
-     m_sName "Green"
-     m_Material "{18ECC73E26AFA56A}UI/Materials/Editor/Thermal Green.emat"
-    }
-    ACM_ThermalPalette "{3D5EF5B0AA23889B}" {
-     m_sName "Orange"
-     m_Material "{C15D807755CDCB98}UI/Materials/Editor/Thermal Orange.emat"
-    }
-   }
-   m_bManualBrightnessEnabled 1
-   m_fBrightnessStep 0.25
-   m_sAnimationSignal "w_nvRotator"
-  }
   BaseLoadoutClothComponent "{6854413183178A48}" {
-   AreaType ACM_NV_Slotted "{6854413183178A4F}" {
+   AreaType ACM_NVG "{6854413183178A4F}" {
    }
    Animate 1
    WornModel "{FF1BBF60071B0FF1}Assets/GPNVG.xob"

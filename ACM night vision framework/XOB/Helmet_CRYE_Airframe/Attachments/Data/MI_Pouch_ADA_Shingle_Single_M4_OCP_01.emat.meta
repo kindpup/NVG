@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{19FECB32C8485E38}XOB/Helmet_CRYE_Airframe/Attachments/Data/MI_Pouch_ADA_Shingle_Single_M4_OCP_01.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

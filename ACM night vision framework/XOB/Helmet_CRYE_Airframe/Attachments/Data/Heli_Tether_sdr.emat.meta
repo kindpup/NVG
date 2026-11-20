@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{6448C72911F598D6}XOB/Helmet_CRYE_Airframe/Attachments/Data/Heli_Tether_sdr.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

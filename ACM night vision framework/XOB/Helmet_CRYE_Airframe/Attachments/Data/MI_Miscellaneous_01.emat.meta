@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{B859D60F40F3F799}XOB/Helmet_CRYE_Airframe/Attachments/Data/MI_Miscellaneous_01.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

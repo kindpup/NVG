@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{49BC6F8F133F0B92}XOB/Helmet_CRYE_Airframe/Attachments/Data/MI_Radio_WR_MPU5_OCP.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

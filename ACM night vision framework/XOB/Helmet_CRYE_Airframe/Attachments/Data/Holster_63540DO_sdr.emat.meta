@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{949F1277C2E233D7}XOB/Helmet_CRYE_Airframe/Attachments/Data/Holster_63540DO_sdr.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

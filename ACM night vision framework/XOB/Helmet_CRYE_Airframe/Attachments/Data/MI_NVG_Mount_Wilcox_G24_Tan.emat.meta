@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{89B620AFDF8FDE15}XOB/Helmet_CRYE_Airframe/Attachments/Data/MI_NVG_Mount_Wilcox_G24_Tan.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

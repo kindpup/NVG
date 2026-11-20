@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{EEAF5A3B8D27A6BD}XOB/Helmet_CRYE_Airframe/Attachments/Data/G17_sdr.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{44CDF4F606981DBB}XOB/OpsCore Fast Xp/Data/MI_Opscore_FAST_MT_Helmet_FDE.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

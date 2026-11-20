@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{DB0A4E99FAA56B2E}XOB/Helmet_CRYE_Airframe/Attachments/Data/MI_Mag_20R.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

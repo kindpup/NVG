@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{E54EAE71CB15F631}XOB/Helmet_CRYE_Airframe/Attachments/Data/MI_Belt_TYR_Gunfighter_MAB_OCP.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

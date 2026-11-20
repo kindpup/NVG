@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{D5379665137DB80B}XOB/Helmet_CRYE_Airframe/Attachments/Data/MI_Mag_Magpul_PMAG_GEN3_M3_Glass.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

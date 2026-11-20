@@ -1,28 +1,22 @@
 GameEntity : "{24ADFCA3516E758B}Prefabs/Characters/HeadGear/Helmet_M1_01/Helmet_M1_01_base.et" {
  ID "5112706CD4157AC7"
  components {
-  ACM_ClothAreaExtensionComponent "{6AD8A05FC636918C}" {
+  ACM_ClothAreaExtensionComponent "{6AE86873357EB5EA}" {
   }
-  ACM_ClothNodeStorageComponent "{6AD8A05FC636907A}" {
-   Attributes SCR_ItemAttributeCollection "{6AD8A05FC6369078}" {
-    ItemDisplayName UIInfo "{6AD8A05FC636907E}" {
+  ACM_ClothNodeStorageComponent "{6AE86873357EAA1C}" {
+   Attributes SCR_ItemAttributeCollection "{6AE86873357EAA1E}" {
+    ItemDisplayName UIInfo "{6AE86873357EAA18}" {
      Name "ACM_CryeAirFrame_RG"
      Description "ACM_CryeAirFrame_RG"
     }
-    ItemPhysAttributes ItemPhysicalAttributes "{6AD8A05FC636907C}" {
+    ItemPhysAttributes ItemPhysicalAttributes "{6AE86873357EAA1A}" {
     }
-    ItemAnimationAttributes ItemAnimationAttributes "{6AD8A05FC6369062}" {
+    ItemAnimationAttributes ItemAnimationAttributes "{6AE86873357EAA04}" {
     }
    }
   }
   MeshObject "{5112706CD4157AE0}" {
-   Object "{04D92714EF8D409F}XOB/Helmet_CRYE_Airframe/Helmet_CRYE_Airframe.xob"
-   Materials {
-    MaterialAssignClass "{6AD8A05FF584F178}" {
-     SourceMaterial "MI_Helmet_CRYE_Airframe_Tan"
-     AssignedMaterial "{0CF92F7ABD5820F5}XOB/Helmet_CRYE_Airframe/Data/MI_Helmet_CRYE_Airframe_RG.emat"
-    }
-   }
+   Object "{97BB4B7B6667EB59}XOB/Helmet_CRYE_Airframe/CryeAirFrame.xob"
   }
   SCR_HeadgearInventoryItemComponent "{5244E4431E28A759}" {
    Enabled 0
@@ -34,53 +28,35 @@ GameEntity : "{24ADFCA3516E758B}Prefabs/Characters/HeadGear/Helmet_M1_01/Helmet_
   }
   BaseLoadoutClothComponent "{5112706CD4157AF8}" {
    Slots {
-    LoadoutSlotInfo ACM_AVS_M_BatteryPack {
-     AreaType ACM_AVS_M_BatteryPack "{6AD8A05FC636906E}" {
+    LoadoutSlotInfo BatteryPack {
+     AreaType ACM_AVS_M_BatteryPack "{6AE86873357EAA0F}" {
      }
     }
-    LoadoutSlotInfo ACM_AVS_M_BatteryPack_Jack {
-    }
-    LoadoutSlotInfo ACM_AVS_M_EarPro_Mount_Wire {
-     AreaType ACM_AVS_M_EarPro_Mount_Wire "{6AD8A05FC636906C}" {
+    LoadoutSlotInfo Mohawk {
+     AreaType ACM_Mohawk "{6AE86873357EAA09}" {
      }
     }
-    LoadoutSlotInfo ACM_AVS_M_EarPro_OpsCore_AMP {
-     AreaType ACM_AVS_M_EarPro_OpsCore_AMP "{6AD8A05FC636906D}" {
+    LoadoutSlotInfo Ears {
+     AreaType ACM_AVS_M_EarPro_OpsCore_AMP "{6AE86873357EAA0B}" {
      }
     }
-    LoadoutSlotInfo ACM_AVS_M_Light_Left {
-     AreaType ACM_AVS_M_Light_Left "{6AD8A05FC6369052}" {
+    LoadoutSlotInfo TopVelcro {
+     AreaType ACM_AVS_M_Strobe "{6AE86873357ECA28}" {
      }
     }
-    LoadoutSlotInfo ACM_AVS_M_Light_right {
-     AreaType ACM_AVS_M_Light_right "{6AD8A05FC6369053}" {
+    LoadoutSlotInfo CounterWeight {
+     AreaType ACM_CounterWeight "{6AE86873357ECA17}" {
      }
     }
-    LoadoutSlotInfo ACM_AVS_M_NVG_Mount {
+    LoadoutSlotInfo NVG {
      PivotID "Head"
-     Offset -0.0024 0.0507 -0.1271
-     Angles 0 180 0
-     AreaType ACM_NV_Slotted "{6AD8A05FC6369051}" {
-     }
-    }
-    LoadoutSlotInfo ACM_AVS_M_Patch_Left {
-     AreaType ACM_AVS_M_Light_Left "{6AD8A05FC636905C}" {
-     }
-    }
-    LoadoutSlotInfo ACM_AVS_M_Patch_Right {
-     AreaType ACM_AVS_M_Patch_Right "{6AD8A05FC636905D}" {
-     }
-    }
-    LoadoutSlotInfo ACM_AVS_M_Strobe {
-     AreaType ACM_AVS_M_Strobe "{6AD8A05FC636B786}" {
-     }
-    }
-    LoadoutSlotInfo ACM_AVS_A_Helmet_CRYE_Airframe_Cover {
-     AreaType ACM_AVS_A_Helmet_CRYE_Airframe_Cover "{6AD8A05FC636B798}" {
+     Offset 0.0002 0.0633 -0.1255
+     Angles -3.846 -178.7159 1.8339
+     AreaType ACM_NVG "{6AE86873357ECA15}" {
      }
     }
    }
-   WornModel "{04D92714EF8D409F}XOB/Helmet_CRYE_Airframe/Helmet_CRYE_Airframe.xob"
+   WornModel "{97BB4B7B6667EB59}XOB/Helmet_CRYE_Airframe/CryeAirFrame.xob"
    WornMaterialsOverride {
     "{0CF92F7ABD5820F5}XOB/Helmet_CRYE_Airframe/Data/MI_Helmet_CRYE_Airframe_RG.emat"
    }
@@ -88,6 +64,7 @@ GameEntity : "{24ADFCA3516E758B}Prefabs/Characters/HeadGear/Helmet_M1_01/Helmet_
    ItemMaterialsOverride {
     "{0CF92F7ABD5820F5}XOB/Helmet_CRYE_Airframe/Data/MI_Helmet_CRYE_Airframe_RG.emat"
    }
+   DeflatedModel "{97BB4B7B6667EB59}XOB/Helmet_CRYE_Airframe/CryeAirFrame.xob"
   }
  }
 }

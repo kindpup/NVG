@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{D420B5C1A9C1AC17}XOB/Helmet_CRYE_Airframe/Attachments/Data/MI_Multitool.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

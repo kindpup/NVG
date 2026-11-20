@@ -179,6 +179,8 @@ class ACM_AVS_M_NVG_Mount : LoadoutAreaType {};
 class ACM_AVS_M_Patch_Left : LoadoutAreaType {};
 class ACM_AVS_M_Patch_Right : LoadoutAreaType {};
 class ACM_AVS_M_Strobe : LoadoutAreaType {};
+class ACM_Mohawk : LoadoutAreaType {};
+class ACM_CounterWeight : LoadoutAreaType {};
 //------------------------------------------------------------------------------------------------
 // A_HeadGear_Attatchments
 //-----------------------------------------------------------------------------------------------

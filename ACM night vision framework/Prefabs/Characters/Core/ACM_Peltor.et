@@ -1,0 +1,76 @@
+GenericEntity {
+ ID "6AE829C8D35C1845"
+ components {
+  Persistence "{6AE829C8D35C1848}" {
+  }
+  MeshObject "{6AE829C8D35C1879}" {
+   Object "{4D81F5839A215364}XOB/Helmet_CRYE_Airframe/Attachments/PeltorsV1.xob"
+   InheritVisibility 1
+  }
+  RigidBody "{6AE829C8D35C1865}" {
+   ModelGeometry 1
+  }
+  SCR_SoundDataComponent "{6AE829C8D35C1867}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{6AE829C8D35C1863}" {
+     m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{6AE829C8D35C186C}" {
+     m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{6AE829C8D35C186E}" {
+     m_sSoundProject "{F62001ED6E9FA253}Sounds/Items/_SharedData/Drop/Items_Drop_Clothes.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+   }
+  }
+  SCR_UniversalInventoryStorageComponent "{6AE829C8D35C1868}" {
+   Attributes SCR_ItemAttributeCollection "{6AE829C8D35C1895}" {
+    ItemDisplayName UIInfo "{6AE829C8D35C1897}" {
+     Name "ACM_Peltor"
+     Description "ACM_Peltor"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{6AE829C8D35C1891}" {
+     Weight 1
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{6AE829C8D35C1892}" {
+      CameraOrbitAngles -15 15 0
+      CameraDistanceToItem 0.3
+     }
+    }
+   }
+   Priority 6
+   m_fMaxWeight 8
+  }
+  BaseLoadoutClothComponent "{6AE83BCFF93E9A3F}" {
+   AreaType ACM_AVS_M_EarPro_OpsCore_AMP "{6AE83BCFFD1B3EFF}" {
+   }
+   WornModel "{4D81F5839A215364}XOB/Helmet_CRYE_Airframe/Attachments/PeltorsV1.xob"
+   ItemModel "{4D81F5839A215364}XOB/Helmet_CRYE_Airframe/Attachments/PeltorsV1.xob"
+   DeflatedModel "{4D81F5839A215364}XOB/Helmet_CRYE_Airframe/Attachments/PeltorsV1.xob"
+  }
+  ActionsManagerComponent "{6AE829C8D35C1899}" {
+   ActionContexts {
+    UserActionContext "{6AE829C8D35C1889}" {
+     ContextName "default"
+     Position PointInfo "{6AE829C8D35C188B}" {
+     }
+    }
+   }
+   additionalActions {
+    SCR_PickUpItemAction "{54F0841010A355F2}" : "{F39A4E9B190C1846}Prefabs/Characters/Core/Actions/PickUpItemAction.conf" {
+    }
+   }
+  }
+  RplComponent "{6AE829C8D35C18B0}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{6AE829C8D35C18BD}" {
+  }
+ }
+}

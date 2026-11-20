@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{C971FD6AA5D24191}XOB/Helmet_CRYE_Airframe/Attachments/Data/default_black.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{18D848105140A38F}XOB/Helmet_CRYE_Airframe/Attachments/Data/Eye.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

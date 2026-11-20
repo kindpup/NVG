@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{39937EB166A0BB3E}XOB/Helmet_CRYE_Airframe/Attachments/Data/IFAK_V3_sdr.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

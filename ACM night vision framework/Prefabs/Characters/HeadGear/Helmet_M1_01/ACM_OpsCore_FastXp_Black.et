@@ -1,0 +1,47 @@
+GameEntity : "{675622B3D31057E0}Prefabs/Characters/HeadGear/Helmet_M1_01/ACM_Crye_AirFrame_RG.et" {
+ ID "5112706CD4157AC7"
+ components {
+  ACM_ClothNodeStorageComponent "{6AE86873357EAA1C}" {
+   Attributes SCR_ItemAttributeCollection "{6AE86873357EAA1E}" {
+    ItemDisplayName UIInfo "{6AE86873357EAA18}" {
+     Name "ACM_OpsCoreFast_BLK"
+     Description "ACM_OpsCoreFast_BLK"
+    }
+   }
+  }
+  MeshObject "{5112706CD4157AE0}" {
+   Object "{301BAD070F8CB8BD}XOB/OpsCore Fast Xp/OpsCoreFastfbx.xob"
+  }
+  BaseLoadoutClothComponent "{5112706CD4157AF8}" {
+   Slots {
+    LoadoutSlotInfo BatteryPack {
+     Offset 0 0.0396 0.4484
+     Angles 15.4745 0 0
+     AutoTransform 0
+    }
+    LoadoutSlotInfo Mohawk {
+     Enabled 0
+    }
+    LoadoutSlotInfo Ears {
+    }
+    LoadoutSlotInfo TopVelcro {
+     Offset 0 -0.0053 0.144
+     Angles 4.581 0 0
+    }
+    LoadoutSlotInfo CounterWeight {
+     Enabled 0
+    }
+    LoadoutSlotInfo NVG {
+    }
+   }
+   WornModel "{301BAD070F8CB8BD}XOB/OpsCore Fast Xp/OpsCoreFastfbx.xob"
+   WornMaterialsOverride {
+    "{CF264306F1629A9E}XOB/OpsCore Fast Xp/Data/MI_Opscore_FAST_MT_Helmet_Black.emat"
+   }
+   ItemModel "{301BAD070F8CB8BD}XOB/OpsCore Fast Xp/OpsCoreFastfbx.xob"
+   ItemMaterialsOverride {
+    "{CF264306F1629A9E}XOB/OpsCore Fast Xp/Data/MI_Opscore_FAST_MT_Helmet_Black.emat"
+   }
+  }
+ }
+}

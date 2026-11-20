@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{A107B25823BC40E2}XOB/Helmet_CRYE_Airframe/Attachments/Data/MI_Holster_Safariland_63540DO_Strap.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{CC3AD5C179D0CD73}XOB/Helmet_CRYE_Airframe/Attachments/Data/Eye_Water.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

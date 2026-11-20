@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{C5BA28EEFCC9D314}XOB/Helmet_CRYE_Airframe/Attachments/Data/MI_Pouch_CRYE_Frag_OCP.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}
