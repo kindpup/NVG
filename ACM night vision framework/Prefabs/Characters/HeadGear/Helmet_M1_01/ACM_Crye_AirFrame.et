@@ -52,7 +52,7 @@ GameEntity : "{24ADFCA3516E758B}Prefabs/Characters/HeadGear/Helmet_M1_01/Helmet_
      PivotID "Head"
      Offset 0.0002 0.0633 -0.1255
      Angles -3.846 -178.7159 1.8339
-     AreaType ACM_NVG "{6AE8687251D02E88}" {
+     AreaType ACM_NV_Slotted "{6AE8687251D02E88}" {
      }
     }
    }

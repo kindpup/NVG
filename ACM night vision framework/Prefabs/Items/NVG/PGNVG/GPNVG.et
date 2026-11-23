@@ -123,7 +123,7 @@ GameEntity {
    }
   }
   BaseLoadoutClothComponent "{6854413183178A48}" {
-   AreaType ACM_NVG "{6854413183178A4F}" {
+   AreaType ACM_NV_Slotted "{6854413183178A4F}" {
    }
    Animate 1
    WornModel "{FF1BBF60071B0FF1}Assets/GPNVG.xob"

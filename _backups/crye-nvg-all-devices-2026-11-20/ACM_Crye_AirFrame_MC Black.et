@@ -1,0 +1,70 @@
+GameEntity : "{24ADFCA3516E758B}Prefabs/Characters/HeadGear/Helmet_M1_01/Helmet_M1_01_base.et" {
+ ID "5112706CD4157AC7"
+ components {
+  ACM_ClothAreaExtensionComponent "{6AE8687303FDBC0D}" {
+  }
+  ACM_ClothNodeStorageComponent "{6AE8687303FDBC31}" {
+   Attributes SCR_ItemAttributeCollection "{6AE8687303FDBC33}" {
+    ItemDisplayName UIInfo "{6AE8687303FDBC3C}" {
+     Name "ACM_CryeAirFrame_MC_Black"
+     Description "ACM_CryeAirFrame_MC_Black"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{6AE8687303FDBC3E}" {
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{6AE8687303FDBC38}" {
+    }
+   }
+  }
+  MeshObject "{5112706CD4157AE0}" {
+   Object "{04D92714EF8D409F}XOB/Helmet_CRYE_Airframe/Helmet_CRYE_Airframe.xob"
+  }
+  SCR_HeadgearInventoryItemComponent "{5244E4431E28A759}" {
+   Enabled 0
+   Attributes SCR_ItemAttributeCollection "{5244E4431DA56D64}" {
+    ItemDisplayName UIInfo "{5244E443130B31B9}" {
+     Name "#AR-Headgear_Helmet_M1_Olive_Name"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5112706CD4157AF8}" {
+   Slots {
+    LoadoutSlotInfo BatteryPack {
+     AreaType ACM_AVS_M_BatteryPack "{6AE8687303FDBC21}" {
+     }
+    }
+    LoadoutSlotInfo Mohawk {
+     AreaType ACM_Mohawk "{6AE8687303FDBC23}" {
+     }
+    }
+    LoadoutSlotInfo Ears {
+     AreaType ACM_AVS_M_EarPro_OpsCore_AMP "{6AE8687303FDBC22}" {
+     }
+    }
+    LoadoutSlotInfo TopVelcro {
+     AreaType ACM_AVS_M_Strobe "{6AE8687303FDBC2C}" {
+     }
+    }
+    LoadoutSlotInfo CounterWeight {
+     AreaType ACM_CounterWeight "{6AE8687303FDBC2F}" {
+     }
+    }
+    LoadoutSlotInfo NVG {
+     PivotID "Head"
+     Offset 0.0002 0.0633 -0.1255
+     Angles -3.846 -178.7159 1.8339
+     AreaType ACM_NVG "{6AE8687303FDBC28}" {
+     }
+    }
+   }
+   WornModel "{97BB4B7B6667EB59}XOB/Helmet_CRYE_Airframe/CryeAirFrame.xob"
+   WornMaterialsOverride {
+    "{88E289F83F333C86}XOB/Helmet_CRYE_Airframe/Data/MI_Helmet_CRYE_Airframe_Black MC.emat"
+   }
+   ItemModel "{01E04E8BCAEBFB54}XOB/Helmet_CRYE_Airframe/CryeAirFrameGround.xob"
+   ItemMaterialsOverride {
+    "{88E289F83F333C86}XOB/Helmet_CRYE_Airframe/Data/MI_Helmet_CRYE_Airframe_Black MC.emat"
+   }
+   DeflatedModel "{97BB4B7B6667EB59}XOB/Helmet_CRYE_Airframe/CryeAirFrame.xob"
+  }
+ }
+}

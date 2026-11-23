@@ -1,0 +1,64 @@
+GameEntity : "{24ADFCA3516E758B}Prefabs/Characters/HeadGear/Helmet_M1_01/Helmet_M1_01_base.et" {
+ ID "5112706CD4157AC7"
+ components {
+  ACM_ClothAreaExtensionComponent "{6ACE2B680BF2704F}" {
+  }
+  ACM_ClothNodeStorageComponent "{6ACE2B680BF27076}" {
+   Attributes SCR_ItemAttributeCollection "{6ACE2B680BF27070}" {
+    ItemDisplayName UIInfo "{6ACE2B680BF27072}" {
+     Name "ACM_CryeAirFrame_Tan"
+     Description "ACM_CryeAirFrame_Tan"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{6ACE2B680BF2707C}" {
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{6ACE2B680BF2707E}" {
+    }
+   }
+  }
+  MeshObject "{5112706CD4157AE0}" {
+   Object "{97BB4B7B6667EB59}XOB/Helmet_CRYE_Airframe/CryeAirFrame.xob"
+  }
+  SCR_HeadgearInventoryItemComponent "{5244E4431E28A759}" {
+   Enabled 0
+   Attributes SCR_ItemAttributeCollection "{5244E4431DA56D64}" {
+    ItemDisplayName UIInfo "{5244E443130B31B9}" {
+     Name "#AR-Headgear_Helmet_M1_Olive_Name"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5112706CD4157AF8}" {
+   Slots {
+    LoadoutSlotInfo BatteryPack {
+     AreaType ACM_AVS_M_BatteryPack "{6AE829C0279EC29D}" {
+     }
+    }
+    LoadoutSlotInfo Mohawk {
+     AreaType ACM_Mohawk "{6AE829C13632EF41}" {
+     }
+    }
+    LoadoutSlotInfo Ears {
+     AreaType ACM_AVS_M_EarPro_OpsCore_AMP "{6AE829C06283A3A5}" {
+     }
+    }
+    LoadoutSlotInfo TopVelcro {
+     AreaType ACM_AVS_M_Strobe "{6AE829C0803B6719}" {
+     }
+    }
+    LoadoutSlotInfo CounterWeight {
+     AreaType ACM_CounterWeight "{6AE829C1053DC1EE}" {
+     }
+    }
+    LoadoutSlotInfo NVG {
+     PivotID "Head"
+     Offset 0.0002 0.0633 -0.1255
+     Angles -3.846 -178.7159 1.8339
+     AreaType ACM_NVG "{6AE8687251D02E88}" {
+     }
+    }
+   }
+   WornModel "{97BB4B7B6667EB59}XOB/Helmet_CRYE_Airframe/CryeAirFrame.xob"
+   ItemModel "{01E04E8BCAEBFB54}XOB/Helmet_CRYE_Airframe/CryeAirFrameGround.xob"
+   DeflatedModel "{97BB4B7B6667EB59}XOB/Helmet_CRYE_Airframe/CryeAirFrame.xob"
+  }
+ }
+}

@@ -1,0 +1,133 @@
+# ACHILLES MODDING COMMUNITY LICENSE (AMCL)
+**Version 1.1 — 2026**
+
+Copyright © 2026 Achilles Modding.  
+All rights reserved unless otherwise stated.
+
+### 1. OVERVIEW
+
+This license applies to all content, mods, assets, scripts, textures, models, prefabs, configurations, and related materials released under the Achilles Modding name for Arma Reforger and related platforms.
+
+By downloading, using, modifying, hosting, or redistributing Achilles Modding content, you agree to the terms outlined below.
+
+### 2. PERMITTED USE
+
+The following uses are permitted unless otherwise specified:
+
+- Use on public or private Arma Reforger servers
+- Use in gameplay, screenshots, videos, and livestreams
+- Non-commercial community use
+- Inclusion in server modpacks provided original files remain intact and credited
+- Personal edits or adjustments for private use only
+
+All permitted uses remain subject to the restrictions, eligibility requirements, and revocation provisions established under this license.
+
+### 3. RESTRICTIONS
+
+The following actions are prohibited without written permission from Achilles Modding:
+
+- Reuploading Achilles Modding content to the Workshop
+- Redistributing modified versions publicly
+- Claiming Achilles Modding work as your own
+- Extracting or reselling assets, textures, or models
+- Porting content to other games or platforms
+- Commercial resale or monetization of the content itself
+- Using Achilles Modding branding, logos, or names to impersonate the project
+- Republishing or mirroring content after removal requests have been issued
+
+### 4. MODIFICATIONS & DERIVATIVE WORKS
+
+Public modifications, derivatives, edits, or repacks of Achilles Modding content require prior written permission unless explicitly stated otherwise by Achilles Modding.
+
+Private edits for personal or server-side use are permitted so long as they are not redistributed publicly.
+
+### 5. SERVER USAGE
+
+Communities and servers may use Achilles Modding content within their server environments provided they follow this license and do not falsely represent Achilles Modding as affiliated with their organization.
+
+Server owners and administrators are responsible for ensuring that their use, hosting, and distribution of Achilles Modding content complies with the terms of this agreement.
+
+### 6. COMMUNITY MEMBERSHIP & LICENSE ELIGIBILITY
+
+Achilles Modding reserves the right to determine eligibility for access to and use of its proprietary modifications, assets, scripts, models, configurations, and related content.
+
+**Any individual who has been permanently banned from the official Achilles Modding (ACM) Discord community, whether prior to or following the publication of this license, is automatically disqualified from receiving or retaining licensing privileges granted by Achilles Modding, to the extent permitted by applicable law and existing agreements.**
+
+A permanent ban from the official ACM Discord constitutes grounds for immediate revocation of permission to use ACM-owned content under this license.
+
+This restriction includes, but is not limited to:
+
+- Personal or private use of Achilles Modding modifications
+- Hosting or operating servers containing ACM-owned content
+- Redistributing, modifying, repackaging, or incorporating ACM-owned assets into other projects
+- Obtaining or using ACM modifications through third-party communities, organizations, or distribution channels
+- Attempting to circumvent restrictions through alternate accounts, intermediaries, or affiliated organizations
+
+Individuals whose licensing privileges have been revoked must discontinue unauthorized use of ACM-owned content and remove such content from servers, repositories, distributions, and other platforms under their direct control.
+
+**Access to ACM modifications through a public server, third-party source, or alternate account does not constitute reinstatement of revoked licensing privileges.**
+
+Reinstatement may only be granted through express written authorization from Achilles Modding management. The removal or expiration of a Discord ban does not automatically restore licensing privileges previously revoked.
+
+This provision applies exclusively to intellectual property and licensing rights controlled by Achilles Modding. It does not override third-party licenses, previously granted irrevocable rights, or applicable law.
+
+### 7. REVOCATION OF PERMISSION
+
+Achilles Modding reserves the right to revoke permission to use, host, redistribute, or associate with its content for any individual, group, server, or organization found engaging in:
+
+- Harassment or targeted abuse
+- Unauthorized redistribution
+- Asset theft or impersonation
+- Malicious conduct toward the project or community
+- Unauthorized monetization
+- False claims of ownership
+- Actions intended to damage the reputation of Achilles Modding
+- Violations of community membership and license eligibility requirements established in Section 6
+- Attempts to circumvent previously imposed licensing restrictions
+
+Permanent removal from the official Achilles Modding Discord community constitutes grounds for revocation of licensing privileges in accordance with Section 6.
+
+Upon revocation, affected parties must cease unauthorized use and remove Achilles Modding content from servers, repositories, distributions, and public downloads under their control within a reasonable timeframe, or immediately where legally required.
+
+All revocations remain subject to applicable law and any binding licensing obligations.
+
+### 8. THIRD-PARTY CONTENT
+
+Some Achilles Modding projects may contain assets, tools, or dependencies owned by third parties. Those assets remain subject to their respective licenses and permissions.
+
+Users are responsible for complying with any third-party licensing requirements.
+
+Nothing within this agreement shall be interpreted as granting Achilles Modding ownership or licensing authority over intellectual property belonging to third parties.
+
+### 9. NO WARRANTY
+
+All Achilles Modding content is provided **"as is"** without warranty of any kind, to the maximum extent permitted by applicable law.
+
+Achilles Modding is not responsible for:
+
+- Data loss
+- Server issues
+- Compatibility problems
+- Damage caused through misuse or modification
+
+Use of the content is at your own risk.
+
+### 10. LICENSE CHANGES
+
+Achilles Modding may update or revise this license at any time for future releases or versions.
+
+Older releases remain governed by the license version included at the time of release unless otherwise stated in a legally enforceable agreement.
+
+Continued use of content distributed under a revised license is subject to the terms applicable to that release.
+
+### 11. CONTACT
+
+For permissions, partnerships, commission work, licensing inquiries, or appeals concerning revoked licensing privileges:
+
+**Discord:** Achilles Modding
+
+---
+
+**END OF LICENSE**
+
+Copyright © 2026 Achilles Modding. All rights reserved.
